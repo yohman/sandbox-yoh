@@ -1,0 +1,4061 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../intro-to-gis-got-data-lets-map-it/">
+      
+      
+        <link rel="next" href="../introduction-to-gis-tokyo/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>Intro to Maps: History and Beyond - Sandblog 2.0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#to-start-navigate-to-this-page-via-the-url-below" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Sandblog 2.0" class="md-header__button md-logo" aria-label="Sandblog 2.0" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Sandblog 2.0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Intro to Maps: History and Beyond
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Sandblog 2.0" class="md-nav__button md-logo" aria-label="Sandblog 2.0" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Sandblog 2.0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome to MkDocs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Archive
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Archive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    An archive from the "old" sandblog (prior to 2024)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a-gis-intro-building-an-elections-results-map/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    A GIS Intro: Building an elections results map
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acls_favro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conversion of 3D Research Data into Interactive Learning Objects (PI: Diane Favro)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adding-media-content-to-a-google-mymap-infobubble/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adding Media Content to a Google MyMap Infobubble
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced-practical-python-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Advanced Practical Python #1: Getting Warmed Up
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced-practical-python-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Advanced Practical Python #2: Dictionary2csv
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced-practical-python-3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Advanced Practical Python #3: File Data Visualization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced-practical-python-4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Advanced Practical Python #4 Sentiment Shakespearean Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../albert-kochaphum-idre/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Albert Kochaphum – IDRE
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../alberts-python-cookbook/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Albert's Python Cookbook
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../an-introduction-to-digital-mapping-for-the-humanities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    An Introduction to Digital Mapping for the Humanities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../and-now-for-something-com-python-ly-different/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    And now for something com-python-ly different...
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arcgis-in-archaeology-working-with-3-dimensions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ArcGIS in Archaeology: Working with 3 Dimensions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../artsteps-building-vr-exhibitions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Artsteps: Building VR Exhibitions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../asian-migration-and-global-cities-an-introduction-to-mapping-and-data-visualization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Asian Migration and Global Cities:  An Introduction to Mapping and Data Visualization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic-python-2018/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    And now for something completely different.
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic-web-scrapin-101/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic Web Scrapin' #101
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basics-of-mapping-for-the-digital-humanities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basics of Mapping for the Digital Humanities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basics-of-python-2018/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    And now for something completely different...
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../beyond-the-digitized-slide-mapping-edition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Beyond the Digitized Slide: The Mapping Edition
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bishamon/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bishamon
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blog Archive
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../building-3d-data-maps-in-google-earth-pro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building 3D data maps in Google Earth (PRO)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../calendar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sandbox Calendar
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cartodb-gallery/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CartoDB Gallery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cartodb-part-1-getting-started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CartoDB Part 1: Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cartodb-part-2-working-with-your-own-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CartoDB Part 2: Working with your own data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../covid-19-maproom/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    COVID-19 Maproom
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../current-sandboxers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Current Sandboxers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dept-of-community-health-sciences-workshop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Department of Community Health Sciences GIS Workshop
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dh-101-mapping-workshop-2017/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DH 101 Mapping Workshop 2017
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dh-199-mapping-and-boyle-heights/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DH 199 Mapping and Boyle Heights
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dh101-cartodb-workshop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DH101 CartoDB Workshop
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dh101-getting-started-with-carto-2017/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DH101 - Getting Started with Carto 2017
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../digital-karnak/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Digital Karnak
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../digital-mapping-part-1b-social-explorer-arcgis-and-qgis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Digital Mapping - Part 1b: Social Explorer and ArcGIS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../digital-mapping-workshop-cartodb-and-beyond/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Digital Mapping Workshop: CartoDB and Beyond
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../digital-mapping-workshop-part-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Digital Mapping Workshop Part 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../digital-mapping-workshop-part-3b-hands-on-leaflet-tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Digital Mapping Workshop - Part 3c: Hands-on Leaflet Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../digital-mapping-workshop-part-3c-energy-atlas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Digital Mapping Workshop - Part 3b:  Energy Atlas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../digital-mapping-workshop-part-iii/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Digital Mapping Workshop Part 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../digital-mapping-workshop-series/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spring 2015: Digital Mapping Workshop Series
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../digital-roman-forum/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Digital Roman Forum
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../earth-day-lightning-talks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Session 2 - "Mapping Applied: Earth Day Lightning Talks"
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../encyclopedia-of-egyptology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Encyclopedia of Egyptology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../forensic-empathy-mapping-diseased-migrants/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Forensic Empathy: Mapping Diseased Migrants
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fukushima/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namie City, Fukushima
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getlatlon/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GetLatLon
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started-with-google-tour-creator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started with Google Tour Creator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started-with-social-explorer-and-exporting-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started with Social Explorer and Exporting Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started-with-spatial-research/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started with Spatial Research
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google-earth-arc-maker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Google Earth Arc Maker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google-maps-nah-leaflet-it-go/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Google Maps? Nah, Leaflet it go.
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google-spreadsheets-json-returner/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Google Spreadsheets JSON Returner
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../got-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Workshop Part 1: Got Data?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../history-of-digital-mapping/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    History of Digital Mapping and Beyond
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-view-kml-network-links-in-google-earth/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to view KML Network Links in Google Earth
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hypercities-the-book/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hypercities: The Book
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro-to-gis-an-archaeological-perspective-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro to GIS, An Archaeological Perspective
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro-to-gis-an-archaeological-perspective-part-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro to GIS: An Archaeological Perspective Part 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro-to-gis-an-archaeological-perspective/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro to GIS: An Archaeological Perspective
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro-to-gis-got-data-lets-map-it/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro to GIS: Got data? Let's map it!
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Intro to Maps: History and Beyond
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Intro to Maps: History and Beyond
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#to-start-navigate-to-this-page-via-the-url-below" class="md-nav__link">
+    <span class="md-ellipsis">
+      To start, navigate to this page via the URL below:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-a-map-what-is-in-a-map-how-do-you-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      "What is a map? What is in a map? How do you map?"
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#our-views-on-maps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Our Views on Maps:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Our Views on Maps:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#andy-httpmappingtheonegithubiomappingtheone" class="md-nav__link">
+    <span class="md-ellipsis">
+      Andy: http://mappingtheone.github.io/mappingtheone/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#albert-httpalbertkunboluclaedu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Albert: http://albertkun.bol.ucla.edu/
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mapping-101-elements-of-a-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mapping 101: Elements of a Map*
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mapping-102-projections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mapping 102: Projections
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#history-of-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      History of Mapping
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="History of Mapping">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#john-snow" class="md-nav__link">
+    <span class="md-ellipsis">
+      John Snow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Minard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bunge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bunge
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interactive-exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interactive Exercise
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#digital-mapping-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Digital Mapping History
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Digital Mapping History">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#esris-arcinfo-and-arcview" class="md-nav__link">
+    <span class="md-ellipsis">
+      ESRI's ArcInfo and ArcView
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xerox-parc-map-viewer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Xerox PARC Map Viewer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapquest" class="md-nav__link">
+    <span class="md-ellipsis">
+      MapQuest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-earth" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google Earth
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openstreetmap-and-google-maps" class="md-nav__link">
+    <span class="md-ellipsis">
+      OpenStreetMap and Google Maps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hypercities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hypercities
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mapping-tools-john-snow-mapped-three-digital-takes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mapping tools - "John Snow Mapped: Three digital takes."
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mapping tools - "John Snow Mapped: Three digital takes."">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#google-fusion-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google Fusion Tables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arcgis-online" class="md-nav__link">
+    <span class="md-ellipsis">
+      ArcGIS Online
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cartodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      CartoDB
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mapping-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mapping Resources
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mapping Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#desktop-gis-vs-online" class="md-nav__link">
+    <span class="md-ellipsis">
+      Desktop GIS vs Online
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ucla-geoportal" class="md-nav__link">
+    <span class="md-ellipsis">
+      UCLA GeoPortal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ucla-research-guides-and-tutorials" class="md-nav__link">
+    <span class="md-ellipsis">
+      UCLA Research Guides and Tutorials
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#free-online-tutorials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Free Online Tutorials
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map-collections-online" class="md-nav__link">
+    <span class="md-ellipsis">
+      Map Collections Online
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Further Reading
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#office-hours-sil-wednesdays-3-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Office Hours - SIL Wednesdays 3-5
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consultations-contact-us" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consultations - Contact US!
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feedback-survey" class="md-nav__link">
+    <span class="md-ellipsis">
+      Feedback Survey:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction-to-gis-tokyo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to GIS (Tokyo)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction-to-gis-training-2016/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to GIS Training 2016
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction-to-gis-workshop-2015/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to GIS Workshop 2015
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction-to-python-2018/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to Python 2018
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction-to-python-summer-2019/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to Python Summer 2019 for Engineering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction-to-spatial-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to Spatial Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../joining-gis-with-your-research/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to add your data to ArcGIS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lisa-snyder-idre/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lisa Snyder - IDRE
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mapping-open-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mapping Open Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../matlab-vs-python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matlab vs Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../meet-the-sandboxers-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Meet the Sandboxers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mxd-data-source-replacer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MXD Data Source Replacer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../my-calendar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    My Calendar
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../my-posts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    My Posts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../network-analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Workshop: Network Analysis Part 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../now-institute-gis-workshop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Now Institute GIS Workshop
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../open-data-and-tableau/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Open Data and Tableau
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../palladio-workshop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Palladio Workshop
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-2b-bringing-gps-to-satellife/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spatial Ethnography Workshop - Part II
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practical-python-for-automation-and-data-visualization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Advanced Practical Python for Automation and Data Visualization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-home-page/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Home Page
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projects-test-page/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Projects Test Page
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-and-the-internet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python and the Web
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-and-the-web-2018/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python and Web Scraping 2018
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-and-visualizing-data-2018/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python and Visualizing Data 2018
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-basics-2017/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Basics 2017
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-scraping-101/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Scraping 101
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-scraping-and-border-mapping/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python, Scraping, and Border Mapping
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-scripts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Scripts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../remote-consulting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../request-a-workshoptraining/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Request a workshop/training
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research-pedagogy-in-3d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Research and Pedagogy in 3D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sample-page/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sample Page
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sandbox-geocoder-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sandbox Geocoder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sandbox-geocoder/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Geocode4free
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sandboxer-alumnis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Alumni Sandboxers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scrapy-tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scrapy Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../selenium-test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Selenium Test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../social-explorer-tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Social Explorer Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spatial-economics-workshop-series-network-analyst/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spatial Economics Workshop Series: Network Analyst
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spatial-economics-workshop-series/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spatial Economics Workshop Series
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spatial-statistics-hot-spot-analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spatial Statistics: Hot spot analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spatializing-data-with-r/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spatializing Data with R
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spring-2016-digital-mapping-series/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spring 2016 Mapping for Research Series
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spring-2017-research-data-visualization-series/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spring 2017 Research Data Visualization Series
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spring-digital-mapping-workshop-part-2-gps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spring Digital Mapping Workshop Part 2: GPS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storymap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    General Story Map Workshop 2018
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../summer-gis-workshop-2018/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Summer GIS Workshop 2018
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../test-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../the-visualization-portal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Visualization Portal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../thinking-spatially/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Thinking Spatially
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../top-web-mapping-technologies-for-research/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Top web mapping technologies for research
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tutorials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ucla-gis-day-2016/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UCLA GIS DAY 2016
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ucla-gis-day-2017/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UCLA GIS DAY 2017
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ucla-gis-day/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UCLA GIS Day
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uhi-adobe-premier-workshop-outline/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UHI Adobe Premiere Workshop Outline
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uhi-story-map-workshop-2017/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UHI Story Map Workshop 2017
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../understanding-mothers-an-interview-with-film-maker-hitomi-kamanaka/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Understanding Mothers: An Interview with Film Maker Hitomi Kamanaka
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../use-360-photos-to-create-a-tiny-planet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Use 360° Photos to Create a "Tiny Planet"
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../utilizing-gps-data-tutorials/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part 2b - Utilizing GPS Data: Tutorials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vsim-5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VSim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vsim-an-interface-for-academic-3d-models/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VSim: An Interface for Academic 3D Models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web-scrapin-focus-on-python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Web Scrapin' Focus on Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../where-is-the-sandbox/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Where is the Sandbox?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workshop-creating-a-google-map-mash-up/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Workshop:  Creating a Google Map "Mash-up"
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workshop-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Workshop data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workshop-how-to-map-your-data-with-google-fusion-tables-and-arcgis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Workshop: How to map your data with Google Fusion Tables and ArcGIS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workshop-spatial-analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Workshop: Spatial Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workshopa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spatial Statistics: Central means and directional distributions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xr-tools-resources-for-getting-started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    XR Tools & Resources for Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../yoh-kawano-idre/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Yoh Kawano - IDRE
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zig-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Zig
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#to-start-navigate-to-this-page-via-the-url-below" class="md-nav__link">
+    <span class="md-ellipsis">
+      To start, navigate to this page via the URL below:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-a-map-what-is-in-a-map-how-do-you-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      "What is a map? What is in a map? How do you map?"
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#our-views-on-maps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Our Views on Maps:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Our Views on Maps:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#andy-httpmappingtheonegithubiomappingtheone" class="md-nav__link">
+    <span class="md-ellipsis">
+      Andy: http://mappingtheone.github.io/mappingtheone/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#albert-httpalbertkunboluclaedu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Albert: http://albertkun.bol.ucla.edu/
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mapping-101-elements-of-a-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mapping 101: Elements of a Map*
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mapping-102-projections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mapping 102: Projections
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#history-of-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      History of Mapping
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="History of Mapping">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#john-snow" class="md-nav__link">
+    <span class="md-ellipsis">
+      John Snow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Minard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bunge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bunge
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interactive-exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interactive Exercise
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#digital-mapping-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Digital Mapping History
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Digital Mapping History">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#esris-arcinfo-and-arcview" class="md-nav__link">
+    <span class="md-ellipsis">
+      ESRI's ArcInfo and ArcView
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xerox-parc-map-viewer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Xerox PARC Map Viewer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapquest" class="md-nav__link">
+    <span class="md-ellipsis">
+      MapQuest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-earth" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google Earth
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openstreetmap-and-google-maps" class="md-nav__link">
+    <span class="md-ellipsis">
+      OpenStreetMap and Google Maps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hypercities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hypercities
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mapping-tools-john-snow-mapped-three-digital-takes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mapping tools - "John Snow Mapped: Three digital takes."
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mapping tools - "John Snow Mapped: Three digital takes."">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#google-fusion-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google Fusion Tables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arcgis-online" class="md-nav__link">
+    <span class="md-ellipsis">
+      ArcGIS Online
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cartodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      CartoDB
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mapping-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mapping Resources
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mapping Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#desktop-gis-vs-online" class="md-nav__link">
+    <span class="md-ellipsis">
+      Desktop GIS vs Online
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ucla-geoportal" class="md-nav__link">
+    <span class="md-ellipsis">
+      UCLA GeoPortal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ucla-research-guides-and-tutorials" class="md-nav__link">
+    <span class="md-ellipsis">
+      UCLA Research Guides and Tutorials
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#free-online-tutorials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Free Online Tutorials
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map-collections-online" class="md-nav__link">
+    <span class="md-ellipsis">
+      Map Collections Online
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Further Reading
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#office-hours-sil-wednesdays-3-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Office Hours - SIL Wednesdays 3-5
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consultations-contact-us" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consultations - Contact US!
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feedback-survey" class="md-nav__link">
+    <span class="md-ellipsis">
+      Feedback Survey:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h3 id="to-start-navigate-to-this-page-via-the-url-below">To start, navigate to this page via the URL below:</h3>
+<p><a href="http://sandbox.idre.ucla.edu/sandbox/intro-to-maps-history-and-beyond">http://sandbox.idre.ucla.edu/sandbox/intro-to-maps-history-and-beyond</a></p>
+<p>[iframe src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1DyOxCYw5KgPCdkMwhr_zfqcE-pVT-tdjpucchc2EQrw"]</p>
+<h3 id="what-is-a-map-what-is-in-a-map-how-do-you-map">"What is a map? What is <em>in</em> a map? <em>How</em> do you map?"</h3>
+<p>[caption id="attachment_2099" align="aligncenter" width="339"]<a href="http://makingmaps.owu.edu/this_is_not_krygier_wood.pdf"><img alt="They're Maps!" src="images/theyremaps.jpg" /></a> Selection from John Krygier and Denis Wood - Ce N'est Pas Le Monde."[/caption]</p>
+<h2 id="our-views-on-maps">Our Views on Maps:</h2>
+<h4 id="andy-httpmappingtheonegithubiomappingtheone">Andy: <a href="http://mappingtheone.github.io/mappingtheone/">http://mappingtheone.github.io/mappingtheone/</a></h4>
+<h4 id="albert-httpalbertkunboluclaedu">Albert: <a href="http://albertkun.bol.ucla.edu/">http://albertkun.bol.ucla.edu/</a></h4>
+<p>Mapping can be defined in so many different ways, there is no easy answer to these questions. In fact, your research can dictate the parameter of choices that define <em>your</em> map. Below are a few examples of just how multi-faceted mapping can be for any discipline, and how the <em>digital</em> can help scope and develop innovative approaches to projects. How then might <em>your</em> project utilize these tools?</p>
+<h2 id="mapping-101-elements-of-a-map">Mapping 101: Elements of a Map*</h2>
+<ol>
+<li>Title</li>
+<li>Data frame</li>
+<li>Neatline</li>
+<li>Author(ity)</li>
+<li>Publisher</li>
+<li>Date of publication</li>
+<li>Citation</li>
+<li>Legend</li>
+<li>Scale</li>
+<li>Symbology</li>
+<li>North Arrow</li>
+<li>Coordinates **This list is not exhaustive and there other optional elements that you can include such as border and inset maps.</li>
+</ol>
+<p>Why? All of these elements help assist you in reading the map, the context of when and how the map was made, and the purpose of the map.</p>
+<h2 id="mapping-102-projections">Mapping 102: Projections</h2>
+<p><a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2016/03/Goldstyn_projections.jpg"><img alt="Source: Jacques Goldstyn, 1983." src="images/Goldstyn_projections-744x731.jpg" /></a>Source: <a href="https://www.mapthematics.com/forums/viewtopic.php?f=8&amp;t=233">Jacques Goldstyn, 1983</a>.</p>
+<blockquote>
+<p>"Everything is related to everything else, but near things are more related than distant things." -Waldo Tobler</p>
+</blockquote>
+<p>Waldo Tobler's statement defines his first law of geography, in ways stating the obvious correlation between objects in space, paving the foundation behind spatial dependencies. Equally important, we may argue, is that the same dependencies that exist in space also exist in time. Chronology is a representation of sequential data as spatial overlays, often visualized to show relationships, dependencies, and causation through time.</p>
+<p>One other issue to note is that maps are a 3D projection on to a 2D surface, what results is a distortion based on the following:</p>
+<ol>
+<li>Distance</li>
+<li>Direction</li>
+<li>Shape</li>
+<li>Area</li>
+</ol>
+<p>In short, in order to preserve one of these elements with highest fidelity, the other elements are to be sacrificed to some degree.</p>
+<p>[caption id="attachment_2149" align="aligncenter" width="465"]<img alt="Source: https://en.wikipedia.org/wiki/Mercator_projection#/media/File:Mercator_projection_SW.jpg" src="images/1024px-Mercator_projection_SW-744x631.jpg" /> https://en.wikipedia.org/wiki/Mercator_projection#/media/File:Mercator_projection_SW.jpg[/caption]</p>
+<p>[caption id="attachment_2112" align="aligncenter" width="453"]<img alt="Impact of map projections. Source: http://makingmapsblog.tumblr.com/post/97906950351/source-comparative-map-africa-vs-us-china" src="images/projectionafrica.jpg" /> Impact of map projections. Source: <a href="https://www.flickr.com/photos/internetarchivebookimages/14762351614/">https://www.flickr.com/photos/internetarchivebookimages/14762351614/</a>[/caption]</p>
+<hr />
+<h1 id="history-of-mapping">History of Mapping</h1>
+<h3 id="john-snow">John Snow</h3>
+<p><a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2016/01/snow_map.png"><img alt="snow_map" src="images/snow_map-744x708.png" /></a></p>
+<p>While maps have existed throughout human history, the “John Snow Cholera Map” from 1854 illustrates the first time that a map was used to spatially analyze a phenomenon; in this case a cholera outbreak within London. In order to produce this map a couple of pieces of geographic information needed to come together:</p>
+<ol>
+<li>The spatial data on where the deaths occurred</li>
+<li>An accurate representation of the street network and buildings</li>
+<li>Locations of the hand-pumps used to get water from.</li>
+</ol>
+<p>Each line represents a death, and a concentration can be seen around a certain street. After having identified the problem, this map allowed Snow to write a letter to the authorities and prompted the end of cholera outbreaks in the locale.</p>
+<h3 id="minard">Minard</h3>
+<p>The representation of 3 dimensional space onto a flat, 2 dimensional platform–a map–brings with it many challenges and compromises (e.g. projection systems). Every "flat" map in existence compromises on one geographical element: <strong>Shape</strong>, <strong>Area</strong>, <strong>Distance</strong> or <strong>Direction</strong>. So too, does the representation of the "fourth dimension", or time, bring about much to contemplate on how best to summarize and eventually effectively visualize geo-temporal data. Historically, inventive methods employed in visualizing change over time has produced infamous graphics such as Minard's map of Napoleon's Russian Campaign in 1812.</p>
+<p><img alt="Minard Map" src="../images/p12p2-lg.jpg" /></p>
+<h3 id="bunge">Bunge</h3>
+<p>[caption id="attachment_2134" align="aligncenter" width="594"]<img alt="Bunge, W. 1971. Fitzgerald: Geography of a revolution. Cambridge, MA : Schenkman." src="images/neighborbunge-744x353.jpg" /> Bunge, W. 1971. Fitzgerald: Geography of a revolution. Cambridge, MA : Schenkman.[/caption]</p>
+<p>Radical and critical cartography has seen a recent resurgence in academia and popular media. William Bunge was an early innovator of radical cartography and helped to found the <a href="https://civic.mit.edu/blog/kanarinka/the-detroit-geographic-expedition-and-institute-a-case-study-in-civic-mapping">Detroit Geographic Expedition</a>. His work was community focused and was in part influenced by the 1967 Detroit riots. Here is an example of two maps using the same data. One created by a city agency and the other created by Bunge. Can you tell the difference?</p>
+<iframe class="juxtapose" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=b4a4df00-0278-11e6-a524-0e7075bba956" width="100%" height="554" frameborder="0"></iframe>
+
+<hr />
+<h1 id="interactive-exercise">Interactive Exercise</h1>
+<p>Please visit the HyperCities map library: <a href="http://www.hypercities.com/maplibrary/maplibrary.html">http://www.hypercities.com/maplibrary/maplibrary.html</a></p>
+<p><a href="http://www.hypercities.com/maplibrary/maplibrary.html"><img alt="2016-04-11t" src="images/2016-04-11t-744x154.png" /></a></p>
+<p>Share your observations on the process of a print map becoming a digital map.</p>
+<ul>
+<li>What is gained?</li>
+<li>What is lost?</li>
+<li>Should we care?</li>
+</ul>
+<hr />
+<h1 id="digital-mapping-history">Digital Mapping History</h1>
+<h3 id="esris-arcinfo-and-arcview">ESRI's ArcInfo and ArcView</h3>
+<p><a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2016/01/arcview.png"><img alt="arcview" src="images/arcview-744x483.png" /></a>While previous cartographic maps were done by hand, increasingly as computer processing became more powerful, spatial information began to be "digitized". Whether it be from tracing old paper maps, or redoing them anew, spatial processing began to take off with the advent of ESRI's ArcInfo command-line based software.</p>
+<h3 id="xerox-parc-map-viewer">Xerox PARC Map Viewer</h3>
+<p><a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2016/01/usmap.gif"><img alt="usmap" src="images/usmap.gif" /></a></p>
+<p>This map viewer was the first of its kind to debut to the young World Wide Web in 1993. The signified the transition to a digital age where spatial information could be shared online.</p>
+<h3 id="mapquest">MapQuest</h3>
+<p><a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2016/01/mapquest-directions3.jpg"><img alt="mapquest-directions3" src="images/mapquest-directions3.jpg" /></a>The rapid development of the Internet allowed a new space for mapping on the web to be explored, not just as static gifs, like in the PARC map viewer, but rather as zoom-able and pan-able images; MapQuest was the first online mapping platform to do so.</p>
+<h3 id="google-earth">Google Earth</h3>
+<p><a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2016/01/googleearth.jpg"><img alt="googleearth" src="images/googleearth-744x465.jpg" /></a></p>
+<p>After Google acquired Keyhole in 2004, their application was re-branded as Google Earth; a standalone application for interrogating the entire planet.</p>
+<p>Among one of the many new features implemented, a time slider was also included to sift through historic imagery. The obvious choice to represent time via an interface is to provide some sort of time dial, a time-machine of sorts that allows you to punch in a past (or future) date, and navigate to that time to present information relevant to that temporal space. Interactive time representations are made possible via a myriad of functional visual widgets. Most popular are the time sliders that allow users to navigate into the past by "sliding" a set of handles to go back (or forward) in time. Google Earth uses such a slider effectively to navigate time:</p>
+<p><a href="https://support.google.com/earth/answer/183758?hl=en"><img alt="google earth time slider" src="../images/earth_183758_time_slider_en.png" /></a></p>
+<p>The advantage of dynamic time sliders is that they are malleable, they adjust to the time spans dictated by the content material. In the screen shot from Google Earth, the time slider itself is indicative of the content being provided, in this case, we can depict that this particular location has historical satellite image dating back to 1992.</p>
+<h3 id="openstreetmap-and-google-maps">OpenStreetMap and Google Maps</h3>
+<p><a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2016/01/osm.png"><img alt="osm" src="images/osm-744x402.png" /></a>OpenStreetMap and Google Maps are "slippy" maps that pioneered the idea of seamlessly moving around a map.</p>
+<h3 id="hypercities">Hypercities</h3>
+<p><a href="http://hypercities.com"><img alt="hypercities" src="images/Screen-Shot-2015-05-07-at-10.15.35-AM-744x382.png" /></a></p>
+<blockquote>
+<p>I turn off Google Maps and start to drive. I wonder: what would it mean to drive downward, into the buried pasts that persist somewhere—in the imagination, in the archive, in the memories of others, in the traces of places long gone and lost? Who used to live here? What used to be there? What’s buried under this freeway, under this skyscraper, beneath these overpasses? What has vanished imperceptibly from the surface of the earth? What voices and ghosts haunt, however imperceptibly, these concrete landscapes? Why do I care? It’s a past which is, ostensibly, not my own. I don’t recognize it. It’s not mine. Time is out of joint. - <em>Todd Presner (HyperCities, Thick Mapping in the Digital Humanities)</em></p>
+</blockquote>
+<p>Perhaps one of the most innovative geotemporal platforms born and created within academia is <a href="http://www.hypercities.com">HyperCities</a>, the brainchild of our very own Todd Presner. The idea that we can spiral downwards–or upwards–from any location to navigate into the past or future is at the core of the HyperCities platform, to the degree that technology can allow such a concept to manifest.</p>
+<hr />
+<h1 id="mapping-tools-john-snow-mapped-three-digital-takes">Mapping tools - "John Snow Mapped: Three digital takes."</h1>
+<h3 id="google-fusion-tables">Google Fusion Tables</h3>
+<iframe src="https://www.google.com/fusiontables/embedviz?q=select+col7+from+147wlDisDp6NnpNxHQpbnjAQ-iW4dR2MAmFdQxYc&amp;viz=MAP&amp;h=false&amp;lat=51.51338517455004&amp;lng=-0.1350014629516636&amp;t=1&amp;z=17&amp;l=col7&amp;y=2&amp;tmplt=2&amp;hml=KML" width="100%" height="300" frameborder="no" scrolling="no"></iframe>
+
+<p><a href="https://www.google.com/fusiontables/DataSource?docid=147wlDisDp6NnpNxHQpbnjAQ-iW4dR2MAmFdQxYc#rows:id=1">Robin Wilson's original Google Fusion map.</a></p>
+<h3 id="arcgis-online">ArcGIS Online</h3>
+<iframe title="John Snow example" src="//www.arcgis.com/apps/Embed/index.html?webmap=c86e6451040c4ada907369c03c16619b&amp;extent=-0.1417,51.5113,-0.132,51.5155&amp;zoom=true&amp;scale=true&amp;disable_scroll=true&amp;theme=light" width="100%" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+
+<p>Using data from Robin Wilson's blog.</p>
+<h3 id="cartodb">CartoDB</h3>
+<iframe src="https://andyrutkowski.cartodb.com/viz/248f6ae4-02c7-11e6-9286-0ecfd53eb7d3/embed_map" width="100%" height="520" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+
+<p>Using data from Robin Wilson's blog.</p>
+<p>Robin Wilson had a great blog post about this a few years ago and we featured his work and data in the above maps - http://blog.rtwilson.com/john-snows-cholera-data-in-more-formats/</p>
+<hr />
+<h1 id="mapping-resources">Mapping Resources</h1>
+<h3 id="desktop-gis-vs-online">Desktop GIS vs Online</h3>
+<p>Desktop mapping programs are useful when the end result is a static map used for publication, or certain types of geographic analysis needs to be done. <a href="http://www.arcgis.com/features/">ArcGIS</a> has the most support and documentation, however requires a license that is expensive outside of academia. <a href="http://www.qgis.org/en/site/">QGIS</a> is a free solution and is going for creating simple maps, but the learning curve is higher for doing more intensive geo-processing.</p>
+<p>Online maps are useful when the end result is an interactive map for illustrating issues and research. They are powerful tools for creating "mash-ups" which combines data from different platforms onto one.</p>
+<p><a href="https://developers.google.com/maps/">Google Maps API</a> is the widely used as a starting platform and has good examples with documentation. The downside to Google Maps API is that the API is closed source, so projects can get depreciated.</p>
+<p><a href="http://www.leafletjs.com/">Leaflet</a> is a online mapping platform that is open source, this means that depreciation is not an issue. The main drawbacks with Leaflet is that some functions are not a fully flushed out as Google Maps API.</p>
+<h3 id="ucla-geoportal">UCLA GeoPortal</h3>
+<p><a href="http://gis.ucla.edu/geodata/">http://gis.ucla.edu/geodata/</a></p>
+<h3 id="ucla-research-guides-and-tutorials">UCLA Research Guides and Tutorials</h3>
+<ul>
+<li>Maps - <a href="http://guides.library.ucla.edu/maps">http://guides.library.ucla.edu/maps</a><ul>
+<li>How to locate maps in library - <a href="http://guides.library.ucla.edu/c.php?">http://guides.library.ucla.edu/c.php?</a>g=180224&amp;p=1185521</li>
+</ul>
+</li>
+<li>GIS - http://guides.library.ucla.edu/gis</li>
+<li>Tutorials - <a href="http://sandbox.idre.ucla.edu/sandbox/category/tutorials">http://sandbox.idre.ucla.edu/sandbox/category/tutorials</a></li>
+</ul>
+<h3 id="free-online-tutorials">Free Online Tutorials</h3>
+<ul>
+<li>Lynda.com @ UCLA - <a href="http://learnit.ucla.edu/lynda.com">http://learnit.ucla.edu/lynda.com</a></li>
+<li><a href="http://www.esri.com/training/main/public-safety">http://www.esri.com/training/main/public-safet</a>y</li>
+</ul>
+<h3 id="map-collections-online">Map Collections Online</h3>
+<p><a href="http://www.davidrumsey.com/view/luna">http://www.davidrumsey.com/view/luna</a></p>
+<h3 id="further-reading">Further Reading</h3>
+<ul>
+<li>The History of Cartography free via University of Chicago Press - <a href="http://www.press.uchicago.edu/books/HOC/index.html">http://www.press.uchicago.edu/books/HOC/index.html</a></li>
+<li>John Krygier and Denis Wood - <a href="https://makingmaps.net/">Making Maps blog</a></li>
+</ul>
+<h3 id="office-hours-sil-wednesdays-3-5">Office Hours - SIL Wednesdays 3-5</h3>
+<h3 id="consultations-contact-us">Consultations - Contact US!</h3>
+<ul>
+<li>Andy - arutkowski (at) library.ucla.edu</li>
+<li>Albert - albertkun (at) idre.ucla.edu</li>
+</ul>
+<h3 id="feedback-survey">Feedback Survey:</h3>
+<p><a href="http://goo.gl/forms/8Q6rZdKRDN">http://goo.gl/forms/8Q6rZdKRDN</a></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>
