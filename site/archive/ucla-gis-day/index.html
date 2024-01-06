@@ -20,8 +20,9 @@
     
     
       
-        <title>UCLA GIS Day - Sandblog 2.0</title>
+        <title>UCLA GIS Day - OARC Technology Sandbox</title>
       
+    
     
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
@@ -30,9 +31,14 @@
 
 
     
+    <link rel="stylesheet" href="../../css/lightgallery.min.css">
+
+    
     
       
     
+    <script src="../../js/lightgallery.min.js"></script>
+
     
       
         
@@ -50,7 +56,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -74,14 +91,12 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Sandblog 2.0" class="md-header__button md-logo" aria-label="Sandblog 2.0" data-md-component="logo">
+    <a href="../.." title="OARC Technology Sandbox" class="md-header__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5m10.78 2H19v12.18c-.26-.8-1.31-1.39-2.2-1.39h-1v-3a1 1 0 0 0-1-1h-6v-2h2a1 1 0 0 0 1-1v-2h2c1.03 0 1.87-.79 1.98-1.79M5 10.29l4.8 4.5v1a2 2 0 0 0 2 2V19H5v-8.71Z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -92,7 +107,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Sandblog 2.0
+            OARC Technology Sandbox
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -133,6 +148,8 @@
         </button>
       </nav>
       
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -157,6 +174,97 @@
       
         
           
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Welcome
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../about/History%20and%20Mission/" class="md-tabs__link">
+          
+  
+  About
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../projects/current/VSim/" class="md-tabs__link">
+          
+  
+  Projects
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -170,16 +278,18 @@
                     
 
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Sandblog 2.0" class="md-nav__button md-logo" aria-label="Sandblog 2.0" data-md-component="logo">
+    <a href="../.." title="OARC Technology Sandbox" class="md-nav__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5m10.78 2H19v12.18c-.26-.8-1.31-1.39-2.2-1.39h-1v-3a1 1 0 0 0-1-1h-6v-2h2a1 1 0 0 0 1-1v-2h2c1.03 0 1.87-.79 1.98-1.79M5 10.29l4.8 4.5v1a2 2 0 0 0 2 2V19H5v-8.71Z"/></svg>
 
     </a>
-    Sandblog 2.0
+    OARC Technology Sandbox
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -195,11 +305,100 @@
         
   
   <span class="md-ellipsis">
-    Welcome to MkDocs
+    Welcome
   </span>
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/History%20and%20Mission/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    History and Mission
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/Who%20We%20Are/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Who We Are
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -217,15 +416,18 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -236,8 +438,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Archive
           </label>
@@ -3256,6 +3458,140 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Current
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Current
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/current/VSim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VSim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/current/world%27s%20columbian%20exposition%20reconstruction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    World's columbian exposition reconstruction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -3390,10 +3726,10 @@
 
   <h1>UCLA GIS Day</h1>
 
-<h2 id="ucla-gis-day-2019">UCLA GIS Day 2019</h2>
-<h4 id="charles-e-young-research-library-map">Charle's E. Young Research Library (<a href="https://www.google.com/maps/place/Charles+E.+Young+Research+Library/@34.0750168,-118.4415424,20z/data=!3m1!5s0x80c2bc8a269b1117:0xfd695793e04b3760!4m12!1m6!3m5!1s0x0:0x6f3f002bb05648e7!2sCharles+E.+Young+Research+Library!8m2!3d34.0749691!4d-118.441466!3m4!1s0x80c2bc88bfffffff:0x6f3f002bb05648e7!8m2!3d34.0749691!4d-118.441466">map</a>)</h4>
-<h4 id="1113-wednesday-10am-2pm">11/13 Wednesday 10am - 2pm</h4>
-<p><img alt="UCLA GIS Day 2019" src="images/2019-10-22-14_39_01-Mapathon-flyer-2019.pdf-Adobe-Acrobat-Pro-DC-e1571780453991-1024x412.png" /></p>
+<h2 id="ucla-gis-day-2019">UCLA GIS Day 2019<a class="headerlink" href="#ucla-gis-day-2019" title="Permanent link">&para;</a></h2>
+<h4 id="charles-e-young-research-library-map">Charle's E. Young Research Library (<a href="https://www.google.com/maps/place/Charles+E.+Young+Research+Library/@34.0750168,-118.4415424,20z/data=!3m1!5s0x80c2bc8a269b1117:0xfd695793e04b3760!4m12!1m6!3m5!1s0x0:0x6f3f002bb05648e7!2sCharles+E.+Young+Research+Library!8m2!3d34.0749691!4d-118.441466!3m4!1s0x80c2bc88bfffffff:0x6f3f002bb05648e7!8m2!3d34.0749691!4d-118.441466">map</a>)<a class="headerlink" href="#charles-e-young-research-library-map" title="Permanent link">&para;</a></h4>
+<h4 id="1113-wednesday-10am-2pm">11/13 Wednesday 10am - 2pm<a class="headerlink" href="#1113-wednesday-10am-2pm" title="Permanent link">&para;</a></h4>
+<p><a class="glightbox" href="images/2019-10-22-14_39_01-Mapathon-flyer-2019.pdf-Adobe-Acrobat-Pro-DC-e1571780453991-1024x412.png" data-type="image" data-width="auto" data-height="auto" data-title="UCLA GIS Day 2019" data-desc-position="bottom"><img alt="UCLA GIS Day 2019" src="images/2019-10-22-14_39_01-Mapathon-flyer-2019.pdf-Adobe-Acrobat-Pro-DC-e1571780453991-1024x412.png" /></a></p>
 <p><a href="https://www.eventbrite.com/e/gis-day-2019-registration-75906882529" rel="noopener noreferrer" target="\_blank"></p>
 <p>Register here</p>
 <p></a>Buy Tickets on Eventbrite</p>
@@ -3405,30 +3741,30 @@
 <p>Do you want to help people affected by recent natural disasters, environmental impacts, and other humanitarian issues? What about the chance to show a little Bruin Pride and exercise your global citizenship? Come to our humanitarian mapa-thon event - No GIS skills are required – and we will quickly train you to use Open Street Map to assist in humanitarian projects around the world.</p>
 <p>Last year’s event was one of the largest on Earth - we made over 10,000 edits to humanitarian projects in just three hours – but we can do better!</p>
 <p>The focus this year is on how climate change is impacting our lived environment. Join us to learn more about how you can make a difference through mapping!</p>
-<h3 id="schedule-of-events">Schedule of events</h3>
+<h3 id="schedule-of-events">Schedule of events<a class="headerlink" href="#schedule-of-events" title="Permanent link">&para;</a></h3>
 <p>Join via zoom!<br />
 <a href="https://ucla.zoom.us/j/721843466">https://ucla.zoom.us/j/721843466</a></p>
-<h4 id="1000-opening-remarks">10:00 Opening remarks</h4>
-<h4 id="1010-lightning-talks-from-our-spatial-thinkers">10:10 Lightning talks from our Spatial Thinkers</h4>
+<h4 id="1000-opening-remarks">10:00 Opening remarks<a class="headerlink" href="#1000-opening-remarks" title="Permanent link">&para;</a></h4>
+<h4 id="1010-lightning-talks-from-our-spatial-thinkers">10:10 Lightning talks from our Spatial Thinkers<a class="headerlink" href="#1010-lightning-talks-from-our-spatial-thinkers" title="Permanent link">&para;</a></h4>
 <p>10:10 <strong>Anusha Goyal</strong> (UCLA)<br />
 A Missing Piece of the Puzzle</p>
-<p><img alt="" src="images/anusha-813x1024.jpg" /></p>
+<p><a class="glightbox" href="images/anusha-813x1024.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/anusha-813x1024.jpg" /></a></p>
 <p>10:18 <strong>Young-Kyung Kim</strong> (USC)<br />
 Shifting Resolutions</p>
-<p><img alt="" src="../images/young-kyung.jpg" /></p>
+<p><a class="glightbox" href="../images/young-kyung.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/young-kyung.jpg" /></a></p>
 <p>10:24 <strong>Robert Cudd</strong> (UCLA)<br />
 The World as Will and Representation</p>
-<p><img alt="Robert Cudd" src="images/robert-e1573583567771.jpg" /></p>
+<p><a class="glightbox" href="images/robert-e1573583567771.jpg" data-type="image" data-width="auto" data-height="auto" data-title="Robert Cudd" data-desc-position="bottom"><img alt="Robert Cudd" src="images/robert-e1573583567771.jpg" /></a></p>
 <p>10:32 <strong>Kate Vavra-Musser</strong> (USC)<br />
 Exposure Pathways</p>
-<p><img alt="" src="../images/vavra-musser.jpg" /></p>
+<p><a class="glightbox" href="../images/vavra-musser.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/vavra-musser.jpg" /></a></p>
 <p>10:40 <strong>Seher Randhawa</strong> (USC)<br />
 Locating Impacts</p>
-<p><img alt="" src="../images/seher.jpg" /></p>
+<p><a class="glightbox" href="../images/seher.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/seher.jpg" /></a></p>
 <p>10:48 <strong>Mariah Tso</strong> (UCLA)<br />
 Unsettling Maps</p>
-<p><img alt="" src="images/Mtso_photo-e1573574932237-1024x576.jpg" /></p>
-<h4 id="1100-mapathon-tutorial-and-launch">11:00 Mapathon Tutorial and Launch</h4>
+<p><a class="glightbox" href="images/Mtso_photo-e1573574932237-1024x576.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Mtso_photo-e1573574932237-1024x576.jpg" /></a></p>
+<h4 id="1100-mapathon-tutorial-and-launch">11:00 Mapathon Tutorial and Launch<a class="headerlink" href="#1100-mapathon-tutorial-and-launch" title="Permanent link">&para;</a></h4>
 <p><strong>What to expect once the Map-a-thon begins<br />
 </strong>We will be giving brief tutorials/workshops to get people up to speed and we will have volunteers on hand to get you started and answer questions. As we map we will have a leaderboard showing our progress against USC. In addition we will have a live feed so we can say hello and see how are counterparts are doing.11:00 Missing Maps and OSM KICK OFF with UCLA's James Walker</p>
 <p>Get an <a href="https://www.openstreetmap.org/user/new">OSM account</a></p>
@@ -3438,9 +3774,9 @@ Unsettling Maps</p>
 <p><a href="https://tasks.teachosm.org/project/829">Our back up task of the day</a></p>
 <p><a href="http://www.missingmaps.org/leaderboards/#/uclagisday2019,uscgisday2019">The Leaderboard</a> tracks how many buildings each campus has added throughout the mapathon.</p>
 <p>11:20 Mapathon begins! Live camera view into USC's mapathoners and a shared Leaderboard to track mapping results</p>
-<h4 id="1200-lunch">12:00 Lunch</h4>
-<h4 id="145-winner-announcement">1:45 Winner announcement</h4>
-<p><img alt="GIS Day sponsors" src="images/image-e1573173238426-1024x119.png" /></p>
+<h4 id="1200-lunch">12:00 Lunch<a class="headerlink" href="#1200-lunch" title="Permanent link">&para;</a></h4>
+<h4 id="145-winner-announcement">1:45 Winner announcement<a class="headerlink" href="#145-winner-announcement" title="Permanent link">&para;</a></h4>
+<p><a class="glightbox" href="images/image-e1573173238426-1024x119.png" data-type="image" data-width="auto" data-height="auto" data-title="GIS Day sponsors" data-desc-position="bottom"><img alt="GIS Day sponsors" src="images/image-e1573173238426-1024x119.png" /></a></p>
 
 
 
@@ -3490,11 +3826,19 @@ Unsettling Maps</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
     
     
       <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
-  </body>
+    <script>
+    var elements = document.getElementsByClassName("lightgallery");
+    for(var i=0; i<elements.length; i++) {
+       lightGallery(elements[i]);
+    }
+    </script>
+
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

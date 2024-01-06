@@ -20,8 +20,9 @@
     
     
       
-        <title>Intro to Maps: History and Beyond - Sandblog 2.0</title>
+        <title>Intro to Maps: History and Beyond - OARC Technology Sandbox</title>
       
+    
     
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
@@ -30,9 +31,14 @@
 
 
     
+    <link rel="stylesheet" href="../../css/lightgallery.min.css">
+
+    
     
       
     
+    <script src="../../js/lightgallery.min.js"></script>
+
     
       
         
@@ -50,7 +56,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -74,14 +91,12 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Sandblog 2.0" class="md-header__button md-logo" aria-label="Sandblog 2.0" data-md-component="logo">
+    <a href="../.." title="OARC Technology Sandbox" class="md-header__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5m10.78 2H19v12.18c-.26-.8-1.31-1.39-2.2-1.39h-1v-3a1 1 0 0 0-1-1h-6v-2h2a1 1 0 0 0 1-1v-2h2c1.03 0 1.87-.79 1.98-1.79M5 10.29l4.8 4.5v1a2 2 0 0 0 2 2V19H5v-8.71Z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -92,7 +107,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Sandblog 2.0
+            OARC Technology Sandbox
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -133,6 +148,8 @@
         </button>
       </nav>
       
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -157,6 +174,97 @@
       
         
           
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Welcome
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../about/History%20and%20Mission/" class="md-tabs__link">
+          
+  
+  About
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../projects/current/VSim/" class="md-tabs__link">
+          
+  
+  Projects
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -170,16 +278,18 @@
                     
 
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Sandblog 2.0" class="md-nav__button md-logo" aria-label="Sandblog 2.0" data-md-component="logo">
+    <a href="../.." title="OARC Technology Sandbox" class="md-nav__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5m10.78 2H19v12.18c-.26-.8-1.31-1.39-2.2-1.39h-1v-3a1 1 0 0 0-1-1h-6v-2h2a1 1 0 0 0 1-1v-2h2c1.03 0 1.87-.79 1.98-1.79M5 10.29l4.8 4.5v1a2 2 0 0 0 2 2V19H5v-8.71Z"/></svg>
 
     </a>
-    Sandblog 2.0
+    OARC Technology Sandbox
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -195,11 +305,100 @@
         
   
   <span class="md-ellipsis">
-    Welcome to MkDocs
+    Welcome
   </span>
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/History%20and%20Mission/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    History and Mission
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/Who%20We%20Are/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Who We Are
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -217,15 +416,18 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -236,8 +438,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Archive
           </label>
@@ -3490,6 +3692,140 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Current
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Current
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/current/VSim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VSim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/current/world%27s%20columbian%20exposition%20reconstruction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    World's columbian exposition reconstruction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -3856,16 +4192,16 @@
                   
 
 
-<h3 id="to-start-navigate-to-this-page-via-the-url-below">To start, navigate to this page via the URL below:</h3>
+<h3 id="to-start-navigate-to-this-page-via-the-url-below">To start, navigate to this page via the URL below:<a class="headerlink" href="#to-start-navigate-to-this-page-via-the-url-below" title="Permanent link">&para;</a></h3>
 <p><a href="http://sandbox.idre.ucla.edu/sandbox/intro-to-maps-history-and-beyond">http://sandbox.idre.ucla.edu/sandbox/intro-to-maps-history-and-beyond</a></p>
 <p>[iframe src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1DyOxCYw5KgPCdkMwhr_zfqcE-pVT-tdjpucchc2EQrw"]</p>
-<h3 id="what-is-a-map-what-is-in-a-map-how-do-you-map">"What is a map? What is <em>in</em> a map? <em>How</em> do you map?"</h3>
+<h3 id="what-is-a-map-what-is-in-a-map-how-do-you-map">"What is a map? What is <em>in</em> a map? <em>How</em> do you map?"<a class="headerlink" href="#what-is-a-map-what-is-in-a-map-how-do-you-map" title="Permanent link">&para;</a></h3>
 <p>[caption id="attachment_2099" align="aligncenter" width="339"]<a href="http://makingmaps.owu.edu/this_is_not_krygier_wood.pdf"><img alt="They're Maps!" src="images/theyremaps.jpg" /></a> Selection from John Krygier and Denis Wood - Ce N'est Pas Le Monde."[/caption]</p>
-<h2 id="our-views-on-maps">Our Views on Maps:</h2>
-<h4 id="andy-httpmappingtheonegithubiomappingtheone">Andy: <a href="http://mappingtheone.github.io/mappingtheone/">http://mappingtheone.github.io/mappingtheone/</a></h4>
-<h4 id="albert-httpalbertkunboluclaedu">Albert: <a href="http://albertkun.bol.ucla.edu/">http://albertkun.bol.ucla.edu/</a></h4>
+<h2 id="our-views-on-maps">Our Views on Maps:<a class="headerlink" href="#our-views-on-maps" title="Permanent link">&para;</a></h2>
+<h4 id="andy-httpmappingtheonegithubiomappingtheone">Andy: <a href="http://mappingtheone.github.io/mappingtheone/">http://mappingtheone.github.io/mappingtheone/</a><a class="headerlink" href="#andy-httpmappingtheonegithubiomappingtheone" title="Permanent link">&para;</a></h4>
+<h4 id="albert-httpalbertkunboluclaedu">Albert: <a href="http://albertkun.bol.ucla.edu/">http://albertkun.bol.ucla.edu/</a><a class="headerlink" href="#albert-httpalbertkunboluclaedu" title="Permanent link">&para;</a></h4>
 <p>Mapping can be defined in so many different ways, there is no easy answer to these questions. In fact, your research can dictate the parameter of choices that define <em>your</em> map. Below are a few examples of just how multi-faceted mapping can be for any discipline, and how the <em>digital</em> can help scope and develop innovative approaches to projects. How then might <em>your</em> project utilize these tools?</p>
-<h2 id="mapping-101-elements-of-a-map">Mapping 101: Elements of a Map*</h2>
+<h2 id="mapping-101-elements-of-a-map">Mapping 101: Elements of a Map*<a class="headerlink" href="#mapping-101-elements-of-a-map" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Title</li>
 <li>Data frame</li>
@@ -3881,7 +4217,7 @@
 <li>Coordinates **This list is not exhaustive and there other optional elements that you can include such as border and inset maps.</li>
 </ol>
 <p>Why? All of these elements help assist you in reading the map, the context of when and how the map was made, and the purpose of the map.</p>
-<h2 id="mapping-102-projections">Mapping 102: Projections</h2>
+<h2 id="mapping-102-projections">Mapping 102: Projections<a class="headerlink" href="#mapping-102-projections" title="Permanent link">&para;</a></h2>
 <p><a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2016/03/Goldstyn_projections.jpg"><img alt="Source: Jacques Goldstyn, 1983." src="images/Goldstyn_projections-744x731.jpg" /></a>Source: <a href="https://www.mapthematics.com/forums/viewtopic.php?f=8&amp;t=233">Jacques Goldstyn, 1983</a>.</p>
 <blockquote>
 <p>"Everything is related to everything else, but near things are more related than distant things." -Waldo Tobler</p>
@@ -3895,11 +4231,11 @@
 <li>Area</li>
 </ol>
 <p>In short, in order to preserve one of these elements with highest fidelity, the other elements are to be sacrificed to some degree.</p>
-<p>[caption id="attachment_2149" align="aligncenter" width="465"]<img alt="Source: https://en.wikipedia.org/wiki/Mercator_projection#/media/File:Mercator_projection_SW.jpg" src="images/1024px-Mercator_projection_SW-744x631.jpg" /> https://en.wikipedia.org/wiki/Mercator_projection#/media/File:Mercator_projection_SW.jpg[/caption]</p>
-<p>[caption id="attachment_2112" align="aligncenter" width="453"]<img alt="Impact of map projections. Source: http://makingmapsblog.tumblr.com/post/97906950351/source-comparative-map-africa-vs-us-china" src="images/projectionafrica.jpg" /> Impact of map projections. Source: <a href="https://www.flickr.com/photos/internetarchivebookimages/14762351614/">https://www.flickr.com/photos/internetarchivebookimages/14762351614/</a>[/caption]</p>
+<p>[caption id="attachment_2149" align="aligncenter" width="465"]<a class="glightbox" href="images/1024px-Mercator_projection_SW-744x631.jpg" data-type="image" data-width="auto" data-height="auto" data-title="Source: https://en.wikipedia.org/wiki/Mercator_projection#/media/File:Mercator_projection_SW.jpg" data-desc-position="bottom"><img alt="Source: https://en.wikipedia.org/wiki/Mercator_projection#/media/File:Mercator_projection_SW.jpg" src="images/1024px-Mercator_projection_SW-744x631.jpg" /></a> https://en.wikipedia.org/wiki/Mercator_projection#/media/File:Mercator_projection_SW.jpg[/caption]</p>
+<p>[caption id="attachment_2112" align="aligncenter" width="453"]<a class="glightbox" href="images/projectionafrica.jpg" data-type="image" data-width="auto" data-height="auto" data-title="Impact of map projections. Source: http://makingmapsblog.tumblr.com/post/97906950351/source-comparative-map-africa-vs-us-china" data-desc-position="bottom"><img alt="Impact of map projections. Source: http://makingmapsblog.tumblr.com/post/97906950351/source-comparative-map-africa-vs-us-china" src="images/projectionafrica.jpg" /></a> Impact of map projections. Source: <a href="https://www.flickr.com/photos/internetarchivebookimages/14762351614/">https://www.flickr.com/photos/internetarchivebookimages/14762351614/</a>[/caption]</p>
 <hr />
-<h1 id="history-of-mapping">History of Mapping</h1>
-<h3 id="john-snow">John Snow</h3>
+<h1 id="history-of-mapping">History of Mapping<a class="headerlink" href="#history-of-mapping" title="Permanent link">&para;</a></h1>
+<h3 id="john-snow">John Snow<a class="headerlink" href="#john-snow" title="Permanent link">&para;</a></h3>
 <p><a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2016/01/snow_map.png"><img alt="snow_map" src="images/snow_map-744x708.png" /></a></p>
 <p>While maps have existed throughout human history, the “John Snow Cholera Map” from 1854 illustrates the first time that a map was used to spatially analyze a phenomenon; in this case a cholera outbreak within London. In order to produce this map a couple of pieces of geographic information needed to come together:</p>
 <ol>
@@ -3908,16 +4244,16 @@
 <li>Locations of the hand-pumps used to get water from.</li>
 </ol>
 <p>Each line represents a death, and a concentration can be seen around a certain street. After having identified the problem, this map allowed Snow to write a letter to the authorities and prompted the end of cholera outbreaks in the locale.</p>
-<h3 id="minard">Minard</h3>
+<h3 id="minard">Minard<a class="headerlink" href="#minard" title="Permanent link">&para;</a></h3>
 <p>The representation of 3 dimensional space onto a flat, 2 dimensional platform–a map–brings with it many challenges and compromises (e.g. projection systems). Every "flat" map in existence compromises on one geographical element: <strong>Shape</strong>, <strong>Area</strong>, <strong>Distance</strong> or <strong>Direction</strong>. So too, does the representation of the "fourth dimension", or time, bring about much to contemplate on how best to summarize and eventually effectively visualize geo-temporal data. Historically, inventive methods employed in visualizing change over time has produced infamous graphics such as Minard's map of Napoleon's Russian Campaign in 1812.</p>
-<p><img alt="Minard Map" src="../images/p12p2-lg.jpg" /></p>
-<h3 id="bunge">Bunge</h3>
-<p>[caption id="attachment_2134" align="aligncenter" width="594"]<img alt="Bunge, W. 1971. Fitzgerald: Geography of a revolution. Cambridge, MA : Schenkman." src="images/neighborbunge-744x353.jpg" /> Bunge, W. 1971. Fitzgerald: Geography of a revolution. Cambridge, MA : Schenkman.[/caption]</p>
+<p><a class="glightbox" href="../images/p12p2-lg.jpg" data-type="image" data-width="auto" data-height="auto" data-title="Minard Map" data-desc-position="bottom"><img alt="Minard Map" src="../images/p12p2-lg.jpg" /></a></p>
+<h3 id="bunge">Bunge<a class="headerlink" href="#bunge" title="Permanent link">&para;</a></h3>
+<p>[caption id="attachment_2134" align="aligncenter" width="594"]<a class="glightbox" href="images/neighborbunge-744x353.jpg" data-type="image" data-width="auto" data-height="auto" data-title="Bunge, W. 1971. Fitzgerald: Geography of a revolution. Cambridge, MA : Schenkman." data-desc-position="bottom"><img alt="Bunge, W. 1971. Fitzgerald: Geography of a revolution. Cambridge, MA : Schenkman." src="images/neighborbunge-744x353.jpg" /></a> Bunge, W. 1971. Fitzgerald: Geography of a revolution. Cambridge, MA : Schenkman.[/caption]</p>
 <p>Radical and critical cartography has seen a recent resurgence in academia and popular media. William Bunge was an early innovator of radical cartography and helped to found the <a href="https://civic.mit.edu/blog/kanarinka/the-detroit-geographic-expedition-and-institute-a-case-study-in-civic-mapping">Detroit Geographic Expedition</a>. His work was community focused and was in part influenced by the 1967 Detroit riots. Here is an example of two maps using the same data. One created by a city agency and the other created by Bunge. Can you tell the difference?</p>
 <iframe class="juxtapose" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=b4a4df00-0278-11e6-a524-0e7075bba956" width="100%" height="554" frameborder="0"></iframe>
 
 <hr />
-<h1 id="interactive-exercise">Interactive Exercise</h1>
+<h1 id="interactive-exercise">Interactive Exercise<a class="headerlink" href="#interactive-exercise" title="Permanent link">&para;</a></h1>
 <p>Please visit the HyperCities map library: <a href="http://www.hypercities.com/maplibrary/maplibrary.html">http://www.hypercities.com/maplibrary/maplibrary.html</a></p>
 <p><a href="http://www.hypercities.com/maplibrary/maplibrary.html"><img alt="2016-04-11t" src="images/2016-04-11t-744x154.png" /></a></p>
 <p>Share your observations on the process of a print map becoming a digital map.</p>
@@ -3927,53 +4263,53 @@
 <li>Should we care?</li>
 </ul>
 <hr />
-<h1 id="digital-mapping-history">Digital Mapping History</h1>
-<h3 id="esris-arcinfo-and-arcview">ESRI's ArcInfo and ArcView</h3>
+<h1 id="digital-mapping-history">Digital Mapping History<a class="headerlink" href="#digital-mapping-history" title="Permanent link">&para;</a></h1>
+<h3 id="esris-arcinfo-and-arcview">ESRI's ArcInfo and ArcView<a class="headerlink" href="#esris-arcinfo-and-arcview" title="Permanent link">&para;</a></h3>
 <p><a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2016/01/arcview.png"><img alt="arcview" src="images/arcview-744x483.png" /></a>While previous cartographic maps were done by hand, increasingly as computer processing became more powerful, spatial information began to be "digitized". Whether it be from tracing old paper maps, or redoing them anew, spatial processing began to take off with the advent of ESRI's ArcInfo command-line based software.</p>
-<h3 id="xerox-parc-map-viewer">Xerox PARC Map Viewer</h3>
+<h3 id="xerox-parc-map-viewer">Xerox PARC Map Viewer<a class="headerlink" href="#xerox-parc-map-viewer" title="Permanent link">&para;</a></h3>
 <p><a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2016/01/usmap.gif"><img alt="usmap" src="images/usmap.gif" /></a></p>
 <p>This map viewer was the first of its kind to debut to the young World Wide Web in 1993. The signified the transition to a digital age where spatial information could be shared online.</p>
-<h3 id="mapquest">MapQuest</h3>
+<h3 id="mapquest">MapQuest<a class="headerlink" href="#mapquest" title="Permanent link">&para;</a></h3>
 <p><a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2016/01/mapquest-directions3.jpg"><img alt="mapquest-directions3" src="images/mapquest-directions3.jpg" /></a>The rapid development of the Internet allowed a new space for mapping on the web to be explored, not just as static gifs, like in the PARC map viewer, but rather as zoom-able and pan-able images; MapQuest was the first online mapping platform to do so.</p>
-<h3 id="google-earth">Google Earth</h3>
+<h3 id="google-earth">Google Earth<a class="headerlink" href="#google-earth" title="Permanent link">&para;</a></h3>
 <p><a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2016/01/googleearth.jpg"><img alt="googleearth" src="images/googleearth-744x465.jpg" /></a></p>
 <p>After Google acquired Keyhole in 2004, their application was re-branded as Google Earth; a standalone application for interrogating the entire planet.</p>
 <p>Among one of the many new features implemented, a time slider was also included to sift through historic imagery. The obvious choice to represent time via an interface is to provide some sort of time dial, a time-machine of sorts that allows you to punch in a past (or future) date, and navigate to that time to present information relevant to that temporal space. Interactive time representations are made possible via a myriad of functional visual widgets. Most popular are the time sliders that allow users to navigate into the past by "sliding" a set of handles to go back (or forward) in time. Google Earth uses such a slider effectively to navigate time:</p>
 <p><a href="https://support.google.com/earth/answer/183758?hl=en"><img alt="google earth time slider" src="../images/earth_183758_time_slider_en.png" /></a></p>
 <p>The advantage of dynamic time sliders is that they are malleable, they adjust to the time spans dictated by the content material. In the screen shot from Google Earth, the time slider itself is indicative of the content being provided, in this case, we can depict that this particular location has historical satellite image dating back to 1992.</p>
-<h3 id="openstreetmap-and-google-maps">OpenStreetMap and Google Maps</h3>
+<h3 id="openstreetmap-and-google-maps">OpenStreetMap and Google Maps<a class="headerlink" href="#openstreetmap-and-google-maps" title="Permanent link">&para;</a></h3>
 <p><a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2016/01/osm.png"><img alt="osm" src="images/osm-744x402.png" /></a>OpenStreetMap and Google Maps are "slippy" maps that pioneered the idea of seamlessly moving around a map.</p>
-<h3 id="hypercities">Hypercities</h3>
+<h3 id="hypercities">Hypercities<a class="headerlink" href="#hypercities" title="Permanent link">&para;</a></h3>
 <p><a href="http://hypercities.com"><img alt="hypercities" src="images/Screen-Shot-2015-05-07-at-10.15.35-AM-744x382.png" /></a></p>
 <blockquote>
 <p>I turn off Google Maps and start to drive. I wonder: what would it mean to drive downward, into the buried pasts that persist somewhere—in the imagination, in the archive, in the memories of others, in the traces of places long gone and lost? Who used to live here? What used to be there? What’s buried under this freeway, under this skyscraper, beneath these overpasses? What has vanished imperceptibly from the surface of the earth? What voices and ghosts haunt, however imperceptibly, these concrete landscapes? Why do I care? It’s a past which is, ostensibly, not my own. I don’t recognize it. It’s not mine. Time is out of joint. - <em>Todd Presner (HyperCities, Thick Mapping in the Digital Humanities)</em></p>
 </blockquote>
 <p>Perhaps one of the most innovative geotemporal platforms born and created within academia is <a href="http://www.hypercities.com">HyperCities</a>, the brainchild of our very own Todd Presner. The idea that we can spiral downwards–or upwards–from any location to navigate into the past or future is at the core of the HyperCities platform, to the degree that technology can allow such a concept to manifest.</p>
 <hr />
-<h1 id="mapping-tools-john-snow-mapped-three-digital-takes">Mapping tools - "John Snow Mapped: Three digital takes."</h1>
-<h3 id="google-fusion-tables">Google Fusion Tables</h3>
+<h1 id="mapping-tools-john-snow-mapped-three-digital-takes">Mapping tools - "John Snow Mapped: Three digital takes."<a class="headerlink" href="#mapping-tools-john-snow-mapped-three-digital-takes" title="Permanent link">&para;</a></h1>
+<h3 id="google-fusion-tables">Google Fusion Tables<a class="headerlink" href="#google-fusion-tables" title="Permanent link">&para;</a></h3>
 <iframe src="https://www.google.com/fusiontables/embedviz?q=select+col7+from+147wlDisDp6NnpNxHQpbnjAQ-iW4dR2MAmFdQxYc&amp;viz=MAP&amp;h=false&amp;lat=51.51338517455004&amp;lng=-0.1350014629516636&amp;t=1&amp;z=17&amp;l=col7&amp;y=2&amp;tmplt=2&amp;hml=KML" width="100%" height="300" frameborder="no" scrolling="no"></iframe>
 
 <p><a href="https://www.google.com/fusiontables/DataSource?docid=147wlDisDp6NnpNxHQpbnjAQ-iW4dR2MAmFdQxYc#rows:id=1">Robin Wilson's original Google Fusion map.</a></p>
-<h3 id="arcgis-online">ArcGIS Online</h3>
+<h3 id="arcgis-online">ArcGIS Online<a class="headerlink" href="#arcgis-online" title="Permanent link">&para;</a></h3>
 <iframe title="John Snow example" src="//www.arcgis.com/apps/Embed/index.html?webmap=c86e6451040c4ada907369c03c16619b&amp;extent=-0.1417,51.5113,-0.132,51.5155&amp;zoom=true&amp;scale=true&amp;disable_scroll=true&amp;theme=light" width="100%" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 
 <p>Using data from Robin Wilson's blog.</p>
-<h3 id="cartodb">CartoDB</h3>
+<h3 id="cartodb">CartoDB<a class="headerlink" href="#cartodb" title="Permanent link">&para;</a></h3>
 <iframe src="https://andyrutkowski.cartodb.com/viz/248f6ae4-02c7-11e6-9286-0ecfd53eb7d3/embed_map" width="100%" height="520" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
 <p>Using data from Robin Wilson's blog.</p>
 <p>Robin Wilson had a great blog post about this a few years ago and we featured his work and data in the above maps - http://blog.rtwilson.com/john-snows-cholera-data-in-more-formats/</p>
 <hr />
-<h1 id="mapping-resources">Mapping Resources</h1>
-<h3 id="desktop-gis-vs-online">Desktop GIS vs Online</h3>
+<h1 id="mapping-resources">Mapping Resources<a class="headerlink" href="#mapping-resources" title="Permanent link">&para;</a></h1>
+<h3 id="desktop-gis-vs-online">Desktop GIS vs Online<a class="headerlink" href="#desktop-gis-vs-online" title="Permanent link">&para;</a></h3>
 <p>Desktop mapping programs are useful when the end result is a static map used for publication, or certain types of geographic analysis needs to be done. <a href="http://www.arcgis.com/features/">ArcGIS</a> has the most support and documentation, however requires a license that is expensive outside of academia. <a href="http://www.qgis.org/en/site/">QGIS</a> is a free solution and is going for creating simple maps, but the learning curve is higher for doing more intensive geo-processing.</p>
 <p>Online maps are useful when the end result is an interactive map for illustrating issues and research. They are powerful tools for creating "mash-ups" which combines data from different platforms onto one.</p>
 <p><a href="https://developers.google.com/maps/">Google Maps API</a> is the widely used as a starting platform and has good examples with documentation. The downside to Google Maps API is that the API is closed source, so projects can get depreciated.</p>
 <p><a href="http://www.leafletjs.com/">Leaflet</a> is a online mapping platform that is open source, this means that depreciation is not an issue. The main drawbacks with Leaflet is that some functions are not a fully flushed out as Google Maps API.</p>
-<h3 id="ucla-geoportal">UCLA GeoPortal</h3>
+<h3 id="ucla-geoportal">UCLA GeoPortal<a class="headerlink" href="#ucla-geoportal" title="Permanent link">&para;</a></h3>
 <p><a href="http://gis.ucla.edu/geodata/">http://gis.ucla.edu/geodata/</a></p>
-<h3 id="ucla-research-guides-and-tutorials">UCLA Research Guides and Tutorials</h3>
+<h3 id="ucla-research-guides-and-tutorials">UCLA Research Guides and Tutorials<a class="headerlink" href="#ucla-research-guides-and-tutorials" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Maps - <a href="http://guides.library.ucla.edu/maps">http://guides.library.ucla.edu/maps</a><ul>
 <li>How to locate maps in library - <a href="http://guides.library.ucla.edu/c.php?">http://guides.library.ucla.edu/c.php?</a>g=180224&amp;p=1185521</li>
@@ -3982,25 +4318,25 @@
 <li>GIS - http://guides.library.ucla.edu/gis</li>
 <li>Tutorials - <a href="http://sandbox.idre.ucla.edu/sandbox/category/tutorials">http://sandbox.idre.ucla.edu/sandbox/category/tutorials</a></li>
 </ul>
-<h3 id="free-online-tutorials">Free Online Tutorials</h3>
+<h3 id="free-online-tutorials">Free Online Tutorials<a class="headerlink" href="#free-online-tutorials" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Lynda.com @ UCLA - <a href="http://learnit.ucla.edu/lynda.com">http://learnit.ucla.edu/lynda.com</a></li>
 <li><a href="http://www.esri.com/training/main/public-safety">http://www.esri.com/training/main/public-safet</a>y</li>
 </ul>
-<h3 id="map-collections-online">Map Collections Online</h3>
+<h3 id="map-collections-online">Map Collections Online<a class="headerlink" href="#map-collections-online" title="Permanent link">&para;</a></h3>
 <p><a href="http://www.davidrumsey.com/view/luna">http://www.davidrumsey.com/view/luna</a></p>
-<h3 id="further-reading">Further Reading</h3>
+<h3 id="further-reading">Further Reading<a class="headerlink" href="#further-reading" title="Permanent link">&para;</a></h3>
 <ul>
 <li>The History of Cartography free via University of Chicago Press - <a href="http://www.press.uchicago.edu/books/HOC/index.html">http://www.press.uchicago.edu/books/HOC/index.html</a></li>
 <li>John Krygier and Denis Wood - <a href="https://makingmaps.net/">Making Maps blog</a></li>
 </ul>
-<h3 id="office-hours-sil-wednesdays-3-5">Office Hours - SIL Wednesdays 3-5</h3>
-<h3 id="consultations-contact-us">Consultations - Contact US!</h3>
+<h3 id="office-hours-sil-wednesdays-3-5">Office Hours - SIL Wednesdays 3-5<a class="headerlink" href="#office-hours-sil-wednesdays-3-5" title="Permanent link">&para;</a></h3>
+<h3 id="consultations-contact-us">Consultations - Contact US!<a class="headerlink" href="#consultations-contact-us" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Andy - arutkowski (at) library.ucla.edu</li>
 <li>Albert - albertkun (at) idre.ucla.edu</li>
 </ul>
-<h3 id="feedback-survey">Feedback Survey:</h3>
+<h3 id="feedback-survey">Feedback Survey:<a class="headerlink" href="#feedback-survey" title="Permanent link">&para;</a></h3>
 <p><a href="http://goo.gl/forms/8Q6rZdKRDN">http://goo.gl/forms/8Q6rZdKRDN</a></p>
 
 
@@ -4051,11 +4387,19 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
     
     
       <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
-  </body>
+    <script>
+    var elements = document.getElementsByClassName("lightgallery");
+    for(var i=0; i<elements.length; i++) {
+       lightGallery(elements[i]);
+    }
+    </script>
+
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

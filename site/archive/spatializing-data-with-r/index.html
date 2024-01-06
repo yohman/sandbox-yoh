@@ -20,8 +20,9 @@
     
     
       
-        <title>Spatializing Data with R - Sandblog 2.0</title>
+        <title>Spatializing Data with R - OARC Technology Sandbox</title>
       
+    
     
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
@@ -30,9 +31,14 @@
 
 
     
+    <link rel="stylesheet" href="../../css/lightgallery.min.css">
+
+    
     
       
     
+    <script src="../../js/lightgallery.min.js"></script>
+
     
       
         
@@ -50,7 +56,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -74,14 +91,12 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Sandblog 2.0" class="md-header__button md-logo" aria-label="Sandblog 2.0" data-md-component="logo">
+    <a href="../.." title="OARC Technology Sandbox" class="md-header__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5m10.78 2H19v12.18c-.26-.8-1.31-1.39-2.2-1.39h-1v-3a1 1 0 0 0-1-1h-6v-2h2a1 1 0 0 0 1-1v-2h2c1.03 0 1.87-.79 1.98-1.79M5 10.29l4.8 4.5v1a2 2 0 0 0 2 2V19H5v-8.71Z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -92,7 +107,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Sandblog 2.0
+            OARC Technology Sandbox
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -133,6 +148,8 @@
         </button>
       </nav>
       
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -157,6 +174,97 @@
       
         
           
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Welcome
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../about/History%20and%20Mission/" class="md-tabs__link">
+          
+  
+  About
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../projects/current/VSim/" class="md-tabs__link">
+          
+  
+  Projects
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -170,16 +278,18 @@
                     
 
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Sandblog 2.0" class="md-nav__button md-logo" aria-label="Sandblog 2.0" data-md-component="logo">
+    <a href="../.." title="OARC Technology Sandbox" class="md-nav__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5m10.78 2H19v12.18c-.26-.8-1.31-1.39-2.2-1.39h-1v-3a1 1 0 0 0-1-1h-6v-2h2a1 1 0 0 0 1-1v-2h2c1.03 0 1.87-.79 1.98-1.79M5 10.29l4.8 4.5v1a2 2 0 0 0 2 2V19H5v-8.71Z"/></svg>
 
     </a>
-    Sandblog 2.0
+    OARC Technology Sandbox
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -195,11 +305,100 @@
         
   
   <span class="md-ellipsis">
-    Welcome to MkDocs
+    Welcome
   </span>
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/History%20and%20Mission/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    History and Mission
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/Who%20We%20Are/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Who We Are
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -217,15 +416,18 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -236,8 +438,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Archive
           </label>
@@ -3203,6 +3405,140 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Current
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Current
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/current/VSim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VSim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/current/world%27s%20columbian%20exposition%20reconstruction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    World's columbian exposition reconstruction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -3280,10 +3616,10 @@
                   
 
 
-<h1 id="spatializing-data-with-r">Spatializing Data with R</h1>
+<h1 id="spatializing-data-with-r">Spatializing Data with R<a class="headerlink" href="#spatializing-data-with-r" title="Permanent link">&para;</a></h1>
 <p>While WYSIWYG software packages like <a href="https://www.esri.com/en-us/arcgis/about-arcgis/overview">ArcGIS</a> and <a href="https://www.qgis.org/">QGIS</a> remain a standard in cartographic representations, open source, scripting solutions have always had a strong cadre of support, especially for advanced spatial research initiatives. With a development history that harks back to the late 1990s, <a href="https://www.r-project.org/">R</a> has been championed as the free and open source programming tool for statisticians the world over. With its growth and foray into data viz, more and more researchers are adopting R as a solution for their spatial needs, due to its scripting capability, and strong statistical integration.</p>
 <p>Here, we introduce you to <a href="https://github.com/mtennekes/tmap">tmap</a> (thematic maps), an actively maintained open-source <a href="http://stackoverflow.com/tags/r/info">R</a>-library for drawing thematic maps, written by <a href="http://stackoverflow.com/users/1393348/martijn-tennekes">Martijn Tennekes</a>. </p>
-<h3 id="data">Data</h3>
+<h3 id="data">Data<a class="headerlink" href="#data" title="Permanent link">&para;</a></h3>
 <p>This workshop presumes that you have a basic knowledge on spatial research, and follows up on the <a href="https://sandbox.idre.ucla.edu/sandbox/getting-started-with-spatial-research">Getting Started Spatial Research workshop</a>. Data can be obtained from the <a href="https://data.lacity.org/">LA Data Portal</a> following <a href="https://ucladataguides.readthedocs.io/en/latest/working_with_data/data_portal.html">this tutorial</a>.</p>
 <p>You can also use any of the data here:</p>
 <p>Sample datasets:</p>
@@ -3292,7 +3628,7 @@
 <li><a href="https://sandbox.idre.ucla.edu/data/gis%20workshop/STOLEN%20BIKE%202019.csv">Stolen Bikes in Los Angeles 2019</a> (<a href="https://data.lacity.org/A-Safe-City/Crime-Data-from-2010-to-Present/63jg-8b9z">source</a>)</li>
 <li><a href="https://sandbox.idre.ucla.edu/data/gis%20workshop/CHILD%20ABUSE%202019.csv">Child Abuse 2019</a> (<a href="https://data.lacity.org/A-Safe-City/Crime-Data-from-2010-to-Present/63jg-8b9z">source</a>)</li>
 </ul>
-<h3 id="r-rstudio">R + RStudio</h3>
+<h3 id="r-rstudio">R + RStudio<a class="headerlink" href="#r-rstudio" title="Permanent link">&para;</a></h3>
 <p><a href="https://www.r-project.org/">R</a> is a programming language that is especially powerful for data exploration, visualization, and statistical analysis. To interact with R, we use <a href="https://www.rstudio.com/">RStudio</a>. Follow these instructions to ensure that you have the proper environment to get started with your R-based research.</p>
 <p><strong>MacOS setup</strong></p>
 <p><a href="https://www.youtube.com/watch?v=5-ly3kyxwEg">Video Tutorial</a></p>
@@ -3300,65 +3636,65 @@
 <p><strong>Windows setup</strong></p>
 <p><a href="https://www.youtube.com/watch?v=q0PjTAylwoU">Video Tutorial</a></p>
 <p>Install R by downloading and running <a href="https://cran.r-project.org/bin/windows/base/release.htm">this .exe file</a> from <a href="https://cran.r-project.org/index.html">CRAN</a>. Also, please install the <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio IDE</a>. Note that if you have separate user and admin accounts, you should run the installers as administrator (right-click on .exe file and select "Run as administrator" instead of double-clicking). Otherwise problems may occur later, for example when installing R packages.</p>
-<h3 id="installing-tmap">Installing tmap</h3>
+<h3 id="installing-tmap">Installing tmap<a class="headerlink" href="#installing-tmap" title="Permanent link">&para;</a></h3>
 <p>Launch RStudio to get started. Use the console to follow the commands throughout this workshop. Start with the installation of the "tmap" package. Note that this may take up to <strong>5 minutes</strong> to install (yes, there are lots of dependencies here):</p>
-<pre><code>install.packages(&quot;tmap&quot;)
-</code></pre>
+<div class="highlight"><pre><span></span><code>install.packages(&quot;tmap&quot;)
+</code></pre></div>
 <p>Now that the tmap package is installed, add the following libraries to your current session. Note that "sf" is the library that stands for "<a href="https://r-spatial.github.io/sf/">Simple Features</a>" which allows data to be spatialized for R.</p>
-<pre><code>library(tmap)
+<div class="highlight"><pre><span></span><code>library(tmap)
 library(sf)
-</code></pre>
+</code></pre></div>
 <p>Load the data. Data can be obtained from the <a href="https://data.lacity.org/">LA Data Portal</a> following <a href="https://ucladataguides.readthedocs.io/en/latest/working_with_data/data_portal.html">this tutorial</a>, or you can download sample datasets from the links provided in the Data section above. Once downloaded, rename the data file to "arrests.csv," and take note of its path in your computer. Enter the following command to assign a variable "arrests" to your data and change the path accordingly.</p>
 <p>MacOS example:</p>
-<pre><code>arrests &lt;- read.csv(&quot;~/Downloads/gis/arrests.csv&quot;)
-</code></pre>
+<div class="highlight"><pre><span></span><code>arrests &lt;- read.csv(&quot;~/Downloads/gis/arrests.csv&quot;)
+</code></pre></div>
 <p>Windows example (use double back slashes):</p>
-<pre><code>arrests &lt;- read.csv(&quot;C:\\Users\\yohman\\Downloads\\arrests.csv&quot;)
-</code></pre>
+<div class="highlight"><pre><span></span><code>arrests &lt;- read.csv(&quot;C:\\Users\\yohman\\Downloads\\arrests.csv&quot;)
+</code></pre></div>
 <p>Check your environment tab to see your data, and make sure the "lat" and "lon" columns exist:</p>
-<p><img alt="rstudio-arrests-data" src="images/rstudio-arrests-data-1024x298.png" /></p>
+<p><a class="glightbox" href="images/rstudio-arrests-data-1024x298.png" data-type="image" data-width="auto" data-height="auto" data-title="rstudio-arrests-data" data-desc-position="bottom"><img alt="rstudio-arrests-data" src="images/rstudio-arrests-data-1024x298.png" /></a></p>
 <p>Convert "arrests" into a "simple feature" – a spatial geometry format that is tmap readable – by identifying the longitude and latitude columns, and create a new variable "arrests_sf." Also, set the projection (crs) to <a href="https://epsg.io/4326">4326</a>, which stands for WGS84, a geographic coordinate system that reads decimal degrees globally:</p>
-<pre><code>arrests_sf &lt;- st_as_sf(arrests, coords = c(&quot;Lon&quot;, &quot;Lat&quot;), crs = 4326)
-</code></pre>
+<div class="highlight"><pre><span></span><code>arrests_sf &lt;- st_as_sf(arrests, coords = c(&quot;Lon&quot;, &quot;Lat&quot;), crs = 4326)
+</code></pre></div>
 <p>Visualize the tabular data and take notice on the new "geometry" column:</p>
-<pre><code>view(arrests_sf)
-</code></pre>
-<p><img alt="view-arrests_sf" src="images/view-arrests_sf.png" /></p>
+<div class="highlight"><pre><span></span><code>view(arrests_sf)
+</code></pre></div>
+<p><a class="glightbox" href="images/view-arrests_sf.png" data-type="image" data-width="auto" data-height="auto" data-title="view-arrests_sf" data-desc-position="bottom"><img alt="view-arrests_sf" src="images/view-arrests_sf.png" /></a></p>
 <p>Now starts the tmap magic. With just one command "qtm" which stands for "<a href="https://www.rdocumentation.org/packages/tmap/versions/2.3-1/topics/qtm">quick thematic map plot</a>," you can instantly output a map of your data</p>
-<pre><code>qtm(arrests_sf)
-</code></pre>
-<p><img alt="simple dot map" src="images/image-e1579211829540.png" /></p>
+<div class="highlight"><pre><span></span><code>qtm(arrests_sf)
+</code></pre></div>
+<p><a class="glightbox" href="images/image-e1579211829540.png" data-type="image" data-width="auto" data-height="auto" data-title="simple dot map" data-desc-position="bottom"><img alt="simple dot map" src="images/image-e1579211829540.png" /></a></p>
 <p>Let's change the map into an interactive leaflet map.</p>
-<pre><code>tmap_mode(&quot;view&quot;)
+<div class="highlight"><pre><span></span><code>tmap_mode(&quot;view&quot;)
 qtm(arrests_sf)
-</code></pre>
-<p><img alt="leaflet" src="images/leaflet.png" /></p>
+</code></pre></div>
+<p><a class="glightbox" href="images/leaflet.png" data-type="image" data-width="auto" data-height="auto" data-title="leaflet" data-desc-position="bottom"><img alt="leaflet" src="images/leaflet.png" /></a></p>
 <p>Change it back to the original view:</p>
-<pre><code>tmap_mode(&quot;plot&quot;)
-</code></pre>
+<div class="highlight"><pre><span></span><code>tmap_mode(&quot;plot&quot;)
+</code></pre></div>
 <p>To give our data spatial bearing, let's bring in a layer for Los Angeles Council Districts. You can download it in SHP (shapefile) format from the <a href="http://boundaries.latimes.com/sets/">LA Times data portal.</a> Save the file and create a variable for the data.</p>
-<p><img alt="council-districts-from-LA-Times" src="images/council-districts-from-LA-Times.png" /></p>
-<pre><code>la_council_districts &lt;- read_sf(&quot;C:\\Users\\yohman\\Downloads\\l.a. city council district (2012).shp&quot;)
-</code></pre>
+<p><a class="glightbox" href="images/council-districts-from-LA-Times.png" data-type="image" data-width="auto" data-height="auto" data-title="council-districts-from-LA-Times" data-desc-position="bottom"><img alt="council-districts-from-LA-Times" src="images/council-districts-from-LA-Times.png" /></a></p>
+<div class="highlight"><pre><span></span><code>la_council_districts &lt;- read_sf(&quot;C:\\Users\\yohman\\Downloads\\l.a. city council district (2012).shp&quot;)
+</code></pre></div>
 <p>Visualize the council districts.</p>
-<pre><code>qtm(la_council_districts, borders = 'gray',fill=NULL)
-</code></pre>
+<div class="highlight"><pre><span></span><code>qtm(la_council_districts, borders = &#39;gray&#39;,fill=NULL)
+</code></pre></div>
 <p>Visualize arrests and districts together.</p>
-<pre><code>qtm(arrests_sf)+
-    qtm(la_council_districts, borders = 'gray',fill=NULL)
-</code></pre>
-<p><img alt="arrests-with-council-districts" src="images/arrests-with-council-districts.png" /></p>
+<div class="highlight"><pre><span></span><code>qtm(arrests_sf)+
+    qtm(la_council_districts, borders = &#39;gray&#39;,fill=NULL)
+</code></pre></div>
+<p><a class="glightbox" href="images/arrests-with-council-districts.png" data-type="image" data-width="auto" data-height="auto" data-title="arrests-with-council-districts" data-desc-position="bottom"><img alt="arrests-with-council-districts" src="images/arrests-with-council-districts.png" /></a></p>
 <p>Color dots by charge description.</p>
-<pre><code>qtm(arrests_sf, dots.col = &quot;Charge.Group.Description&quot;,dots.size = 0.1)+
-    qtm(la_council_districts, borders = 'darkgray',fill=NULL)
-</code></pre>
-<p><img alt="map-by-charge-type" src="images/map-by-charge-type.png" /></p>
+<div class="highlight"><pre><span></span><code>qtm(arrests_sf, dots.col = &quot;Charge.Group.Description&quot;,dots.size = 0.1)+
+    qtm(la_council_districts, borders = &#39;darkgray&#39;,fill=NULL)
+</code></pre></div>
+<p><a class="glightbox" href="images/map-by-charge-type.png" data-type="image" data-width="auto" data-height="auto" data-title="map-by-charge-type" data-desc-position="bottom"><img alt="map-by-charge-type" src="images/map-by-charge-type.png" /></a></p>
 <p>One map per charge description.</p>
-<pre><code>qtm(arrests_sf, dots.col = &quot;Charge.Group.Description&quot;,dots.size = 0.1,by = &quot;Charge.Group.Description&quot;)+
-    qtm(la_council_districts, borders = 'darkgray',fill=NULL)
-</code></pre>
-<p><img alt="maps-by-charge-type" src="images/maps-by-charge-type.png" /></p>
-<h3 id="sources">Sources</h3>
+<div class="highlight"><pre><span></span><code>qtm(arrests_sf, dots.col = &quot;Charge.Group.Description&quot;,dots.size = 0.1,by = &quot;Charge.Group.Description&quot;)+
+    qtm(la_council_districts, borders = &#39;darkgray&#39;,fill=NULL)
+</code></pre></div>
+<p><a class="glightbox" href="images/maps-by-charge-type.png" data-type="image" data-width="auto" data-height="auto" data-title="maps-by-charge-type" data-desc-position="bottom"><img alt="maps-by-charge-type" src="images/maps-by-charge-type.png" /></a></p>
+<h3 id="sources">Sources<a class="headerlink" href="#sources" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="https://github.com/mtennekes/tmap">tmap github</a></li>
 <li><a href="https://cran.r-project.org/web/packages/tmap/vignettes/tmap-getstarted.html">tmap: get started!</a></li>
@@ -3416,11 +3752,19 @@ qtm(arrests_sf)
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
     
     
       <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
-  </body>
+    <script>
+    var elements = document.getElementsByClassName("lightgallery");
+    for(var i=0; i<elements.length; i++) {
+       lightGallery(elements[i]);
+    }
+    </script>
+
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

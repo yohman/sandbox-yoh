@@ -1,3 +1,28 @@
-site_name: Sandblog 2.0
+site_name: OARC Technology Sandbox
 theme:
   name: material
+  features:
+    - navigation.tabs
+    - search.suggest
+    - search.highlight
+  icon:
+    logo: material/earth-box
+  custom_dir: 'theme'
+
+# Extensions
+markdown_extensions:
+  - markdown.extensions.codehilite
+  - attr_list
+  - md_in_html
+  # Python Markdown
+  - toc:
+      permalink: true
+
+  # Python Markdown Extensions
+  - pymdownx.highlight
+  - pymdownx.superfences
+
+plugins:
+  - search
+  - glightbox:
+      auto_caption: true

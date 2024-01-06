@@ -20,8 +20,9 @@
     
     
       
-        <title>Conversion of 3D Research Data into Interactive Learning Objects (PI: Diane Favro) - Sandblog 2.0</title>
+        <title>Conversion of 3D Research Data into Interactive Learning Objects (PI: Diane Favro) - OARC Technology Sandbox</title>
       
+    
     
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
@@ -30,9 +31,14 @@
 
 
     
+    <link rel="stylesheet" href="../../css/lightgallery.min.css">
+
+    
     
       
     
+    <script src="../../js/lightgallery.min.js"></script>
+
     
       
         
@@ -50,7 +56,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -74,14 +91,12 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Sandblog 2.0" class="md-header__button md-logo" aria-label="Sandblog 2.0" data-md-component="logo">
+    <a href="../.." title="OARC Technology Sandbox" class="md-header__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5m10.78 2H19v12.18c-.26-.8-1.31-1.39-2.2-1.39h-1v-3a1 1 0 0 0-1-1h-6v-2h2a1 1 0 0 0 1-1v-2h2c1.03 0 1.87-.79 1.98-1.79M5 10.29l4.8 4.5v1a2 2 0 0 0 2 2V19H5v-8.71Z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -92,7 +107,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Sandblog 2.0
+            OARC Technology Sandbox
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -133,6 +148,8 @@
         </button>
       </nav>
       
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -157,6 +174,97 @@
       
         
           
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Welcome
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../about/History%20and%20Mission/" class="md-tabs__link">
+          
+  
+  About
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../projects/current/VSim/" class="md-tabs__link">
+          
+  
+  Projects
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -170,16 +278,18 @@
                     
 
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Sandblog 2.0" class="md-nav__button md-logo" aria-label="Sandblog 2.0" data-md-component="logo">
+    <a href="../.." title="OARC Technology Sandbox" class="md-nav__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5m10.78 2H19v12.18c-.26-.8-1.31-1.39-2.2-1.39h-1v-3a1 1 0 0 0-1-1h-6v-2h2a1 1 0 0 0 1-1v-2h2c1.03 0 1.87-.79 1.98-1.79M5 10.29l4.8 4.5v1a2 2 0 0 0 2 2V19H5v-8.71Z"/></svg>
 
     </a>
-    Sandblog 2.0
+    OARC Technology Sandbox
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -195,11 +305,100 @@
         
   
   <span class="md-ellipsis">
-    Welcome to MkDocs
+    Welcome
   </span>
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/History%20and%20Mission/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    History and Mission
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/Who%20We%20Are/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Who We Are
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -217,15 +416,18 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -236,8 +438,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Archive
           </label>
@@ -3226,6 +3428,140 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Current
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Current
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/current/VSim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VSim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/current/world%27s%20columbian%20exposition%20reconstruction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    World's columbian exposition reconstruction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -3330,25 +3666,25 @@
 
   <h1>Conversion of 3D Research Data into Interactive Learning Objects (PI: Diane Favro)</h1>
 
-<h3 id="digital-karnak"><em>Digital Karnak</em></h3>
+<h3 id="digital-karnak"><em>Digital Karnak</em><a class="headerlink" href="#digital-karnak" title="Permanent link">&para;</a></h3>
 <p>The Digital Karnak computer model is a 3D interactive reconstruction of ancient Egypt’s temple of Karnak, one of the largest temple complexes in the world. Originally funded through an NEH program to develop teaching and learning resources, the PIs on the project were Diane Favro (Architecture and Urban Design, UCLA) and Willeke Wendrich (Near Eastern Languages and Cultures, UCLA); Lisa Snyder was technical advisor. Snyder is also representing the original Digital Karnak team and serving as the participating scholar for the conversion of the Karnak model. The website is available at <a href="http://dlib.etc.ucla.edu/projects/Karnak/">http://dlib.etc.ucla.edu/projects/Karnak/</a>; below is a screenshot from the interactive model.</p>
 <p>[gallery ids="1972"]</p>
-<h3 id="roman-forum"><em>Roman Forum</em></h3>
+<h3 id="roman-forum"><em>Roman Forum</em><a class="headerlink" href="#roman-forum" title="Permanent link">&para;</a></h3>
 <p>From 1997 to 2003 the UCLA Cultural Virtual Reality Laboratory (CVR Lab) under the direction of original PIs Bernard Frischer and Diane Favro created a digital model of the Roman Forum as it appeared in late antiquity. From 2002 to 2005, with generous support from the National Science Foundation and other sources, a website was created to share information about the digital Forum model, but not the model itself (<a href="http://dlib.etc.ucla.edu/projects/Forum">http://dlib.etc.ucla.edu/projects/Forum</a>).</p>
 <p>[gallery ids="1978,1988,1989"]</p>
-<h3 id="cathedral-of-santiago-de-compostela"><em>Cathedral of Santiago de Compostela</em></h3>
+<h3 id="cathedral-of-santiago-de-compostela"><em>Cathedral of Santiago de Compostela</em><a class="headerlink" href="#cathedral-of-santiago-de-compostela" title="Permanent link">&para;</a></h3>
 <p>The digital model allows students and researchers to experience the space of the cathedral as it would have been seen by medieval pilgrims to Santiago de Compostela, one of the great pilgrimage basilicas of Europe. The model shows the building as it appeared upon dedication on April 3, 1211 A.D. PI John Dagenais (Spanish and Portuguese, UCLA) received initial funding came from a GTE Foundation Grant for development of Virtual Reality courseware. The project has also been supported by grants from UCLA’s Office of Instructional Development and other internal sources.</p>
 <p>[gallery ids="1968,1967,1966"]</p>
-<h3 id="catalhoyuk-history-houses"><em>Çatalhöyük History Houses</em></h3>
+<h3 id="catalhoyuk-history-houses"><em>Çatalhöyük History Houses</em><a class="headerlink" href="#catalhoyuk-history-houses" title="Permanent link">&para;</a></h3>
 <p>The digital simulation of Çatalhöyük ‘History houses’—or more elaborated Neolithic buildings that were rebuilt multiple times in the same place—aims to define a new approach to digital archaeology that integrates a plurality of data in a visual-analytical environment where advanced interactive techniques simulate the cosmology, shared space, material culture, and experiential aspects of Çatalhöyük cultural landscapes. The original project was developed by Nicola Lercari (World Heritage, UCMerced) and Grant Cox (ArtasMedia).</p>
 <p>[gallery ids="1965"]</p>
-<h3 id="3d-saqqara"><em>3D Saqqara</em></h3>
+<h3 id="3d-saqqara"><em>3D Saqqara</em><a class="headerlink" href="#3d-saqqara" title="Permanent link">&para;</a></h3>
 <p>Under the direction of PI Elaine A. Sullivan (History, UC Santa Cruz), the 3D Saqqara project offers the first fully integrated GIS + 3D modeling project re-creating a truly four-dimensional investigation of the ancient site of Saqqara, Egypt. The temporal model of Saqqara traces change at the cemetery from Egypt’s First to Thirtieth Dynasty, from 2950-332 BCE, visualizing the separate architectural phases now obscured by later alterations of the site. The model was funded by an NEH Digital Humanities Start-Up Grant, a UCSC Faculty Research Grant, an ACLS Digital Innovation Fellowship award, and the W.M. Keck Foundation.</p>
 <p>[gallery ids="1976,1975"]</p>
-<h3 id="pharos-lighthouse"><em>Pharos Lighthouse</em></h3>
+<h3 id="pharos-lighthouse"><em>Pharos Lighthouse</em><a class="headerlink" href="#pharos-lighthouse" title="Permanent link">&para;</a></h3>
 <p>Faced with scant archaeological evidence, conflicting texts, and schematic pictorial representations, scholars have long argued over the design and appearance of the lighthouse. PI Anthony Caldwell (ETC, UCLA) drew upon historical data for his reconstruction, as well as a  close analysis of the structural challenges of the project. Based on the tenets of experimental archaeology, the resulting new digital reconstruction posits a technologically realistic result, calibrated and tested using engineering software.</p>
 <p>[gallery ids="1977,1974,1973,1963,1979"]</p>
-<h3 id="vsim"><em>VSim</em></h3>
+<h3 id="vsim"><em>VSim</em><a class="headerlink" href="#vsim" title="Permanent link">&para;</a></h3>
 <p>VSim facilitates the real-time exploration of highly detailed, three-dimensional computer models in both formal and informal educational settings. Beyond real-time interaction with 3D content, this NEH-funded software offers two critical functions for academic use of interactive computer models: the narrative section that allows users to create linear presentations within the virtual space (think PowerPoint or Prezi within a three-dimensional world), and the embedded resource section that allows users to embed within the virtual space annotations and links to primary and secondary resources about the modeled environment. The result is a virtual learning environment that can be broadly disseminated to educators and learners across grade levels and humanities disciplines. (PIs Lisa M. Snyder and Scott Friedman, IDRE, UCLA; <a href="https://idre.ucla.edu/research/active-research/vsim">https://idre.ucla.edu/research/active-research/vsim</a>) The top three images below are from the Digital Karnak publication prototype; the bottom three show various modeling projects in the VSim format with their associated embedded resources.</p>
 <p>[gallery ids="1970,1993,1995,1996,1997,1969"]</p>
 
@@ -3400,11 +3736,19 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
     
     
       <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
-  </body>
+    <script>
+    var elements = document.getElementsByClassName("lightgallery");
+    for(var i=0; i<elements.length; i++) {
+       lightGallery(elements[i]);
+    }
+    </script>
+
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

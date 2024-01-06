@@ -20,8 +20,9 @@
     
     
       
-        <title>DH101 - Getting Started with Carto 2017 - Sandblog 2.0</title>
+        <title>DH101 - Getting Started with Carto 2017 - OARC Technology Sandbox</title>
       
+    
     
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
@@ -30,9 +31,14 @@
 
 
     
+    <link rel="stylesheet" href="../../css/lightgallery.min.css">
+
+    
     
       
     
+    <script src="../../js/lightgallery.min.js"></script>
+
     
       
         
@@ -50,7 +56,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -74,14 +91,12 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Sandblog 2.0" class="md-header__button md-logo" aria-label="Sandblog 2.0" data-md-component="logo">
+    <a href="../.." title="OARC Technology Sandbox" class="md-header__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5m10.78 2H19v12.18c-.26-.8-1.31-1.39-2.2-1.39h-1v-3a1 1 0 0 0-1-1h-6v-2h2a1 1 0 0 0 1-1v-2h2c1.03 0 1.87-.79 1.98-1.79M5 10.29l4.8 4.5v1a2 2 0 0 0 2 2V19H5v-8.71Z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -92,7 +107,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Sandblog 2.0
+            OARC Technology Sandbox
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -133,6 +148,8 @@
         </button>
       </nav>
       
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -157,6 +174,97 @@
       
         
           
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Welcome
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../about/History%20and%20Mission/" class="md-tabs__link">
+          
+  
+  About
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../projects/current/VSim/" class="md-tabs__link">
+          
+  
+  Projects
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -170,16 +278,18 @@
                     
 
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Sandblog 2.0" class="md-nav__button md-logo" aria-label="Sandblog 2.0" data-md-component="logo">
+    <a href="../.." title="OARC Technology Sandbox" class="md-nav__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5m10.78 2H19v12.18c-.26-.8-1.31-1.39-2.2-1.39h-1v-3a1 1 0 0 0-1-1h-6v-2h2a1 1 0 0 0 1-1v-2h2c1.03 0 1.87-.79 1.98-1.79M5 10.29l4.8 4.5v1a2 2 0 0 0 2 2V19H5v-8.71Z"/></svg>
 
     </a>
-    Sandblog 2.0
+    OARC Technology Sandbox
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -195,11 +305,100 @@
         
   
   <span class="md-ellipsis">
-    Welcome to MkDocs
+    Welcome
   </span>
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/History%20and%20Mission/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    History and Mission
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/Who%20We%20Are/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Who We Are
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -217,15 +416,18 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -236,8 +438,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Archive
           </label>
@@ -3199,6 +3401,140 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Current
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Current
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/current/VSim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VSim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/current/world%27s%20columbian%20exposition%20reconstruction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    World's columbian exposition reconstruction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -3276,31 +3612,31 @@
 
   <h1>DH101 - Getting Started with Carto 2017</h1>
 
-<h3 id="create-a-cartodb-account">Create a CartoDB account</h3>
+<h3 id="create-a-cartodb-account">Create a CartoDB account<a class="headerlink" href="#create-a-cartodb-account" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Go to the Carto <a href="https://cartodb.com/signup?plan=academy">sign up page</a></li>
 </ol>
-<h3 id="create-your-first-map"><a href="https://github.com/albertkun/cartodb-workshop/wiki/2-Getting-started-with-CartoDB#create-your-first-map"></a>Create your first map</h3>
+<h3 id="create-your-first-map"><a href="https://github.com/albertkun/cartodb-workshop/wiki/2-Getting-started-with-CartoDB#create-your-first-map"></a>Create your first map<a class="headerlink" href="#create-your-first-map" title="Permanent link">&para;</a></h3>
 <ol>
-<li>Once logged in, look for the following button: <img alt="" src="../images/Screen%20Shot%202016-04-25%20at%2011.42.41%20AM.jpg" /></li>
-<li>Choose "Data library", then click on the search (magnifying glass) <img alt="" src="../images/Screen%20Shot%202016-04-25%20at%2011.43.50%20AM.jpg" /></li>
+<li>Once logged in, look for the following button: <a class="glightbox" href="../images/Screen%20Shot%202016-04-25%20at%2011.42.41%20AM.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/Screen%20Shot%202016-04-25%20at%2011.42.41%20AM.jpg" /></a></li>
+<li>Choose "Data library", then click on the search (magnifying glass) <a class="glightbox" href="../images/Screen%20Shot%202016-04-25%20at%2011.43.50%20AM.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/Screen%20Shot%202016-04-25%20at%2011.43.50%20AM.jpg" /></a></li>
 <li>In the search box, enter "earthquake"</li>
-<li>Find the dataset titled “Realtime Earthquakes” provided by the U.S. Geological Survey. Click on it and press the Create Map button. <img alt="" src="../images/Screen%20Shot%202016-04-25%20at%2011.49.01%20AM.jpg" /></li>
+<li>Find the dataset titled “Realtime Earthquakes” provided by the U.S. Geological Survey. Click on it and press the Create Map button. <a class="glightbox" href="../images/Screen%20Shot%202016-04-25%20at%2011.49.01%20AM.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/Screen%20Shot%202016-04-25%20at%2011.49.01%20AM.jpg" /></a></li>
 </ol>
-<h3 id="data-vs-map"><a href="https://github.com/albertkun/cartodb-workshop/wiki/2-Getting-started-with-CartoDB#data-vs-map"></a>DATA vs MAP</h3>
+<h3 id="data-vs-map"><a href="https://github.com/albertkun/cartodb-workshop/wiki/2-Getting-started-with-CartoDB#data-vs-map"></a>DATA vs MAP<a class="headerlink" href="#data-vs-map" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Notice the DATA VIEW and MAP VIEW toggle <img alt="" src="https://camo.githubusercontent.com/0ab43375eac302d6b0766b411ba5232268fc502f/687474703a2f2f73616e64626f782e696472652e75636c612e6564752f73616e64626f782f77702d636f6e74656e742f75706c6f6164732f323031362f30342f53637265656e2d53686f742d323031362d30342d32352d61742d342e32332e31332d504d2e6a7067" /></li>
-<li>Data view:<img alt="" src="../images/Screen%20Shot%202016-04-25%20at%204.25.46%20PM.jpg" /></li>
-<li>Map view:<img alt="" src="../images/Screen%20Shot%202016-04-25%20at%204.24.45%20PM.jpg" /></li>
+<li>Notice the DATA VIEW and MAP VIEW toggle <a class="glightbox" href="https://camo.githubusercontent.com/0ab43375eac302d6b0766b411ba5232268fc502f/687474703a2f2f73616e64626f782e696472652e75636c612e6564752f73616e64626f782f77702d636f6e74656e742f75706c6f6164732f323031362f30342f53637265656e2d53686f742d323031362d30342d32352d61742d342e32332e31332d504d2e6a7067" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="https://camo.githubusercontent.com/0ab43375eac302d6b0766b411ba5232268fc502f/687474703a2f2f73616e64626f782e696472652e75636c612e6564752f73616e64626f782f77702d636f6e74656e742f75706c6f6164732f323031362f30342f53637265656e2d53686f742d323031362d30342d32352d61742d342e32332e31332d504d2e6a7067" /></a></li>
+<li>Data view:<a class="glightbox" href="../images/Screen%20Shot%202016-04-25%20at%204.25.46%20PM.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/Screen%20Shot%202016-04-25%20at%204.25.46%20PM.jpg" /></a></li>
+<li>Map view:<a class="glightbox" href="../images/Screen%20Shot%202016-04-25%20at%204.24.45%20PM.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/Screen%20Shot%202016-04-25%20at%204.24.45%20PM.jpg" /></a></li>
 </ul>
-<h3 id="customize-your-map"><a href="https://github.com/albertkun/cartodb-workshop/wiki/2-Getting-started-with-CartoDB#customize-your-map"></a>Customize your map</h3>
+<h3 id="customize-your-map"><a href="https://github.com/albertkun/cartodb-workshop/wiki/2-Getting-started-with-CartoDB#customize-your-map"></a>Customize your map<a class="headerlink" href="#customize-your-map" title="Permanent link">&para;</a></h3>
 <ol>
-<li>Click on the "wizards" icon on the right<img alt="" src="../images/Screen%20Shot%202016-04-25%20at%2011.53.03%20AM.jpg" /></li>
+<li>Click on the "wizards" icon on the right<a class="glightbox" href="../images/Screen%20Shot%202016-04-25%20at%2011.53.03%20AM.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/Screen%20Shot%202016-04-25%20at%2011.53.03%20AM.jpg" /></a></li>
 <li>Scroll until you find "BUBBLE" as a map option, and select it</li>
 <li>For column, choose "mag" (magnitude)</li>
-<li>Experiment with the various options made available to you and note the changes on your map.<img alt="" src="../images/Screen%20Shot%202016-04-25%20at%2011.55.30%20AM.jpg" /></li>
-<li>Experiment with other options: basemaps, adding elements, etc<img alt="" src="../images/changebasemaps.jpg" /></li>
-<li>Finally, export your map and copy and paste it into the workshop <a href="https://docs.google.com/document/d/1OsEta8QOMyP7T75WH_PV0HBqDtYCK8qj_U9BB-swFpc/edit#heading=h.fdfh2lbses36">google doc's Map Gallery</a> <img alt="" src="../images/Screen%20Shot%202016-04-25%20at%204.32.24%20PM.jpg" /></li>
+<li>Experiment with the various options made available to you and note the changes on your map.<a class="glightbox" href="../images/Screen%20Shot%202016-04-25%20at%2011.55.30%20AM.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/Screen%20Shot%202016-04-25%20at%2011.55.30%20AM.jpg" /></a></li>
+<li>Experiment with other options: basemaps, adding elements, etc<a class="glightbox" href="../images/changebasemaps.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/changebasemaps.jpg" /></a></li>
+<li>Finally, export your map and copy and paste it into the workshop <a href="https://docs.google.com/document/d/1OsEta8QOMyP7T75WH_PV0HBqDtYCK8qj_U9BB-swFpc/edit#heading=h.fdfh2lbses36">google doc's Map Gallery</a> <a class="glightbox" href="../images/Screen%20Shot%202016-04-25%20at%204.32.24%20PM.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/Screen%20Shot%202016-04-25%20at%204.32.24%20PM.jpg" /></a></li>
 </ol>
 
 
@@ -3351,11 +3687,19 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
     
     
       <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
-  </body>
+    <script>
+    var elements = document.getElementsByClassName("lightgallery");
+    for(var i=0; i<elements.length; i++) {
+       lightGallery(elements[i]);
+    }
+    </script>
+
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

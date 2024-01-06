@@ -20,8 +20,9 @@
     
     
       
-        <title>Digital Mapping Workshop Part 1 - Sandblog 2.0</title>
+        <title>Digital Mapping Workshop Part 1 - OARC Technology Sandbox</title>
       
+    
     
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
@@ -30,9 +31,14 @@
 
 
     
+    <link rel="stylesheet" href="../../css/lightgallery.min.css">
+
+    
     
       
     
+    <script src="../../js/lightgallery.min.js"></script>
+
     
       
         
@@ -50,7 +56,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -74,14 +91,12 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Sandblog 2.0" class="md-header__button md-logo" aria-label="Sandblog 2.0" data-md-component="logo">
+    <a href="../.." title="OARC Technology Sandbox" class="md-header__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5m10.78 2H19v12.18c-.26-.8-1.31-1.39-2.2-1.39h-1v-3a1 1 0 0 0-1-1h-6v-2h2a1 1 0 0 0 1-1v-2h2c1.03 0 1.87-.79 1.98-1.79M5 10.29l4.8 4.5v1a2 2 0 0 0 2 2V19H5v-8.71Z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -92,7 +107,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Sandblog 2.0
+            OARC Technology Sandbox
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -133,6 +148,8 @@
         </button>
       </nav>
       
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -157,6 +174,97 @@
       
         
           
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Welcome
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../about/History%20and%20Mission/" class="md-tabs__link">
+          
+  
+  About
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../projects/current/VSim/" class="md-tabs__link">
+          
+  
+  Projects
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -170,16 +278,18 @@
                     
 
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Sandblog 2.0" class="md-nav__button md-logo" aria-label="Sandblog 2.0" data-md-component="logo">
+    <a href="../.." title="OARC Technology Sandbox" class="md-nav__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5m10.78 2H19v12.18c-.26-.8-1.31-1.39-2.2-1.39h-1v-3a1 1 0 0 0-1-1h-6v-2h2a1 1 0 0 0 1-1v-2h2c1.03 0 1.87-.79 1.98-1.79M5 10.29l4.8 4.5v1a2 2 0 0 0 2 2V19H5v-8.71Z"/></svg>
 
     </a>
-    Sandblog 2.0
+    OARC Technology Sandbox
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -195,11 +305,100 @@
         
   
   <span class="md-ellipsis">
-    Welcome to MkDocs
+    Welcome
   </span>
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/History%20and%20Mission/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    History and Mission
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/Who%20We%20Are/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Who We Are
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -217,15 +416,18 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -236,8 +438,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Archive
           </label>
@@ -3265,6 +3467,140 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Current
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Current
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/current/VSim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VSim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/current/world%27s%20columbian%20exposition%20reconstruction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    World's columbian exposition reconstruction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -3408,7 +3744,7 @@
 
   <h1>Digital Mapping Workshop Part 1</h1>
 
-<h2 id="from-text-to-map">From text to map</h2>
+<h2 id="from-text-to-map">From text to map<a class="headerlink" href="#from-text-to-map" title="Permanent link">&para;</a></h2>
 <p>Behind any beautiful digital map lies the reality that every point, line or polygon is generated by some form of numerical and textual data.  Here is an example of a "placemark" written in KML:</p>
 <p><Placemark>
     <name>Visualization Portal</name>
@@ -3432,7 +3768,7 @@
         <coordinates>-118.44339036032716, 34.069750838829485</coordinates>
     </Point>
 </Placemark></p>
-<h2 id="history-mapped">History mapped</h2>
+<h2 id="history-mapped">History mapped<a class="headerlink" href="#history-mapped" title="Permanent link">&para;</a></h2>
 <p>A paper map can be scanned and made digital.  As an image, it does not know "where it is", in terms of its spatiality.  A process called "georeferencing" allows us to "spatialize" printed documents, and put them in the context of other spatial layers.  Here is an example of one of the most famous historical maps, the "John Snow Map" from 1854 that illustrates a Cholera outbreak that attacked London.</p>
 <p><a href="http://www.ph.ucla.edu/epi/snow/snowmap_1854.jpg"><img alt="John Snow Cholera map (1854)" src="images/snowmap_1854.jpg" /></a></p>
 <p>The same map can be visualized on a GIS platform, in this case, Google Earth:</p>
@@ -3445,29 +3781,29 @@
 <li>Give the network link a name, and paste the hyperlink</li>
 </ol>
 <p>[/TBS_ALERT]</p>
-<h3 id="los-angeles-1857-2002">Los Angeles 1857-2002</h3>
+<h3 id="los-angeles-1857-2002">Los Angeles 1857-2002<a class="headerlink" href="#los-angeles-1857-2002" title="Permanent link">&para;</a></h3>
 <p><a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2015/04/LA-1881.jpg"><img alt="LA 1881" src="images/LA-1881-650x182.jpg" /></a></p>
 <p>[<a href="http://sandbox.idre.ucla.edu/kml/Los%20Angeles%20Historical%20Maps.kmz">Historical Los Angeles Maps in Google Earth</a>]</p>
-<h2 id="the-power-of-spatial-imagery">The power of spatial imagery</h2>
-<h3 id="google-street-view">Google Street View</h3>
+<h2 id="the-power-of-spatial-imagery">The power of spatial imagery<a class="headerlink" href="#the-power-of-spatial-imagery" title="Permanent link">&para;</a></h2>
+<h3 id="google-street-view">Google Street View<a class="headerlink" href="#google-street-view" title="Permanent link">&para;</a></h3>
 <p><a href="https://www.google.com/maps/@34.068746,-118.444981,3a,75y,296.06h,85.99t/data=!3m4!1e1!3m2!1sRZfrTYcw1jMi3O_A5Heu1A!2e0"><img alt="Screen Shot 2015-04-08 at 4.10.27 PM" src="images/Screen-Shot-2015-04-08-at-4.10.27-PM-650x180.png" /></a></p>
 <p><a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2015/04/Screen-Shot-2015-04-08-at-4.11.25-PM.png"><img alt="Screen Shot 2015-04-08 at 4.11.25 PM" src="images/Screen-Shot-2015-04-08-at-4.11.25-PM-650x191.png" /></a></p>
 <p><a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2015/04/Screen-Shot-2015-04-08-at-4.11.58-PM.png"><img alt="Screen Shot 2015-04-08 at 4.11.58 PM" src="images/Screen-Shot-2015-04-08-at-4.11.58-PM-650x177.png" /></a></p>
-<h3 id="_1"><a href="https://www.google.com/maps/@37.475186,141.035305,3a,75y,230.94h,90.01t/data=!3m5!1e1!3m3!1sFkW7FLc6nfUi6lteGS8IYw!2e0!3e2"><img alt="Ukedo Street View" src="images/Screen-Shot-2015-04-10-at-11.05.08-AM-650x149.png" /></a></h3>
-<h3 id="hurricane-katrina">Hurricane Katrina</h3>
+<h3 id="_1"><a href="https://www.google.com/maps/@37.475186,141.035305,3a,75y,230.94h,90.01t/data=!3m5!1e1!3m3!1sFkW7FLc6nfUi6lteGS8IYw!2e0!3e2"><img alt="Ukedo Street View" src="images/Screen-Shot-2015-04-10-at-11.05.08-AM-650x149.png" /></a><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<h3 id="hurricane-katrina">Hurricane Katrina<a class="headerlink" href="#hurricane-katrina" title="Permanent link">&para;</a></h3>
 <p><a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2015/04/New-Orleans-4-17-2005.jpg"><img alt="New Orleans 4-17-2005" src="images/New-Orleans-4-17-2005-650x206.jpg" /></a></p>
 <p><a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2015/04/New-Orleans-8-30-2005.jpg"><img alt="New Orleans 8-30-2005" src="images/New-Orleans-8-30-2005-650x206.jpg" /></a></p>
 <p>[<a href="http://sandbox.idre.ucla.edu/kml/Hurricane%20Katrina%202005.kmz">Hurricane Katrina in Google Earth</a>]</p>
 <p>Source: National Geospatial-Intelligence Agency, http://google-earth-kml.blogspot.com/2007/05/hurricane-katrina.html</p>
-<h3 id="banda-aceh-indonesia">Banda Aceh, Indonesia</h3>
+<h3 id="banda-aceh-indonesia">Banda Aceh, Indonesia<a class="headerlink" href="#banda-aceh-indonesia" title="Permanent link">&para;</a></h3>
 <p><a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2015/04/aceh-1-27-2005.jpg"><img alt="aceh 6-22-2004" src="images/aceh-6-22-2004-650x206.jpg" /></a></p>
 <p><a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2015/04/aceh-1-27-2005.jpg"><img alt="aceh 1-27-2005" src="images/aceh-1-27-2005-650x206.jpg" /></a></p>
 <p><a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2015/04/aceh-2-22-2009.jpg"><img alt="aceh 2-22-2009" src="images/aceh-2-22-2009-650x206.jpg" /></a></p>
-<h3 id="sendai-japan">Sendai, Japan</h3>
+<h3 id="sendai-japan">Sendai, Japan<a class="headerlink" href="#sendai-japan" title="Permanent link">&para;</a></h3>
 <p><a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2015/04/sendai-3-13-2011.jpg"><img alt="sendai 12-9-2009" src="images/sendai-12-9-2009-650x206.jpg" /></a></p>
 <p><a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2015/04/sendai-3-13-2011.jpg"><img alt="sendai 3-13-2011" src="images/sendai-3-13-2011-650x206.jpg" /></a></p>
 <p>[<a href="http://sandbox.idre.ucla.edu/kml/311Japan.kmz">Japan Disasters Google Earth KMZ</a>]</p>
-<h2 id="census-data">Census Data</h2>
+<h2 id="census-data">Census Data<a class="headerlink" href="#census-data" title="Permanent link">&para;</a></h2>
 <p><a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2015/04/Screen-Shot-2015-04-09-at-9.38.58-PM.png"><img alt="census data on google earth" src="images/Screen-Shot-2015-04-09-at-9.38.58-PM-650x201.png" /></a></p>
 
 
@@ -3518,11 +3854,19 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
     
     
       <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
-  </body>
+    <script>
+    var elements = document.getElementsByClassName("lightgallery");
+    for(var i=0; i<elements.length; i++) {
+       lightGallery(elements[i]);
+    }
+    </script>
+
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

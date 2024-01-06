@@ -20,8 +20,9 @@
     
     
       
-        <title>ArcGIS in Archaeology: Working with 3 Dimensions - Sandblog 2.0</title>
+        <title>ArcGIS in Archaeology: Working with 3 Dimensions - OARC Technology Sandbox</title>
       
+    
     
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
@@ -30,9 +31,14 @@
 
 
     
+    <link rel="stylesheet" href="../../css/lightgallery.min.css">
+
+    
     
       
     
+    <script src="../../js/lightgallery.min.js"></script>
+
     
       
         
@@ -50,7 +56,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -74,14 +91,12 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Sandblog 2.0" class="md-header__button md-logo" aria-label="Sandblog 2.0" data-md-component="logo">
+    <a href="../.." title="OARC Technology Sandbox" class="md-header__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5m10.78 2H19v12.18c-.26-.8-1.31-1.39-2.2-1.39h-1v-3a1 1 0 0 0-1-1h-6v-2h2a1 1 0 0 0 1-1v-2h2c1.03 0 1.87-.79 1.98-1.79M5 10.29l4.8 4.5v1a2 2 0 0 0 2 2V19H5v-8.71Z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -92,7 +107,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Sandblog 2.0
+            OARC Technology Sandbox
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -133,6 +148,8 @@
         </button>
       </nav>
       
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -157,6 +174,97 @@
       
         
           
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Welcome
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../about/History%20and%20Mission/" class="md-tabs__link">
+          
+  
+  About
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../projects/current/VSim/" class="md-tabs__link">
+          
+  
+  Projects
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -170,16 +278,18 @@
                     
 
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Sandblog 2.0" class="md-nav__button md-logo" aria-label="Sandblog 2.0" data-md-component="logo">
+    <a href="../.." title="OARC Technology Sandbox" class="md-nav__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5m10.78 2H19v12.18c-.26-.8-1.31-1.39-2.2-1.39h-1v-3a1 1 0 0 0-1-1h-6v-2h2a1 1 0 0 0 1-1v-2h2c1.03 0 1.87-.79 1.98-1.79M5 10.29l4.8 4.5v1a2 2 0 0 0 2 2V19H5v-8.71Z"/></svg>
 
     </a>
-    Sandblog 2.0
+    OARC Technology Sandbox
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -195,11 +305,100 @@
         
   
   <span class="md-ellipsis">
-    Welcome to MkDocs
+    Welcome
   </span>
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/History%20and%20Mission/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    History and Mission
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/Who%20We%20Are/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Who We Are
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -217,15 +416,18 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -236,8 +438,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Archive
           </label>
@@ -3250,6 +3452,140 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Current
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Current
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/current/VSim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VSim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/current/world%27s%20columbian%20exposition%20reconstruction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    World's columbian exposition reconstruction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -3378,37 +3714,37 @@
 
   <h1>ArcGIS in Archaeology: Working with 3 Dimensions</h1>
 
-<h2 id="arcgis-in-archaeology-working-with-3-dimensions">ArcGIS in Archaeology: Working with 3 Dimensions</h2>
+<h2 id="arcgis-in-archaeology-working-with-3-dimensions">ArcGIS in Archaeology: Working with 3 Dimensions<a class="headerlink" href="#arcgis-in-archaeology-working-with-3-dimensions" title="Permanent link">&para;</a></h2>
 <p>[TBS_ALERT color="info" heading="Special Thanks"] The data used in this workshop has kindly been made available by the University of Jaén.</p>
 <p>Name of the project: <strong>Qubbet el-Hawa</strong><br />
 Institution: <strong>University of Jaén</strong><br />
 Website: <a href="http://www.ujaen.es/investiga/qubbetelhawa/index.php">http://www.ujaen.es/investiga/qubbetelhawa/index.php</a><br />
 Special thanks to <strong>Alejandro Jiménez Serrano</strong> (director of the archaeological project and professor at the University of Jaén), <strong>Luisa García González</strong> (field director and PhD candidate, University of Jaén), and <strong>Patricia Mora Riudavets</strong> (archeological photographer and PhD candidate, University of Alcalá de Henares).  </p>
 <p>[/TBS_ALERT]</p>
-<p><img alt="" src="images/DAE-e1551219681720-1024x612.jpg" /></p>
-<h2 id="terminology">Terminology</h2>
+<p><a class="glightbox" href="images/DAE-e1551219681720-1024x612.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/DAE-e1551219681720-1024x612.jpg" /></a></p>
+<h2 id="terminology">Terminology<a class="headerlink" href="#terminology" title="Permanent link">&para;</a></h2>
 <p><strong>Photogrammetry/Structure-from-Motion:</strong> having to do with measurements from photographs; however, in archaeology (and other disciplines) often shorthand for the process of creating 3D models from a series of photographs taken systematically; link to more information: http://culturalheritageimaging.org/Technologies/Photogrammetry/</p>
-<p><img alt="Photogrammetry" src="images/oven_photogrammetry2-e1551293733592.jpg" /></p>
+<p><a class="glightbox" href="images/oven_photogrammetry2-e1551293733592.jpg" data-type="image" data-width="auto" data-height="auto" data-title="Photogrammetry" data-desc-position="bottom"><img alt="Photogrammetry" src="images/oven_photogrammetry2-e1551293733592.jpg" /></a></p>
 <p><strong>DEM - Digital Elevation Model</strong>: representation of terrain based on elevation data; typically shown with lighter color indicating a higher elevation and darker color lower. DEMs can be used within ArcMap when running analyses that take into account elevation changes.</p>
-<p><img alt="DEM mudbrick example" src="images/DEM-e1551293759390.png" /></p>
+<p><a class="glightbox" href="images/DEM-e1551293759390.png" data-type="image" data-width="auto" data-height="auto" data-title="DEM mudbrick example" data-desc-position="bottom"><img alt="DEM mudbrick example" src="images/DEM-e1551293759390.png" /></a></p>
 <p><strong>Ortho(photo/image/mosaic):</strong> aerial photograph or an image that has been geometrically corrected to eliminate distortion and create a uniform scale similar to a map</p>
-<p><img alt="Draped ortho" src="images/draped_ortho-e1551293793927.png" /></p>
+<p><a class="glightbox" href="images/draped_ortho-e1551293793927.png" data-type="image" data-width="auto" data-height="auto" data-title="Draped ortho" data-desc-position="bottom"><img alt="Draped ortho" src="images/draped_ortho-e1551293793927.png" /></a></p>
 <p><strong>TIN - Triangular Irregular Network:</strong> points (vertices) with elevation data that are joined together to form a model. TINs can be used in ArcScene as a tool to "drape" points or orthoimages so they can be viewed in three dimensions.</p>
-<p><img alt="TIN example" src="images/tin2-e1551293820178.png" /></p>
+<p><a class="glightbox" href="images/tin2-e1551293820178.png" data-type="image" data-width="auto" data-height="auto" data-title="TIN example" data-desc-position="bottom"><img alt="TIN example" src="images/tin2-e1551293820178.png" /></a></p>
 <p><strong>AYSOAY - Are You Sick of Acronyms Yet?</strong></p>
 <hr />
-<h2 id="arcscene-demo">ArcScene Demo</h2>
+<h2 id="arcscene-demo">ArcScene Demo<a class="headerlink" href="#arcscene-demo" title="Permanent link">&para;</a></h2>
 <p>We'll go through a short demonstration on what's possible when you start working with the third dimension. The steps for each are detailed below!</p>
-<h2 id="photoscanmetashape-models-in-arcscene">Photoscan/Metashape Models in ArcScene</h2>
-<h3 id="before-taking-the-photographs">Before taking the photographs</h3>
+<h2 id="photoscanmetashape-models-in-arcscene">Photoscan/Metashape Models in ArcScene<a class="headerlink" href="#photoscanmetashape-models-in-arcscene" title="Permanent link">&para;</a></h2>
+<h3 id="before-taking-the-photographs">Before taking the photographs<a class="headerlink" href="#before-taking-the-photographs" title="Permanent link">&para;</a></h3>
 <p>Print markers from Photoscan - Tools/Markers/Print markers</p>
-<p><img alt="Print markers" src="images/print_markers-e1551300533278.jpg" /></p>
-<h3 id="while-taking-the-photographs">While taking the photographs</h3>
+<p><a class="glightbox" href="images/print_markers-e1551300533278.jpg" data-type="image" data-width="auto" data-height="auto" data-title="Print markers" data-desc-position="bottom"><img alt="Print markers" src="images/print_markers-e1551300533278.jpg" /></a></p>
+<h3 id="while-taking-the-photographs">While taking the photographs<a class="headerlink" href="#while-taking-the-photographs" title="Permanent link">&para;</a></h3>
 <p>Place markers around area you plan to photograph (distribute throughout taking into account height) and take points on each of the markers (don't forget to label which marker is which!)</p>
-<p><img alt="Distributed markers" src="images/markers-e1551300558192.jpg" /></p>
-<h3 id="processing-the-photographs">Processing the photographs</h3>
+<p><a class="glightbox" href="images/markers-e1551300558192.jpg" data-type="image" data-width="auto" data-height="auto" data-title="Distributed markers" data-desc-position="bottom"><img alt="Distributed markers" src="images/markers-e1551300558192.jpg" /></a></p>
+<h3 id="processing-the-photographs">Processing the photographs<a class="headerlink" href="#processing-the-photographs" title="Permanent link">&para;</a></h3>
 <p>Process the model as you typically would but run the detect markers tool so Photoscan can add targets to each marker. The details of the process is dependent on the software version. A workshop on photogrammetry is typically offered in the Fall or Spring.</p>
-<p><img alt="Detect markers" src="images/detect_markers-e1551300592669.jpg" /></p>
+<p><a class="glightbox" href="images/detect_markers-e1551300592669.jpg" data-type="image" data-width="auto" data-height="auto" data-title="Detect markers" data-desc-position="bottom"><img alt="Detect markers" src="images/detect_markers-e1551300592669.jpg" /></a></p>
 <p>In order to render appropriately in ArcScene you will need to export the model twice from Photoscan. The first will be a georeferenced version while the second will not. Export to Collada (dae)</p>
 <ul>
 <li>Go to File/Export/Export model</li>
@@ -3419,18 +3755,18 @@ Special thanks to <strong>Alejandro Jiménez Serrano</strong> (director of the a
 <blockquote>
 <p><a href="https://www.khronos.org/collada/">Collada file format</a>: Collada files are based on an XML schema designed to facilitate moving 3D assets in and out of programs or applications. With Collada scene information (think lighting, effects, animation) can accompany.</p>
 </blockquote>
-<h3 id="importing-into-arcscene">Importing into ArcScene</h3>
+<h3 id="importing-into-arcscene">Importing into ArcScene<a class="headerlink" href="#importing-into-arcscene" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Open new blank ArcScene</li>
 <li>Create a file geodatabase in your project folder</li>
 <li>Search for the <strong>"Import 3D Files"</strong> tool</li>
 </ul>
-<p><img alt="Import- Step 1" src="images/import_1-e1551312742303-1024x650.png" /></p>
-<p><img alt="Import- Step 2" src="images/import_2-1-e1551312773910-1024x648.png" /></p>
+<p><a class="glightbox" href="images/import_1-e1551312742303-1024x650.png" data-type="image" data-width="auto" data-height="auto" data-title="Import- Step 1" data-desc-position="bottom"><img alt="Import- Step 1" src="images/import_1-e1551312742303-1024x650.png" /></a></p>
+<p><a class="glightbox" href="images/import_2-1-e1551312773910-1024x648.png" data-type="image" data-width="auto" data-height="auto" data-title="Import- Step 2" data-desc-position="bottom"><img alt="Import- Step 2" src="images/import_2-1-e1551312773910-1024x648.png" /></a></p>
 <ul>
 <li>Import the <strong><em>georeferenced model</em></strong> and save the feature class to the file geodatabase you created- it will look strange and blocky...do not be alarmed!</li>
 </ul>
-<p><img alt="blocky" src="images/blocky-e1551300617560.png" /></p>
+<p><a class="glightbox" href="images/blocky-e1551300617560.png" data-type="image" data-width="auto" data-height="auto" data-title="blocky" data-desc-position="bottom"><img alt="blocky" src="images/blocky-e1551300617560.png" /></a></p>
 <ul>
 <li>Right click on the model layer on the Table of Contents and select Edit Features/Start Editing</li>
 <li>The 3D Editor toolbar should open (if not open it through Customize/Toolbars)</li>
@@ -3440,7 +3776,7 @@ Special thanks to <strong>Alejandro Jiménez Serrano</strong> (director of the a
 <li>Navigate to the dae file that exported <strong><em>without coordinates</em></strong></li>
 <li>The model should load and look normal (not blocky) but remain in the same georeferenced location</li>
 </ul>
-<h2 id="resources-on-campus">Resources on campus</h2>
+<h2 id="resources-on-campus">Resources on campus<a class="headerlink" href="#resources-on-campus" title="Permanent link">&para;</a></h2>
 <p><a href="http://www.library.ucla.edu/use/computers-computing-services/lux-lab">UCLA Library Lux Lab</a> – UCLA Library’s emerging technologies unit; staff specialize in 3D scanning, 3D printing, laser etching and cutting, large format printing, aerial mapping, and 360 immersive projections for research projects. Equipment and staff available upon request.</p>
 <p><a href="https://drc.ucla.edu/labs/sil/">YRL Scholarly Innovation Lab</a> – collaborative workspace for research projects and working groups in YRL; staff specialize in 3D modeling.</p>
 <p><a href="http://www.library.ucla.edu/location/data-science-center">Library Data Science Center</a> – UCLA Library’s data unit; staff specialize in teaching data literacy, coding skills for researchers, data management and preservation, data cleaning, data analyses and visualizations, and open science.</p>
@@ -3493,11 +3829,19 @@ Special thanks to <strong>Alejandro Jiménez Serrano</strong> (director of the a
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
     
     
       <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
-  </body>
+    <script>
+    var elements = document.getElementsByClassName("lightgallery");
+    for(var i=0; i<elements.length; i++) {
+       lightGallery(elements[i]);
+    }
+    </script>
+
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

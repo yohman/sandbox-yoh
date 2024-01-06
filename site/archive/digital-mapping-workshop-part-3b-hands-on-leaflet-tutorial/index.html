@@ -20,8 +20,9 @@
     
     
       
-        <title>Digital Mapping Workshop - Part 3c: Hands-on Leaflet Tutorial - Sandblog 2.0</title>
+        <title>Digital Mapping Workshop - Part 3c: Hands-on Leaflet Tutorial - OARC Technology Sandbox</title>
       
+    
     
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
@@ -30,9 +31,14 @@
 
 
     
+    <link rel="stylesheet" href="../../css/lightgallery.min.css">
+
+    
     
       
     
+    <script src="../../js/lightgallery.min.js"></script>
+
     
       
         
@@ -50,7 +56,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -74,14 +91,12 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Sandblog 2.0" class="md-header__button md-logo" aria-label="Sandblog 2.0" data-md-component="logo">
+    <a href="../.." title="OARC Technology Sandbox" class="md-header__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5m10.78 2H19v12.18c-.26-.8-1.31-1.39-2.2-1.39h-1v-3a1 1 0 0 0-1-1h-6v-2h2a1 1 0 0 0 1-1v-2h2c1.03 0 1.87-.79 1.98-1.79M5 10.29l4.8 4.5v1a2 2 0 0 0 2 2V19H5v-8.71Z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -92,7 +107,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Sandblog 2.0
+            OARC Technology Sandbox
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -133,6 +148,8 @@
         </button>
       </nav>
       
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -157,6 +174,97 @@
       
         
           
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Welcome
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../about/History%20and%20Mission/" class="md-tabs__link">
+          
+  
+  About
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../projects/current/VSim/" class="md-tabs__link">
+          
+  
+  Projects
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -170,16 +278,18 @@
                     
 
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Sandblog 2.0" class="md-nav__button md-logo" aria-label="Sandblog 2.0" data-md-component="logo">
+    <a href="../.." title="OARC Technology Sandbox" class="md-nav__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5m10.78 2H19v12.18c-.26-.8-1.31-1.39-2.2-1.39h-1v-3a1 1 0 0 0-1-1h-6v-2h2a1 1 0 0 0 1-1v-2h2c1.03 0 1.87-.79 1.98-1.79M5 10.29l4.8 4.5v1a2 2 0 0 0 2 2V19H5v-8.71Z"/></svg>
 
     </a>
-    Sandblog 2.0
+    OARC Technology Sandbox
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -195,11 +305,100 @@
         
   
   <span class="md-ellipsis">
-    Welcome to MkDocs
+    Welcome
   </span>
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/History%20and%20Mission/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    History and Mission
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/Who%20We%20Are/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Who We Are
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -217,15 +416,18 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -236,8 +438,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Archive
           </label>
@@ -3221,6 +3423,140 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Current
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Current
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/current/VSim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VSim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/current/world%27s%20columbian%20exposition%20reconstruction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    World's columbian exposition reconstruction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -3316,8 +3652,8 @@
                   
 
 
-<h1 id="lets-dive-into-making-our-very-first-web-map">Let’s dive into making our very first web map!</h1>
-<h2 id="1-setting-up-your-html-page">1) Setting up your HTML page:</h2>
+<h1 id="lets-dive-into-making-our-very-first-web-map">Let’s dive into making our very first web map!<a class="headerlink" href="#lets-dive-into-making-our-very-first-web-map" title="Permanent link">&para;</a></h1>
+<h2 id="1-setting-up-your-html-page">1) Setting up your HTML page:<a class="headerlink" href="#1-setting-up-your-html-page" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Open a text editor (we recommend <a href="http://www.sublimetext.com/2">Sublime Text 2</a>)</li>
 <li>
@@ -3327,9 +3663,20 @@
 <head>
     <title>Digital Mapping Leaflet Example</title>
     <meta charset="utf-8" />
-</head>
+ <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
 <body>
-</body>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html></p>
 </li>
 <li>
@@ -3345,7 +3692,7 @@
 </style></p>
 </li>
 </ol>
-<h2 id="2-adding-javascript-libraries">2) Adding Javascript Libraries:</h2>
+<h2 id="2-adding-javascript-libraries">2) Adding Javascript Libraries:<a class="headerlink" href="#2-adding-javascript-libraries" title="Permanent link">&para;</a></h2>
 <p>Now that our page is setup, we can begin with adding content, instead of creating our own applications, we can add-on other functions to our website by including <strong>Javascript Libraries</strong>.</p>
 <ol>
 <li>
@@ -3367,7 +3714,7 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script></p>
 </li>
 </ol>
-<h2 id="3-creating-your-leaflet-map">3) Creating your Leaflet Map:</h2>
+<h2 id="3-creating-your-leaflet-map">3) Creating your Leaflet Map:<a class="headerlink" href="#3-creating-your-leaflet-map" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
 <p>So far, your HTML page should look like the following:</p>
@@ -3384,18 +3731,30 @@
     <!-- Leaflet -->
     <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" /></p>
-<pre><code>&lt;!-- jquery  --&gt;        
-&lt;script src="http://code.jquery.com/jquery-1.11.0.min.js"&gt;&lt;/script&gt;
-&lt;script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"&gt;&lt;/script&gt;
+<div class="codehilite"><pre><span></span><code><span class="cm">&lt;!-- jquery  --&gt;</span><span class="w">        </span>
+<span class="nt">&lt;script</span><span class="w"> </span><span class="na">src=</span><span class="s">&quot;http://code.jquery.com/jquery-1.11.0.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script</span><span class="w"> </span><span class="na">src=</span><span class="s">&quot;http://code.jquery.com/jquery-migrate-1.2.1.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
 
-&lt;!-- bootstrap --&gt;
-&lt;link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet"&gt;
-&lt;script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"&gt;&lt;/script&gt;
-</code></pre>
-<p></head>
+<span class="cm">&lt;!-- bootstrap --&gt;</span>
+<span class="nt">&lt;link</span><span class="w"> </span><span class="na">href=</span><span class="s">&quot;http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css&quot;</span><span class="w"> </span><span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;script</span><span class="w"> </span><span class="na">src=</span><span class="s">&quot;//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div>
+
+<p> <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
 <body>
     <div id="map"></div>
-</body>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html></p>
 </li>
 <li>
@@ -3406,15 +3765,16 @@
 <p><script type="text/javascript">
     //make map a global variable
     var map;</p>
-<pre><code>function init(){
-    map = L.map('map').setView(\[34.06949867805522, -118.44327126718139\], 17);
+<div class="codehilite"><pre><span></span><code><span class="nt">function</span><span class="w"> </span><span class="nt">init</span><span class="o">()</span><span class="p">{</span>
+<span class="w">    </span><span class="err">map</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">L.map(&#39;map&#39;).setView(\</span><span class="cp">[</span><span class="mf">34.06949867805522</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">118.44327126718139</span><span class="o">\</span><span class="cp">]</span><span class="err">,</span><span class="w"> </span><span class="err">17)</span><span class="p">;</span>
 
-    L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
-        maxZoom: 18,
-        id: 'examples.map-i875mjb7'
-    }).addTo(map);
-}
-</code></pre>
+<span class="w">    </span><span class="err">L.tileLayer(&#39;</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="err">{</span><span class="n">s</span><span class="p">}.</span><span class="nc">tiles</span><span class="p">.</span><span class="nc">mapbox</span><span class="p">.</span><span class="nc">com</span><span class="o">/</span><span class="nt">v3</span><span class="o">/</span><span class="p">{</span><span class="err">id</span><span class="p">}</span><span class="o">/</span><span class="p">{</span><span class="err">z</span><span class="p">}</span><span class="o">/</span><span class="p">{</span><span class="err">x</span><span class="p">}</span><span class="o">/</span><span class="p">{</span><span class="err">y</span><span class="p">}.</span><span class="nc">png</span><span class="s1">&#39;, {</span>
+<span class="s1">        maxZoom: 18,</span>
+<span class="s1">        id: &#39;</span><span class="nt">examples</span><span class="p">.</span><span class="nc">map-i875mjb7</span><span class="err">&#39;</span>
+<span class="w">    </span><span class="err">}</span><span class="o">)</span><span class="p">.</span><span class="nc">addTo</span><span class="o">(</span><span class="nt">map</span><span class="o">);</span>
+<span class="err">}</span>
+</code></pre></div>
+
 </script>
 </li>
 <li>
@@ -3422,7 +3782,7 @@
 </li>
 </ol>
 <p><a href="http://sandbox.idre.ucla.edu/Workshops/DigitalMappingWorkshop2015/Leaflet_1_3v2.html">Example</a></p>
-<h2 id="4-add-a-marker">4) Add a marker:</h2>
+<h2 id="4-add-a-marker">4) Add a marker:<a class="headerlink" href="#4-add-a-marker" title="Permanent link">&para;</a></h2>
 <p>You can create markers in Leaflet by using a basic L.marker([lat],[long]).addTo(map), but we can automate this process by creating a function, like follows:</p>
 <ol>
 <li>
@@ -3456,43 +3816,55 @@
     <!-- Leaflet -->
     <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" /></p>
-<pre><code>&lt;!-- jquery  --&gt;        
-&lt;script src="http://code.jquery.com/jquery-1.11.0.min.js"&gt;&lt;/script&gt;
-&lt;script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"&gt;&lt;/script&gt;
+<div class="codehilite"><pre><span></span><code><span class="cm">&lt;!-- jquery  --&gt;</span><span class="w">        </span>
+<span class="nt">&lt;script</span><span class="w"> </span><span class="na">src=</span><span class="s">&quot;http://code.jquery.com/jquery-1.11.0.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script</span><span class="w"> </span><span class="na">src=</span><span class="s">&quot;http://code.jquery.com/jquery-migrate-1.2.1.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
 
-&lt;!-- bootstrap --&gt;
-&lt;link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet"&gt;
-&lt;script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"&gt;&lt;/script&gt;
+<span class="cm">&lt;!-- bootstrap --&gt;</span>
+<span class="nt">&lt;link</span><span class="w"> </span><span class="na">href=</span><span class="s">&quot;http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css&quot;</span><span class="w"> </span><span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;script</span><span class="w"> </span><span class="na">src=</span><span class="s">&quot;//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
 
-&lt;script type="text/javascript"&gt;
-    var map;
+<span class="nt">&lt;script</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span>var<span class="w"> </span>map;
 
-    function init(){
-        map = L.map('map').setView(\[34.07381780761041, -118.44177995896911\], 17);
+<span class="w">    </span>function<span class="w"> </span>init(){
+<span class="w">        </span>map<span class="w"> </span>=<span class="w"> </span>L.map(&#39;map&#39;).setView(\[34.07381780761041,<span class="w"> </span>-118.44177995896911\],<span class="w"> </span>17);
 
-        L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
-            maxZoom: 18,
-            id: 'examples.map-i875mjb7'
-        }).addTo(map);
-        createMarker(34.06961421319362, -118.44321762300109,"This was a marker made from our function!")
-    }
+<span class="w">        </span>L.tileLayer(&#39;https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png&#39;,<span class="w"> </span>{
+<span class="w">            </span>maxZoom:<span class="w"> </span>18,
+<span class="w">            </span>id:<span class="w"> </span>&#39;examples.map-i875mjb7&#39;
+<span class="w">        </span>}).addTo(map);
+<span class="w">        </span>createMarker(34.06961421319362,<span class="w"> </span>-118.44321762300109,&quot;This<span class="w"> </span>was<span class="w"> </span>a<span class="w"> </span>marker<span class="w"> </span>made<span class="w"> </span>from<span class="w"> </span>our<span class="w"> </span>function!&quot;)
+<span class="w">    </span>}
 
-    function createMarker(latitude,longitude,popupContent){
-        L.marker(\[latitude,longitude\]).addTo(map)
-            .bindPopup(popupContent);
-    }
+<span class="w">    </span>function<span class="w"> </span>createMarker(latitude,longitude,popupContent){
+<span class="w">        </span>L.marker(\[latitude,longitude\]).addTo(map)
+<span class="w">            </span>.bindPopup(popupContent);
+<span class="w">    </span>}
 
-&lt;/script&gt;
-</code></pre>
-<p></head>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div>
+
+<p> <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
 <body onload="init()">
     <div id="map"></div>
-</body>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html></p>
 <p><a href="http://sandbox.idre.ucla.edu/Workshops/DigitalMappingWorkshop2015/Leaflet_1_4.html">Example</a></p>
 </li>
 </ol>
-<h2 id="5-customizing-it-up">5) Customizing it up:</h2>
+<h2 id="5-customizing-it-up">5) Customizing it up:<a class="headerlink" href="#5-customizing-it-up" title="Permanent link">&para;</a></h2>
 <p>Say you'd like to change your base map, you can do so by simply replacing Lines 27 to 30 ("L.tileLayer...")on the previous sample code. But where would you find some sample base maps? <a href="http://leaflet-extras.github.io/leaflet-providers/preview/">Leaflet Providers</a> which gives you both code snippets and examples of what options are available.</p>
 <ol>
 <li>Go to Leaflet Providers</li>
@@ -3514,36 +3886,48 @@
     <!-- Leaflet -->
     <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" /></p>
-<pre><code>&lt;!-- jquery  --&gt;        
-&lt;script src="http://code.jquery.com/jquery-1.11.0.min.js"&gt;&lt;/script&gt;
-&lt;script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"&gt;&lt;/script&gt;
+<div class="codehilite"><pre><span></span><code><span class="cm">&lt;!-- jquery  --&gt;</span><span class="w">        </span>
+<span class="nt">&lt;script</span><span class="w"> </span><span class="na">src=</span><span class="s">&quot;http://code.jquery.com/jquery-1.11.0.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script</span><span class="w"> </span><span class="na">src=</span><span class="s">&quot;http://code.jquery.com/jquery-migrate-1.2.1.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
 
-&lt;!-- bootstrap --&gt;
-&lt;link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet"&gt;
-&lt;script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"&gt;&lt;/script&gt;
+<span class="cm">&lt;!-- bootstrap --&gt;</span>
+<span class="nt">&lt;link</span><span class="w"> </span><span class="na">href=</span><span class="s">&quot;http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css&quot;</span><span class="w"> </span><span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;script</span><span class="w"> </span><span class="na">src=</span><span class="s">&quot;//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
 
-&lt;script type="text/javascript"&gt;
-var map;
-function init(){
-    map = L.map('map').setView(\[34.07381780761041, -118.44177995896911\], 17);
+<span class="nt">&lt;script</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
+var<span class="w"> </span>map;
+function<span class="w"> </span>init(){
+<span class="w">    </span>map<span class="w"> </span>=<span class="w"> </span>L.map(&#39;map&#39;).setView(\[34.07381780761041,<span class="w"> </span>-118.44177995896911\],<span class="w"> </span>17);
 
-    var Esri\_WorldImagery = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World\_Imagery/MapServer/tile/{z}/{y}/{x}', {
-        attribution: 'Tiles &amp;copy; Esri &amp;mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
-    }).addTo(map);
+<span class="w">    </span>var<span class="w"> </span>Esri\_WorldImagery<span class="w"> </span>=<span class="w"> </span>L.tileLayer(&#39;http://server.arcgisonline.com/ArcGIS/rest/services/World\_Imagery/MapServer/tile/{z}/{y}/{x}&#39;,<span class="w"> </span>{
+<span class="w">        </span>attribution:<span class="w"> </span>&#39;Tiles<span class="w"> </span><span class="ni">&amp;copy;</span><span class="w"> </span>Esri<span class="w"> </span><span class="ni">&amp;mdash;</span><span class="w"> </span>Source:<span class="w"> </span>Esri,<span class="w"> </span>i-cubed,<span class="w"> </span>USDA,<span class="w"> </span>USGS,<span class="w"> </span>AEX,<span class="w"> </span>GeoEye,<span class="w"> </span>Getmapping,<span class="w"> </span>Aerogrid,<span class="w"> </span>IGN,<span class="w"> </span>IGP,<span class="w"> </span>UPR-EGP,<span class="w"> </span>and<span class="w"> </span>the<span class="w"> </span>GIS<span class="w"> </span>User<span class="w"> </span>Community&#39;
+<span class="w">    </span>}).addTo(map);
 
-    createMarker(34.06961421319362, -118.44321762300109,"This was a marker made from our function!")
+<span class="w">    </span>createMarker(34.06961421319362,<span class="w"> </span>-118.44321762300109,&quot;This<span class="w"> </span>was<span class="w"> </span>a<span class="w"> </span>marker<span class="w"> </span>made<span class="w"> </span>from<span class="w"> </span>our<span class="w"> </span>function!&quot;)
 }
 
-function createMarker(latitude,longitude,popupContent){
-    L.marker(\[latitude,longitude\]).addTo(map)
-        .bindPopup(popupContent);
-    }
-&lt;/script&gt;
-</code></pre>
-<p></head>
+function<span class="w"> </span>createMarker(latitude,longitude,popupContent){
+<span class="w">    </span>L.marker(\[latitude,longitude\]).addTo(map)
+<span class="w">        </span>.bindPopup(popupContent);
+<span class="w">    </span>}
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div>
+
+<p> <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
 <body onload="init()">
     <div id="map"></div>
-</body>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html></p>
 </li>
 </ol>
@@ -3551,7 +3935,7 @@ function createMarker(latitude,longitude,popupContent){
 <ol>
 <li>Notice that Lines 28 - 30 use ESRI's satellite base map now; and that's all there is to change your base map!</li>
 </ol>
-<h2 id="6-adding-your-data-from-geojsonio">6) Adding your data from GeoJSON.io:</h2>
+<h2 id="6-adding-your-data-from-geojsonio">6) Adding your data from GeoJSON.io:<a class="headerlink" href="#6-adding-your-data-from-geojsonio" title="Permanent link">&para;</a></h2>
 <p>GeoJSON.io allows us to author web content in various formats that can also be consumed by Leaflet (with the help of jQuery).</p>
 <ol>
 <li>Visit <a href="http://geojson.io/">GeoJSON.io</a> to author some points or load your data into it!</li>
@@ -3604,62 +3988,74 @@ function createMarker(latitude,longitude,popupContent){
     <!-- Leaflet -->
     <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" /></p>
-<pre><code>&lt;!-- jquery  --&gt;        
-&lt;script src="http://code.jquery.com/jquery-1.11.0.min.js"&gt;&lt;/script&gt;
-&lt;script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"&gt;&lt;/script&gt;
+<div class="codehilite"><pre><span></span><code><span class="cm">&lt;!-- jquery  --&gt;</span><span class="w">        </span>
+<span class="nt">&lt;script</span><span class="w"> </span><span class="na">src=</span><span class="s">&quot;http://code.jquery.com/jquery-1.11.0.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script</span><span class="w"> </span><span class="na">src=</span><span class="s">&quot;http://code.jquery.com/jquery-migrate-1.2.1.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
 
-&lt;!-- bootstrap --&gt;
-&lt;link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet"&gt;
-&lt;script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"&gt;&lt;/script&gt;
+<span class="cm">&lt;!-- bootstrap --&gt;</span>
+<span class="nt">&lt;link</span><span class="w"> </span><span class="na">href=</span><span class="s">&quot;http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css&quot;</span><span class="w"> </span><span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;script</span><span class="w"> </span><span class="na">src=</span><span class="s">&quot;//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
 
-&lt;script type="text/javascript"&gt;
-var map;
-function init(){
-    map = L.map('map').setView(\[34.07381780761041, -118.44177995896911\], 17);
+<span class="nt">&lt;script</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
+var<span class="w"> </span>map;
+function<span class="w"> </span>init(){
+<span class="w">    </span>map<span class="w"> </span>=<span class="w"> </span>L.map(&#39;map&#39;).setView(\[34.07381780761041,<span class="w"> </span>-118.44177995896911\],<span class="w"> </span>17);
 
-    var Esri\_WorldImagery = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World\_Imagery/MapServer/tile/{z}/{y}/{x}', {
-        attribution: 'Tiles &amp;copy; Esri &amp;mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
-    }).addTo(map);
-    getData();
+<span class="w">    </span>var<span class="w"> </span>Esri\_WorldImagery<span class="w"> </span>=<span class="w"> </span>L.tileLayer(&#39;http://server.arcgisonline.com/ArcGIS/rest/services/World\_Imagery/MapServer/tile/{z}/{y}/{x}&#39;,<span class="w"> </span>{
+<span class="w">        </span>attribution:<span class="w"> </span>&#39;Tiles<span class="w"> </span><span class="ni">&amp;copy;</span><span class="w"> </span>Esri<span class="w"> </span><span class="ni">&amp;mdash;</span><span class="w"> </span>Source:<span class="w"> </span>Esri,<span class="w"> </span>i-cubed,<span class="w"> </span>USDA,<span class="w"> </span>USGS,<span class="w"> </span>AEX,<span class="w"> </span>GeoEye,<span class="w"> </span>Getmapping,<span class="w"> </span>Aerogrid,<span class="w"> </span>IGN,<span class="w"> </span>IGP,<span class="w"> </span>UPR-EGP,<span class="w"> </span>and<span class="w"> </span>the<span class="w"> </span>GIS<span class="w"> </span>User<span class="w"> </span>Community&#39;
+<span class="w">    </span>}).addTo(map);
+<span class="w">    </span>getData();
 }
 
-function createMarker(latitude,longitude,popupContent){
-    L.marker(\[latitude,longitude\]).addTo(map)
-        .bindPopup(popupContent);
-    }
+function<span class="w"> </span>createMarker(latitude,longitude,popupContent){
+<span class="w">    </span>L.marker(\[latitude,longitude\]).addTo(map)
+<span class="w">        </span>.bindPopup(popupContent);
+<span class="w">    </span>}
 
-function getData()
+function<span class="w"> </span>getData()
 {
-    var url = 'map.geojson'
-    $.getJSON(url,function(data){
-        $.each(data.features,function(i,val){
-            if(val.geometry.type == "Point"){
-                lng = val.geometry.coordinates\[0\];
-                lat = val.geometry.coordinates\[1\];
-                popup = val.properties.name;
-                createMarker(lat,lng,popup);
-            }
-            else
-            {
-                L.geoJson(val,{onEachFeature: onEachFeature}).addTo(map)
-            }
-        });
-    })
+<span class="w">    </span>var<span class="w"> </span>url<span class="w"> </span>=<span class="w"> </span>&#39;map.geojson&#39;
+<span class="w">    </span>$.getJSON(url,function(data){
+<span class="w">        </span>$.each(data.features,function(i,val){
+<span class="w">            </span>if(val.geometry.type<span class="w"> </span>==<span class="w"> </span>&quot;Point&quot;){
+<span class="w">                </span>lng<span class="w"> </span>=<span class="w"> </span>val.geometry.coordinates\[0\];
+<span class="w">                </span>lat<span class="w"> </span>=<span class="w"> </span>val.geometry.coordinates\[1\];
+<span class="w">                </span>popup<span class="w"> </span>=<span class="w"> </span>val.properties.name;
+<span class="w">                </span>createMarker(lat,lng,popup);
+<span class="w">            </span>}
+<span class="w">            </span>else
+<span class="w">            </span>{
+<span class="w">                </span>L.geoJson(val,{onEachFeature:<span class="w"> </span>onEachFeature}).addTo(map)
+<span class="w">            </span>}
+<span class="w">        </span>});
+<span class="w">    </span>})
 }
 
-function onEachFeature(feature, layer) {
-    // runs only if this feature a property named 'name'
-    if (feature.properties &amp;&amp; feature.properties.name) {
-        layer.bindPopup(feature.properties.name);
-    }
+function<span class="w"> </span>onEachFeature(feature,<span class="w"> </span>layer)<span class="w"> </span>{
+<span class="w">    </span>//<span class="w"> </span>runs<span class="w"> </span>only<span class="w"> </span>if<span class="w"> </span>this<span class="w"> </span>feature<span class="w"> </span>a<span class="w"> </span>property<span class="w"> </span>named<span class="w"> </span>&#39;name&#39;
+<span class="w">    </span>if<span class="w"> </span>(feature.properties<span class="w"> </span><span class="err">&amp;&amp;</span><span class="w"> </span>feature.properties.name)<span class="w"> </span>{
+<span class="w">        </span>layer.bindPopup(feature.properties.name);
+<span class="w">    </span>}
 }
 
-&lt;/script&gt;
-</code></pre>
-<p></head>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div>
+
+<p> <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
 <body onload="init()">
     <div id="map"></div>
-</body>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html></p>
 <p><a href="http://sandbox.idre.ucla.edu/Workshops/DigitalMappingWorkshop2015/Leaflet_1_6.html">Example</a></p>
 </li>
@@ -3714,11 +4110,19 @@ function onEachFeature(feature, layer) {
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
     
     
       <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
+    <script>
+    var elements = document.getElementsByClassName("lightgallery");
+    for(var i=0; i<elements.length; i++) {
+       lightGallery(elements[i]);
+    }
+    </script>
+
   </body>
 </html>

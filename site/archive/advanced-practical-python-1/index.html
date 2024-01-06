@@ -20,8 +20,9 @@
     
     
       
-        <title>Advanced Practical Python #1: Getting Warmed Up - Sandblog 2.0</title>
+        <title>Advanced Practical Python #1: Getting Warmed Up - OARC Technology Sandbox</title>
       
+    
     
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
@@ -30,9 +31,14 @@
 
 
     
+    <link rel="stylesheet" href="../../css/lightgallery.min.css">
+
+    
     
       
     
+    <script src="../../js/lightgallery.min.js"></script>
+
     
       
         
@@ -50,7 +56,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -74,14 +91,12 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Sandblog 2.0" class="md-header__button md-logo" aria-label="Sandblog 2.0" data-md-component="logo">
+    <a href="../.." title="OARC Technology Sandbox" class="md-header__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5m10.78 2H19v12.18c-.26-.8-1.31-1.39-2.2-1.39h-1v-3a1 1 0 0 0-1-1h-6v-2h2a1 1 0 0 0 1-1v-2h2c1.03 0 1.87-.79 1.98-1.79M5 10.29l4.8 4.5v1a2 2 0 0 0 2 2V19H5v-8.71Z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -92,7 +107,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Sandblog 2.0
+            OARC Technology Sandbox
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -133,6 +148,8 @@
         </button>
       </nav>
       
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -157,6 +174,97 @@
       
         
           
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Welcome
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../about/History%20and%20Mission/" class="md-tabs__link">
+          
+  
+  About
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../projects/current/VSim/" class="md-tabs__link">
+          
+  
+  Projects
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -170,16 +278,18 @@
                     
 
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Sandblog 2.0" class="md-nav__button md-logo" aria-label="Sandblog 2.0" data-md-component="logo">
+    <a href="../.." title="OARC Technology Sandbox" class="md-nav__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5m10.78 2H19v12.18c-.26-.8-1.31-1.39-2.2-1.39h-1v-3a1 1 0 0 0-1-1h-6v-2h2a1 1 0 0 0 1-1v-2h2c1.03 0 1.87-.79 1.98-1.79M5 10.29l4.8 4.5v1a2 2 0 0 0 2 2V19H5v-8.71Z"/></svg>
 
     </a>
-    Sandblog 2.0
+    OARC Technology Sandbox
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -195,11 +305,100 @@
         
   
   <span class="md-ellipsis">
-    Welcome to MkDocs
+    Welcome
   </span>
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/History%20and%20Mission/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    History and Mission
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/Who%20We%20Are/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Who We Are
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -217,15 +416,18 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -236,8 +438,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Archive
           </label>
@@ -3289,6 +3491,140 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Current
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Current
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/current/VSim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VSim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/current/world%27s%20columbian%20exposition%20reconstruction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    World's columbian exposition reconstruction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -3456,9 +3792,9 @@
 
 <p>In the first part of our Advanced Practical Python workshop we are going to create a script the moves our files into folders based on the file type (also known as file extension).</p>
 <p><strong>Warning:</strong> This script WILL move your files so do not run it in a system directory or somewhere that you did not want to have organized! THERE IS NO UNDO!!!! <a href="https://emojipedia.org/smiling-face-with-smiling-eyes/">?</a></p>
-<h2 id="part-1-getting-a-basic-count-of-files">Part 1. Getting a basic count of files</h2>
+<h2 id="part-1-getting-a-basic-count-of-files">Part 1. Getting a basic count of files<a class="headerlink" href="#part-1-getting-a-basic-count-of-files" title="Permanent link">&para;</a></h2>
 <p>Let's start with importing some built in Python modules:</p>
-<h1 id="import-modules">import modules</h1>
+<h1 id="import-modules">import modules<a class="headerlink" href="#import-modules" title="Permanent link">&para;</a></h1>
 <p>import shutil
 import os</p>
 <p>"import Shutil" brings in shell utilities which allows Python to interact in the command line, and "import os" allows interaction with the operating system.</p>
@@ -3468,7 +3804,7 @@ import os</p>
 <p>print "here are the folders: {}".format(folders)</p>
 <p>Next we will 'walk' through our folders and just get a count of the number of files in there:</p>
 <p>count = 0</p>
-<h1 id="walk-through-the-directories">'walk' through the directories</h1>
+<h1 id="walk-through-the-directories">'walk' through the directories<a class="headerlink" href="#walk-through-the-directories" title="Permanent link">&para;</a></h1>
 <p>for files in os.walk("."):
     for filename in files:
         count +=1
@@ -3477,10 +3813,10 @@ print "This is the count of files {}".format(count)</p>
 <p>Within that for-loop, we will nest another loop (for the file names later on) and increment the count.</p>
 <p>Then we'll finally print the count.</p>
 <p>We now have a basic function that counts the total number of files within the scripts folder.</p>
-<h2 id="part-2-counting-unique-file-extensions">Part 2. Counting unique file extensions</h2>
+<h2 id="part-2-counting-unique-file-extensions">Part 2. Counting unique file extensions<a class="headerlink" href="#part-2-counting-unique-file-extensions" title="Permanent link">&para;</a></h2>
 <p>Let's do something more useful and get the specific file types of the files within the folder. Set a blank array for the file types with file_types = []  we will then encase our function in a file name loop because the current loop just deals with "walking." The next line of code then splits the entire file name when you encounter the first "." using filename.split(".")</p>
 <p>file_types =[]</p>
-<h1 id="walk-through-the-directories_1">'walk' through the directories</h1>
+<h1 id="walk-through-the-directories_1">'walk' through the directories<a class="headerlink" href="#walk-through-the-directories_1" title="Permanent link">&para;</a></h1>
 <p>for files in os.walk("."):
     for filename in files:
         extension = filename.split(".")[-1]</p>
@@ -3488,7 +3824,7 @@ print "This is the count of files {}".format(count)</p>
 <p>For example, given some_array = ["apple", "grape", "melon"] then some_array[0] will return "apple".  We can also use colons to identify starting points, some_array[1:] will return "grape" and "melon" while some_array[:1] will return only "apple."</p>
 <p>Now let's do something useful and get a list of unique extensions in our directory by adding the following <strong>if-statement</strong>:</p>
 <p>file_types = []</p>
-<h1 id="walk-through-the-directories_2">'walk' through the directories</h1>
+<h1 id="walk-through-the-directories_2">'walk' through the directories<a class="headerlink" href="#walk-through-the-directories_2" title="Permanent link">&para;</a></h1>
 <p>for files in os.walk("."):
     for filename in files:
         print filename
@@ -3499,7 +3835,7 @@ print "{}".format(file_types)</p>
 <p>This if-statement adds unique extensions to the "filetypes" array using the "not in" condition.</p>
 <p>If you get all the file types in your folder listed, then rejoice!</p>
 <p>The next step is to create folders for each file extension and then move our files into there.</p>
-<h2 id="part-3-moving-files-into-folders">Part 3. Moving files into folders</h2>
+<h2 id="part-3-moving-files-into-folders">Part 3. Moving files into folders<a class="headerlink" href="#part-3-moving-files-into-folders" title="Permanent link">&para;</a></h2>
 <p>Now that we have a list of folders, we can loop through them and create folders. Start with our good friend, the for-loop and a print statement:</p>
 <p>for file_type in file_types:
     print file_type</p>
@@ -3521,10 +3857,11 @@ print "{}".format(file_types)</p>
     def create_path(path):
         if not os.path.isdir(path):
             os.mkdir(path)</p>
-<pre><code>create\_path(file\_type)
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="nx">create</span><span class="err">\</span><span class="nx">_path</span><span class="p">(</span><span class="nx">file</span><span class="err">\</span><span class="nx">_type</span><span class="p">)</span>
+</code></pre></div>
+
 <p>Time to actually use those folders!</p>
-<h2 id="part-4-moving-your-files-into-folders">Part 4. Moving your files into folders</h2>
+<h2 id="part-4-moving-your-files-into-folders">Part 4. Moving your files into folders<a class="headerlink" href="#part-4-moving-your-files-into-folders" title="Permanent link">&para;</a></h2>
 <p>Within the loop of for file_type in file_types:  we are going to add another loop inside of it! Adding loops within loops is a common exercise, in this instance our logic is as follows:</p>
 <ol>
 <li>For each <strong>file type</strong> we are going to create a <strong>directory</strong> (if it does not already exist)</li>
@@ -3556,37 +3893,38 @@ else:
 <p>Your final script should look like the following:</p>
 <p>import shutil
 import os</p>
-<h1 id="define-the-folders-to-look-through">define the folders to look through</h1>
+<h1 id="define-the-folders-to-look-through">define the folders to look through<a class="headerlink" href="#define-the-folders-to-look-through" title="Permanent link">&para;</a></h1>
 <p>folders = os.listdir("./")</p>
-<h1 id="set-an-array-for-the-file-types">set an array for the file types</h1>
+<h1 id="set-an-array-for-the-file-types">set an array for the file types<a class="headerlink" href="#set-an-array-for-the-file-types" title="Permanent link">&para;</a></h1>
 <p>file_types = []</p>
-<h1 id="create-a-list-of-file-types">create a list of file types</h1>
+<h1 id="create-a-list-of-file-types">create a list of file types<a class="headerlink" href="#create-a-list-of-file-types" title="Permanent link">&para;</a></h1>
 <p>for root, dirs, files in os.walk("."):
     for filename in files:
         the_type = filename.split(".")[-1]
         if the_type not in file_types:
             file_types.append(the_type)</p>
-<h2 id="optional-print-out-the-list-of-file-types">OPTIONAL: print out the list of file types</h2>
+<h2 id="optional-print-out-the-list-of-file-types">OPTIONAL: print out the list of file types<a class="headerlink" href="#optional-print-out-the-list-of-file-types" title="Permanent link">&para;</a></h2>
 <p>print ('These are file types: \n {}').format(file_types)</p>
 <p>for file_type in file_types:
     #define the function for making folders
     def create_path(path):
         if not os.path.isdir(path):
             os.mkdir(path)</p>
-<pre><code>#use the function
-create\_path(file\_type)
+<div class="codehilite"><pre><span></span><code><span class="c1">#use the function</span>
+<span class="n">create</span>\<span class="n">_path</span><span class="p">(</span><span class="n">file</span>\<span class="n">_type</span><span class="p">)</span>
 
-#make a variable for the target destinations
-destination = "./"+file\_type+"/"
+<span class="c1">#make a variable for the target destinations</span>
+<span class="n">destination</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;./&quot;</span><span class="o">+</span><span class="n">file</span>\<span class="n">_type</span><span class="o">+</span><span class="s2">&quot;/&quot;</span>
 
-#loop through each file in the folders
-for files in folders:
-    if files.endswith("."+file\_type):
-        if files == 'fileOrganizer.py':
-            print "Found file organizer so ignoring it."
-        else:
-            shutil.move(files,destination)
-</code></pre>
+<span class="c1">#loop through each file in the folders</span>
+<span class="k">for</span><span class="w"> </span><span class="n">files</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">folders</span><span class="p">:</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">files</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="o">+</span><span class="n">file</span>\<span class="n">_type</span><span class="p">):</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">files</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;fileOrganizer.py&#39;</span><span class="p">:</span>
+<span class="w">            </span><span class="nb">print</span><span class="w"> </span><span class="s2">&quot;Found file organizer so ignoring it.&quot;</span>
+<span class="w">        </span><span class="k">else</span><span class="p">:</span>
+<span class="w">            </span><span class="n">shutil</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">files</span><span class="p">,</span><span class="n">destination</span><span class="p">)</span>
+</code></pre></div>
+
 <p>print "Script has completed"</p>
 <p>You can also find the code on GitHub here:</p>
 <p><a href="https://github.com/albertkun/fileOrganizer/blob/master/fileOrganizer.py">https://github.com/albertkun/fileOrganizer/blob/master/fileOrganizer.py</a></p>
@@ -3640,11 +3978,19 @@ for files in folders:
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
     
     
       <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
-  </body>
+    <script>
+    var elements = document.getElementsByClassName("lightgallery");
+    for(var i=0; i<elements.length; i++) {
+       lightGallery(elements[i]);
+    }
+    </script>
+
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

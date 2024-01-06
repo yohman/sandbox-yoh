@@ -20,8 +20,9 @@
     
     
       
-        <title>Scrapy Tutorial - Sandblog 2.0</title>
+        <title>Scrapy Tutorial - OARC Technology Sandbox</title>
       
+    
     
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
@@ -30,9 +31,14 @@
 
 
     
+    <link rel="stylesheet" href="../../css/lightgallery.min.css">
+
+    
     
       
     
+    <script src="../../js/lightgallery.min.js"></script>
+
     
       
         
@@ -50,7 +56,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -74,14 +91,12 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Sandblog 2.0" class="md-header__button md-logo" aria-label="Sandblog 2.0" data-md-component="logo">
+    <a href="../.." title="OARC Technology Sandbox" class="md-header__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5m10.78 2H19v12.18c-.26-.8-1.31-1.39-2.2-1.39h-1v-3a1 1 0 0 0-1-1h-6v-2h2a1 1 0 0 0 1-1v-2h2c1.03 0 1.87-.79 1.98-1.79M5 10.29l4.8 4.5v1a2 2 0 0 0 2 2V19H5v-8.71Z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -92,7 +107,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Sandblog 2.0
+            OARC Technology Sandbox
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -133,6 +148,8 @@
         </button>
       </nav>
       
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -157,6 +174,97 @@
       
         
           
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Welcome
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../about/History%20and%20Mission/" class="md-tabs__link">
+          
+  
+  About
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../projects/current/VSim/" class="md-tabs__link">
+          
+  
+  Projects
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -170,16 +278,18 @@
                     
 
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Sandblog 2.0" class="md-nav__button md-logo" aria-label="Sandblog 2.0" data-md-component="logo">
+    <a href="../.." title="OARC Technology Sandbox" class="md-nav__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5m10.78 2H19v12.18c-.26-.8-1.31-1.39-2.2-1.39h-1v-3a1 1 0 0 0-1-1h-6v-2h2a1 1 0 0 0 1-1v-2h2c1.03 0 1.87-.79 1.98-1.79M5 10.29l4.8 4.5v1a2 2 0 0 0 2 2V19H5v-8.71Z"/></svg>
 
     </a>
-    Sandblog 2.0
+    OARC Technology Sandbox
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -195,11 +305,100 @@
         
   
   <span class="md-ellipsis">
-    Welcome to MkDocs
+    Welcome
   </span>
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/History%20and%20Mission/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    History and Mission
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/Who%20We%20Are/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Who We Are
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -217,15 +416,18 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -236,8 +438,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Archive
           </label>
@@ -3199,6 +3401,140 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Current
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Current
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/current/VSim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VSim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/current/world%27s%20columbian%20exposition%20reconstruction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    World's columbian exposition reconstruction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -3276,16 +3612,16 @@
 
   <h1>Scrapy Tutorial</h1>
 
-<h2 id="install-scrapy">Install Scrapy</h2>
-<pre><code class="language-bash">pip install scrapy
-</code></pre>
-<h2 id="setting-up-the-project">Setting up the project</h2>
-<pre><code class="language-bash">scrapy startproject ucla_scraper
-</code></pre>
-<h2 id="creating-the-spider">Creating the Spider</h2>
+<h2 id="install-scrapy">Install Scrapy<a class="headerlink" href="#install-scrapy" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>scrapy
+</code></pre></div>
+<h2 id="setting-up-the-project">Setting up the project<a class="headerlink" href="#setting-up-the-project" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>scrapy<span class="w"> </span>startproject<span class="w"> </span>ucla_scraper
+</code></pre></div>
+<h2 id="creating-the-spider">Creating the Spider<a class="headerlink" href="#creating-the-spider" title="Permanent link">&para;</a></h2>
 <p>Run this snippet in the your command line/terminal to create a spider called "ucla_scraper":</p>
-<pre><code class="language-bash">scrapy genspider ucla_scraper ucla 
-</code></pre>
+<div class="highlight"><pre><span></span><code>scrapy<span class="w"> </span>genspider<span class="w"> </span>ucla_scraper<span class="w"> </span>ucla<span class="w"> </span>
+</code></pre></div>
 <p>Next open the file that was created in the "spiders" folder, it should be called "ucla_scraper.py"</p>
 <p>Feel free to copy and paste the following code based off of a datablogger tutorial (<a href="https://www.data-blogger.com/2016/08/18/scraping-a-website-with-python-scrapy/">https://www.data-blogger.com/2016/08/18/scraping-a-website-with-python-scrapy/</a>)</p>
 <p># -*- coding: utf-8 -*-
@@ -3303,49 +3639,50 @@ from scrapy.spiders import Rule, CrawlSpider</p>
     start_urls = ['http://www.ucla.edu/students/current-students']
     custom_settings = {
         'DEPTH_LIMIT': '2'}</p>
-<pre><code># This spider has one rule: extract all (unique and canonicalized) links, follow them and parse them using the parse\_items method
-rules = \[
-    Rule(
-        LinkExtractor(
-            canonicalize=True,
-            unique=True
-        ),
-        follow=True,
-        callback="parse\_items"
-    )
-\]
+<div class="codehilite"><pre><span></span><code><span class="err">#</span><span class="w"> </span><span class="n">This</span><span class="w"> </span><span class="n">spider</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="k">rule</span><span class="err">:</span><span class="w"> </span><span class="k">extract</span><span class="w"> </span><span class="ow">all</span><span class="w"> </span><span class="p">(</span><span class="k">unique</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">canonicalized</span><span class="p">)</span><span class="w"> </span><span class="n">links</span><span class="p">,</span><span class="w"> </span><span class="n">follow</span><span class="w"> </span><span class="n">them</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nf">parse</span><span class="w"> </span><span class="n">them</span><span class="w"> </span><span class="k">using</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="nf">parse</span><span class="err">\</span><span class="n">_items</span><span class="w"> </span><span class="k">method</span>
+<span class="n">rules</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">\</span><span class="o">[</span>
+<span class="n">    Rule(</span>
+<span class="n">        LinkExtractor(</span>
+<span class="n">            canonicalize=True,</span>
+<span class="n">            unique=True</span>
+<span class="n">        ),</span>
+<span class="n">        follow=True,</span>
+<span class="n">        callback=&quot;parse\_items&quot;</span>
+<span class="n">    )</span>
+<span class="n">\</span><span class="o">]</span>
 
-# Method which starts the requests by visiting all URLs specified in start\_urls
-def start\_requests(self):
-    for url in self.start\_urls:
-        yield scrapy.Request(url, callback=self.parse, dont\_filter=True)
+<span class="err">#</span><span class="w"> </span><span class="k">Method</span><span class="w"> </span><span class="n">which</span><span class="w"> </span><span class="n">starts</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">requests</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">visiting</span><span class="w"> </span><span class="ow">all</span><span class="w"> </span><span class="n">URLs</span><span class="w"> </span><span class="n">specified</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">start</span><span class="err">\</span><span class="n">_urls</span>
+<span class="n">def</span><span class="w"> </span><span class="k">start</span><span class="err">\</span><span class="n">_requests</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="err">:</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="k">start</span><span class="err">\</span><span class="nl">_urls</span><span class="p">:</span>
+<span class="w">        </span><span class="n">yield</span><span class="w"> </span><span class="n">scrapy</span><span class="p">.</span><span class="n">Request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="w"> </span><span class="n">callback</span><span class="o">=</span><span class="n">self</span><span class="p">.</span><span class="nf">parse</span><span class="p">,</span><span class="w"> </span><span class="n">dont</span><span class="err">\</span><span class="n">_filter</span><span class="o">=</span><span class="k">True</span><span class="p">)</span>
 
-# Method for parsing items
-def parse\_items(self, response):
-    # The list of items that are found on the particular page
-    items = \[\]
-    # Only extract canonicalized and unique links (with respect to the current page)
-    links = LinkExtractor(canonicalize=True, unique=True).extract\_links(response)
-    # Now go through all the found links
-    for link in links:
-        # Check whether the domain of the URL of the link is allowed; so whether it is in one of the allowed domains
-        is\_allowed = False
-        for allowed\_domain in self.allowed\_domains:
-            if allowed\_domain in link.url:
-                is\_allowed = True
-        # If it is allowed, create a new item and add it to the list of found items
-        if is\_allowed:
-            item = ScraperItem()
-            item\['url\_from'\] = response.url
-            item\['url\_to'\] = link.url
-            items.append(item)
-    # Return all the found items
-    return items
-</code></pre>
-<h2 id="execute-the-spider">Execute the Spider!</h2>
+<span class="err">#</span><span class="w"> </span><span class="k">Method</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">parsing</span><span class="w"> </span><span class="n">items</span>
+<span class="n">def</span><span class="w"> </span><span class="nf">parse</span><span class="err">\</span><span class="n">_items</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="p">)</span><span class="err">:</span>
+<span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">items</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="k">are</span><span class="w"> </span><span class="k">found</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">particular</span><span class="w"> </span><span class="n">page</span>
+<span class="w">    </span><span class="n">items</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">\</span><span class="o">[</span><span class="n">\</span><span class="o">]</span>
+<span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="k">Only</span><span class="w"> </span><span class="k">extract</span><span class="w"> </span><span class="n">canonicalized</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="k">unique</span><span class="w"> </span><span class="n">links</span><span class="w"> </span><span class="p">(</span><span class="k">with</span><span class="w"> </span><span class="n">respect</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">current</span><span class="w"> </span><span class="n">page</span><span class="p">)</span>
+<span class="w">    </span><span class="n">links</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LinkExtractor</span><span class="p">(</span><span class="n">canonicalize</span><span class="o">=</span><span class="k">True</span><span class="p">,</span><span class="w"> </span><span class="k">unique</span><span class="o">=</span><span class="k">True</span><span class="p">).</span><span class="k">extract</span><span class="err">\</span><span class="n">_links</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+<span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="n">Now</span><span class="w"> </span><span class="k">go</span><span class="w"> </span><span class="n">through</span><span class="w"> </span><span class="ow">all</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">found</span><span class="w"> </span><span class="n">links</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">link</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nl">links</span><span class="p">:</span>
+<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="k">Check</span><span class="w"> </span><span class="n">whether</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">domain</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">URL</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">link</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">allowed</span><span class="p">;</span><span class="w"> </span><span class="n">so</span><span class="w"> </span><span class="n">whether</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">allowed</span><span class="w"> </span><span class="n">domains</span>
+<span class="w">        </span><span class="k">is</span><span class="err">\</span><span class="n">_allowed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">False</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="n">allowed</span><span class="err">\</span><span class="n">_domain</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">allowed</span><span class="err">\</span><span class="nl">_domains</span><span class="p">:</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="n">allowed</span><span class="err">\</span><span class="n">_domain</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">link</span><span class="p">.</span><span class="nl">url</span><span class="p">:</span>
+<span class="w">                </span><span class="k">is</span><span class="err">\</span><span class="n">_allowed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">True</span>
+<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="k">If</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">allowed</span><span class="p">,</span><span class="w"> </span><span class="k">create</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="k">add</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="k">found</span><span class="w"> </span><span class="n">items</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="k">is</span><span class="err">\</span><span class="nl">_allowed</span><span class="p">:</span>
+<span class="w">            </span><span class="n">item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ScraperItem</span><span class="p">()</span>
+<span class="w">            </span><span class="n">item</span><span class="err">\</span><span class="o">[</span><span class="n">&#39;url\_from&#39;\</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">response</span><span class="p">.</span><span class="n">url</span>
+<span class="w">            </span><span class="n">item</span><span class="err">\</span><span class="o">[</span><span class="n">&#39;url\_to&#39;\</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">link</span><span class="p">.</span><span class="n">url</span>
+<span class="w">            </span><span class="n">items</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+<span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="k">Return</span><span class="w"> </span><span class="ow">all</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">found</span><span class="w"> </span><span class="n">items</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">items</span>
+</code></pre></div>
+
+<h2 id="execute-the-spider">Execute the Spider!<a class="headerlink" href="#execute-the-spider" title="Permanent link">&para;</a></h2>
 <p>Run the spider from the command line in the parent directory of the spiders folder as follows:</p>
-<pre><code class="language-bash">scrapy crawl ucla_scraper -o links.csv -t csv
-</code></pre>
+<div class="highlight"><pre><span></span><code>scrapy<span class="w"> </span>crawl<span class="w"> </span>ucla_scraper<span class="w"> </span>-o<span class="w"> </span>links.csv<span class="w"> </span>-t<span class="w"> </span>csv
+</code></pre></div>
 <p>Done!</p>
 
 
@@ -3396,11 +3733,19 @@ def parse\_items(self, response):
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
     
     
       <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
-  </body>
+    <script>
+    var elements = document.getElementsByClassName("lightgallery");
+    for(var i=0; i<elements.length; i++) {
+       lightGallery(elements[i]);
+    }
+    </script>
+
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

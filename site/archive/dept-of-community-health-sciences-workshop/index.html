@@ -20,8 +20,9 @@
     
     
       
-        <title>Department of Community Health Sciences GIS Workshop - Sandblog 2.0</title>
+        <title>Department of Community Health Sciences GIS Workshop - OARC Technology Sandbox</title>
       
+    
     
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
@@ -30,9 +31,14 @@
 
 
     
+    <link rel="stylesheet" href="../../css/lightgallery.min.css">
+
+    
     
       
     
+    <script src="../../js/lightgallery.min.js"></script>
+
     
       
         
@@ -50,7 +56,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -74,14 +91,12 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Sandblog 2.0" class="md-header__button md-logo" aria-label="Sandblog 2.0" data-md-component="logo">
+    <a href="../.." title="OARC Technology Sandbox" class="md-header__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5m10.78 2H19v12.18c-.26-.8-1.31-1.39-2.2-1.39h-1v-3a1 1 0 0 0-1-1h-6v-2h2a1 1 0 0 0 1-1v-2h2c1.03 0 1.87-.79 1.98-1.79M5 10.29l4.8 4.5v1a2 2 0 0 0 2 2V19H5v-8.71Z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -92,7 +107,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Sandblog 2.0
+            OARC Technology Sandbox
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -133,6 +148,8 @@
         </button>
       </nav>
       
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -157,6 +174,97 @@
       
         
           
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Welcome
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../about/History%20and%20Mission/" class="md-tabs__link">
+          
+  
+  About
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../projects/current/VSim/" class="md-tabs__link">
+          
+  
+  Projects
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -170,16 +278,18 @@
                     
 
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Sandblog 2.0" class="md-nav__button md-logo" aria-label="Sandblog 2.0" data-md-component="logo">
+    <a href="../.." title="OARC Technology Sandbox" class="md-nav__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5m10.78 2H19v12.18c-.26-.8-1.31-1.39-2.2-1.39h-1v-3a1 1 0 0 0-1-1h-6v-2h2a1 1 0 0 0 1-1v-2h2c1.03 0 1.87-.79 1.98-1.79M5 10.29l4.8 4.5v1a2 2 0 0 0 2 2V19H5v-8.71Z"/></svg>
 
     </a>
-    Sandblog 2.0
+    OARC Technology Sandbox
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -195,11 +305,100 @@
         
   
   <span class="md-ellipsis">
-    Welcome to MkDocs
+    Welcome
   </span>
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/History%20and%20Mission/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    History and Mission
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/Who%20We%20Are/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Who We Are
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -217,15 +416,18 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -236,8 +438,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Archive
           </label>
@@ -3499,6 +3701,140 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Current
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Current
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/current/VSim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VSim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/current/world%27s%20columbian%20exposition%20reconstruction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    World's columbian exposition reconstruction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -3874,15 +4210,15 @@
                   
 
 
-<h4 id="welcome-to-the-department-of-community-health-sciences-gis-workshop">Welcome to the Department of Community Health Sciences GIS Workshop!</h4>
-<h4 id="first-please-navigate-to-this-page-using-the-url-below">First, please navigate to this page using the URL below:</h4>
-<h4 id="httpsandboxidreuclaedusandboxdept-of-community-health-sciences-workshop"><a href="http://sandbox.idre.ucla.edu/sandbox/dept-of-community-health-sciences-workshop">http://sandbox.idre.ucla.edu/sandbox/dept-of-community-health-sciences-workshop</a></h4>
-<h4 id="and-then-download-the-workshop-tutorial-files">And then download the Workshop tutorial files:</h4>
-<h4 id="httpsandboxidreuclaeduworkshopsdchs_workshopzip"><a href="http://sandbox.idre.ucla.edu/Workshops/DCHS_Workshop.zip">http://sandbox.idre.ucla.edu/Workshops/DCHS_Workshop.zip</a></h4>
-<h1 id="other-links">Other Links</h1>
+<h4 id="welcome-to-the-department-of-community-health-sciences-gis-workshop">Welcome to the Department of Community Health Sciences GIS Workshop!<a class="headerlink" href="#welcome-to-the-department-of-community-health-sciences-gis-workshop" title="Permanent link">&para;</a></h4>
+<h4 id="first-please-navigate-to-this-page-using-the-url-below">First, please navigate to this page using the URL below:<a class="headerlink" href="#first-please-navigate-to-this-page-using-the-url-below" title="Permanent link">&para;</a></h4>
+<h4 id="httpsandboxidreuclaedusandboxdept-of-community-health-sciences-workshop"><a href="http://sandbox.idre.ucla.edu/sandbox/dept-of-community-health-sciences-workshop">http://sandbox.idre.ucla.edu/sandbox/dept-of-community-health-sciences-workshop</a><a class="headerlink" href="#httpsandboxidreuclaedusandboxdept-of-community-health-sciences-workshop" title="Permanent link">&para;</a></h4>
+<h4 id="and-then-download-the-workshop-tutorial-files">And then download the Workshop tutorial files:<a class="headerlink" href="#and-then-download-the-workshop-tutorial-files" title="Permanent link">&para;</a></h4>
+<h4 id="httpsandboxidreuclaeduworkshopsdchs_workshopzip"><a href="http://sandbox.idre.ucla.edu/Workshops/DCHS_Workshop.zip">http://sandbox.idre.ucla.edu/Workshops/DCHS_Workshop.zip</a><a class="headerlink" href="#httpsandboxidreuclaeduworkshopsdchs_workshopzip" title="Permanent link">&para;</a></h4>
+<h1 id="other-links">Other Links<a class="headerlink" href="#other-links" title="Permanent link">&para;</a></h1>
 <p>ESRI's Self-learning Tutorials: <a href="http://www.esri.com/training/main/training-catalog/course-recommendations">http://www.esri.com/training/main/training-catalog/course-recommendations</a></p>
 <p>Social Explorer: <a href="http://www.socialexplorer.com/">http://www.socialexplorer.com/</a></p>
-<h1 id="outline">Outline:</h1>
+<h1 id="outline">Outline:<a class="headerlink" href="#outline" title="Permanent link">&para;</a></h1>
 <ol>
 <li>Introduction to GIS and ESRI<ol>
 <li>Background: Geographical information in the U.S.</li>
@@ -3914,22 +4250,22 @@
 </ol>
 <p><em>*Time permitting</em></p>
 <p>Part I: Introduction to GIS and ESRI</p>
-<h3 id="the-esri-way-of-gis">The ESRI way of GIS</h3>
+<h3 id="the-esri-way-of-gis">The ESRI way of GIS<a class="headerlink" href="#the-esri-way-of-gis" title="Permanent link">&para;</a></h3>
 <p>The first step in this tutorial is to understand that we are covering the basics of desktop GIS analysis using ESRI's ArcGIS software suite. This is by no means an all encompassing "this is all of GIS" tutorial, but rather a view on how GIS is used to build maps from ESRI's perspective, limited by the functionalities of the software covered.</p>
 <p>The core function of the ESRI ArcGIS suite lies within two programs:</p>
 <ol>
 <li>ArcCatalog - for managing GIS datasets</li>
 <li>ArcMap - for mapping GIS datasets</li>
 </ol>
-<p><img alt="ArcIcons" src="images/ArcIcons.png" /></p>
+<p><a class="glightbox" href="images/ArcIcons.png" data-type="image" data-width="auto" data-height="auto" data-title="ArcIcons" data-desc-position="bottom"><img alt="ArcIcons" src="images/ArcIcons.png" /></a></p>
 <p>[TBS_ALERT color="info" heading="A note about OpenSource Alternatives"]</p>
 <p><a href="http://www.qgis.org/en/site/">QGIS</a> is as an alternative to ArcGIS that is free and openly available to the public on all computing platforms. Despite the accessibility of QGIS, there is a steeper learning curve for those learning GIS for the first time. However, those seeking a free low-cost alternative to ArcGIS can apply the concepts learned in this workshop with that program.</p>
 <p>For those interested in seeing the comparison between QGIS and ArcGIS you can check out this external article here: <a href="http://www.xyht.com/spatial-itgis/qgis-v-arcgis/">http://www.xyht.com/spatial-itgis/qgis-v-arcgis/</a></p>
 <p>[/TBS_ALERT]</p>
-<h2 id="a-little-background-geographical-information-in-the-usa">A little background: Geographical information in the U.S.A.</h2>
+<h2 id="a-little-background-geographical-information-in-the-usa">A little background: Geographical information in the U.S.A.<a class="headerlink" href="#a-little-background-geographical-information-in-the-usa" title="Permanent link">&para;</a></h2>
 <p>Demographic information in the USA is typically arranged in a hierarchical geography, starting from large to small. Starting from States, the information gets broken down into Counties or Metropolitan Statistical Areas (MSAs) which are smaller regions within States. Each of those are comprised of Census Places which are similar to cities in their size and composition. Finally, the neighborhoods of each city are broken down into a Census Block Group. The last and smallest geographic unit is the Census Tract, which is a subdivision of Census Block Groups.</p>
 <p><a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2014/01/ca.jpg"><img alt="ca" src="images/ca-150x150.jpg" /></a> <a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2014/01/ca2.jpg"><img alt="ca2" src="images/ca2-150x150.jpg" /></a> <a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2014/01/ca3.jpg"><img alt="ca3" src="images/ca3-150x150.jpg" /></a></p>
-<h2 id="hello-map-thematic-mapping-and-the-basics">Hello Map: Thematic Mapping and the basics</h2>
+<h2 id="hello-map-thematic-mapping-and-the-basics">Hello Map: Thematic Mapping and the basics<a class="headerlink" href="#hello-map-thematic-mapping-and-the-basics" title="Permanent link">&para;</a></h2>
 <p>Now it's finally time to actually map something! For this exercise, you are provided with a Workshop geodatabase, which is a collection of GIS datasets. A GIS dataset can be any of the following:</p>
 <ol>
 <li>a vector layer - points, lines or polygons</li>
@@ -3957,25 +4293,25 @@
 <li><a href="http://sandbox.idre.ucla.edu/Workshops/DCHS_Workshop.zip">Workshop.gdb Download Link</a></li>
 </ul>
 <p>Download and extract Workshop.zip. Then locate Workshop.gdb, and put it in a project folder for this workshop. For this workshop, you will learn how to inspect the geodatabase data in ArcCatalog, then use ArcMap to create some maps.</p>
-<h2 id="connecting-a-folder-in-arccatalog">Connecting a folder in ArcCatalog</h2>
+<h2 id="connecting-a-folder-in-arccatalog">Connecting a folder in ArcCatalog<a class="headerlink" href="#connecting-a-folder-in-arccatalog" title="Permanent link">&para;</a></h2>
 <p>Open up ArcCatalog and click the second button to left, which is the "Connect Folder" button.</p>
-<p><img alt="ArcCatalog3" src="images/ArcCatalog3.png" /></p>
+<p><a class="glightbox" href="images/ArcCatalog3.png" data-type="image" data-width="auto" data-height="auto" data-title="ArcCatalog3" data-desc-position="bottom"><img alt="ArcCatalog3" src="images/ArcCatalog3.png" /></a></p>
 <p>Navigate to the <strong>Folder</strong> where you extracted the "Workshop.zip" file and then select "OK".</p>
 <p>[TBS_ALERT color="danger" heading="Do not try to connect a file!"]If you try to connect files, you will notice that the "OK" button is grayed out, connecting folders allows you only to choose folders.[/TBS_ALERT]</p>
-<h2 id="view-and-preview-the-data">View and Preview the data</h2>
+<h2 id="view-and-preview-the-data">View and Preview the data<a class="headerlink" href="#view-and-preview-the-data" title="Permanent link">&para;</a></h2>
 <p>After you've connected the folder, now you can check Folder Connections and open the Folder which you've connected.</p>
 <p>Locate "Workshop.gdb" and double click it to view its contents.</p>
 <p>Browse for CA_Boundary and click the "Preview" tab to view the shape of California.</p>
-<h2 id="adding-layers">Adding Layers</h2>
+<h2 id="adding-layers">Adding Layers<a class="headerlink" href="#adding-layers" title="Permanent link">&para;</a></h2>
 <p>Now the time has come to fire up ArcMap and get to map making!</p>
 <p>The first step for any GIS project is to have data (more on this later!). In order to add data to your project click on the "Add data" button:</p>
-<p><img alt="addData" src="images/addData.png" /></p>
+<p><a class="glightbox" href="images/addData.png" data-type="image" data-width="auto" data-height="auto" data-title="addData" data-desc-position="bottom"><img alt="addData" src="images/addData.png" /></a></p>
 <p>Notice how the connected folder can be selected and datasets be added now? Also, if your map is feeling a bit empty, you can add base maps by clicking the upside down triangle next to the Add Data button. Adding a basemap only provides reference information and nothing else.</p>
 <p>[TBS_ALERT color="info" heading="ArcCatalog in ArcMap?"] You can also connect folders in ArcMap by clicking a button, but we didn't do so because we wanted to demo ArcCatalog. You can even access ArcCatalog in ArcMap, but the view is rather constrained, so we opted to demo the standalone program.[/TBS_ALERT]</p>
 <p>Vector layers are also referred to as "feature classes" in ESRILand. All GIS datasets can be added in this same way. Now drag each layer and re-order them. If you are familiar with Adobe Photoshop or Illustrator, you will recognize conceptual similarities with layering. What happens when layers are re-ordered? How does this dictate your strategy on building a single flattened map with multiple layers?</p>
 <p><a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2014/09/workshop1.png"><img alt="workshop1" src="images/workshop1-510x188.png" /></a></p>
-<h2 id="attributes">Attributes</h2>
-<p><img alt="TableView" src="images/TableView.png" /></p>
+<h2 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link">&para;</a></h2>
+<p><a class="glightbox" href="images/TableView.png" data-type="image" data-width="auto" data-height="auto" data-title="TableView" data-desc-position="bottom"><img alt="TableView" src="images/TableView.png" /></a></p>
 <p>Every layer (feature class) comes with attributes. This is the all-important "information" part of geographic "information" systems mapping. Data in the attribute tables dictates what <em>can</em> get mapped. Open the attribute table of each layer, and study how each row and column is tied to the mapped element. Questions we will answer include:</p>
 <ul>
 <li>What is the unique identifier for each row?</li>
@@ -3985,17 +4321,17 @@
 <li>Can you build custom queries?</li>
 <li>Can you build graphs?</li>
 </ul>
-<h2 id="symbolization">Symbolization</h2>
+<h2 id="symbolization">Symbolization<a class="headerlink" href="#symbolization" title="Permanent link">&para;</a></h2>
 <p><a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2014/01/Screen-Shot-2014-01-30-at-3.45.23-PM.png"><img alt="Screen Shot 2014-01-30 at 3.45.23 PM" src="images/Screen-Shot-2014-01-30-at-3.45.23-PM-500x177.png" /></a></p>
 <p>Outlines, fills, colors, weight, action! Here is the design phase of creating a map. Consider color choices: grayscale? color schemes? color hierarchy? Inevitably, you will find yourselves in the throes of ESRI's symbolization quagmire... That said, experiment with two types of symbolization for the workshop data:</p>
 <ol>
 <li>Categories -&gt; Unique values</li>
 <li>Quantities -&gt; Graduated colors</li>
 </ol>
-<h2 id="labeling">Labeling</h2>
+<h2 id="labeling">Labeling<a class="headerlink" href="#labeling" title="Permanent link">&para;</a></h2>
 <p><a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2014/01/Screen-Shot-2014-01-30-at-3.48.34-PM.png"><img alt="Screen Shot 2014-01-30 at 3.48.34 PM" src="images/Screen-Shot-2014-01-30-at-3.48.34-PM-500x203.png" /></a></p>
 <p>Map elements need labels at times. Consider what needs to be labeled, and what does not. Label sizes, fonts, weights, placement, colors are all things to consider for your map. Understand the relationship between labels, attributes, and layers.</p>
-<h2 id="choropleth-maps">Choropleth Maps</h2>
+<h2 id="choropleth-maps">Choropleth Maps<a class="headerlink" href="#choropleth-maps" title="Permanent link">&para;</a></h2>
 <p><a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2014/01/Screen-Shot-2014-01-30-at-3.56.27-PM.png"><img alt="Screen Shot 2014-01-30 at 3.56.27 PM" src="images/Screen-Shot-2014-01-30-at-3.56.27-PM-500x191.png" /></a></p>
 <p>For this section, we will focus on creating a choropleth (which just means a colored map based on numerical data)!</p>
 <p>When creating a choropleth the following needs to be considered:</p>
@@ -4013,18 +4349,18 @@
 </ol>
 </li>
 </ol>
-<h1 id="data-data-data">Data, data, data!</h1>
+<h1 id="data-data-data">Data, data, data!<a class="headerlink" href="#data-data-data" title="Permanent link">&para;</a></h1>
 <p>Let's talk about data manipulation in ArcMap, which is one of the core functions of any GIS program. Within ArcMap "joining" or "connecting" data is a fundamental task for working between data from different sources. There are two basic "joining" method available:</p>
 <ol>
 <li>
-<h4 id="joining-connecting-an-external-data-source-to-a-gis-dataset">Joining - connecting an external data source to a GIS dataset</h4>
+<h4 id="joining-connecting-an-external-data-source-to-a-gis-dataset">Joining - connecting an external data source to a GIS dataset<a class="headerlink" href="#joining-connecting-an-external-data-source-to-a-gis-dataset" title="Permanent link">&para;</a></h4>
 </li>
 <li>
-<h4 id="spatial-join-connecting-data-based-on-geography">Spatial Join - connecting data based on geography</h4>
+<h4 id="spatial-join-connecting-data-based-on-geography">Spatial Join - connecting data based on geography<a class="headerlink" href="#spatial-join-connecting-data-based-on-geography" title="Permanent link">&para;</a></h4>
 </li>
 </ol>
 <p>This workshop will focus on the first "joining" method, which is more applicable to non-geographic datasets, such as excel spreadsheets, CSVs, and other data tables.</p>
-<h2 id="acquiring-data-non-geographic-spatial-data">Acquiring data non-geographic spatial data</h2>
+<h2 id="acquiring-data-non-geographic-spatial-data">Acquiring data non-geographic spatial data<a class="headerlink" href="#acquiring-data-non-geographic-spatial-data" title="Permanent link">&para;</a></h2>
 <p>A) Non-geographic spatial data for GIS analysis can be sourced from different formats, such as:</p>
 <ul>
 <li>Excel spreadsheets (.xsl)</li>
@@ -4033,8 +4369,8 @@
 </ul>
 <p>B) <a href="http://www.socialexplorer.com/">Social Explorer</a> (<a href="http://www.socialexplorer.com/">http://www.socialexplorer.com/</a>) is a website that enables access to Census Data, please see this other <a href="http://sandbox.idre.ucla.edu/?page_id=189">tutorial</a> for more information!</p>
 <p>The key is that there has to be a column which is able to link the non-geographic data to some spatial data set, such as States, Countries, FIPS Codes, Zipcodes.</p>
-<p><img alt="joining" src="images/joining.png" /></p>
-<h2 id="editing-data">Editing data</h2>
+<p><a class="glightbox" href="images/joining.png" data-type="image" data-width="auto" data-height="auto" data-title="joining" data-desc-position="bottom"><img alt="joining" src="images/joining.png" /></a></p>
+<h2 id="editing-data">Editing data<a class="headerlink" href="#editing-data" title="Permanent link">&para;</a></h2>
 <p>When the "key" field is which formatted in differently, the table will only join if the connecting table has exactly the same formatting and values.</p>
 <p>To ensure this formatting, and to introduce a new concept, there is the ability to "Edit" data in ArcMap.</p>
 <p>If you already have data loaded into ArcMap you can edit using either the "Editor" or using the "Field Calculator." Whenever you decide to edit data, you typically want to add a new field so that you do not accidentally modify other ones. To add a new field you have to open up a table, and then click on "Add Field..."</p>
@@ -4043,12 +4379,12 @@
 <p>[TBS_ALERT color="info" heading="Data Types"]</p>
 <p><strong>Short or Long Integers</strong> - Numbers with no decimals [ex. 12] <strong>Float or Double</strong> - Numbers with decimals [ex. 12.01] <strong>String</strong> - Text (any combination of letters and numbers) [ex. Twelve and one hundredth]</p>
 <p>[/TBS_ALERT]</p>
-<h3 id="a-the-editor-allows-you-to-type-directly-onto-the-fields-to-change-any-values-and-is-useful-when-you-are-creating-your-data-from-scratch">A) The Editor allows you to type directly onto the fields to change any values, and is useful when you are creating your data from scratch.</h3>
+<h3 id="a-the-editor-allows-you-to-type-directly-onto-the-fields-to-change-any-values-and-is-useful-when-you-are-creating-your-data-from-scratch">A) The Editor allows you to type directly onto the fields to change any values, and is useful when you are creating your data from scratch.<a class="headerlink" href="#a-the-editor-allows-you-to-type-directly-onto-the-fields-to-change-any-values-and-is-useful-when-you-are-creating-your-data-from-scratch" title="Permanent link">&para;</a></h3>
 <p>For example: If you have data based on Zipcodes, you add a new field for number of enrolled students, and simply type the number in the field when you select the Zipcode.</p>
-<h3 id="b-the-field-calculator-is-used-for-running-calculations-andor-operations-on-the-current-data">B) The "Field Calculator" is used for running calculations and/or operations on the current data.</h3>
+<h3 id="b-the-field-calculator-is-used-for-running-calculations-andor-operations-on-the-current-data">B) The "Field Calculator" is used for running calculations and/or operations on the current data.<a class="headerlink" href="#b-the-field-calculator-is-used-for-running-calculations-andor-operations-on-the-current-data" title="Permanent link">&para;</a></h3>
 <p>[caption id="attachment_884" align="aligncenter" width="510"]<a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2014/09/48-14-Table.png"><img alt="Right click on a field for the field calculator" src="images/48-14-Table-510x292.png" /></a> Right click on a field name in order to access the Field Calculator[/caption]</p>
 <p>[caption id="attachment_885" align="aligncenter" width="465"]<a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2014/09/50-53-Field-Calculator.png"><img alt="Field Calculator" src="images/50-53-Field-Calculator.png" /></a> Use a formula in order to calculate what the field should be[/caption]</p>
-<h2 id="joining-data">Joining Data</h2>
+<h2 id="joining-data">Joining Data<a class="headerlink" href="#joining-data" title="Permanent link">&para;</a></h2>
 <p>When you have data with geographic IDs, such as a Zipcode or a FIPS code, you are able to add the table to ArcGIS and then join that to the corresponding geography/GIS file.</p>
 <p>[TBS_ALERT color="info" heading="What the FIPS?"]A Federal Information Processing Standards (FIPS) code is what you will encounter when working with data from the US Census, it basically has the following format: [STATE] + [COUNTY] + [CENSUS TRACT] + [CENSUS BLOCK GROUP] For example: 06 + 037 + 2653 + 01 or 06037265301 , which is UCLA's census tract. [/TBS_ALERT]</p>
 <p>There are 3 steps to joining data:</p>
@@ -4057,42 +4393,42 @@
 <p><a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2014/09/workshop3.png"><img alt="workshop3" src="images/workshop3-510x297.png" /></a></p>
 <p>3. Select the field that you are join to in the destination GIS file, and then locate the spreadsheet that you have prepared for the join, and choose the correct field that you have prepared. You can then click "Ok" to complete the join!</p>
 <p><a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2015/05/Join1.png"><img alt="Join1" src="images/Join1.png" /></a></p>
-<h5 id="congratulations-you-have-completed-your-first-join">Congratulations! You have completed your first join!</h5>
+<h5 id="congratulations-you-have-completed-your-first-join">Congratulations! You have completed your first join!<a class="headerlink" href="#congratulations-you-have-completed-your-first-join" title="Permanent link">&para;</a></h5>
 <p>4. Now when you navigate to the layer table, you will see that the spreadsheet data was appended to the corresponding layer!</p>
 <p><a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2015/05/JoinAddedFields2.png"><img alt="JoinAddedFields2" src="images/JoinAddedFields2.png" /></a></p>
-<h2 id="saving-the-join">Saving the Join</h2>
+<h2 id="saving-the-join">Saving the Join<a class="headerlink" href="#saving-the-join" title="Permanent link">&para;</a></h2>
 <p>In order to make the "join" permanent, you can save a new dataset by exporting the data.</p>
 <ol>
 <li>Right click on the geographic dataset that the non-geographic spatial data was joined to, in this example the LA_CensusTracts</li>
 <li>Go to "Data" then "Export Data..." <a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2015/05/savingTheJoin.png"><img alt="savingTheJoin" src="images/savingTheJoin.png" /></a></li>
 <li>Select a location and name for the new shapefile (or Feature Class if you are saving the file back into the Geodatabase)</li>
 </ol>
-<h2 id="utilizing-the-join">Utilizing the Join</h2>
+<h2 id="utilizing-the-join">Utilizing the Join<a class="headerlink" href="#utilizing-the-join" title="Permanent link">&para;</a></h2>
 <p>Now that we have the join up and running, we will utilize what we previously learned to attempt the following challenges:</p>
 <p>Challenge 1: Create a map that highlights percent minority populations</p>
 <p>Challenge 2: Which census tract has the lowest percent of highschool graduates?</p>
 <p>Challenge 3: Can you join the store and obesity tables to census tracts, and find out which store resides in the census tract with the lowest median income (out of the 7 stores)?</p>
-<h2 id="geocoding">Geocoding</h2>
+<h2 id="geocoding">Geocoding<a class="headerlink" href="#geocoding" title="Permanent link">&para;</a></h2>
 <p>Geocoding is the process of assigning a latitude and longitude to addresses, which are then able to be utilized within a spatial context. Unfortunately, ESRI now charges for Geocodes, which makes it quite costly to access this service.</p>
 <p>There are less accurate but free alternatives online, including one which the Sandbox has developed itself:</p>
 <p><a href="http://sandbox.idre.ucla.edu/tools/geocoder/" title="http://sandbox.idre.ucla.edu/geocoder/">http://sandbox.idre.ucla.edu/tools/geocoder/</a></p>
 <p>For our (inaccurate) geo-coder, all you have to do is place in a few addresses, and then you can copy and paste that into an Excel file and then save it. Once saved, the Excel file can then be loaded into ArcGIS by going to File -&gt; Add data --&gt; Add XY data.</p>
 <p><a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2014/09/workshop6.png"><img alt="workshop6" src="images/workshop6-510x392.png" /></a></p>
 <p>Finally, your data points will then load on to your map!</p>
-<h2 id="exporting-maps">Exporting maps</h2>
+<h2 id="exporting-maps">Exporting maps<a class="headerlink" href="#exporting-maps" title="Permanent link">&para;</a></h2>
 <p>To export a map, you go to File -&gt; Export.</p>
-<p><img alt="Export" src="images/Export.png" /></p>
-<h1 id="extra-material-geoprocessing-conducting-spatial-analysis">Extra Material - Geoprocessing: Conducting spatial analysis</h1>
+<p><a class="glightbox" href="images/Export.png" data-type="image" data-width="auto" data-height="auto" data-title="Export" data-desc-position="bottom"><img alt="Export" src="images/Export.png" /></a></p>
+<h1 id="extra-material-geoprocessing-conducting-spatial-analysis">Extra Material - Geoprocessing: Conducting spatial analysis<a class="headerlink" href="#extra-material-geoprocessing-conducting-spatial-analysis" title="Permanent link">&para;</a></h1>
 <p>In addition to editing and visualizing data, GIS can be used to create new data as well. There are three geoprocessing functions that will be covered, which only is a tip of the iceberg when it comes to the various tools that ArcMap provides. Most geoprocessing tools can be found under "Geoprocessing," aside from geocoding.</p>
-<h2 id="geoprocessing-menu">Geoprocessing Menu</h2>
+<h2 id="geoprocessing-menu">Geoprocessing Menu<a class="headerlink" href="#geoprocessing-menu" title="Permanent link">&para;</a></h2>
 <p>The drop down for geoprocessing houses all the tools for accessing spatial analysis.</p>
 <p><a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2014/09/workshop9.png"><img alt="workshop9" src="images/workshop9-510x283.png" /></a></p>
-<h2 id="buffers">Buffers</h2>
+<h2 id="buffers">Buffers<a class="headerlink" href="#buffers" title="Permanent link">&para;</a></h2>
 <p>A buffer is just a circle around a specific point, line, or polygon which is helpful to see what phenomenon are around which areas. Typically, buffers are identified in linear units (kilometers, miles, etc.).</p>
 <p><a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2014/09/workshop8.png"><img alt="workshop8" src="images/workshop8-510x140.png" /></a></p>
 <p>Select the buffer tool from the geoprocessing drop down, and then select the input as the layer which you want to draw the buffer around. Then specify an output directory/name and the linear distance (kilometers, miles, etc.).</p>
 <p>[caption id="attachment_892" align="aligncenter" width="510"]<a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2014/09/workshop10.png"><img alt="workshop10" src="images/workshop10-510x418.png" /></a> An example of how the buffer options should be when filled out.[/caption]</p>
-<h2 id="clip">Clip</h2>
+<h2 id="clip">Clip<a class="headerlink" href="#clip" title="Permanent link">&para;</a></h2>
 <p>A clip will cut out data from one layer from another, which is useful when you only want to know which features are located within a certain spot. Combining buffers and the clip, results in the map below, which shows the census tracts that 1 mile around geocoded addresses!</p>
 <p><a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2014/09/workshop7.png"><img alt="workshop7" src="images/workshop7-510x234.png" /></a></p>
 <p>For the clip options, the input features is the layer that remains (the cookie dough), while the clip features are the layers which you will use to base the clip from (the cookie cutter). Finally, specify an output feature class for your new file, and execute the clip.</p>
@@ -4149,11 +4485,19 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
     
     
       <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
-  </body>
+    <script>
+    var elements = document.getElementsByClassName("lightgallery");
+    for(var i=0; i<elements.length; i++) {
+       lightGallery(elements[i]);
+    }
+    </script>
+
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

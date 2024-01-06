@@ -20,8 +20,9 @@
     
     
       
-        <title>VSim: An Interface for Academic 3D Models - Sandblog 2.0</title>
+        <title>VSim: An Interface for Academic 3D Models - OARC Technology Sandbox</title>
       
+    
     
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
@@ -30,9 +31,14 @@
 
 
     
+    <link rel="stylesheet" href="../../css/lightgallery.min.css">
+
+    
     
       
     
+    <script src="../../js/lightgallery.min.js"></script>
+
     
       
         
@@ -50,7 +56,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -74,14 +91,12 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Sandblog 2.0" class="md-header__button md-logo" aria-label="Sandblog 2.0" data-md-component="logo">
+    <a href="../.." title="OARC Technology Sandbox" class="md-header__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5m10.78 2H19v12.18c-.26-.8-1.31-1.39-2.2-1.39h-1v-3a1 1 0 0 0-1-1h-6v-2h2a1 1 0 0 0 1-1v-2h2c1.03 0 1.87-.79 1.98-1.79M5 10.29l4.8 4.5v1a2 2 0 0 0 2 2V19H5v-8.71Z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -92,7 +107,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Sandblog 2.0
+            OARC Technology Sandbox
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -133,6 +148,8 @@
         </button>
       </nav>
       
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -157,6 +174,97 @@
       
         
           
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Welcome
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../about/History%20and%20Mission/" class="md-tabs__link">
+          
+  
+  About
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../projects/current/VSim/" class="md-tabs__link">
+          
+  
+  Projects
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -170,16 +278,18 @@
                     
 
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Sandblog 2.0" class="md-nav__button md-logo" aria-label="Sandblog 2.0" data-md-component="logo">
+    <a href="../.." title="OARC Technology Sandbox" class="md-nav__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5m10.78 2H19v12.18c-.26-.8-1.31-1.39-2.2-1.39h-1v-3a1 1 0 0 0-1-1h-6v-2h2a1 1 0 0 0 1-1v-2h2c1.03 0 1.87-.79 1.98-1.79M5 10.29l4.8 4.5v1a2 2 0 0 0 2 2V19H5v-8.71Z"/></svg>
 
     </a>
-    Sandblog 2.0
+    OARC Technology Sandbox
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -195,11 +305,100 @@
         
   
   <span class="md-ellipsis">
-    Welcome to MkDocs
+    Welcome
   </span>
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/History%20and%20Mission/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    History and Mission
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/Who%20We%20Are/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Who We Are
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -217,15 +416,18 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -236,8 +438,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Archive
           </label>
@@ -3199,6 +3401,140 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Current
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Current
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/current/VSim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VSim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/current/world%27s%20columbian%20exposition%20reconstruction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    World's columbian exposition reconstruction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -3278,21 +3614,21 @@
 
 <p><strong>VSim</strong> is a simple-to-use interface for exploring computer models of historic sites, environments, and objects. Designed to support both teacher-centered presentations and student-centered assignments, this NEH-funded software is perfect for classroom use.</p>
 <p>The VSim interface is flexible, and can fit into any classroom.</p>
-<h2 id="download-and-install">Download and Install</h2>
+<h2 id="download-and-install">Download and Install<a class="headerlink" href="#download-and-install" title="Permanent link">&para;</a></h2>
 <p>Go to <a href="https://vsim.library.ucla.edu/xmlui/">https://vsim.library.ucla.edu/xmlui/</a>  and visit the Download page.</p>
-<p><img alt="" src="images/Screen-Shot-2020-07-28-at-10.20.58-PM-1024x491.png" /></p>
+<p><a class="glightbox" href="images/Screen-Shot-2020-07-28-at-10.20.58-PM-1024x491.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Screen-Shot-2020-07-28-at-10.20.58-PM-1024x491.png" /></a></p>
 <p>VSim 2.0 works best for PCs, though there is a Mac version available.</p>
-<p><img alt="" src="images/Screen-Shot-2020-07-28-at-10.23.50-PM-1024x638.png" /></p>
+<p><a class="glightbox" href="images/Screen-Shot-2020-07-28-at-10.23.50-PM-1024x638.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Screen-Shot-2020-07-28-at-10.23.50-PM-1024x638.png" /></a></p>
 <p>Once the download is complete, unzip and extract all the files.</p>
-<p><img alt="" src="images/vsim1-1024x539.png" /></p>
+<p><a class="glightbox" href="images/vsim1-1024x539.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/vsim1-1024x539.png" /></a></p>
 <p>In the unzipped <strong>VSim_BETA_Windows_Dec2018</strong> folder, open the folder dated <strong>2018_12_12</strong>.</p>
-<p><img alt="" src="images/Vsim2-1024x195.png" /></p>
+<p><a class="glightbox" href="images/Vsim2-1024x195.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Vsim2-1024x195.png" /></a></p>
 <p>Scroll to the bottom of the folder and double click on the blue VSim pyramid icon to launch the application.</p>
-<p><img alt="" src="images/Vsim3.png" /></p>
+<p><a class="glightbox" href="images/Vsim3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Vsim3.png" /></a></p>
 <p>Your VSim application window will launch. Start with the VSim tutorial narrative to become familiar with VSim's navigation and main features.</p>
-<p><img alt="" src="images/VSim4.png" /></p>
+<p><a class="glightbox" href="images/VSim4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/VSim4.png" /></a></p>
 <p>Also, take a look at VSim's <a href="https://www.google.com/url?q=https%3A%2F%2Fidre.ucla.edu%2Fwp-content%2Fuploads%2F2018%2F12%2FVSim_AbridgedUsersGuide_Dec20_2018.pdf%3Fx83242&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNG6txJgwZ1RaAAWXn3nfrbZV_VaBA"><strong>Abridged User Guide</strong></a> before you get started.</p>
-<h2 id="basic-navigation">Basic Navigation</h2>
+<h2 id="basic-navigation">Basic Navigation<a class="headerlink" href="#basic-navigation" title="Permanent link">&para;</a></h2>
 <p>VSim’s navigation tools facilitate real-time interaction with 3D content in first person (WASD), flight simulation, or Google Earth-style object rotation mode. In all modes, the spacebar toggles between freeze (so that you can interact with the narratives and embedded resources) and unfreeze (so that you can navigate through the environment). In both first person and flight mode, the ‘G’ key toggles ground mode on and off to tether you to the ground at pedestrian height.</p>
 <p>Note: If you hit 'G' and your model has no ground or you have collision off, you will begin to endlessly fall. Toggle collision and groun back on, then hit 'R' to reset your view</p>
 <ul>
@@ -3309,30 +3645,30 @@
 <p><a href="https://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2020/07/VSim8.png"><img alt="" src="images/VSim8.png" /></a></p>
 </li>
 </ul>
-<h2 id="features">Features</h2>
+<h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
 <p>See the <a href="https://www.google.com/url?q=https%3A%2F%2Fidre.ucla.edu%2Fwp-content%2Fuploads%2F2018%2F12%2FVSim_AbridgedUsersGuide_Dec20_2018.pdf%3Fx83242&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNG6txJgwZ1RaAAWXn3nfrbZV_VaBA"><strong>Abridged User Guide</strong></a> for a breakdown of VSim's main features: the Narrative and the Embedded Resource tools.</p>
-<h2 id="get-started">Get Started</h2>
+<h2 id="get-started">Get Started<a class="headerlink" href="#get-started" title="Permanent link">&para;</a></h2>
 <p>For this section of the tutorial, I am using a <a href="https://www.google.com/url?q=https%3A%2F%2Fsketchfab.com%2F3d-models%2F105794-smk-hercules-lansdowne-37474f59a3f04487900d8144548e4d69&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNEXpIR0-EjeQgsxygYJmlwAcwKoOw">model of Hercules</a> that I downloaded from <a href="https://www.google.com/url?q=https%3A%2F%2Fsketchfab.com%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNHzxeyDk0JnmkyWGPa7BZ64iarwiA">SketchFab</a>. The geometry was so dense, it took an extremely long time to load into VSim, so modifications were made to decrease the models files size. You can access a VSim file of the model <a href="https://drive.google.com/open?id=1Fn30-KdAwGxirgE03qVBV4B5klbmgZsT">here</a> for this demo.</p>
 <p>To clear the VSim tutorial and start a new project, go to 'File' and select 'New'. Select 'Yes,' when the pop-up window asks if you're sure that you want to create a new file.</p>
-<p><img alt="" src="images/VSim9.png" /></p>
+<p><a class="glightbox" href="images/VSim9.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/VSim9.png" /></a></p>
 <p>Go back to 'File' and select 'Open.' to upload your model file. In this case, we will be using the LansdowneHercules.vsim file. (This Windows-compatible version of VSim opens .dae, .flt., .ive, .obj, and .vsim model files).</p>
-<p><img alt="" src="images/Vsim11.png" /></p>
+<p><a class="glightbox" href="images/Vsim11.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Vsim11.png" /></a></p>
 <p>Navigate to where your model file is stored on your computer. If you don't see the file at first, make sure you adjust to show "All File Types." You will see a pop-up window when your file is uploading. It may take a minute to import your file, depending on its size.. The larger the file, the longer you will have to wait.</p>
-<p><img alt="" src="images/Vsim12-1024x747.png" /></p>
+<p><a class="glightbox" href="images/Vsim12-1024x747.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Vsim12-1024x747.png" /></a></p>
 <p>Once your model file is open, you can begin adding embedded resources and your narrative(s).</p>
-<p><img alt="" src="images/Vsim13-1024x825.png" /></p>
+<p><a class="glightbox" href="images/Vsim13-1024x825.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Vsim13-1024x825.png" /></a></p>
 <p>To build a narrative, click the '+' in the upper left corner and give your project a title, description, and author.</p>
-<p><img alt="" src="images/Vsim14.png" /></p>
+<p><a class="glightbox" href="images/Vsim14.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Vsim14.png" /></a></p>
 <p>Double click on your narrative or select 'Open' to open the Narrative Editor and begin adding Nodes.</p>
-<p><img alt="" src="images/Vsim15.png" /></p>
+<p><a class="glightbox" href="images/Vsim15.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Vsim15.png" /></a></p>
 <p>Use the navigation to set your first view, and then click the '+' to add a Node to your Narrative. Select Edit to add text labels or images to your Node.</p>
-<p><img alt="" src="images/Vsim16-1024x827.png" /></p>
+<p><a class="glightbox" href="images/Vsim16-1024x827.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Vsim16-1024x827.png" /></a></p>
 <p>For adding text to your Nodes, VSim comes pre-programmed with two header styles, a body style, and a label style. You can adjust these on the fly using the features in the Node Editor. To program all your labels with a new style, go to the 'Settings' menu and select 'Font and Color Styles.'</p>
-<p><img alt="" src="images/Vsim17-1024x823.png" /></p>
+<p><a class="glightbox" href="images/Vsim17-1024x823.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Vsim17-1024x823.png" /></a></p>
 <p>Here, you can adjust each label's settings, so they become your preset text styles in your Node Editor.</p>
-<p><img alt="" src="images/Vsim18.png" /></p>
+<p><a class="glightbox" href="images/Vsim18.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Vsim18.png" /></a></p>
 <p>To save your work, you have a few options. You can save your model, with the embedded resources and narratives you've created by selecting 'Save As' from your File menu. However, you can also export your narratives and embedded resources as separate files . You can load these in as needed and that way your VSim file does not have to be so big. To do so, go to the File menu and select 'Export Narrative...' or 'Export Resources...'</p>
-<p><img alt="" src="images/Vsim19.png" /></p>
+<p><a class="glightbox" href="images/Vsim19.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Vsim19.png" /></a></p>
 <p>Want to learn more? Watch this <a href="https://www.youtube.com/watch?v=TUz086WMGNU">video demonstration</a> of the prototype of VSim with Dr. Lisa Snyder.</p>
 
 
@@ -3383,11 +3719,19 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
     
     
       <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
-  </body>
+    <script>
+    var elements = document.getElementsByClassName("lightgallery");
+    for(var i=0; i<elements.length; i++) {
+       lightGallery(elements[i]);
+    }
+    </script>
+
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

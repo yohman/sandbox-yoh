@@ -20,8 +20,9 @@
     
     
       
-        <title>Social Explorer Tutorial - Sandblog 2.0</title>
+        <title>Social Explorer Tutorial - OARC Technology Sandbox</title>
       
+    
     
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
@@ -30,9 +31,14 @@
 
 
     
+    <link rel="stylesheet" href="../../css/lightgallery.min.css">
+
+    
     
       
     
+    <script src="../../js/lightgallery.min.js"></script>
+
     
       
         
@@ -50,7 +56,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -74,14 +91,12 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Sandblog 2.0" class="md-header__button md-logo" aria-label="Sandblog 2.0" data-md-component="logo">
+    <a href="../.." title="OARC Technology Sandbox" class="md-header__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5m10.78 2H19v12.18c-.26-.8-1.31-1.39-2.2-1.39h-1v-3a1 1 0 0 0-1-1h-6v-2h2a1 1 0 0 0 1-1v-2h2c1.03 0 1.87-.79 1.98-1.79M5 10.29l4.8 4.5v1a2 2 0 0 0 2 2V19H5v-8.71Z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -92,7 +107,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Sandblog 2.0
+            OARC Technology Sandbox
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -133,6 +148,8 @@
         </button>
       </nav>
       
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -157,6 +174,97 @@
       
         
           
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Welcome
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../about/History%20and%20Mission/" class="md-tabs__link">
+          
+  
+  About
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../projects/current/VSim/" class="md-tabs__link">
+          
+  
+  Projects
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -170,16 +278,18 @@
                     
 
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Sandblog 2.0" class="md-nav__button md-logo" aria-label="Sandblog 2.0" data-md-component="logo">
+    <a href="../.." title="OARC Technology Sandbox" class="md-nav__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5m10.78 2H19v12.18c-.26-.8-1.31-1.39-2.2-1.39h-1v-3a1 1 0 0 0-1-1h-6v-2h2a1 1 0 0 0 1-1v-2h2c1.03 0 1.87-.79 1.98-1.79M5 10.29l4.8 4.5v1a2 2 0 0 0 2 2V19H5v-8.71Z"/></svg>
 
     </a>
-    Sandblog 2.0
+    OARC Technology Sandbox
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -195,11 +305,100 @@
         
   
   <span class="md-ellipsis">
-    Welcome to MkDocs
+    Welcome
   </span>
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/History%20and%20Mission/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    History and Mission
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/Who%20We%20Are/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Who We Are
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -217,15 +416,18 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -236,8 +438,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Archive
           </label>
@@ -3412,6 +3614,140 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Current
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Current
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/current/VSim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VSim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/current/world%27s%20columbian%20exposition%20reconstruction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    World's columbian exposition reconstruction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -3710,16 +4046,16 @@
 <li>Annotating</li>
 <li>Sharing and Animating</li>
 </ol>
-<h2 id="before-we-begin">Before we begin</h2>
-<h3 id="1-is-social-explorer-right-for-me">1. Is Social Explorer right for me?</h3>
-<h4 id="do-use-social-explorer-if-you">Do use Social Explorer if you...</h4>
+<h2 id="before-we-begin">Before we begin<a class="headerlink" href="#before-we-begin" title="Permanent link">&para;</a></h2>
+<h3 id="1-is-social-explorer-right-for-me">1. Is Social Explorer right for me?<a class="headerlink" href="#1-is-social-explorer-right-for-me" title="Permanent link">&para;</a></h3>
+<h4 id="do-use-social-explorer-if-you">Do use Social Explorer if you...<a class="headerlink" href="#do-use-social-explorer-if-you" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Plan to use only U.S. census data</li>
 <li>Focus on the "story" of a map rather than a fully customized map</li>
 <li>Would like to use graphs from other data sources</li>
 <li>Want to share online maps</li>
 </ul>
-<h4 id="do-not-use-social-explorer-if-you">Do NOT use Social Explorer if you...</h4>
+<h4 id="do-not-use-social-explorer-if-you">Do NOT use Social Explorer if you...<a class="headerlink" href="#do-not-use-social-explorer-if-you" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Intend to use geographic data not a part of the U.S. census database</li>
 <li>
@@ -3738,40 +4074,40 @@
 </li>
 <li>Plan to integrate your maps with GoogleEarth or ArcGIS</li>
 </ul>
-<h2 id="appetizer">Appetizer</h2>
-<h3 id="2-getting-oriented">2. Getting oriented</h3>
+<h2 id="appetizer">Appetizer<a class="headerlink" href="#appetizer" title="Permanent link">&para;</a></h2>
+<h3 id="2-getting-oriented">2. Getting oriented<a class="headerlink" href="#2-getting-oriented" title="Permanent link">&para;</a></h3>
 <ol>
 <li>First navigate to <a href="http://www.socialexplorer.com">http://www.socialexplorer.com</a></li>
 <li>Click on “Take the Tour” button or “How To” tab</li>
 <li>Scroll to the bottom of the page and click on “Start Now”</li>
 <li>The following interface will pop-up (without highlighted boxes):</li>
 </ol>
-<p><img alt="" src="https://lh5.googleusercontent.com/I0OakASRMeGqUPOwjAq5OvoNf-E1OYkSWmHCSGZVqJMdUq7rJ1pHaBfx6iW56BtepCiXf3KlxZWSnoOrqLCHVd7qixlY4d0xU6910rwMAA3DoZx-VGLDsvU2" /></p>
-<h2 id="main-course">Main Course</h2>
+<p><a class="glightbox" href="https://lh5.googleusercontent.com/I0OakASRMeGqUPOwjAq5OvoNf-E1OYkSWmHCSGZVqJMdUq7rJ1pHaBfx6iW56BtepCiXf3KlxZWSnoOrqLCHVd7qixlY4d0xU6910rwMAA3DoZx-VGLDsvU2" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="https://lh5.googleusercontent.com/I0OakASRMeGqUPOwjAq5OvoNf-E1OYkSWmHCSGZVqJMdUq7rJ1pHaBfx6iW56BtepCiXf3KlxZWSnoOrqLCHVd7qixlY4d0xU6910rwMAA3DoZx-VGLDsvU2" /></a></p>
+<h2 id="main-course">Main Course<a class="headerlink" href="#main-course" title="Permanent link">&para;</a></h2>
 <p>The colored sections are referred in the following way:</p>
 <p>Section i) - Location Searcher Section ii) - Subject Changer / Map Editor Section iii) - Data/Annotation/Layer Toggler Section iv) - Snapshot taker Section v) - Exporting</p>
-<h3 id="3-decisions-and-selections">3. Decisions and Selections</h3>
-<h4 id="setting-your-location-of-interest">Setting your location of interest</h4>
+<h3 id="3-decisions-and-selections">3. Decisions and Selections<a class="headerlink" href="#3-decisions-and-selections" title="Permanent link">&para;</a></h3>
+<h4 id="setting-your-location-of-interest">Setting your location of interest<a class="headerlink" href="#setting-your-location-of-interest" title="Permanent link">&para;</a></h4>
 <p>Under the location searcher (section i) either enter the location of a U.S. location (address, city, county, etc.) OR leave empty if you intend to look at the whole country.</p>
-<h4 id="selecting-your-subject">Selecting your subject</h4>
-<p>With the subject changer (section ii), choose the thematic subject you would like to show.<img alt="" src="https://lh4.googleusercontent.com/E0O1xJUrbmb0w0IIEF03dp0IFwKL37BrDbA4e6rrrisuUn6cngwPIEAyAqVJD8M3JmFdY1DM9yFvaFKWI1KqZYzFpalsLmAWK5c4gamunmkdKRvOWRcOPmkh" /></p>
+<h4 id="selecting-your-subject">Selecting your subject<a class="headerlink" href="#selecting-your-subject" title="Permanent link">&para;</a></h4>
+<p>With the subject changer (section ii), choose the thematic subject you would like to show.<a class="glightbox" href="https://lh4.googleusercontent.com/E0O1xJUrbmb0w0IIEF03dp0IFwKL37BrDbA4e6rrrisuUn6cngwPIEAyAqVJD8M3JmFdY1DM9yFvaFKWI1KqZYzFpalsLmAWK5c4gamunmkdKRvOWRcOPmkh" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="https://lh4.googleusercontent.com/E0O1xJUrbmb0w0IIEF03dp0IFwKL37BrDbA4e6rrrisuUn6cngwPIEAyAqVJD8M3JmFdY1DM9yFvaFKWI1KqZYzFpalsLmAWK5c4gamunmkdKRvOWRcOPmkh" /></a></p>
 <p>The buttons above show different types of data visualizations:</p>
 <p>A) Dot density - Numeric data</p>
 <p>B) Chromatic (colored map) - Categorized data</p>
 <p>C) Graduated circles - Numeric/Categorized data</p>
 <p>D) ??? (not map related?)</p>
 <p>Be aware that not all selections are not available depending on the type of data.</p>
-<p><img alt="" src="https://lh6.googleusercontent.com/-qVWL6EjZKxaaX-ndslcP2XNYZ1zg61ImSQ-eDELT_P_dnMlKv6lGvQX5Pu263rBOEuez3QsqeEQb8511w0LYh1Cf6dtnFoY4sUBCXZ2j2QDFJvBD2IQwGIQ" /></p>
+<p><a class="glightbox" href="https://lh6.googleusercontent.com/-qVWL6EjZKxaaX-ndslcP2XNYZ1zg61ImSQ-eDELT_P_dnMlKv6lGvQX5Pu263rBOEuez3QsqeEQb8511w0LYh1Cf6dtnFoY4sUBCXZ2j2QDFJvBD2IQwGIQ" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="https://lh6.googleusercontent.com/-qVWL6EjZKxaaX-ndslcP2XNYZ1zg61ImSQ-eDELT_P_dnMlKv6lGvQX5Pu263rBOEuez3QsqeEQb8511w0LYh1Cf6dtnFoY4sUBCXZ2j2QDFJvBD2IQwGIQ" /></a></p>
 <p>After choosing your subject of interest, you can now edit the map to portray your story. For themes that can be categorized, like “Total Population: Female” or “Worked at home” you can use a chlorochromatic map which has the following two custimization options:</p>
-<h5 id="colorizing">Colorizing</h5>
+<h5 id="colorizing">Colorizing<a class="headerlink" href="#colorizing" title="Permanent link">&para;</a></h5>
 <p>The “Colors” button and Edit Cutoff points are both useful tools to showcase the data in ways that are more relevant for you.</p>
-<h6 id="tips"><em>Tips:</em></h6>
+<h6 id="tips"><em>Tips:</em><a class="headerlink" href="#tips" title="Permanent link">&para;</a></h6>
 <ul>
 <li>Use a sequential scheme when you want to stress changes in your data relative to each other.</li>
 <li>Use a diverging scheme when wanting to show a change beyond a certain threshold</li>
 </ul>
-<p>There are only 22 color schemes available, shown below:<img alt="" src="https://lh3.googleusercontent.com/FF9j9Xxpx86zEz5n7xdaJYCeW9Xxx47c3x9fEZo7t-Ll9Qu4bOlNMr_0zey1yPa9msPpm7cGXkRuiYxHFCQWNRu4fNZXQjR7SvVlgU-U4D45mIPXDTtW7QlU" /></p>
-<h5 id="setting-breakpoints">Setting breakpoints</h5>
+<p>There are only 22 color schemes available, shown below:<a class="glightbox" href="https://lh3.googleusercontent.com/FF9j9Xxpx86zEz5n7xdaJYCeW9Xxx47c3x9fEZo7t-Ll9Qu4bOlNMr_0zey1yPa9msPpm7cGXkRuiYxHFCQWNRu4fNZXQjR7SvVlgU-U4D45mIPXDTtW7QlU" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="https://lh3.googleusercontent.com/FF9j9Xxpx86zEz5n7xdaJYCeW9Xxx47c3x9fEZo7t-Ll9Qu4bOlNMr_0zey1yPa9msPpm7cGXkRuiYxHFCQWNRu4fNZXQjR7SvVlgU-U4D45mIPXDTtW7QlU" /></a></p>
+<h5 id="setting-breakpoints">Setting breakpoints<a class="headerlink" href="#setting-breakpoints" title="Permanent link">&para;</a></h5>
 <p>Breakpoints are the "cutoff" points for grouped data which affects:</p>
 <ul>
 <li>How many colors there are</li>
@@ -3779,22 +4115,22 @@
 </ul>
 <p>The following methods are available:</p>
 <p><strong>Natural breaks</strong> - Emphasizes distinct "natural" drop offs in the data <strong>Quantile</strong> - Puts the same number of data points in each group <strong>Equal Interval</strong> - Separate the data range equally <strong>Custom</strong> - Allows you to manually set your breakpoints</p>
-<p><em>Tip: Try to use between 4 to 6 classes, as that number of colors are easily readable on a map without being distracting.</em><img alt="" src="https://lh4.googleusercontent.com/5RSwuLJ8Hw0ry1IH_jLIwdEHPhlSs3Mruft8Gx6l3CS5ES6ujh5SQ6McKmgH19eo-M8r8WfGKM458As8mV7RStmZNr2LkU6spegBgT0R0EG2h0CSeaa6tp9v" /></p>
-<h3 id="4-annotating">4. Annotating</h3>
+<p><em>Tip: Try to use between 4 to 6 classes, as that number of colors are easily readable on a map without being distracting.</em><a class="glightbox" href="https://lh4.googleusercontent.com/5RSwuLJ8Hw0ry1IH_jLIwdEHPhlSs3Mruft8Gx6l3CS5ES6ujh5SQ6McKmgH19eo-M8r8WfGKM458As8mV7RStmZNr2LkU6spegBgT0R0EG2h0CSeaa6tp9v" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="https://lh4.googleusercontent.com/5RSwuLJ8Hw0ry1IH_jLIwdEHPhlSs3Mruft8Gx6l3CS5ES6ujh5SQ6McKmgH19eo-M8r8WfGKM458As8mV7RStmZNr2LkU6spegBgT0R0EG2h0CSeaa6tp9v" /></a></p>
+<h3 id="4-annotating">4. Annotating<a class="headerlink" href="#4-annotating" title="Permanent link">&para;</a></h3>
 <p>After clicking on the annotation tab (section iii) you will access the set of options for adding your information to the map.</p>
-<h4 id="drawing">Drawing</h4>
+<h4 id="drawing">Drawing<a class="headerlink" href="#drawing" title="Permanent link">&para;</a></h4>
 <ul>
 <li>These tools are undefined shapes that you can draw onto the map to highlight a specific area.</li>
 <li>You can add these by drawing them onto the map.</li>
 </ul>
-<h4 id="elements">Elements</h4>
+<h4 id="elements">Elements<a class="headerlink" href="#elements" title="Permanent link">&para;</a></h4>
 <ul>
 <li>These are predefined shapes, which allows you to add objects such as markers, charts, photos, and text.</li>
 <li>You can add these by dragging them onto the map OR clicking on them.</li>
 </ul>
-<p><img alt="" src="https://lh5.googleusercontent.com/aOF1Cp_4xXiA-EIERMTjuoDdFhiPlZgr0C07Ke9Jik76tq0OK8ADu0X6iukpBX5TGmtYNGB5tpboG46qlfbZ9jfscq2aREJgtwxXBFmNkMnpZRNLwmrIDBI_" /></p>
-<h4 id="properties">Properties</h4>
-<p>Clicking an annotation object makes the following show up:<img alt="" src="https://lh3.googleusercontent.com/QP2g6BQolOQJ7FxCYCk5Ekn8l6EknExfrU2CwZ-UuEGzRDKZGLScSTfSHKP5QxdZ7ctcNpMkEyU6y0AkdYFrBXRHO-XFZp8dq_HqgAQhBFoFdFzWamrPk7cd" /></p>
+<p><a class="glightbox" href="https://lh5.googleusercontent.com/aOF1Cp_4xXiA-EIERMTjuoDdFhiPlZgr0C07Ke9Jik76tq0OK8ADu0X6iukpBX5TGmtYNGB5tpboG46qlfbZ9jfscq2aREJgtwxXBFmNkMnpZRNLwmrIDBI_" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="https://lh5.googleusercontent.com/aOF1Cp_4xXiA-EIERMTjuoDdFhiPlZgr0C07Ke9Jik76tq0OK8ADu0X6iukpBX5TGmtYNGB5tpboG46qlfbZ9jfscq2aREJgtwxXBFmNkMnpZRNLwmrIDBI_" /></a></p>
+<h4 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h4>
+<p>Clicking an annotation object makes the following show up:<a class="glightbox" href="https://lh3.googleusercontent.com/QP2g6BQolOQJ7FxCYCk5Ekn8l6EknExfrU2CwZ-UuEGzRDKZGLScSTfSHKP5QxdZ7ctcNpMkEyU6y0AkdYFrBXRHO-XFZp8dq_HqgAQhBFoFdFzWamrPk7cd" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="https://lh3.googleusercontent.com/QP2g6BQolOQJ7FxCYCk5Ekn8l6EknExfrU2CwZ-UuEGzRDKZGLScSTfSHKP5QxdZ7ctcNpMkEyU6y0AkdYFrBXRHO-XFZp8dq_HqgAQhBFoFdFzWamrPk7cd" /></a></p>
 <ul>
 <li>The blue gear icon edits the annotation properties.</li>
 <li>While the trash bin will delete the annotation object.</li>
@@ -3802,14 +4138,14 @@
 <li>The blue arrow allows us to rotate</li>
 </ul>
 <p>Within the annotation properties you can do things like change the fill of the annotation or make it so the object changes with zoom (on map) or will keep the same size as you zoom in and out (fixed).</p>
-<p><img alt="" src="https://lh5.googleusercontent.com/MkL6FZ5NsH43E9t5K5SXqIxrPHWl21yi0YRPa72e2nN6NpQzOX7AyWy4iX5ZFl2MonhqlyMIkV_ERZgOL-K1DibN6qYa9FIc3_LEK9sPg5RG5FYr4wGol50A" /></p>
-<h2 id="dessert">Dessert</h2>
-<h3 id="5-sharing-and-animating">5. Sharing and Animating</h3>
+<p><a class="glightbox" href="https://lh5.googleusercontent.com/MkL6FZ5NsH43E9t5K5SXqIxrPHWl21yi0YRPa72e2nN6NpQzOX7AyWy4iX5ZFl2MonhqlyMIkV_ERZgOL-K1DibN6qYa9FIc3_LEK9sPg5RG5FYr4wGol50A" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="https://lh5.googleusercontent.com/MkL6FZ5NsH43E9t5K5SXqIxrPHWl21yi0YRPa72e2nN6NpQzOX7AyWy4iX5ZFl2MonhqlyMIkV_ERZgOL-K1DibN6qYa9FIc3_LEK9sPg5RG5FYr4wGol50A" /></a></p>
+<h2 id="dessert">Dessert<a class="headerlink" href="#dessert" title="Permanent link">&para;</a></h2>
+<h3 id="5-sharing-and-animating">5. Sharing and Animating<a class="headerlink" href="#5-sharing-and-animating" title="Permanent link">&para;</a></h3>
 <p>After you have added appropriate annotations and designed a map to your liking, you can now take a snapshot of it by clicking the button within the snapshot tab (section iv).</p>
 <p>These snapshots allow you to share a series of maps with others.</p>
 <p>If you are satisfied with a static image, then you can simply export your map in the various ways shown in the export/share area (section v).</p>
 <p>However, if you would like to make an animated map, the following steps show you how.</p>
-<h4 id="making-an-animated-movie-of-your-map">Making an animated movie of your map:</h4>
+<h4 id="making-an-animated-movie-of-your-map">Making an animated movie of your map:<a class="headerlink" href="#making-an-animated-movie-of-your-map" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Keep the zoom and area the same</li>
 <li>Take snapshots at different time periods but using the same data</li>
@@ -3818,7 +4154,7 @@
 <p>After you finish taking the snapshots, then choose “Export to Powerpoint” option, and then download the resulting file.</p>
 <p>Open the file in powerpoint and then save as .wmv file.</p>
 <p>Now you have a video of your map!</p>
-<h2 id="demos">Demos</h2>
+<h2 id="demos">Demos<a class="headerlink" href="#demos" title="Permanent link">&para;</a></h2>
 <p><strong>Shared Map Demo:</strong> <a href="http://www.socialexplorer.com/89aacd3a4f1e4e1/view">http://www.socialexplorer.com/89aacd3a4f1e4e1/view</a></p>
 <p><strong>Powerpoint demo:</strong> <a href="http://www.socialexplorer.com/89AACD3A4F1E4E1/explore">http://www.socialexplorer.com/89AACD3A4F1E4E1/explore</a></p>
 <p><strong>Video Demo:</strong> <a href="https://docs.google.com/file/d/0Bw70UyvGZsQFeU5wRTdWaUR2cHM/edit?usp=sharing">https://docs.google.com/file/d/0Bw70UyvGZsQFeU5wRTdWaUR2cHM/edit?usp=sharing</a></p>
@@ -3871,11 +4207,19 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
     
     
       <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
-  </body>
+    <script>
+    var elements = document.getElementsByClassName("lightgallery");
+    for(var i=0; i<elements.length; i++) {
+       lightGallery(elements[i]);
+    }
+    </script>
+
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

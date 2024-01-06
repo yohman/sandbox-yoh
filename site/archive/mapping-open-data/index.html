@@ -20,8 +20,9 @@
     
     
       
-        <title>Mapping Open Data - Sandblog 2.0</title>
+        <title>Mapping Open Data - OARC Technology Sandbox</title>
       
+    
     
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
@@ -30,9 +31,14 @@
 
 
     
+    <link rel="stylesheet" href="../../css/lightgallery.min.css">
+
+    
     
       
     
+    <script src="../../js/lightgallery.min.js"></script>
+
     
       
         
@@ -50,7 +56,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -74,14 +91,12 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Sandblog 2.0" class="md-header__button md-logo" aria-label="Sandblog 2.0" data-md-component="logo">
+    <a href="../.." title="OARC Technology Sandbox" class="md-header__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5m10.78 2H19v12.18c-.26-.8-1.31-1.39-2.2-1.39h-1v-3a1 1 0 0 0-1-1h-6v-2h2a1 1 0 0 0 1-1v-2h2c1.03 0 1.87-.79 1.98-1.79M5 10.29l4.8 4.5v1a2 2 0 0 0 2 2V19H5v-8.71Z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -92,7 +107,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Sandblog 2.0
+            OARC Technology Sandbox
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -133,6 +148,8 @@
         </button>
       </nav>
       
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -157,6 +174,97 @@
       
         
           
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Welcome
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../about/History%20and%20Mission/" class="md-tabs__link">
+          
+  
+  About
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../projects/current/VSim/" class="md-tabs__link">
+          
+  
+  Projects
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -170,16 +278,18 @@
                     
 
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Sandblog 2.0" class="md-nav__button md-logo" aria-label="Sandblog 2.0" data-md-component="logo">
+    <a href="../.." title="OARC Technology Sandbox" class="md-nav__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5m10.78 2H19v12.18c-.26-.8-1.31-1.39-2.2-1.39h-1v-3a1 1 0 0 0-1-1h-6v-2h2a1 1 0 0 0 1-1v-2h2c1.03 0 1.87-.79 1.98-1.79M5 10.29l4.8 4.5v1a2 2 0 0 0 2 2V19H5v-8.71Z"/></svg>
 
     </a>
-    Sandblog 2.0
+    OARC Technology Sandbox
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -195,11 +305,100 @@
         
   
   <span class="md-ellipsis">
-    Welcome to MkDocs
+    Welcome
   </span>
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/History%20and%20Mission/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    History and Mission
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/Who%20We%20Are/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Who We Are
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -217,15 +416,18 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -236,8 +438,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Archive
           </label>
@@ -3217,6 +3419,140 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Current
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Current
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/current/VSim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VSim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/current/world%27s%20columbian%20exposition%20reconstruction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    World's columbian exposition reconstruction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -3313,20 +3649,20 @@
   <h1>Mapping Open Data</h1>
 
 <p>The open data movement has made more and more data available for academics to download and use for their research. But how can we map this data? This workshop will take you through the process of acquiring data from the <a href="https://data.lacity.org/">Los Angeles Open Data portal</a> and visualizing it on ArcGIS for further analysis.</p>
-<h3 id="the-los-angeles-open-data-portal">The Los Angeles Open Data Portal</h3>
+<h3 id="the-los-angeles-open-data-portal">The Los Angeles Open Data Portal<a class="headerlink" href="#the-los-angeles-open-data-portal" title="Permanent link">&para;</a></h3>
 <p><a href="https://data.lacity.org/">https://data.lacity.org/</a></p>
-<p><img alt="" src="images/open-data-search-1-e1524853436494.png" /></p>
+<p><a class="glightbox" href="images/open-data-search-1-e1524853436494.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/open-data-search-1-e1524853436494.png" /></a></p>
 <p>Inspect the data</p>
-<p><img alt="" src="images/open-data-crime-data-e1524853710964.png" /></p>
+<p><a class="glightbox" href="images/open-data-crime-data-e1524853710964.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/open-data-crime-data-e1524853710964.png" /></a></p>
 <p>Almost 2 million records! Let's filter it down to something more manageable.</p>
-<p><img alt="" src="images/open-data-vizualize-e1524861110176.png" /></p>
+<p><a class="glightbox" href="images/open-data-vizualize-e1524861110176.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/open-data-vizualize-e1524861110176.png" /></a></p>
 <p>Now add the filter:</p>
-<p><img alt="" src="images/open-data-filter-e1524861049921.png" /></p>
+<p><a class="glightbox" href="images/open-data-filter-e1524861049921.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/open-data-filter-e1524861049921.png" /></a></p>
 <p>Export the data</p>
-<p><img alt="" src="images/open-data-export-csv-e1524861203772.png" /></p>
-<h3 id="cleaning-up-those-coordinates">Cleaning up those coordinates</h3>
+<p><a class="glightbox" href="images/open-data-export-csv-e1524861203772.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/open-data-export-csv-e1524861203772.png" /></a></p>
+<h3 id="cleaning-up-those-coordinates">Cleaning up those coordinates<a class="headerlink" href="#cleaning-up-those-coordinates" title="Permanent link">&para;</a></h3>
 <p>Open the downloaded data in Excel. Scroll to the right until you see the Location column.</p>
-<p><img alt="" src="images/open-data-location-column-e1524865676923.png" /></p>
+<p><a class="glightbox" href="images/open-data-location-column-e1524865676923.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/open-data-location-column-e1524865676923.png" /></a></p>
 <p>Hmm, that's strange, the latitude and longitude columns are in the same column! ArcGIS does not like this. Let's clean this up.</p>
 <p>First, find and replace the brackets.</p>
 <ol>
@@ -3335,17 +3671,17 @@
 <li>For "Find what", enter an open bracket "("</li>
 <li>Click Replace All</li>
 </ol>
-<p><img alt="" src="images/open-data-replace-brackets-e1524869310445.png" /></p>
+<p><a class="glightbox" href="images/open-data-replace-brackets-e1524869310445.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/open-data-replace-brackets-e1524869310445.png" /></a></p>
 <p>Repeat for the closing bracket.</p>
 <p>Split the column into two:</p>
-<p><img alt="" src="images/open-data-text-to-columns-e1524869544554.png" /></p>
+<p><a class="glightbox" href="images/open-data-text-to-columns-e1524869544554.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/open-data-text-to-columns-e1524869544554.png" /></a></p>
 <p>Choose, delimited, check the "Comma" box, and finish.</p>
-<p><img alt="" src="images/open-data-text-to-columns2-e1524869659658.png" /></p>
+<p><a class="glightbox" href="images/open-data-text-to-columns2-e1524869659658.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/open-data-text-to-columns2-e1524869659658.png" /></a></p>
 <p>Rename the column headers to Latitude and Longitude</p>
-<p><img alt="" src="images/open-data-lat-lon-e1524869765545.png" /></p>
-<h3 id="lets-map-it">Let's map it!</h3>
+<p><a class="glightbox" href="images/open-data-lat-lon-e1524869765545.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/open-data-lat-lon-e1524869765545.png" /></a></p>
+<h3 id="lets-map-it">Let's map it!<a class="headerlink" href="#lets-map-it" title="Permanent link">&para;</a></h3>
 <p>Add the csv file to a new ArcMap project. Right click, Display XY Data...</p>
-<p><img alt="" src="images/open-data-display-xy-e1524870101534.png" /></p>
+<p><a class="glightbox" href="images/open-data-display-xy-e1524870101534.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/open-data-display-xy-e1524870101534.png" /></a></p>
 <ol>
 <li>Set X to Longitude</li>
 <li>Set Y to Latitude</li>
@@ -3353,30 +3689,30 @@
 <li>Enter "WGS 1984" in the search box</li>
 <li>Choose WGS 1984</li>
 </ol>
-<p><img alt="" src="images/open-data-set-coordinate-system-e1524870277327.png" /></p>
+<p><a class="glightbox" href="images/open-data-set-coordinate-system-e1524870277327.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/open-data-set-coordinate-system-e1524870277327.png" /></a></p>
 <p>Now save your new layer as a shapefile, or geodatabase:</p>
-<p><img alt="" src="images/open-data-export-data-e1525276046743.png" /></p>
-<p><img alt="" src="images/open-data-export-into-geodatabase-e1525276199611.png" /></p>
-<h3 id="project-the-data">Project the data</h3>
+<p><a class="glightbox" href="images/open-data-export-data-e1525276046743.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/open-data-export-data-e1525276046743.png" /></a></p>
+<p><a class="glightbox" href="images/open-data-export-into-geodatabase-e1525276199611.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/open-data-export-into-geodatabase-e1525276199611.png" /></a></p>
+<h3 id="project-the-data">Project the data<a class="headerlink" href="#project-the-data" title="Permanent link">&para;</a></h3>
 <p>Our data is currently in a geographic coordinate system (WGS1984). Let's change this to a projected coordinate system (UTM Zone 11N).</p>
 <p>Click on the search tool</p>
-<p><img alt="" src="images/search-tool-e1525277972537.png" /></p>
+<p><a class="glightbox" href="images/search-tool-e1525277972537.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/search-tool-e1525277972537.png" /></a></p>
 <p>Type "project" and click on <strong>Project (Data Management)</strong></p>
-<p><img alt="" src="images/project-to-utm-e1525278207598.png" /></p>
+<p><a class="glightbox" href="images/project-to-utm-e1525278207598.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/project-to-utm-e1525278207598.png" /></a></p>
 <p>Now, set the projection of the data frame. Right click on <strong>Layers</strong>, and go to <strong>properties</strong>. Then, set the coordinate system to <strong>NAD 1983 UTM Zone 11N</strong></p>
-<p><img alt="" src="images/open-data-set-utm-zone-1-e1525277078543.png" /></p>
-<h3 id="hot-spots">Hot spots?</h3>
+<p><a class="glightbox" href="images/open-data-set-utm-zone-1-e1525277078543.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/open-data-set-utm-zone-1-e1525277078543.png" /></a></p>
+<h3 id="hot-spots">Hot spots?<a class="headerlink" href="#hot-spots" title="Permanent link">&para;</a></h3>
 <p>Let's find crime hot spots by race. Select incidents where the person arrested was classified as Hispanic (H). In the menu bar, go to <strong>Selection</strong>, <strong>Select by attribute.</strong> Enter the following SQL statement:</p>
 <p>Victim_Decent = 'H'</p>
-<p><img alt="" src="images/crime-by-race-1-e1525280021439.png" /></p>
+<p><a class="glightbox" href="images/crime-by-race-1-e1525280021439.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/crime-by-race-1-e1525280021439.png" /></a></p>
 <p>Now perform a kernel density to visualize the density of Hispanic arrests in Los Angeles. In the search box, enter "kernel" and click on the Kernel Density (Spatial Analyst) tool. Enter the four boxes as shown below:</p>
-<p><img alt="" src="images/hispanic-kernel-e1525280163943.png" /></p>
+<p><a class="glightbox" href="images/hispanic-kernel-e1525280163943.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/hispanic-kernel-e1525280163943.png" /></a></p>
 <p>Add a basemap, and change the symbology to make the visual more powerful:</p>
-<p><img alt="" src="images/kernel-crime-map-e1525280341147.png" /></p>
+<p><a class="glightbox" href="images/kernel-crime-map-e1525280341147.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/kernel-crime-map-e1525280341147.png" /></a></p>
 <p>Repeat the process for other race categories:</p>
-<table><tbody><tr><td>Black <img class="alignnone size-full wp-image-3313" src="images/kernel-black-e1525280897233.png" alt="" width="991" height="731"></td><td>White<img class="alignnone size-full wp-image-3314" src="images/kernel-white-e1525281024184.png" alt="" width="991" height="731"></td><td>Hispanic<img class="alignnone size-full wp-image-3312" src="images/kernel-hispanic-e1525280752322.png" alt="" width="991" height="731"></td></tr></tbody></table>
+<table><tbody><tr><td>Black <a class="glightbox" href="images/kernel-black-e1525280897233.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img class="alignnone size-full wp-image-3313" src="images/kernel-black-e1525280897233.png" alt="" width="991" height="731"></a></td><td>White<a class="glightbox" href="images/kernel-white-e1525281024184.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img class="alignnone size-full wp-image-3314" src="images/kernel-white-e1525281024184.png" alt="" width="991" height="731"></a></td><td>Hispanic<a class="glightbox" href="images/kernel-hispanic-e1525280752322.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img class="alignnone size-full wp-image-3312" src="images/kernel-hispanic-e1525280752322.png" alt="" width="991" height="731"></a></td></tr></tbody></table>
 
-<h3 id="data-in-this-tutorial">Data in this tutorial</h3>
+<h3 id="data-in-this-tutorial">Data in this tutorial<a class="headerlink" href="#data-in-this-tutorial" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="http://gis.ucla.edu/geodata/dataset/lapd-crime-data-2010">LAPD Crime Data 2010 (csv)</a></li>
 </ul>
@@ -3429,11 +3765,19 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
     
     
       <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
-  </body>
+    <script>
+    var elements = document.getElementsByClassName("lightgallery");
+    for(var i=0; i<elements.length; i++) {
+       lightGallery(elements[i]);
+    }
+    </script>
+
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

@@ -20,8 +20,9 @@
     
     
       
-        <title>Python and the Web - Sandblog 2.0</title>
+        <title>Python and the Web - OARC Technology Sandbox</title>
       
+    
     
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
@@ -30,9 +31,14 @@
 
 
     
+    <link rel="stylesheet" href="../../css/lightgallery.min.css">
+
+    
     
       
     
+    <script src="../../js/lightgallery.min.js"></script>
+
     
       
         
@@ -50,7 +56,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -74,14 +91,12 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Sandblog 2.0" class="md-header__button md-logo" aria-label="Sandblog 2.0" data-md-component="logo">
+    <a href="../.." title="OARC Technology Sandbox" class="md-header__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5m10.78 2H19v12.18c-.26-.8-1.31-1.39-2.2-1.39h-1v-3a1 1 0 0 0-1-1h-6v-2h2a1 1 0 0 0 1-1v-2h2c1.03 0 1.87-.79 1.98-1.79M5 10.29l4.8 4.5v1a2 2 0 0 0 2 2V19H5v-8.71Z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -92,7 +107,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Sandblog 2.0
+            OARC Technology Sandbox
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -133,6 +148,8 @@
         </button>
       </nav>
       
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -157,6 +174,97 @@
       
         
           
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Welcome
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../about/History%20and%20Mission/" class="md-tabs__link">
+          
+  
+  About
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../projects/current/VSim/" class="md-tabs__link">
+          
+  
+  Projects
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -170,16 +278,18 @@
                     
 
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Sandblog 2.0" class="md-nav__button md-logo" aria-label="Sandblog 2.0" data-md-component="logo">
+    <a href="../.." title="OARC Technology Sandbox" class="md-nav__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5m10.78 2H19v12.18c-.26-.8-1.31-1.39-2.2-1.39h-1v-3a1 1 0 0 0-1-1h-6v-2h2a1 1 0 0 0 1-1v-2h2c1.03 0 1.87-.79 1.98-1.79M5 10.29l4.8 4.5v1a2 2 0 0 0 2 2V19H5v-8.71Z"/></svg>
 
     </a>
-    Sandblog 2.0
+    OARC Technology Sandbox
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -195,11 +305,100 @@
         
   
   <span class="md-ellipsis">
-    Welcome to MkDocs
+    Welcome
   </span>
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/History%20and%20Mission/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    History and Mission
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/Who%20We%20Are/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Who We Are
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -217,15 +416,18 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -236,8 +438,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Archive
           </label>
@@ -3331,6 +3533,140 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Current
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Current
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/current/VSim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VSim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/current/world%27s%20columbian%20exposition%20reconstruction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    World's columbian exposition reconstruction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -3538,7 +3874,7 @@
                   
 
 
-<h2 id="part-i-setting-up-the-script">Part I - Setting up the script</h2>
+<h2 id="part-i-setting-up-the-script">Part I - Setting up the script<a class="headerlink" href="#part-i-setting-up-the-script" title="Permanent link">&para;</a></h2>
 <p>Start a new python script in either your preferred text editor or Python IDE.</p>
 <p>To work with the web, our python script needs to send out data, one way to do this is using the built-in "request" module. Bring it in using the following:</p>
 <p>import requests</p>
@@ -3562,7 +3898,7 @@ from collections import defaultdict</p>
 <p>searchTerm = 'ucla'</p>
 <p>page = requests.get('http://www.google.com/search?tbm=isch&amp;q='+searchTerm)
 print page.content</p>
-<h2 id="part-ii-lets-us-nodes-what-is-going-on">Part II - Let's us Nodes what is going on</h2>
+<h2 id="part-ii-lets-us-nodes-what-is-going-on">Part II - Let's us Nodes what is going on<a class="headerlink" href="#part-ii-lets-us-nodes-what-is-going-on" title="Permanent link">&para;</a></h2>
 <p>Next we want to use the tree and html modules, because that allows us to search nodes:</p>
 <p>tree = html.fromstring(page.content)</p>
 <p>html.fromstring allows us to search the page as a tree, rather than simply text, but how do we search?</p>
@@ -3588,7 +3924,7 @@ page = requests.get('http://www.google.com/search?tbm=isch&amp;q='+searchTerm)</
 <p>tree = html.fromstring(page.content)
 images = tree.xpath('//img/@src')
 print images</p>
-<h3 id="step-3-lets-close-the-loop">Step 3 - Let's close the loop</h3>
+<h3 id="step-3-lets-close-the-loop">Step 3 - Let's close the loop<a class="headerlink" href="#step-3-lets-close-the-loop" title="Permanent link">&para;</a></h3>
 <p>Remember that a loop in Python has the following components:</p>
 <p>for something in someArray:
     #do something<br></p>
@@ -3599,14 +3935,14 @@ print images</p>
     print number</p>
 <p>In order to do a loop, something needs be looped over, in this case it is some array of numbers.</p>
 <p>Let's add this code to our Google scraper:</p>
-<h1 id="set-an-array-for-the-image-contents">set an array for the image contents</h1>
+<h1 id="set-an-array-for-the-image-contents">set an array for the image contents<a class="headerlink" href="#set-an-array-for-the-image-contents" title="Permanent link">&para;</a></h1>
 <p>theData = []</p>
-<h1 id="loop-for-the-content">loop for the content</h1>
+<h1 id="loop-for-the-content">loop for the content<a class="headerlink" href="#loop-for-the-content" title="Permanent link">&para;</a></h1>
 <p>for source in images:
     theData.append(source)
     print source</p>
 <p>In Line 2, we are creating an empty to store our image source contents, and calling it theData . In line 5, we begin our for-loop. Then we add our content to theData array using theData.append(source) . We can print each clean source if we wanted using print source.</p>
-<h2 id="step-4-put-it-into-a-csv">Step 4 Put it into a CSV</h2>
+<h2 id="step-4-put-it-into-a-csv">Step 4 Put it into a CSV<a class="headerlink" href="#step-4-put-it-into-a-csv" title="Permanent link">&para;</a></h2>
 <p>Now that we have everything cleaned up, we are going to write it to a csv file:</p>
 <p>targetFile = open("./"+searchTerm+".csv", "wb")
 writer = csv.writer(targetFile)</p>
@@ -3614,46 +3950,46 @@ writer = csv.writer(targetFile)</p>
 <p>We can check our images with the following:</p>
 <p>print 'number of images found:',len(images)</p>
 <p>Finally, we will do our last for-loop and close the csv file:</p>
-<h1 id="write-the-data-into-the-csv-file">write the data into the csv file</h1>
+<h1 id="write-the-data-into-the-csv-file">write the data into the csv file<a class="headerlink" href="#write-the-data-into-the-csv-file" title="Permanent link">&para;</a></h1>
 <p>for row in theData:
     writer.writerow([row])
     print row</p>
 <p>targetFile.close()
 print "done with script"</p>
 <p>Make sure that "row" is within brackets or the csv file will be weird!</p>
-<h3 id="congratulations-you-have-scraped-a-google-page">Congratulations you have scraped a Google page!!</h3>
-<h2 id="extra-step-lets-add-some-user-input">Extra step: Let's add some user input</h2>
+<h3 id="congratulations-you-have-scraped-a-google-page">Congratulations you have scraped a Google page!!<a class="headerlink" href="#congratulations-you-have-scraped-a-google-page" title="Permanent link">&para;</a></h3>
+<h2 id="extra-step-lets-add-some-user-input">Extra step: Let's add some user input<a class="headerlink" href="#extra-step-lets-add-some-user-input" title="Permanent link">&para;</a></h2>
 <p>But wait, instead of searching for "ucla" all the time, we can have the user input a search term by doing the following:</p>
-<h1 id="ask-the-user-for-the-search-term">ask the user for the search term</h1>
+<h1 id="ask-the-user-for-the-search-term">ask the user for the search term<a class="headerlink" href="#ask-the-user-for-the-search-term" title="Permanent link">&para;</a></h1>
 <p>searchterm = str(raw_input("What is the search term? \n"))</p>
 <p>Your final code should look like the following:</p>
 <p>import requests,os,csv
 from lxml import html,etree
 from collections import defaultdict</p>
-<h1 id="ask-the-user-for-the-search-term_1">ask the user for the search term</h1>
+<h1 id="ask-the-user-for-the-search-term_1">ask the user for the search term<a class="headerlink" href="#ask-the-user-for-the-search-term_1" title="Permanent link">&para;</a></h1>
 <p>searchTerm = str(raw_input("What is the search term? \n"))</p>
 <p>page = requests.get('http://www.google.com/search?tbm=isch&amp;q='+searchTerm)</p>
 <p>tree = html.fromstring(page.content)
 images = tree.xpath('//img/@src')
 print images</p>
-<h1 id="set-an-array-for-the-image-contents_1">set an array for the image contents</h1>
+<h1 id="set-an-array-for-the-image-contents_1">set an array for the image contents<a class="headerlink" href="#set-an-array-for-the-image-contents_1" title="Permanent link">&para;</a></h1>
 <p>theData = []</p>
-<h1 id="loop-for-the-image-source">loop for the image source</h1>
+<h1 id="loop-for-the-image-source">loop for the image source<a class="headerlink" href="#loop-for-the-image-source" title="Permanent link">&para;</a></h1>
 <p>for source in images:
     cleanSource = source.encode('utf-8')
     theData.append(source)
     print source</p>
-<h1 id="define-the-target-csv">define the target csv</h1>
+<h1 id="define-the-target-csv">define the target csv<a class="headerlink" href="#define-the-target-csv" title="Permanent link">&para;</a></h1>
 <p>targetFile = open("./"+searchTerm+".csv", "wb")
 writer = csv.writer(targetFile)</p>
-<h1 id="write-the-data-into-the-csv-file_1">write the data into the csv file</h1>
+<h1 id="write-the-data-into-the-csv-file_1">write the data into the csv file<a class="headerlink" href="#write-the-data-into-the-csv-file_1" title="Permanent link">&para;</a></h1>
 <p>for row in theData:
     writer.writerow([row])
     print row</p>
 <p>print 'number of images found:',len(images)</p>
 <p>targetFile.close()
 print "done with script"</p>
-<h4 id="back-to-the-workshop"><a href="https://sandbox.idre.ucla.edu/sandbox/web-scrapin-focus-on-python">Back to the workshop</a></h4>
+<h4 id="back-to-the-workshop"><a href="https://sandbox.idre.ucla.edu/sandbox/web-scrapin-focus-on-python">Back to the workshop</a><a class="headerlink" href="#back-to-the-workshop" title="Permanent link">&para;</a></h4>
 
 
 
@@ -3703,11 +4039,19 @@ print "done with script"</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
     
     
       <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
-  </body>
+    <script>
+    var elements = document.getElementsByClassName("lightgallery");
+    for(var i=0; i<elements.length; i++) {
+       lightGallery(elements[i]);
+    }
+    </script>
+
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

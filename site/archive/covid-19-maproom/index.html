@@ -20,8 +20,9 @@
     
     
       
-        <title>COVID-19 Maproom - Sandblog 2.0</title>
+        <title>COVID-19 Maproom - OARC Technology Sandbox</title>
       
+    
     
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
@@ -30,9 +31,14 @@
 
 
     
+    <link rel="stylesheet" href="../../css/lightgallery.min.css">
+
+    
     
       
     
+    <script src="../../js/lightgallery.min.js"></script>
+
     
       
         
@@ -50,7 +56,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -74,14 +91,12 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Sandblog 2.0" class="md-header__button md-logo" aria-label="Sandblog 2.0" data-md-component="logo">
+    <a href="../.." title="OARC Technology Sandbox" class="md-header__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5m10.78 2H19v12.18c-.26-.8-1.31-1.39-2.2-1.39h-1v-3a1 1 0 0 0-1-1h-6v-2h2a1 1 0 0 0 1-1v-2h2c1.03 0 1.87-.79 1.98-1.79M5 10.29l4.8 4.5v1a2 2 0 0 0 2 2V19H5v-8.71Z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -92,7 +107,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Sandblog 2.0
+            OARC Technology Sandbox
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -133,6 +148,8 @@
         </button>
       </nav>
       
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -157,6 +174,97 @@
       
         
           
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Welcome
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../about/History%20and%20Mission/" class="md-tabs__link">
+          
+  
+  About
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../projects/current/VSim/" class="md-tabs__link">
+          
+  
+  Projects
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -170,16 +278,18 @@
                     
 
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Sandblog 2.0" class="md-nav__button md-logo" aria-label="Sandblog 2.0" data-md-component="logo">
+    <a href="../.." title="OARC Technology Sandbox" class="md-nav__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5m10.78 2H19v12.18c-.26-.8-1.31-1.39-2.2-1.39h-1v-3a1 1 0 0 0-1-1h-6v-2h2a1 1 0 0 0 1-1v-2h2c1.03 0 1.87-.79 1.98-1.79M5 10.29l4.8 4.5v1a2 2 0 0 0 2 2V19H5v-8.71Z"/></svg>
 
     </a>
-    Sandblog 2.0
+    OARC Technology Sandbox
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -195,11 +305,100 @@
         
   
   <span class="md-ellipsis">
-    Welcome to MkDocs
+    Welcome
   </span>
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/History%20and%20Mission/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    History and Mission
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/Who%20We%20Are/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Who We Are
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -217,15 +416,18 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -236,8 +438,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Archive
           </label>
@@ -3199,6 +3401,140 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Current
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Current
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/current/VSim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VSim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/current/world%27s%20columbian%20exposition%20reconstruction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    World's columbian exposition reconstruction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -3276,45 +3612,45 @@
 
   <h1>COVID-19 Maproom</h1>
 
-<p><img alt="covid19 sandbox maproom" src="images/image-8-1024x446.png" /></p>
+<p><a class="glightbox" href="images/image-8-1024x446.png" data-type="image" data-width="auto" data-height="auto" data-title="covid19 sandbox maproom" data-desc-position="bottom"><img alt="covid19 sandbox maproom" src="images/image-8-1024x446.png" /></a></p>
 <p><a href="https://sandbox.idre.ucla.edu/covid19/">https://sandbox.idre.ucla.edu/covid19/</a></p>
 <p>To better understand and visualize the global and local spread of the COVID-19 epidemic, a group of researchers at the <a href="https://idre.ucla.edu/">UCLA Institute for Digital Research and Education</a> have developed a map-based data dashboard that provides an interactive timeline from January 22 to present day.</p>
-<h3 id="where-does-the-data-come-from">Where does the data come from?</h3>
+<h3 id="where-does-the-data-come-from">Where does the data come from?<a class="headerlink" href="#where-does-the-data-come-from" title="Permanent link">&para;</a></h3>
 <p>This project is powered by two external sources of data. The global view draws from a <a href="https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data">data repository operated by the Johns Hopkins University Center for Systems Science and Engineering</a> and is updated automatically as the repository is updated. The California and Los Angeles County views draw <a href="https://www.latimes.com/projects/california-coronavirus-cases-tracking-outbreak/">data from the Los Angeles Times’ Tracking coronavirus in California page</a> and are updated as time permits (usually daily).</p>
 <p>This visualization is being offered “as-is” given its time-sensitive purpose. There is no attempt to independently verify the validity of the data sources it depends upon and it is not running in a production environment that is intended to handle wide access and use. However, the visualization is being offered under a <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a> license in the spirit of global collaboration and the hope that others may build on this work and help to add to the world’s understanding of COVID-19.</p>
-<h3 id="how-do-you-use-this-site">How do you use this site?</h3>
+<h3 id="how-do-you-use-this-site">How do you use this site?<a class="headerlink" href="#how-do-you-use-this-site" title="Permanent link">&para;</a></h3>
 <p>The main feature of <a href="https://sandbox.idre.ucla.edu/covid19">this visualization</a> is the ability to "scrub" through time. When you first load the page, watch as the animation depicts the spread of the virus starting from January 22, 2020, to present day (at the time of this writing, 3/24/20). From its origin in China, one can witness the spatial growth of the epidemic. Within 60 days, it has reached almost all corners of our planet. Once the animation is done, you can use your left ← and right → arrow keys to navigate back and forth in one day increments. You can also drag the red circle and slide it across the time line, or click on an area on the red line to jump to a specific day.</p>
-<p><img alt="time bar closeup" src="images/image-16-1024x435.png" /></p>
+<p><a class="glightbox" href="images/image-16-1024x435.png" data-type="image" data-width="auto" data-height="auto" data-title="time bar closeup" data-desc-position="bottom"><img alt="time bar closeup" src="images/image-16-1024x435.png" /></a></p>
 <p>The ranking table on the bottom right allows you to see the rankings for that particular day on the timebar. As you "scrub" the timeline, the ranking will update in real time:</p>
-<p><img alt="ranking table" src="images/image-2-e1585087383364.png" /></p>
+<p><a class="glightbox" href="images/image-2-e1585087383364.png" data-type="image" data-width="auto" data-height="auto" data-title="ranking table" data-desc-position="bottom"><img alt="ranking table" src="images/image-2-e1585087383364.png" /></a></p>
 <p>Hover over a row on the rankings table, or hover over a circle on the map to see a line chart of the location's data over time.</p>
-<p><img alt="change over time" src="images/image-3.png" /></p>
+<p><a class="glightbox" href="images/image-3.png" data-type="image" data-width="auto" data-height="auto" data-title="change over time" data-desc-position="bottom"><img alt="change over time" src="images/image-3.png" /></a></p>
 <p>The three buttons on the top left corner allow you to change the scale of the map. The three scales available are "Global," "California," and "Los Angeles."</p>
-<p><img alt="Global, California, Los Angeles buttons" src="images/image-17.png" /></p>
+<p><a class="glightbox" href="images/image-17.png" data-type="image" data-width="auto" data-height="auto" data-title="Global, California, Los Angeles buttons" data-desc-position="bottom"><img alt="Global, California, Los Angeles buttons" src="images/image-17.png" /></a></p>
 <p>Global:</p>
-<p><img alt="global map" src="images/image-12-1024x458.png" /></p>
+<p><a class="glightbox" href="images/image-12-1024x458.png" data-type="image" data-width="auto" data-height="auto" data-title="global map" data-desc-position="bottom"><img alt="global map" src="images/image-12-1024x458.png" /></a></p>
 <p>California:</p>
-<p><img alt="California map" src="images/image-13-1024x458.png" /></p>
+<p><a class="glightbox" href="images/image-13-1024x458.png" data-type="image" data-width="auto" data-height="auto" data-title="California map" data-desc-position="bottom"><img alt="California map" src="images/image-13-1024x458.png" /></a></p>
 <p>Los Angeles:</p>
-<p><img alt="LA map" src="images/la-1024x458.jpg" /></p>
+<p><a class="glightbox" href="images/la-1024x458.jpg" data-type="image" data-width="auto" data-height="auto" data-title="LA map" data-desc-position="bottom"><img alt="LA map" src="images/la-1024x458.jpg" /></a></p>
 <p>And finally, the three buttons at the bottom right allow you to switch the data from "confirmed cases," "deaths," and "recovered."</p>
-<p><img alt="buttons for confirmed, deaths, and recovered" src="images/image-14.png" /></p>
+<p><a class="glightbox" href="images/image-14.png" data-type="image" data-width="auto" data-height="auto" data-title="buttons for confirmed, deaths, and recovered" data-desc-position="bottom"><img alt="buttons for confirmed, deaths, and recovered" src="images/image-14.png" /></a></p>
 <p>Below is the world map for recorded deaths as of 3/24/2020:</p>
-<p><img alt="world map of deaths" src="images/image-15-1024x459.png" /></p>
-<h3 id="what-can-you-tell-from-the-visualization">What can you tell from the visualization?</h3>
+<p><a class="glightbox" href="images/image-15-1024x459.png" data-type="image" data-width="auto" data-height="auto" data-title="world map of deaths" data-desc-position="bottom"><img alt="world map of deaths" src="images/image-15-1024x459.png" /></a></p>
+<h3 id="what-can-you-tell-from-the-visualization">What can you tell from the visualization?<a class="headerlink" href="#what-can-you-tell-from-the-visualization" title="Permanent link">&para;</a></h3>
 <p>One of the goals to address this epidemic is to "flatten the curve." According to the CDC, the flattening of the curve refers to our collective effort to not overwhelm our health care system capacity. This, we do by measures we have now become accustomed to: washing our hands, social distancing, and avoiding crowds. By limiting the spread, we allow our health care system to treat the most needy, while also biding valuable time to develop vaccines needed to cure those who are and become infected.</p>
 <p>The map informs this curve in several ways. Circle sizes on the map represent the total number of confirmed cases, deaths, or recovered by location, usually a country or a region. Because of the big outliers (specifically China and Italy), the map uses a logarithmic curve, meaning that circles with high values beyond a certain number remain roughly the same size. That is why the circle sizes for Italy, France, and Spain are similar, despite their wide range in actual numbers:</p>
-<p><img alt="circle sizes" src="images/image-4-1024x593.png" /></p>
+<p><a class="glightbox" href="images/image-4-1024x593.png" data-type="image" data-width="auto" data-height="auto" data-title="circle sizes" data-desc-position="bottom"><img alt="circle sizes" src="images/image-4-1024x593.png" /></a></p>
 <p>Circle colors are represented by growth rate, calculated as a percent change from the previous day. If the growth is greater than 50％ from the day before, it is represented by a red circle; no change is represented by a semi-transparent white circle.</p>
-<p><img alt="red circle" src="images/image-19.png" /></p>
-<p><img alt="white circle" src="images/image-20.png" /></p>
+<p><a class="glightbox" href="images/image-19.png" data-type="image" data-width="auto" data-height="auto" data-title="red circle" data-desc-position="bottom"><img alt="red circle" src="images/image-19.png" /></a></p>
+<p><a class="glightbox" href="images/image-20.png" data-type="image" data-width="auto" data-height="auto" data-title="white circle" data-desc-position="bottom"><img alt="white circle" src="images/image-20.png" /></a></p>
 <p>That is why we see a cluster of large but relatively white circles in East Asia, indicative or a region from where the peak has passed and/or the virus has been contained. In contrast, a cluster of white and red circles are predominant in Europe and Africa, where the virus is present and still spreading:</p>
-<p><img alt="red vs white circles" src="images/image-5.png" /></p>
+<p><a class="glightbox" href="images/image-5.png" data-type="image" data-width="auto" data-height="auto" data-title="red vs white circles" data-desc-position="bottom"><img alt="red vs white circles" src="images/image-5.png" /></a></p>
 <p>This is also evident in the line charts produced for each country. Below, one can see how South Korea's line curve has "flattened," whereas the USA curve is still rising:</p>
-<p><img alt="South Korea's curve" src="images/image-6.png" /></p>
-<p><img alt="USA curve" src="images/image-9.png" /></p>
+<p><a class="glightbox" href="images/image-6.png" data-type="image" data-width="auto" data-height="auto" data-title="South Korea's curve" data-desc-position="bottom"><img alt="South Korea's curve" src="images/image-6.png" /></a></p>
+<p><a class="glightbox" href="images/image-9.png" data-type="image" data-width="auto" data-height="auto" data-title="USA curve" data-desc-position="bottom"><img alt="USA curve" src="images/image-9.png" /></a></p>
 <p>When the red circles on the map disappear, it will mark the day that there are no longer any new cases.</p>
-<h3 id="how-was-the-site-built">How was the site built?</h3>
+<h3 id="how-was-the-site-built">How was the site built?<a class="headerlink" href="#how-was-the-site-built" title="Permanent link">&para;</a></h3>
 <p>This maproom was created using the following javascript libraries:</p>
 <ul>
 <li><a href="https://leafletjs.com/">leafletjs</a> for mapping</li>
@@ -3374,11 +3710,19 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
     
     
       <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
-  </body>
+    <script>
+    var elements = document.getElementsByClassName("lightgallery");
+    for(var i=0; i<elements.length; i++) {
+       lightGallery(elements[i]);
+    }
+    </script>
+
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

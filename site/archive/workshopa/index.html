@@ -20,8 +20,9 @@
     
     
       
-        <title>Spatial Statistics: Central means and directional distributions - Sandblog 2.0</title>
+        <title>Spatial Statistics: Central means and directional distributions - OARC Technology Sandbox</title>
       
+    
     
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
@@ -30,9 +31,14 @@
 
 
     
+    <link rel="stylesheet" href="../../css/lightgallery.min.css">
+
+    
     
       
     
+    <script src="../../js/lightgallery.min.js"></script>
+
     
       
         
@@ -50,7 +56,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -74,14 +91,12 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Sandblog 2.0" class="md-header__button md-logo" aria-label="Sandblog 2.0" data-md-component="logo">
+    <a href="../.." title="OARC Technology Sandbox" class="md-header__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5m10.78 2H19v12.18c-.26-.8-1.31-1.39-2.2-1.39h-1v-3a1 1 0 0 0-1-1h-6v-2h2a1 1 0 0 0 1-1v-2h2c1.03 0 1.87-.79 1.98-1.79M5 10.29l4.8 4.5v1a2 2 0 0 0 2 2V19H5v-8.71Z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -92,7 +107,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Sandblog 2.0
+            OARC Technology Sandbox
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -133,6 +148,8 @@
         </button>
       </nav>
       
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -157,6 +174,97 @@
       
         
           
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Welcome
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../about/History%20and%20Mission/" class="md-tabs__link">
+          
+  
+  About
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../projects/current/VSim/" class="md-tabs__link">
+          
+  
+  Projects
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -170,16 +278,18 @@
                     
 
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Sandblog 2.0" class="md-nav__button md-logo" aria-label="Sandblog 2.0" data-md-component="logo">
+    <a href="../.." title="OARC Technology Sandbox" class="md-nav__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5m10.78 2H19v12.18c-.26-.8-1.31-1.39-2.2-1.39h-1v-3a1 1 0 0 0-1-1h-6v-2h2a1 1 0 0 0 1-1v-2h2c1.03 0 1.87-.79 1.98-1.79M5 10.29l4.8 4.5v1a2 2 0 0 0 2 2V19H5v-8.71Z"/></svg>
 
     </a>
-    Sandblog 2.0
+    OARC Technology Sandbox
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -195,11 +305,100 @@
         
   
   <span class="md-ellipsis">
-    Welcome to MkDocs
+    Welcome
   </span>
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/History%20and%20Mission/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    History and Mission
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/Who%20We%20Are/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Who We Are
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -217,15 +416,18 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -236,8 +438,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Archive
           </label>
@@ -3199,6 +3401,140 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Current
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Current
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/current/VSim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VSim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/current/world%27s%20columbian%20exposition%20reconstruction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    World's columbian exposition reconstruction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -3281,51 +3617,51 @@
 <ul>
 <li><a href="http://sandbox.idre.ucla.edu/workshops/ss_workshop2018.gdb.zip">Spatial Statistics Workshop Geodatabase</a></li>
 </ul>
-<h3 id="setting-up-your-project">Setting up your project</h3>
+<h3 id="setting-up-your-project">Setting up your project<a class="headerlink" href="#setting-up-your-project" title="Permanent link">&para;</a></h3>
 <p>Through the process of this workshop, you will be creating many new data layers. It is always good practice to designate a path to the geodatabase that you will use to store the layers.</p>
 <ol>
 <li>Go to File, Map Document Properties...</li>
 <li>Change the default geodatabase by finding the path to the workshop geodatabase you just downloaded.</li>
-<li>Also click on the checkbox next to Store relative pathnames to data sources <img alt="" src="images/sa-map-document-properties-e1518639638350.png" /></li>
+<li>Also click on the checkbox next to Store relative pathnames to data sources <a class="glightbox" href="images/sa-map-document-properties-e1518639638350.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/sa-map-document-properties-e1518639638350.png" /></a></li>
 </ol>
-<h3 id="finding-the-center-mean-for-different-population-groups">Finding the center mean for different population groups</h3>
-<p><img alt="" src="../images/GUID-1F7217DA-FC4E-46A2-B91C-7AB5E53DDA9C-web.png" /></p>
+<h3 id="finding-the-center-mean-for-different-population-groups">Finding the center mean for different population groups<a class="headerlink" href="#finding-the-center-mean-for-different-population-groups" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="../images/GUID-1F7217DA-FC4E-46A2-B91C-7AB5E53DDA9C-web.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/GUID-1F7217DA-FC4E-46A2-B91C-7AB5E53DDA9C-web.png" /></a></p>
 <ol>
 <li>Open ArcMap and add the <strong>us_states</strong> and <strong>us_counties</strong> layers</li>
 <li>Go to <strong>Windows</strong>, <strong>Catalog</strong> to open the Catalog panel on the right</li>
-<li>Expand <strong>Toolboxes</strong>, <strong>System Toolboxes, Spatial Statistics Tools, Measuring Geographic Distributions</strong> <img alt="" src="images/ss-spatial-stats-toolbox-e1518735321785.png" /></li>
+<li>Expand <strong>Toolboxes</strong>, <strong>System Toolboxes, Spatial Statistics Tools, Measuring Geographic Distributions</strong> <a class="glightbox" href="images/ss-spatial-stats-toolbox-e1518735321785.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/ss-spatial-stats-toolbox-e1518735321785.png" /></a></li>
 <li>Double click on the <strong>Mean Center</strong> tool<ol>
 <li>Input: <strong>us_counties</strong></li>
 <li>Output: <strong>us_counties_MeanCenter_white</strong></li>
 <li>Weight: <strong>WHITE</strong></li>
-<li>Case field: <strong>STATE_FIPS</strong> (this creates a different point per state) <img alt="" src="images/ss-mean-center-params-e1518735528487.png" /></li>
-<li>A new layer should appear on your map. Modify the symbology: <img alt="" src="images/ss-symbology-e1518735688788.png" /></li>
+<li>Case field: <strong>STATE_FIPS</strong> (this creates a different point per state) <a class="glightbox" href="images/ss-mean-center-params-e1518735528487.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/ss-mean-center-params-e1518735528487.png" /></a></li>
+<li>A new layer should appear on your map. Modify the symbology: <a class="glightbox" href="images/ss-symbology-e1518735688788.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/ss-symbology-e1518735688788.png" /></a></li>
 <li>Repeat steps 1~5, choosing <strong>BLACK</strong> and <strong>HISPANIC</strong> respectively to produce 3 different colored dots per state.</li>
 </ol>
 </li>
 </ol>
 <p>[TBS_ALERT color="info" heading="What does the map tell us?"]</p>
-<p><img alt="" src="images/ss-mean-center-map-e1518735947903.png" /></p>
+<p><a class="glightbox" href="images/ss-mean-center-map-e1518735947903.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/ss-mean-center-map-e1518735947903.png" /></a></p>
 <p>Examine the map and explain what you are able to observe. What do the colors represent? What does that tell us about the spatial distribution of our population by race categories?</p>
 <p>[/TBS_ALERT]</p>
-<h3 id="measuring-directional-distribution">Measuring directional distribution</h3>
-<p><img alt="" src="../images/GUID-13B1B03F-A692-49E5-B371-C2095CADCA5A-web.png" /></p>
+<h3 id="measuring-directional-distribution">Measuring directional distribution<a class="headerlink" href="#measuring-directional-distribution" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="../images/GUID-13B1B03F-A692-49E5-B371-C2095CADCA5A-web.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/GUID-13B1B03F-A692-49E5-B371-C2095CADCA5A-web.png" /></a></p>
 <p>Now let's see if there are any central tendencies, dispersion, and directional trends to our data.</p>
 <ol>
 <li>From the Spatial Statistics Toolbox, double click on the <strong>Directional Distribution (Standard Deviational Ellipse)</strong> tool<ol>
 <li>Input: <strong>us_counties</strong></li>
 <li>Output: <strong>us_counties_DirectionalDistr_white</strong></li>
 <li>Weight Field: <strong>WHITE</strong></li>
-<li>Case Field: <strong>STATE_FIPS</strong> <img alt="" src="images/ss-directional-distribution-params-e1518737242917.png" /> [TBS_ALERT color="info" heading="How big is my ellipse?"] Notice the option to choose 1, 2, or 3 standard deviations for your ellipse size. For 2-dimensional data, that is, data with an x and a y,  one standard deviational ellipse will cover approximately 63 percent of the features; two standard deviations will contain approximately 98 percent of the features; and three standard deviations will cover approximately 99.9 percent of the features. [/TBS_ALERT]</li>
+<li>Case Field: <strong>STATE_FIPS</strong> <a class="glightbox" href="images/ss-directional-distribution-params-e1518737242917.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/ss-directional-distribution-params-e1518737242917.png" /></a> [TBS_ALERT color="info" heading="How big is my ellipse?"] Notice the option to choose 1, 2, or 3 standard deviations for your ellipse size. For 2-dimensional data, that is, data with an x and a y,  one standard deviational ellipse will cover approximately 63 percent of the features; two standard deviations will contain approximately 98 percent of the features; and three standard deviations will cover approximately 99.9 percent of the features. [/TBS_ALERT]</li>
 </ol>
 </li>
 <li>Modify the symbology of the ellipse to match the color of the mean center dot for the same race category</li>
 <li>Repeat steps 1~2 for <strong>BLACK</strong> and <strong>HISPANIC</strong></li>
 </ol>
 <p>[TBS_ALERT color="info" heading="What does the map tell us?"]</p>
-<p><img alt="" src="images/ss-directional-distribution-map-e1518737520215.png" />Examine the map and explain what you are able to observe. What do the colors represent? What insights do the size, shape, and overlap of ellipses provide?</p>
+<p><a class="glightbox" href="images/ss-directional-distribution-map-e1518737520215.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/ss-directional-distribution-map-e1518737520215.png" /></a>Examine the map and explain what you are able to observe. What do the colors represent? What insights do the size, shape, and overlap of ellipses provide?</p>
 <p>[/TBS_ALERT]</p>
-<h3 id="resources">Resources</h3>
+<h3 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="http://pro.arcgis.com/en/pro-app/tool-reference/spatial-statistics/h-how-mean-center-spatial-statistics-works.htm">ArcGIS Central Mean</a></li>
 <li><a href="http://pro.arcgis.com/en/pro-app/tool-reference/spatial-statistics/directional-distribution.htm">ArcGIS Directional Distribution</a></li>
@@ -3379,11 +3715,19 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
     
     
       <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
-  </body>
+    <script>
+    var elements = document.getElementsByClassName("lightgallery");
+    for(var i=0; i<elements.length; i++) {
+       lightGallery(elements[i]);
+    }
+    </script>
+
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

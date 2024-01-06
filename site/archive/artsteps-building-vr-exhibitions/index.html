@@ -20,8 +20,9 @@
     
     
       
-        <title>Artsteps: Building VR Exhibitions - Sandblog 2.0</title>
+        <title>Artsteps: Building VR Exhibitions - OARC Technology Sandbox</title>
       
+    
     
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
@@ -30,9 +31,14 @@
 
 
     
+    <link rel="stylesheet" href="../../css/lightgallery.min.css">
+
+    
     
       
     
+    <script src="../../js/lightgallery.min.js"></script>
+
     
       
         
@@ -50,7 +56,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -74,14 +91,12 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Sandblog 2.0" class="md-header__button md-logo" aria-label="Sandblog 2.0" data-md-component="logo">
+    <a href="../.." title="OARC Technology Sandbox" class="md-header__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5m10.78 2H19v12.18c-.26-.8-1.31-1.39-2.2-1.39h-1v-3a1 1 0 0 0-1-1h-6v-2h2a1 1 0 0 0 1-1v-2h2c1.03 0 1.87-.79 1.98-1.79M5 10.29l4.8 4.5v1a2 2 0 0 0 2 2V19H5v-8.71Z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -92,7 +107,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Sandblog 2.0
+            OARC Technology Sandbox
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -133,6 +148,8 @@
         </button>
       </nav>
       
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -157,6 +174,97 @@
       
         
           
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Welcome
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../about/History%20and%20Mission/" class="md-tabs__link">
+          
+  
+  About
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../projects/current/VSim/" class="md-tabs__link">
+          
+  
+  Projects
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -170,16 +278,18 @@
                     
 
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Sandblog 2.0" class="md-nav__button md-logo" aria-label="Sandblog 2.0" data-md-component="logo">
+    <a href="../.." title="OARC Technology Sandbox" class="md-nav__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5m10.78 2H19v12.18c-.26-.8-1.31-1.39-2.2-1.39h-1v-3a1 1 0 0 0-1-1h-6v-2h2a1 1 0 0 0 1-1v-2h2c1.03 0 1.87-.79 1.98-1.79M5 10.29l4.8 4.5v1a2 2 0 0 0 2 2V19H5v-8.71Z"/></svg>
 
     </a>
-    Sandblog 2.0
+    OARC Technology Sandbox
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -195,11 +305,100 @@
         
   
   <span class="md-ellipsis">
-    Welcome to MkDocs
+    Welcome
   </span>
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/History%20and%20Mission/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    History and Mission
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/Who%20We%20Are/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Who We Are
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -217,15 +416,18 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -236,8 +438,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Archive
           </label>
@@ -3226,6 +3428,140 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Current
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Current
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/current/VSim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VSim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/current/world%27s%20columbian%20exposition%20reconstruction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    World's columbian exposition reconstruction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -3338,14 +3674,14 @@
 <li>Develop guided pathways through the virtual environment with supplemental material</li>
 <li>Easy distribution for computers (link or embed code) and VR headsets</li>
 </ul>
-<h2 id="set-up">Set Up</h2>
+<h2 id="set-up">Set Up<a class="headerlink" href="#set-up" title="Permanent link">&para;</a></h2>
 <p>Got to <a href="https://www.artsteps.com/">Artsteps.com</a> and sign up for a free account.</p>
-<p><img alt="" src="images/Screen-Shot-2020-07-20-at-5.17.37-PM-1024x480.png" /></p>
-<h2 id="create">Create</h2>
+<p><a class="glightbox" href="images/Screen-Shot-2020-07-20-at-5.17.37-PM-1024x480.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Screen-Shot-2020-07-20-at-5.17.37-PM-1024x480.png" /></a></p>
+<h2 id="create">Create<a class="headerlink" href="#create" title="Permanent link">&para;</a></h2>
 <p>Once you've logged in, you can create your own virtual exhibition or view others.</p>
 <p>Here is a very detailed <a href="https://www.google.com/url?q=https%3A%2F%2Fwww.artsteps.com%2Fview%2F5e81f24eb733f3186e8fb567&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNGk0ghVMfuZjlNzf4Rjv4FARf-jJQ">example</a> of what can be produced.</p>
 <p>Click "Create" to begin making your own virtual exhibition.</p>
-<p><img alt="" src="images/Screen-Shot-2020-07-20-at-5.19.18-PM-1024x478.png" /></p>
+<p><a class="glightbox" href="images/Screen-Shot-2020-07-20-at-5.19.18-PM-1024x478.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Screen-Shot-2020-07-20-at-5.19.18-PM-1024x478.png" /></a></p>
 <p>At the top of your window, you can navigate forward and backward through the steps for creating your project:</p>
 <ol>
 <li>Define your space</li>
@@ -3354,55 +3690,55 @@
 <li>Plan a guided Tour</li>
 <li>Publish your exhibition</li>
 </ol>
-<p><img alt="" src="images/AS-1024x581.png" /></p>
-<h2 id="define-your-space">Define Your Space</h2>
-<p><img alt="" src="images/Screen-Shot-2020-05-05-at-3.31.56-PM.png" /></p>
+<p><a class="glightbox" href="images/AS-1024x581.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/AS-1024x581.png" /></a></p>
+<h2 id="define-your-space">Define Your Space<a class="headerlink" href="#define-your-space" title="Permanent link">&para;</a></h2>
+<p><a class="glightbox" href="images/Screen-Shot-2020-05-05-at-3.31.56-PM.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Screen-Shot-2020-05-05-at-3.31.56-PM.png" /></a></p>
 <p>You can choose from one of two exhibition templates or you can create your own space. Begin by clicking on the icon to place walls or doors and click and drag on the grid area. The start icon indicates where users will be place when they begin their experience.</p>
-<p><img alt="" src="images/Screen-Shot-2020-05-05-at-3.31.41-PM.png" /></p>
-<p><img alt="" src="images/Screen-Shot-2020-05-05-at-3.31.47-PM.png" /></p>
+<p><a class="glightbox" href="images/Screen-Shot-2020-05-05-at-3.31.41-PM.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Screen-Shot-2020-05-05-at-3.31.41-PM.png" /></a></p>
+<p><a class="glightbox" href="images/Screen-Shot-2020-05-05-at-3.31.47-PM.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Screen-Shot-2020-05-05-at-3.31.47-PM.png" /></a></p>
 <p>Use the pink guide lines to make sure your walls line up.</p>
-<p><img alt="" src="images/Screen-Shot-2020-05-05-at-3.33.13-PM-1024x687.png" /></p>
-<p><img alt="" src="images/Screen-Shot-2020-05-05-at-3.34.10-PM-1024x781.png" /></p>
-<p><img alt="" src="images/Screen-Shot-2020-05-05-at-3.35.46-PM-1024x781.png" /></p>
+<p><a class="glightbox" href="images/Screen-Shot-2020-05-05-at-3.33.13-PM-1024x687.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Screen-Shot-2020-05-05-at-3.33.13-PM-1024x687.png" /></a></p>
+<p><a class="glightbox" href="images/Screen-Shot-2020-05-05-at-3.34.10-PM-1024x781.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Screen-Shot-2020-05-05-at-3.34.10-PM-1024x781.png" /></a></p>
+<p><a class="glightbox" href="images/Screen-Shot-2020-05-05-at-3.35.46-PM-1024x781.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Screen-Shot-2020-05-05-at-3.35.46-PM-1024x781.png" /></a></p>
 <p>Doorways can be added by selecting the tool and click on the wall space where you want to place a door.</p>
 <p>To turn off your construction tools, click on the icons again. You won't be able to select and delete walls until you have deselected your construction tools.</p>
-<p><img alt="" src="images/Screen-Shot-2020-05-05-at-3.52.41-PM.png" /></p>
-<p><img alt="" src="images/Screen-Shot-2020-05-05-at-3.52.27-PM.png" /></p>
+<p><a class="glightbox" href="images/Screen-Shot-2020-05-05-at-3.52.41-PM.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Screen-Shot-2020-05-05-at-3.52.41-PM.png" /></a></p>
+<p><a class="glightbox" href="images/Screen-Shot-2020-05-05-at-3.52.27-PM.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Screen-Shot-2020-05-05-at-3.52.27-PM.png" /></a></p>
 <p>Once you have, you can select walls and click the delete wall button to remove walls from your construction.</p>
 <p>This functionality is only present in the "Define your space" area.</p>
-<p><img alt="" src="images/Screen-Shot-2020-05-05-at-8.24.14-PM-1024x701.png" /></p>
-<p><img alt="" src="images/As2-1024x712.png" /></p>
+<p><a class="glightbox" href="images/Screen-Shot-2020-05-05-at-8.24.14-PM-1024x701.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Screen-Shot-2020-05-05-at-8.24.14-PM-1024x701.png" /></a></p>
+<p><a class="glightbox" href="images/As2-1024x712.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/As2-1024x712.png" /></a></p>
 <p>The "i" or information button in the upper right of your creation window can be selected at any stage within your process to provide you with tools tips and directions for that section of the creation process.</p>
-<h2 id="design-your-space">Design Your Space</h2>
+<h2 id="design-your-space">Design Your Space<a class="headerlink" href="#design-your-space" title="Permanent link">&para;</a></h2>
 <p>Next, you can design your space by adding colors and textures to your walls and floor, by click "2. Design your space" in the top menu. There are 40 colors and 36 textures to choose from in the pallets on the left of your window. You can switch to a ground-level view by selecting the "Switch View" button in the upper left of your creation window.</p>
-<p><img alt="" src="images/AS3-1024x574.png" /></p>
+<p><a class="glightbox" href="images/AS3-1024x574.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/AS3-1024x574.png" /></a></p>
 <p>At the ground level, you can make decisions about if your models doors. You can choose to have the doors be open or closed and locked or unlocked.</p>
 <p>To move through the space at ground level, point the cursor the area you want to move to and a set of footprints will appear. Place the footprints where you want to land and click. To change the direction you're facing, click and drag to the right or left</p>
-<p><img alt="" src="images/AS4-1024x642.png" /></p>
+<p><a class="glightbox" href="images/AS4-1024x642.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/AS4-1024x642.png" /></a></p>
 <p>Select the map in the bottom left corner of your creation window to see where you are located within your model at any time. Click the arrow to the right of the model layout to close it.</p>
-<p><img alt="" src="images/AS5-1024x587.png" /></p>
+<p><a class="glightbox" href="images/AS5-1024x587.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/AS5-1024x587.png" /></a></p>
 <p>To add a color on the walls or floors of your exhibition, select any color you like from the palette and the click on the surface you want painted.</p>
-<p><img alt="" src="images/AS6-1024x522.png" /></p>
+<p><a class="glightbox" href="images/AS6-1024x522.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/AS6-1024x522.png" /></a></p>
 <p>You can also paint the ceiling, floor, and wall frame of your exhibition.</p>
 <ul>
 <li>
-<p><img alt="" src="images/As7-1024x486.png" /></p>
+<p><a class="glightbox" href="images/As7-1024x486.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/As7-1024x486.png" /></a></p>
 </li>
 <li>
-<p><img alt="" src="images/As8-1024x487.png" /></p>
+<p><a class="glightbox" href="images/As8-1024x487.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/As8-1024x487.png" /></a></p>
 </li>
 </ul>
 <p>In order to add textures on a surface, choose the desired texture image and then click on the surface you want it placed. You can then layer color over a texture to change the shade of the texture.</p>
-<p><img alt="" src="images/As9-1024x436.png" /></p>
+<p><a class="glightbox" href="images/As9-1024x436.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/As9-1024x436.png" /></a></p>
 <p>You can also upload your own texture. The texture can be uploaded as a Flickr API asset, an image file, or from a URL.</p>
-<p><img alt="" src="images/AS10-1024x290.png" /></p>
+<p><a class="glightbox" href="images/AS10-1024x290.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/AS10-1024x290.png" /></a></p>
 <p>To stop applying colors and textures, deselect the current color or texture you are using from the pallet.</p>
 <p>Then, you can click on a wall to adjust the light intensity or the texture tiling (making the pattern more or less frequent per the area).</p>
-<p><img alt="" src="images/AS11-1024x893.png" /></p>
-<h2 id="add-place-your-artifacts">Add &amp; Place Your Artifacts</h2>
+<p><a class="glightbox" href="images/AS11-1024x893.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/AS11-1024x893.png" /></a></p>
+<h2 id="add-place-your-artifacts">Add &amp; Place Your Artifacts<a class="headerlink" href="#add-place-your-artifacts" title="Permanent link">&para;</a></h2>
 <p>Once you've constructed and designed your space, you're ready to add your curated objects and wall labels to it. For this tutorial, we will be using objects and texts from the <a href="https://www.google.com/url?q=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FHercules&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNFsc5-zihbGm7Cxyods-yeJM4cdVQ">Wikipedia page for Hercules</a>, the ancient Roman mythical hero and son of the god Zeus.</p>
 <p>You can upload image, video, 3D objects, and text as assets.</p>
-<p><img alt="" src="images/AS12.png" /></p>
+<p><a class="glightbox" href="images/AS12.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/AS12.png" /></a></p>
 <p>To upload an asset, select which types of asset you want to upload in the artifacts panel, then select the "Add" button. Each object types will have different options for upload. For images, you can use the search feature to use images from Flickr. For 3D objects, you can use the search feature to use assets from Google Poly. Review the slideshow below to see what information is needed for each asset.</p>
 <p><em>NOTE: At the time of this tutorial, I have not been able to get video links from youtube to work in the video upload window.</em></p>
 <ul>
@@ -3426,93 +3762,93 @@
 </li>
 </ul>
 <p>After you upload an object, you will see it appear in the asset type as a thumbnail image. Select the thumbnail and then click and drag the asset anywhere in your model to place it.</p>
-<p><img alt="" src="images/AS13-1024x438.png" /></p>
+<p><a class="glightbox" href="images/AS13-1024x438.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/AS13-1024x438.png" /></a></p>
 <p>Once an asset is placed, a set of tools will appear to help you orient the object within your space. For images, you will also be able to select a frame for your image.</p>
-<p><img alt="" src="images/AS14-1024x443.png" /></p>
+<p><a class="glightbox" href="images/AS14-1024x443.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/AS14-1024x443.png" /></a></p>
 <p>When you select "Move," "Rotate," or "Scale," the orientation tool will adjust its design. The colors in each orientation tool correspond with the related x, y, and z axises. You can also click the "Remove" icon to delete the item from the model. This will not delete it from the asset collect.</p>
-<p><img alt="" src="images/AS15.png" /></p>
+<p><a class="glightbox" href="images/AS15.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/AS15.png" /></a></p>
 <ul>
 <li>
-<p><img alt="" src="images/AS16.png" /></p>
+<p><a class="glightbox" href="images/AS16.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/AS16.png" /></a></p>
 <p>Move</p>
 </li>
 <li>
-<p><img alt="" src="images/AS17.png" /></p>
+<p><a class="glightbox" href="images/AS17.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/AS17.png" /></a></p>
 <p>Rotate</p>
 </li>
 <li>
-<p><img alt="" src="images/AS18.png" /></p>
+<p><a class="glightbox" href="images/AS18.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/AS18.png" /></a></p>
 <p>Scale</p>
 </li>
 </ul>
 <p>Adding wall text takes some finesse. If you copy and paste or type text into the text asset main field. It will show up as a very long floating text. You cannot adjust the width of the text with the scale tool.</p>
 <ul>
 <li>
-<p><img alt="" src="images/AS19-1024x494.png" /></p>
+<p><a class="glightbox" href="images/AS19-1024x494.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/AS19-1024x494.png" /></a></p>
 </li>
 <li>
-<p><img alt="" src="images/AS20-1024x507.png" /></p>
+<p><a class="glightbox" href="images/AS20-1024x507.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/AS20-1024x507.png" /></a></p>
 </li>
 </ul>
 <p>Instead, go back into your asset editor by double-clicking on the object or hovering over the thumbnail in the artifacts panel and clicking on the edit icon.</p>
-<p><img alt="" src="images/AS21.png" /></p>
+<p><a class="glightbox" href="images/AS21.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/AS21.png" /></a></p>
 <p>Add in line breaks using the "return" or "enter" key, so that roughly the same amount of words are in each line of text. Approximate this number based on what you would like the width and size of your text to be. This may take a few attempts.</p>
 <ul>
 <li>
-<p><img alt="" src="images/AS22-1024x647.png" /></p>
+<p><a class="glightbox" href="images/AS22-1024x647.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/AS22-1024x647.png" /></a></p>
 </li>
 <li>
-<p><img alt="" src="images/AS23-1024x523.png" /></p>
+<p><a class="glightbox" href="images/AS23-1024x523.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/AS23-1024x523.png" /></a></p>
 </li>
 </ul>
 <p>Then, you can use the Move and Scale tools to adjust the text's appearance on the wall.</p>
-<p><img alt="" src="images/Screen-Shot-2020-07-20-at-7.40.40-PM-1024x515.png" /></p>
+<p><a class="glightbox" href="images/Screen-Shot-2020-07-20-at-7.40.40-PM-1024x515.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Screen-Shot-2020-07-20-at-7.40.40-PM-1024x515.png" /></a></p>
 <p>You can also incorporate 3D objects. Artsteps offers 5 "pre-made" display cases that you can choose from to include in your model display.</p>
 <p><em>However, please note that all assets have a 4MB limit on a free account. This makes it difficult to include any 3D objects with complex geometry.</em></p>
-<p><img alt="" src="images/AS24.png" /></p>
+<p><a class="glightbox" href="images/AS24.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/AS24.png" /></a></p>
 <p>3D objects can be difficult to place and take some finagling, so give yourself enough time to incorporate them, especially if you're setting them with one of the display cases.</p>
 <ul>
 <li>
-<p><img alt="" src="images/AS25-1024x653.png" /></p>
+<p><a class="glightbox" href="images/AS25-1024x653.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/AS25-1024x653.png" /></a></p>
 </li>
 <li>
-<p><img alt="" src="images/Screen-Shot-2020-07-20-at-7.44.25-PM.png" /></p>
+<p><a class="glightbox" href="images/Screen-Shot-2020-07-20-at-7.44.25-PM.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Screen-Shot-2020-07-20-at-7.44.25-PM.png" /></a></p>
 </li>
 </ul>
-<h2 id="plan-a-guided-tour">Plan a Guided Tour</h2>
+<h2 id="plan-a-guided-tour">Plan a Guided Tour<a class="headerlink" href="#plan-a-guided-tour" title="Permanent link">&para;</a></h2>
 <p>In the next section, you can add guide points to your exhibition space. This feature can be used to narrate the exhibition through interactive storytelling or be used to explain your exhibition design and highlight curatorial choices you made throughout the virtual exhibition.</p>
 <p>Click on the "Add Guide Point" button to get started.</p>
-<p><img alt="" src="images/AS26-1024x406.png" /></p>
+<p><a class="glightbox" href="images/AS26-1024x406.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/AS26-1024x406.png" /></a></p>
 <p>First, add a title and description to your guide point. Keep in mind, you can use this feature like an audio guide by uploading sound clips. You can also choose whether or not you would like your guide points to be visible.</p>
-<p><img alt="" src="images/AS27-1024x488.png" /></p>
+<p><a class="glightbox" href="images/AS27-1024x488.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/AS27-1024x488.png" /></a></p>
 <p>Create a guide point and place it on your 3d canvas. Use the preview window in the upper right-hand corner to see where on the ground level the point will be. Zoom in and out on your model to check your placement.</p>
-<p><img alt="" src="images/AS28-1024x456.png" /></p>
+<p><a class="glightbox" href="images/AS28-1024x456.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/AS28-1024x456.png" /></a></p>
 <p>Select the Move tool and click on what look like the stand legs to drag your point where you want it to be. Use the Rotate tool to adjust the orientation of your guide point, which is shown by the radiating white area coming from the point.</p>
 <ul>
 <li>
-<p><img alt="" src="images/AS29-1024x745.png" /></p>
+<p><a class="glightbox" href="images/AS29-1024x745.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/AS29-1024x745.png" /></a></p>
 </li>
 <li>
-<p><img alt="" src="images/AS30-1024x746.png" /></p>
+<p><a class="glightbox" href="images/AS30-1024x746.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/AS30-1024x746.png" /></a></p>
 </li>
 </ul>
 <p>As you add more points a path will form that your visitors can use as a guide to your exhibition.</p>
-<p><img alt="" src="images/AS31-1024x517.png" /></p>
-<h2 id="publish-your-exhibition">Publish Your Exhibition</h2>
+<p><a class="glightbox" href="images/AS31-1024x517.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/AS31-1024x517.png" /></a></p>
+<h2 id="publish-your-exhibition">Publish Your Exhibition<a class="headerlink" href="#publish-your-exhibition" title="Permanent link">&para;</a></h2>
 <p>Along the way, you can save and view your progress by click the corresponding buttons in the upper right corner of your screen.</p>
-<p><img alt="" src="images/AS32-1024x515.png" /></p>
+<p><a class="glightbox" href="images/AS32-1024x515.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/AS32-1024x515.png" /></a></p>
 <p>"View" will show you what your published exhibition will look like from the perspective of your users/visitors. You can return back to editing your exhibition by click the "Edit" button next to the title of your exhibition.</p>
-<p><img alt="" src="images/AS33-1024x558.png" /></p>
+<p><a class="glightbox" href="images/AS33-1024x558.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/AS33-1024x558.png" /></a></p>
 <p>Once you are back in edit mode, you can give your exhibition a title, description, and add categories and tags, so that it can be found within search results.</p>
-<p><img alt="" src="images/AS34-1024x563.png" /></p>
+<p><a class="glightbox" href="images/AS34-1024x563.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/AS34-1024x563.png" /></a></p>
 <p>Click the toggle on the bottom left to adjust the Publishing Settings makes your exhibition viewable to the public. When it's blue, you have published and your exhibition is open to the public and you can send a link of your exhibition to anyone you wish to have view it. You can deselect this at any time to hide your exhibition from the public again.</p>
-<p><img alt="" src="images/Screen-Shot-2020-07-21-at-11.09.16-AM-1024x481.png" /></p>
+<p><a class="glightbox" href="images/Screen-Shot-2020-07-21-at-11.09.16-AM-1024x481.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Screen-Shot-2020-07-21-at-11.09.16-AM-1024x481.png" /></a></p>
 <p>If save and log out, you can find your project when you log back in by using the dropdown in the upper right corner of your window and selecting "Profile"</p>
-<p><img alt="" src="images/Screen-Shot-2020-07-21-at-11.10.19-AM-1024x501.png" /></p>
+<p><a class="glightbox" href="images/Screen-Shot-2020-07-21-at-11.10.19-AM-1024x501.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Screen-Shot-2020-07-21-at-11.10.19-AM-1024x501.png" /></a></p>
 <p>From your profile, you can see all your current exhibition projects and select them to make edits.</p>
-<p><img alt="" src="images/Screen-Shot-2020-07-21-at-11.11.32-AM-1024x580.png" /></p>
+<p><a class="glightbox" href="images/Screen-Shot-2020-07-21-at-11.11.32-AM-1024x580.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Screen-Shot-2020-07-21-at-11.11.32-AM-1024x580.png" /></a></p>
 <p>Click on your exhibition to view it as a visitor. Copy the URL to share it with others or click the three dots at the bottom right to share via social media or use an embed code to place your exhibition within a webpage.</p>
-<p><img alt="" src="images/Screen-Shot-2020-05-06-at-12.20.41-PM-1024x586.png" /></p>
+<p><a class="glightbox" href="images/Screen-Shot-2020-05-06-at-12.20.41-PM-1024x586.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Screen-Shot-2020-05-06-at-12.20.41-PM-1024x586.png" /></a></p>
 <p>Enjoy making and sharing your virtual tours!</p>
 <p><em>Tutorial made by <a href="https://oit.ucla.edu/people/profiles/francesca-albrezzihttps://oit.ucla.edu/people/profiles/francesca-albrezzi">Francesca Albrezzi</a></em></p>
 
@@ -3564,11 +3900,19 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
     
     
       <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
-  </body>
+    <script>
+    var elements = document.getElementsByClassName("lightgallery");
+    for(var i=0; i<elements.length; i++) {
+       lightGallery(elements[i]);
+    }
+    </script>
+
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

@@ -20,8 +20,9 @@
     
     
       
-        <title>Getting Started with Google Tour Creator - Sandblog 2.0</title>
+        <title>Getting Started with Google Tour Creator - OARC Technology Sandbox</title>
       
+    
     
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
@@ -30,9 +31,14 @@
 
 
     
+    <link rel="stylesheet" href="../../css/lightgallery.min.css">
+
+    
     
       
     
+    <script src="../../js/lightgallery.min.js"></script>
+
     
       
         
@@ -50,7 +56,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -69,14 +86,12 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Sandblog 2.0" class="md-header__button md-logo" aria-label="Sandblog 2.0" data-md-component="logo">
+    <a href="../.." title="OARC Technology Sandbox" class="md-header__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5m10.78 2H19v12.18c-.26-.8-1.31-1.39-2.2-1.39h-1v-3a1 1 0 0 0-1-1h-6v-2h2a1 1 0 0 0 1-1v-2h2c1.03 0 1.87-.79 1.98-1.79M5 10.29l4.8 4.5v1a2 2 0 0 0 2 2V19H5v-8.71Z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -87,7 +102,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Sandblog 2.0
+            OARC Technology Sandbox
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -128,6 +143,8 @@
         </button>
       </nav>
       
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -152,6 +169,97 @@
       
         
           
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Welcome
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../about/History%20and%20Mission/" class="md-tabs__link">
+          
+  
+  About
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../projects/current/VSim/" class="md-tabs__link">
+          
+  
+  Projects
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -165,16 +273,18 @@
                     
 
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Sandblog 2.0" class="md-nav__button md-logo" aria-label="Sandblog 2.0" data-md-component="logo">
+    <a href="../.." title="OARC Technology Sandbox" class="md-nav__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5m10.78 2H19v12.18c-.26-.8-1.31-1.39-2.2-1.39h-1v-3a1 1 0 0 0-1-1h-6v-2h2a1 1 0 0 0 1-1v-2h2c1.03 0 1.87-.79 1.98-1.79M5 10.29l4.8 4.5v1a2 2 0 0 0 2 2V19H5v-8.71Z"/></svg>
 
     </a>
-    Sandblog 2.0
+    OARC Technology Sandbox
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -190,11 +300,100 @@
         
   
   <span class="md-ellipsis">
-    Welcome to MkDocs
+    Welcome
   </span>
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/History%20and%20Mission/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    History and Mission
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/Who%20We%20Are/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Who We Are
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -212,15 +411,18 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -231,8 +433,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Archive
           </label>
@@ -3130,6 +3332,140 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Current
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Current
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/current/VSim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VSim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/current/world%27s%20columbian%20exposition%20reconstruction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    World's columbian exposition reconstruction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -3165,15 +3501,15 @@
 
 <p>For the tutorial, download this <a href="https://drive.google.com/drive/folders/1paPeJevFdqrJhOSfSrCqF1tqzFXOsOsz?usp=sharing">example set of 360° images</a>. They are 360° photos of outdoor spaces around UCLA campus and a few other images that will be used in the tutorial. The 360° photos were taken with a second generation <a href="https://www.samsung.com/global/galaxy/gear-360/">Samsung Gear 360</a>, which retail for a little less than <a href="https://www.amazon.com/Samsung-Gear-Camera-Version-Warranty/dp/B06XR9SGXL">$200</a>. The images were also lightly edited with Adobe Photoshop 2020 to remove the tripod from the bottom of each image.</p>
 <p>Go to the <a href="https://arvr.google.com/tourcreator/">Google Tour Creator</a> site.</p>
-<p><img alt="" src="images/Picture1-1.png" /></p>
+<p><a class="glightbox" href="images/Picture1-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Picture1-1.png" /></a></p>
 <p><em>Keep in mind the other XR creator tools that Google has to offer.</em> </p>
-<p><img alt="" src="images/Picture2.png" /></p>
+<p><a class="glightbox" href="images/Picture2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Picture2.png" /></a></p>
 <ul>
 <li><a href="https://arvr.google.com/blocks/">Google Blocks</a></li>
 <li><a href="https://poly.google.com/">Google Poly</a></li>
 <li><a href="https://tiltbrush.com/">Tilt Brush</a></li>
 </ul>
-<p><img alt="" src="images/Picture3.png" /></p>
+<p><a class="glightbox" href="images/Picture3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Picture3.png" /></a></p>
 <p>Sign in using your google account. <em>*Note that your educational google account (e.g.</em> <a href="mailto:username@g.ucla.edu">username@g.ucla.edu</a><em>) may not work if your school does not have an agreement with google that includes Tour Creator in their GSuite package. A personal gmail account will be able to access tour creator. However, requiring students to use a personal account may carry FERPA concerns in terms of student privacy, which they may need to waive.</em></p>
 <hr />
 <p>Once your logged in to Tour Creator, you can: </p>
@@ -3182,35 +3518,35 @@
 <li>Creator your own tour</li>
 <li>Edit a tour you've already started</li>
 </ol>
-<p><img alt="" src="images/Picture4.png" /></p>
-<p><img alt="" src="images/Picture5.png" /></p>
+<p><a class="glightbox" href="images/Picture4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Picture4.png" /></a></p>
+<p><a class="glightbox" href="images/Picture5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Picture5.png" /></a></p>
 <p>If you don't have access to a 360° camera, you can still use tour creator! The templates let you use content previously generated by others.</p>
 <p>Since we have a set of 360° images to use, select "+ New Tour" and assign your new project a title, description, category, and cover photo. </p>
-<p><img alt="" src="images/Picture6.png" /></p>
+<p><a class="glightbox" href="images/Picture6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Picture6.png" /></a></p>
 <p>Selecting a category allows you to tag your project for search. If you publish your tour and make it public, others can use Google Poly to find your work.</p>
-<p><img alt="" src="images/Picture7.png" /></p>
+<p><a class="glightbox" href="images/Picture7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Picture7.png" /></a></p>
 <p>Click "Create" when you're finished. You can come back and edit this information later, if you wish.</p>
-<p><img alt="" src="images/Picture8.png" /></p>
+<p><a class="glightbox" href="images/Picture8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Picture8.png" /></a></p>
 <hr />
 <p>Next you will add your "scene." A "scene" is any 180 or 360 image. Once again, if you don't have your own camera or content, you can use "Street View" to search for a place to use. </p>
-<p><img alt="" src="images/Picture9.png" /></p>
+<p><a class="glightbox" href="images/Picture9.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Picture9.png" /></a></p>
 <p>Since we have our own 360 images to use, for now, we will select "Upload," pick one of the 360 files from our desktop, and click "Add Scene." </p>
-<p><img alt="" src="images/Picture10.png" /></p>
-<p><img alt="" src="images/Picture11.png" /></p>
-<p><img alt="" src="images/Picture12.png" /></p>
+<p><a class="glightbox" href="images/Picture10.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Picture10.png" /></a></p>
+<p><a class="glightbox" href="images/Picture11.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Picture11.png" /></a></p>
+<p><a class="glightbox" href="images/Picture12.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Picture12.png" /></a></p>
 <hr />
 <p>In the scene editor, you can label your image with basic metadata, set a starting view, add ambient audio and scene narration, and annotate it with "points of interest." Think of your scenes like slides. Use the menu on the bottom of your window to add additional scenes and navigate and rearrange your scenes once you've created several.</p>
-<p><img alt="" src="images/Picture13.png" /></p>
+<p><a class="glightbox" href="images/Picture13.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Picture13.png" /></a></p>
 <hr />
 <p>This time, you can add a scene from "Street View" by searching a location. For example, try "UCLA sculpture garden."</p>
-<p><img alt="" src="images/Picture14.png" /></p>
+<p><a class="glightbox" href="images/Picture14.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Picture14.png" /></a></p>
 <p>By adding points of interest, you can overlay the scene with clickable annotations. These can be text, audio, image, or a combination.</p>
-<p><img alt="" src="images/Picture15.png" /></p>
+<p><a class="glightbox" href="images/Picture15.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Picture15.png" /></a></p>
 <p><em>Note, however, that text annotations can only be 50 words.</em> </p>
-<p><img alt="" src="images/Picture16.png" /></p>
+<p><a class="glightbox" href="images/Picture16.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Picture16.png" /></a></p>
 <p>Finalize your tour's structure by moving your scenes left or right using the 3dot menu that appears when you hover over your scene navigation items.</p>
-<p><img alt="" src="images/Picture17.png" /></p>
-<p><img alt="" src="images/Picture18.png" /></p>
+<p><a class="glightbox" href="images/Picture17.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Picture17.png" /></a></p>
+<p><a class="glightbox" href="images/Picture18.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Picture18.png" /></a></p>
 <hr />
 <p>Your tour is automatically saved as you work. When you're finished you can use the top menu items to:</p>
 <ul>
@@ -3218,14 +3554,14 @@
 <li>Use the 3dot menu to edit your tours description info or delete your tour.</li>
 <li>Publish your tour to Google Poly</li>
 </ul>
-<p><img alt="" src="images/Picture19.png" /></p>
+<p><a class="glightbox" href="images/Picture19.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Picture19.png" /></a></p>
 <p>When publishing, you can choose to make your tour "Public" or "Unlisted." "Unlisted" provides you with a private link to your tour. Unless a person has that link, they will not be able to locate or see your tour on Google Poly. By making your tour "Public," anyone searching Google Poly can find your tour. Once you've made your selection, you can click "Publish." You can always go back in and edit your tour and re-publish it, if you want to make changes. </p>
-<p><img alt="" src="images/Picture20.png" /></p>
+<p><a class="glightbox" href="images/Picture20.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Picture20.png" /></a></p>
 <p>Once your tour is "Published," you will be provided a link to allow you to view your tour. Click "View tour" to immediately review your tour on your desktop. If you copy the link, using the icon on the right, you can send and use that link on a mobile device to view the tour in a headset.</p>
-<p><img alt="" src="images/Picture21.png" /></p>
+<p><a class="glightbox" href="images/Picture21.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Picture21.png" /></a></p>
 <p>When you open the link on your phone, you can swipe your finger across the screen to rotate your view. At the top, you can select the icon to the right to turn on or off the 360 degree view. This would make the experience mixed reality; as you moved your phone, the image would be viewed from a different angle. If you select the mask-like icon on the left, you will enter a stereo view. Once you're in a stereo view, you can place the tour in a headset and view it in a more immersive fashion.</p>
-<p><img alt="" src="images/Picture22.png" /></p>
-<p><img alt="" src="images/Picture23.png" /></p>
+<p><a class="glightbox" href="images/Picture22.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Picture22.png" /></a></p>
+<p><a class="glightbox" href="images/Picture23.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Picture23.png" /></a></p>
 <p><em><strong>*Note:</strong></em></p>
 <p><em>Not all mobile web browsers or cell phones may be compatible. Settings may need to be adjusted to allow these features to be enabled. Currently, this is only support on older IOS12 devices. Hopefully, Google will be updating Tour Creator Mobile VR modes for IOS13.</em></p>
 <hr />
@@ -3279,11 +3615,19 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
     
     
       <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
-  </body>
+    <script>
+    var elements = document.getElementsByClassName("lightgallery");
+    for(var i=0; i<elements.length; i++) {
+       lightGallery(elements[i]);
+    }
+    </script>
+
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

@@ -20,8 +20,9 @@
     
     
       
-        <title>Getting Started with Spatial Research - Sandblog 2.0</title>
+        <title>Getting Started with Spatial Research - OARC Technology Sandbox</title>
       
+    
     
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
@@ -30,9 +31,14 @@
 
 
     
+    <link rel="stylesheet" href="../../css/lightgallery.min.css">
+
+    
     
       
     
+    <script src="../../js/lightgallery.min.js"></script>
+
     
       
         
@@ -50,7 +56,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -74,14 +91,12 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Sandblog 2.0" class="md-header__button md-logo" aria-label="Sandblog 2.0" data-md-component="logo">
+    <a href="../.." title="OARC Technology Sandbox" class="md-header__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5m10.78 2H19v12.18c-.26-.8-1.31-1.39-2.2-1.39h-1v-3a1 1 0 0 0-1-1h-6v-2h2a1 1 0 0 0 1-1v-2h2c1.03 0 1.87-.79 1.98-1.79M5 10.29l4.8 4.5v1a2 2 0 0 0 2 2V19H5v-8.71Z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -92,7 +107,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Sandblog 2.0
+            OARC Technology Sandbox
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -133,6 +148,8 @@
         </button>
       </nav>
       
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -157,6 +174,97 @@
       
         
           
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Welcome
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../about/History%20and%20Mission/" class="md-tabs__link">
+          
+  
+  About
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../projects/current/VSim/" class="md-tabs__link">
+          
+  
+  Projects
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -170,16 +278,18 @@
                     
 
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Sandblog 2.0" class="md-nav__button md-logo" aria-label="Sandblog 2.0" data-md-component="logo">
+    <a href="../.." title="OARC Technology Sandbox" class="md-nav__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5m10.78 2H19v12.18c-.26-.8-1.31-1.39-2.2-1.39h-1v-3a1 1 0 0 0-1-1h-6v-2h2a1 1 0 0 0 1-1v-2h2c1.03 0 1.87-.79 1.98-1.79M5 10.29l4.8 4.5v1a2 2 0 0 0 2 2V19H5v-8.71Z"/></svg>
 
     </a>
-    Sandblog 2.0
+    OARC Technology Sandbox
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -195,11 +305,100 @@
         
   
   <span class="md-ellipsis">
-    Welcome to MkDocs
+    Welcome
   </span>
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/History%20and%20Mission/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    History and Mission
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/Who%20We%20Are/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Who We Are
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -217,15 +416,18 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -236,8 +438,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Archive
           </label>
@@ -3322,6 +3524,140 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Current
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Current
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/current/VSim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VSim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/current/world%27s%20columbian%20exposition%20reconstruction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    World's columbian exposition reconstruction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -3522,8 +3858,8 @@
 
   <h1>Getting Started with Spatial Research</h1>
 
-<h2 id="getting-started-with-spatial-research">Getting Started with Spatial Research</h2>
-<h3 id="i-need-maps-for-my-research-how-do-i-get-started">I need maps for my research... how do I get started?</h3>
+<h2 id="getting-started-with-spatial-research">Getting Started with Spatial Research<a class="headerlink" href="#getting-started-with-spatial-research" title="Permanent link">&para;</a></h2>
+<h3 id="i-need-maps-for-my-research-how-do-i-get-started">I need maps for my research... how do I get started?<a class="headerlink" href="#i-need-maps-for-my-research-how-do-i-get-started" title="Permanent link">&para;</a></h3>
 <p>As members of an academic community with a myriad of research initiatives, the need to map information, to spatially analyze, to geoprocess, and to visualize space and time is becoming ubiquitous. But how do you get started? The answer to this question largely depends on <em>what</em> you want to map, and <em>how</em> you want to create your map. The <em>what</em> is usually easy. It is driven by your passion to pursue a research question and to have maps assist in the development of an argument. The <em>how</em> is the difficult part. It may depend on what data you have, what tools you have access to, how comfortable you are with software packages, if you are open to write code or use the command line. Often times, your research question lends itself to a spatial argument. However, providing insights to questions using spatial visualization tools is a process that involves any number of factors, including: data acquisition, data cleanup, geo-enabling data, geocoding data, georeferencing data, visualizing spatial data, overlaying other spatial data, conducting spatial analysis and/or geoprocessing, analyzing results, visualizing results, and publishing results. There is no single application that can accomplish every phase of your spatial process. The table below provides some clarity on which tools are available for what purposes, and it is followed by a broad summary of some of the most useful tools.</p>
 <p>[table id=1 /]</p>
 <p>Other notable mapping tools, used primarily as multi-layered, web-based presentation platforms:</p>
@@ -3533,59 +3869,59 @@
 <li><a href="https://www.historypin.org/en/">History Pin</a> - "pin" your history on this map-based platform that allows for geotemporal story telling</li>
 <li><a href="https://www.davidrumsey.com">David Rumsey Historical Map Collection</a> - a great resource for georeferenced historical maps</li>
 </ul>
-<h3 id="google-earth">Google Earth</h3>
-<p><img alt="Google Earth Screenshot" src="images/image-2-e1567799343720-1024x480.png" /></p>
+<h3 id="google-earth">Google Earth<a class="headerlink" href="#google-earth" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="images/image-2-e1567799343720-1024x480.png" data-type="image" data-width="auto" data-height="auto" data-title="Google Earth Screenshot" data-desc-position="bottom"><img alt="Google Earth Screenshot" src="images/image-2-e1567799343720-1024x480.png" /></a></p>
 <p><a href="https://www.google.com/earth/">https://www.google.com/earth/</a> | <a href="https://sandbox.idre.ucla.edu/kml/Los%20Angeles%20Historical%20Maps.kmz">Los Angeles Historical Map Collection (KMZ)</a></p>
 <p>Even before Google Maps, Google Earth existed in the name of "Keyhole Earth Viewer." Google would acquire Keyhole in 2004 and the rest, as they say, is history. While the boundaries between Google Maps and Google Earth are beginning to blur (Maps now includes 3D capabilities), Google Earth remains relevant as a 3D mapping platform to visualize historical imagery, and to create 3D geospatial narratives.</p>
-<h3 id="google-mapsapi">Google Maps/API</h3>
-<p><img alt="" src="images/Screen-Shot-2019-04-11-at-11.25.49-AM-e1555007184723-1024x511.png" /></p>
+<h3 id="google-mapsapi">Google Maps/API<a class="headerlink" href="#google-mapsapi" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="images/Screen-Shot-2019-04-11-at-11.25.49-AM-e1555007184723-1024x511.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Screen-Shot-2019-04-11-at-11.25.49-AM-e1555007184723-1024x511.png" /></a></p>
 <p>While we use Google Maps seemingly daily, let's not forget that it is most likely the world's most powerful GIS. Its features include a global reach, <a href="https://www.google.com/maps/@34.0687751,-118.4450444,3a,60y,311.36h,92.57t/data=!3m6!1e1!3m4!1srJo6WOkVunyPIFnKD9wT1w!2e0!7i16384!8i8192">temporality</a>, transportation metrics, satellite and street map imagery, 3D navigation, and participatory and private data creation. The Google eco-system contains a slate of developer API's, that is, programming interfaces that allows you to utilize their computational and visualizational libraries for your own purposes. For example, <a href="https://cloud.google.com/maps-platform/maps/">Google Maps Javascript API</a> lets you to create interactive Google web maps and overlay it with your own data; <a href="https://cloud.google.com/maps-platform/places/">Google Geocoding API</a> allows you to convert any text based location into map coordinates; <a href="https://developers.google.com/chart/">Google Charts API</a> allows you to visualize data in the form of <a href="https://developers.google.com/chart/interactive/docs/gallery/bubblechart">charts</a> and graphs. Is it free? <a href="https://cloud.google.com/maps-platform/pricing/">No</a>. For researchers, the caveat is that any Google process requires results to be shown on their products and in public the sphere. Deviations from this violate their <a href="https://cloud.google.com/maps-platform/terms/maps-service-terms/">user agreement</a>, or would come at a prohibitive cost.</p>
-<h3 id="social-explorer">Social Explorer</h3>
-<p><img alt="Social Explorer" src="images/Social-Explorer-e1516309262695-1024x455.png" /></p>
+<h3 id="social-explorer">Social Explorer<a class="headerlink" href="#social-explorer" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="images/Social-Explorer-e1516309262695-1024x455.png" data-type="image" data-width="auto" data-height="auto" data-title="Social Explorer" data-desc-position="bottom"><img alt="Social Explorer" src="images/Social-Explorer-e1516309262695-1024x455.png" /></a></p>
 <p><a href="https://www.socialexplorer.com/">https://www.socialexplorer.com/</a></p>
 <p>Imagine a platform that gives you access to every census variable for every moment in history since it was collected (think 1790 onwards), has the ability to generate beautiful maps (including side-by-side maps for comparisons), allows you to create presentation narratives (think map centered power point), and let's you share, embed, and download your data and maps.</p>
 <ul>
 <li>10/22/2019 New feature: <a href="https://www.socialexplorer.com/blog/post/introducing-our-new-change-over-time-feature-10095">change over time</a></li>
 </ul>
-<h3 id="tableau">Tableau</h3>
-<p><img alt="mapping in tableau" src="images/image-3-e1568224758810-1024x603.png" /></p>
+<h3 id="tableau">Tableau<a class="headerlink" href="#tableau" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="images/image-3-e1568224758810-1024x603.png" data-type="image" data-width="auto" data-height="auto" data-title="mapping in tableau" data-desc-position="bottom"><img alt="mapping in tableau" src="images/image-3-e1568224758810-1024x603.png" /></a></p>
 <p><a href="https://www.tableau.com/">https://www.tableau.com/</a></p>
 <p>Need to discover hidden patterns in your data? Need to link maps with charts? Tableau provides interfaces that allow you to do just that, interconnect different parameters of your data to discover, rank, and expose relevant metrics from your data. In addition, it can handle large datasets (~millions). The catch? For the free version (Tableau Public), you can only save your projects online in public mode, meaning that your visualizations must be shared on the web.</p>
-<h3 id="r-rstudio">R + RStudio</h3>
-<p><img alt="rstudio" src="images/rstudio-1024x704.png" /></p>
+<h3 id="r-rstudio">R + RStudio<a class="headerlink" href="#r-rstudio" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="images/rstudio-1024x704.png" data-type="image" data-width="auto" data-height="auto" data-title="rstudio" data-desc-position="bottom"><img alt="rstudio" src="images/rstudio-1024x704.png" /></a></p>
 <p>While WYSIWYG software packages like <a href="https://www.esri.com/en-us/arcgis/about-arcgis/overview">ArcGIS</a> and <a href="https://www.qgis.org/">QGIS</a> remain a standard in cartographic representations, open source, scripting solutions have always had a strong cadre of support, especially for advanced spatial research initiatives. With a development history that harks back to the late 1990s, <a href="https://www.r-project.org/">R</a> has been championed as the free and open source programming tool for statisticians the world over. With its growth and foray into data viz, more and more researchers are adopting R as a solution for their spatial needs, due to its scripting capability, and strong statistical integration.</p>
 <ul>
 <li><a href="https://sandbox.idre.ucla.edu/sandbox/spatializing-data-with-r">Spatializing Data with R</a></li>
 </ul>
-<h3 id="palladio">Palladio</h3>
-<p><img alt="Palladio screenshot" src="images/image-1-e1567799098880-1024x497.png" /></p>
+<h3 id="palladio">Palladio<a class="headerlink" href="#palladio" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="images/image-1-e1567799098880-1024x497.png" data-type="image" data-width="auto" data-height="auto" data-title="Palladio screenshot" data-desc-position="bottom"><img alt="Palladio screenshot" src="images/image-1-e1567799098880-1024x497.png" /></a></p>
 <p><a href="http://hdlab.stanford.edu/palladio/">Palladio Home</a> | <a href="http://miriamposner.com/blog/getting-started-with-palladio/">Miriam's excellent workshop</a> | <a href="https://sandbox.idre.ucla.edu/data/palladio/forensic4palladio.json">sample data import</a></p>
 <p>Do you need a jack-of-all-trades data visualizer? <a href="http://hdlab.stanford.edu/palladio/">Palladio</a>, a data visualization tool built by the folks from <a href="http://hdlab.stanford.edu/">Stanford's Humanities Lab</a> combines mapping, temporal charts, faceted browsing, network diagrams, and gallery views. Its strength lies in its ability to visualize data dynamical through multiple filters. As an example, one can instantly see the distribution of data over time, while simultaneously viewing it on a map to get a sense of the data's correlation in space and time. Beware, however, of using Palladio for any dataset beyond 5,000 data points. As a javascript, browser-based platform, the performance is only as good as your local computer's capacity.</p>
-<h3 id="arcgis-online">ArcGIS Online</h3>
-<p><img alt="ArcGIS Online Hyper Dublin" src="images/Screen-Shot-2019-09-04-at-12.12.13-PM-e1567624364974-1024x445.png" /></p>
+<h3 id="arcgis-online">ArcGIS Online<a class="headerlink" href="#arcgis-online" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="images/Screen-Shot-2019-09-04-at-12.12.13-PM-e1567624364974-1024x445.png" data-type="image" data-width="auto" data-height="auto" data-title="ArcGIS Online Hyper Dublin" data-desc-position="bottom"><img alt="ArcGIS Online Hyper Dublin" src="images/Screen-Shot-2019-09-04-at-12.12.13-PM-e1567624364974-1024x445.png" /></a></p>
 <p><a href="https://www.arcgis.com/home/webmap/viewer.html?webmap=bb5d6e0845a9448bae2a317964ab7f8bhttps://www.arcgis.com/home/webmap/viewer.html?webmap=bb5d6e0845a9448bae2a317964ab7f8b">ArcGIS Sample Project</a></p>
 <p>Not ready for a full-blown immersive GIS desktop experience? Try <a href="https://www.esri.com/en-us/arcgis/products/arcgis-online/overview">ArcGIS Online</a>, a web-based GIS platform that allows you to upload spatial layers, or create customs layers directly. Licensed users will also have the ability to conduct basic geoprocesses such as joining, data aggregation, and hot spot analysis.</p>
-<h3 id="arcgismappro">ArcGIS/Map/Pro</h3>
-<p><img alt="" src="images/arcgis-e1571788904701-1024x484.jpg" /></p>
+<h3 id="arcgismappro">ArcGIS/Map/Pro<a class="headerlink" href="#arcgismappro" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="images/arcgis-e1571788904701-1024x484.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/arcgis-e1571788904701-1024x484.jpg" /></a></p>
 <p><a href="https://www.esri.com/en-us/arcgis/products/arcgis-pro/overview">https://www.esri.com/en-us/arcgis/products/arcgis-pro/overview</a></p>
 <p>Favored by many, ESRI's ArcGIS is the industry standard as a software package for digital mapping. ESRI has been around even before Microsoft, founded by the charismatic Jack Dangermond, an environmental scientist in 1969. Users have long been enamored by ArcGIS's broad reach to all spectrums of research, with much of the workflow and usability tailored to the expert cartographer. The ArcGIS desktop products have a steep learning curve, but for those who are planning on conducting spatial analysis for the long haul, it can be an essential piece to your research toolset. Note however, that none of the ArcGIS desktop products work on a Mac.</p>
-<h3 id="qgis">QGIS</h3>
-<p><img alt="QGIS Screenshot" src="images/image-e1567728116993-1024x556.png" /></p>
+<h3 id="qgis">QGIS<a class="headerlink" href="#qgis" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="images/image-e1567728116993-1024x556.png" data-type="image" data-width="auto" data-height="auto" data-title="QGIS Screenshot" data-desc-position="bottom"><img alt="QGIS Screenshot" src="images/image-e1567728116993-1024x556.png" /></a></p>
 <p><a href="https://qgis.org/en/site/">Download it here</a>  </p>
 <p><a href="https://qgis.org/en/site/">QGIS</a> is the open source standard for desktop GIS. In much the same way as the ArcGIS counter part, QGIS comes with a steep learning curve, but comes with all the features you need for your spatial needs. First launched in 2002, QGIS has a vibrant open source community that continues to develop and support the product. What's more, if you want to use GIS for advanced spatial analysis on a Mac, this may be your best option.</p>
-<h3 id="leaflet-and-openstreetmap">Leaflet and OpenStreetMap</h3>
-<p><img alt="leaflet js" src="images/Screen-Shot-2019-04-11-at-4.37.55-PM-e1555025987214.png" /></p>
+<h3 id="leaflet-and-openstreetmap">Leaflet and OpenStreetMap<a class="headerlink" href="#leaflet-and-openstreetmap" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="images/Screen-Shot-2019-04-11-at-4.37.55-PM-e1555025987214.png" data-type="image" data-width="auto" data-height="auto" data-title="leaflet js" data-desc-position="bottom"><img alt="leaflet js" src="images/Screen-Shot-2019-04-11-at-4.37.55-PM-e1555025987214.png" /></a></p>
 <p><a href="https://leafletjs.com/">https://leafletjs.com/</a></p>
 <p>What about an open source equivalent to Google Maps API? <a href="https://leafletjs.com">Leaflet</a> and <a href="https://www.openstreetmap.org/">OpenStreetMap</a> are your open source javascript alternatives that come at no cost or fear of depracation. For simple web maps, choose leaflet, for more advanced functions and presentations, and especially if you are using projections, choose OpenStreetMap.</p>
-<h3 id="google-earth-engine">Google Earth Engine</h3>
-<p><img alt="Google Earth Engine" src="images/Screen-Shot-2019-04-11-at-4.59.59-PM-e1555027247448-1024x400.png" /></p>
+<h3 id="google-earth-engine">Google Earth Engine<a class="headerlink" href="#google-earth-engine" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="images/Screen-Shot-2019-04-11-at-4.59.59-PM-e1555027247448-1024x400.png" data-type="image" data-width="auto" data-height="auto" data-title="Google Earth Engine" data-desc-position="bottom"><img alt="Google Earth Engine" src="images/Screen-Shot-2019-04-11-at-4.59.59-PM-e1555027247448-1024x400.png" /></a></p>
 <p><a href="https://earthengine.google.com/">https://earthengine.google.com/</a> | If you have an account, try the <a href="https://code.earthengine.google.com/">code editor</a></p>
 <p>Remote sensing technology has never been made more available than it is today, thanks to the efforts of the <a href="https://earthengine.google.com">Google Earth Engine</a> team. Now, with just a few lines of code, researchers are able to access a multi-petabyte catalog of satellite imagery and geospatial datasets for planetary-scale analysis. With over 40 years of historical imagery and scientific datasets, you can analyze forest and water coverage, land use change, or assess the health of agricultural fields, among many other possible analyses.</p>
-<h3 id="d3-geo">D3-Geo</h3>
-<p><img alt="d3 geo" src="images/Screen-Shot-2019-04-11-at-4.22.04-PM-e1555024966689-1024x614.png" /></p>
+<h3 id="d3-geo">D3-Geo<a class="headerlink" href="#d3-geo" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="images/Screen-Shot-2019-04-11-at-4.22.04-PM-e1555024966689-1024x614.png" data-type="image" data-width="auto" data-height="auto" data-title="d3 geo" data-desc-position="bottom"><img alt="d3 geo" src="images/Screen-Shot-2019-04-11-at-4.22.04-PM-e1555024966689-1024x614.png" /></a></p>
 <p><a href="https://d3js.org/">D3</a> | <a href="https://observablehq.com/collection/@d3/d3-geo">d3-geo</a> | <a href="https://medium.com/@mbostock/command-line-cartography-part-1-897aa8f8ca2c">command line D3</a>  </p>
 <p>Fancy yourself for your coding chops? Give D3 a whirl, a web-based platform for data visualization. What distinguishes D3 (which stands for Data Driven Documents) visualizations from other libraries is that mapping is but one of its many outputs. Data can be ingested and reimagined in seemingly endless possibilities. Maps can be designed to be static, <a href="https://bost.ocks.org/mike/nations/">animated</a>, 3D, <a href="https://bl.ocks.org/syntagmatic/ba569633d51ebec6ec6e">reprojected</a>, and data can be made to <a href="https://earth.nullschool.net/">move</a> if you so desire.</p>
-<h2 id="from-text-to-map">From text to map</h2>
+<h2 id="from-text-to-map">From text to map<a class="headerlink" href="#from-text-to-map" title="Permanent link">&para;</a></h2>
 <p>Behind any beautiful digital map lies the reality that every point, line or polygon is generated by some form of numerical and textual data.  Here is an example of a point, or "placemark," written in KML:</p>
 <p><Placemark>
     <name>YRL</name> 
@@ -3620,7 +3956,7 @@
     </LineString>
 </Placemark></p>
 <p>Instruction: Copy and paste this code into a text editor, and save it as a .kml file. Double click on the file to open it in Google Earth.</p>
-<h2 id="a-simple-web-map">A Simple Web Map</h2>
+<h2 id="a-simple-web-map">A Simple Web Map<a class="headerlink" href="#a-simple-web-map" title="Permanent link">&para;</a></h2>
 <p>A different markup language produces a map for a different platform. Here, we combine CSS, HTML, and Javascript to produce a map using the open-source map library Leaflet:</p>
 <!-- leaflet css -->
 <p><link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/></p>
@@ -3640,7 +3976,7 @@
 </script>
 
 <p>Instructions: Paste this code into a text editor, and save it as an html file. Double click to open the map on a web browser.</p>
-<h2 id="map-sandbox-lets-create-some-maps">Map Sandbox: Let's create some maps</h2>
+<h2 id="map-sandbox-lets-create-some-maps">Map Sandbox: Let's create some maps<a class="headerlink" href="#map-sandbox-lets-create-some-maps" title="Permanent link">&para;</a></h2>
 <p>Experiment with different tools with this sample dataset from the Los Angeles Data Portal. Each dataset contains columns for latitude and longitude, allowing you to import into the various platforms discussed here.</p>
 <ul>
 <li>Part 1: <a href="https://sandbox.idre.ucla.edu/sandbox/open-data-and-tableau">Mapping crime data in Tableau</a></li>
@@ -3660,8 +3996,8 @@
 <li><a href="https://sandbox.idre.ucla.edu/data/gis workshop/CHILD%20ABUSE%202019.csv">Child Abuse 2019</a> (<a href="https://data.lacity.org/A-Safe-City/Crime-Data-from-2010-to-Present/63jg-8b9z">source</a>)</li>
 </ul>
 <p>Sample results (<a href="https://www.socialexplorer.com/explore-maps">Social Explorer,</a> <a href="https://public.tableau.com/en-us/s/">Tableau Public</a> shown below):</p>
-<p><img alt="social explorer with uploaded data" src="images/image-5-1024x720.png" /></p>
-<p><img alt="mapping in tableau" src="images/image-3-e1568224758810-1024x603.png" /></p>
+<p><a class="glightbox" href="images/image-5-1024x720.png" data-type="image" data-width="auto" data-height="auto" data-title="social explorer with uploaded data" data-desc-position="bottom"><img alt="social explorer with uploaded data" src="images/image-5-1024x720.png" /></a></p>
+<p><a class="glightbox" href="images/image-3-e1568224758810-1024x603.png" data-type="image" data-width="auto" data-height="auto" data-title="mapping in tableau" data-desc-position="bottom"><img alt="mapping in tableau" src="images/image-3-e1568224758810-1024x603.png" /></a></p>
 <p>Additional Resources</p>
 <ul>
 <li><a href="http://gisday.ucla.edu">The Battle of the Maps: GIS Day 2019</a></li>
@@ -3716,11 +4052,19 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
     
     
       <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
-  </body>
+    <script>
+    var elements = document.getElementsByClassName("lightgallery");
+    for(var i=0; i<elements.length; i++) {
+       lightGallery(elements[i]);
+    }
+    </script>
+
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
