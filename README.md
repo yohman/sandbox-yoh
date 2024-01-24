@@ -29,3 +29,11 @@ mkdocs serve
 Open a browser and enter the provided local URL (such as http://127.0.0.1:8000/)
 
 All front end edits should be made in the `docs` folder, which will automatically update the content. 
+
+Once you are satisfied with your edits, build the site with the following command:
+
+```
+mkdocs build
+```
+This will update the content in the `site` folder, which is served to the public.
+
