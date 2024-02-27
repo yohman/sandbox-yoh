@@ -21,7 +21,7 @@ hide:
     const randomImage = images[Math.floor(Math.random() * images.length)];
 
     // Replace '{{random_image}}' with the randomly chosen image
-    document.querySelector('body').style.backgroundImage = `url('projects/current/images/${randomImage}')`;
+    document.querySelector('body').style.backgroundImage = `url('Work/current/images/${randomImage}')`;
 </script>
 
 
