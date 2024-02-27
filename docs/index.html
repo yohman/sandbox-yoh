@@ -85,15 +85,25 @@
 		}
 
 	</style>
+	<script>
+		function handleScanClick() {
+			var code = prompt("Enter your 4 digit code");
+			if (code == "4328") {
+				window.location.href = 'work';
+			} else {
+				alert("Wrong passcode");
+			}
+		}
+	</script>
 </head>
 <body>
 	<div class="sign">
 		<div>Technology Sandbox</div>
 		<div class="room">Room 4328</div>
 	</div>
-	<div class="door" onclick="window.location.href='work';">
+	<div class="door">
 		<div class="title">Sandbox</div>
-		<div class="handscan"></div>
+		<div class="handscan" onclick="handleScanClick()"></div>
 	</div>
 </body>
 </html>
