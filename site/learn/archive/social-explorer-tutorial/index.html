@@ -1,0 +1,939 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>Social Explorer Tutorial - OARC Technology Sandbox</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/style.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#before-we-begin" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="OARC Technology Sandbox" class="md-header__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
+      
+  <img src="../../../logo.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OARC Technology Sandbox
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Social Explorer Tutorial
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/IDREsandbox/sandbox" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../work/" class="md-tabs__link">
+        
+  
+    
+  
+  Work
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link">
+        
+  
+    
+  
+  Learn
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../connect/who/" class="md-tabs__link">
+          
+  
+    
+  
+  Connect
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../blog" class="md-tabs__link">
+        
+  
+    
+  
+  Musings
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="OARC Technology Sandbox" class="md-nav__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
+      
+  <img src="../../../logo.jpg" alt="logo">
+
+    </a>
+    OARC Technology Sandbox
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/IDREsandbox/sandbox" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../work/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Work
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Learn
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Connect
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Connect
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../connect/who/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Who we are
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../connect/consult/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Consult
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../connect/where/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Where is the Sandbox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Musings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#before-we-begin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Before we begin
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Before we begin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-is-social-explorer-right-for-me" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Is Social Explorer right for me?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Is Social Explorer right for me?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#do-use-social-explorer-if-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do use Social Explorer if you...
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do-not-use-social-explorer-if-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do NOT use Social Explorer if you...
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appetizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Appetizer
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Appetizer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-getting-oriented" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Getting oriented
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#main-course" class="md-nav__link">
+    <span class="md-ellipsis">
+      Main Course
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Main Course">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3-decisions-and-selections" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Decisions and Selections
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Decisions and Selections">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-your-location-of-interest" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting your location of interest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selecting-your-subject" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selecting your subject
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Selecting your subject">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#colorizing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Colorizing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Colorizing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tips:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-breakpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting breakpoints
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-annotating" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Annotating
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Annotating">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#drawing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Drawing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Elements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dessert" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dessert
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dessert">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5-sharing-and-animating" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Sharing and Animating
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Sharing and Animating">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#making-an-animated-movie-of-your-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      Making an animated movie of your map:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Demos
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>Social Explorer Tutorial</h1>
+
+<p><a href="http://www.socialexplorer.com/"><img alt="social explorer" src="images/Screen-Shot-2013-11-13-at-11.44.25-AM.png" /></a></p>
+<ol>
+<li>Choosing Social Explorer?</li>
+<li>Getting oriented</li>
+<li>Decisions and Selections</li>
+<li>Annotating</li>
+<li>Sharing and Animating</li>
+</ol>
+<h2 id="before-we-begin">Before we begin<a class="headerlink" href="#before-we-begin" title="Permanent link">&para;</a></h2>
+<h3 id="1-is-social-explorer-right-for-me">1. Is Social Explorer right for me?<a class="headerlink" href="#1-is-social-explorer-right-for-me" title="Permanent link">&para;</a></h3>
+<h4 id="do-use-social-explorer-if-you">Do use Social Explorer if you...<a class="headerlink" href="#do-use-social-explorer-if-you" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Plan to use only U.S. census data</li>
+<li>Focus on the "story" of a map rather than a fully customized map</li>
+<li>Would like to use graphs from other data sources</li>
+<li>Want to share online maps</li>
+</ul>
+<h4 id="do-not-use-social-explorer-if-you">Do NOT use Social Explorer if you...<a class="headerlink" href="#do-not-use-social-explorer-if-you" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Intend to use geographic data not a part of the U.S. census database</li>
+<li>
+<p>Want to show data beyond:</p>
+</li>
+<li>
+<p>State</p>
+</li>
+<li>County</li>
+<li>Census Tract</li>
+<li>
+<p>Census Block Group</p>
+</li>
+<li>
+<p>Want to customize your own data symbolization</p>
+</li>
+<li>Plan to integrate your maps with GoogleEarth or ArcGIS</li>
+</ul>
+<h2 id="appetizer">Appetizer<a class="headerlink" href="#appetizer" title="Permanent link">&para;</a></h2>
+<h3 id="2-getting-oriented">2. Getting oriented<a class="headerlink" href="#2-getting-oriented" title="Permanent link">&para;</a></h3>
+<ol>
+<li>First navigate to <a href="http://www.socialexplorer.com">http://www.socialexplorer.com</a></li>
+<li>Click on “Take the Tour” button or “How To” tab</li>
+<li>Scroll to the bottom of the page and click on “Start Now”</li>
+<li>The following interface will pop-up (without highlighted boxes):</li>
+</ol>
+<p><img alt="" src="https://lh5.googleusercontent.com/I0OakASRMeGqUPOwjAq5OvoNf-E1OYkSWmHCSGZVqJMdUq7rJ1pHaBfx6iW56BtepCiXf3KlxZWSnoOrqLCHVd7qixlY4d0xU6910rwMAA3DoZx-VGLDsvU2" /></p>
+<h2 id="main-course">Main Course<a class="headerlink" href="#main-course" title="Permanent link">&para;</a></h2>
+<p>The colored sections are referred in the following way:</p>
+<p>Section i) - Location Searcher Section ii) - Subject Changer / Map Editor Section iii) - Data/Annotation/Layer Toggler Section iv) - Snapshot taker Section v) - Exporting</p>
+<h3 id="3-decisions-and-selections">3. Decisions and Selections<a class="headerlink" href="#3-decisions-and-selections" title="Permanent link">&para;</a></h3>
+<h4 id="setting-your-location-of-interest">Setting your location of interest<a class="headerlink" href="#setting-your-location-of-interest" title="Permanent link">&para;</a></h4>
+<p>Under the location searcher (section i) either enter the location of a U.S. location (address, city, county, etc.) OR leave empty if you intend to look at the whole country.</p>
+<h4 id="selecting-your-subject">Selecting your subject<a class="headerlink" href="#selecting-your-subject" title="Permanent link">&para;</a></h4>
+<p>With the subject changer (section ii), choose the thematic subject you would like to show.<img alt="" src="https://lh4.googleusercontent.com/E0O1xJUrbmb0w0IIEF03dp0IFwKL37BrDbA4e6rrrisuUn6cngwPIEAyAqVJD8M3JmFdY1DM9yFvaFKWI1KqZYzFpalsLmAWK5c4gamunmkdKRvOWRcOPmkh" /></p>
+<p>The buttons above show different types of data visualizations:</p>
+<p>A) Dot density - Numeric data</p>
+<p>B) Chromatic (colored map) - Categorized data</p>
+<p>C) Graduated circles - Numeric/Categorized data</p>
+<p>D) ??? (not map related?)</p>
+<p>Be aware that not all selections are not available depending on the type of data.</p>
+<p><img alt="" src="https://lh6.googleusercontent.com/-qVWL6EjZKxaaX-ndslcP2XNYZ1zg61ImSQ-eDELT_P_dnMlKv6lGvQX5Pu263rBOEuez3QsqeEQb8511w0LYh1Cf6dtnFoY4sUBCXZ2j2QDFJvBD2IQwGIQ" /></p>
+<p>After choosing your subject of interest, you can now edit the map to portray your story. For themes that can be categorized, like “Total Population: Female” or “Worked at home” you can use a chlorochromatic map which has the following two custimization options:</p>
+<h5 id="colorizing">Colorizing<a class="headerlink" href="#colorizing" title="Permanent link">&para;</a></h5>
+<p>The “Colors” button and Edit Cutoff points are both useful tools to showcase the data in ways that are more relevant for you.</p>
+<h6 id="tips"><em>Tips:</em><a class="headerlink" href="#tips" title="Permanent link">&para;</a></h6>
+<ul>
+<li>Use a sequential scheme when you want to stress changes in your data relative to each other.</li>
+<li>Use a diverging scheme when wanting to show a change beyond a certain threshold</li>
+</ul>
+<p>There are only 22 color schemes available, shown below:<img alt="" src="https://lh3.googleusercontent.com/FF9j9Xxpx86zEz5n7xdaJYCeW9Xxx47c3x9fEZo7t-Ll9Qu4bOlNMr_0zey1yPa9msPpm7cGXkRuiYxHFCQWNRu4fNZXQjR7SvVlgU-U4D45mIPXDTtW7QlU" /></p>
+<h5 id="setting-breakpoints">Setting breakpoints<a class="headerlink" href="#setting-breakpoints" title="Permanent link">&para;</a></h5>
+<p>Breakpoints are the "cutoff" points for grouped data which affects:</p>
+<ul>
+<li>How many colors there are</li>
+<li>What the audience is supposed to understand from your map (i.e. “This place has a higher work from home population”)</li>
+</ul>
+<p>The following methods are available:</p>
+<p><strong>Natural breaks</strong> - Emphasizes distinct "natural" drop offs in the data <strong>Quantile</strong> - Puts the same number of data points in each group <strong>Equal Interval</strong> - Separate the data range equally <strong>Custom</strong> - Allows you to manually set your breakpoints</p>
+<p><em>Tip: Try to use between 4 to 6 classes, as that number of colors are easily readable on a map without being distracting.</em><img alt="" src="https://lh4.googleusercontent.com/5RSwuLJ8Hw0ry1IH_jLIwdEHPhlSs3Mruft8Gx6l3CS5ES6ujh5SQ6McKmgH19eo-M8r8WfGKM458As8mV7RStmZNr2LkU6spegBgT0R0EG2h0CSeaa6tp9v" /></p>
+<h3 id="4-annotating">4. Annotating<a class="headerlink" href="#4-annotating" title="Permanent link">&para;</a></h3>
+<p>After clicking on the annotation tab (section iii) you will access the set of options for adding your information to the map.</p>
+<h4 id="drawing">Drawing<a class="headerlink" href="#drawing" title="Permanent link">&para;</a></h4>
+<ul>
+<li>These tools are undefined shapes that you can draw onto the map to highlight a specific area.</li>
+<li>You can add these by drawing them onto the map.</li>
+</ul>
+<h4 id="elements">Elements<a class="headerlink" href="#elements" title="Permanent link">&para;</a></h4>
+<ul>
+<li>These are predefined shapes, which allows you to add objects such as markers, charts, photos, and text.</li>
+<li>You can add these by dragging them onto the map OR clicking on them.</li>
+</ul>
+<p><img alt="" src="https://lh5.googleusercontent.com/aOF1Cp_4xXiA-EIERMTjuoDdFhiPlZgr0C07Ke9Jik76tq0OK8ADu0X6iukpBX5TGmtYNGB5tpboG46qlfbZ9jfscq2aREJgtwxXBFmNkMnpZRNLwmrIDBI_" /></p>
+<h4 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h4>
+<p>Clicking an annotation object makes the following show up:<img alt="" src="https://lh3.googleusercontent.com/QP2g6BQolOQJ7FxCYCk5Ekn8l6EknExfrU2CwZ-UuEGzRDKZGLScSTfSHKP5QxdZ7ctcNpMkEyU6y0AkdYFrBXRHO-XFZp8dq_HqgAQhBFoFdFzWamrPk7cd" /></p>
+<ul>
+<li>The blue gear icon edits the annotation properties.</li>
+<li>While the trash bin will delete the annotation object.</li>
+<li>The white dots allow us to manipulate the annotation</li>
+<li>The blue arrow allows us to rotate</li>
+</ul>
+<p>Within the annotation properties you can do things like change the fill of the annotation or make it so the object changes with zoom (on map) or will keep the same size as you zoom in and out (fixed).</p>
+<p><img alt="" src="https://lh5.googleusercontent.com/MkL6FZ5NsH43E9t5K5SXqIxrPHWl21yi0YRPa72e2nN6NpQzOX7AyWy4iX5ZFl2MonhqlyMIkV_ERZgOL-K1DibN6qYa9FIc3_LEK9sPg5RG5FYr4wGol50A" /></p>
+<h2 id="dessert">Dessert<a class="headerlink" href="#dessert" title="Permanent link">&para;</a></h2>
+<h3 id="5-sharing-and-animating">5. Sharing and Animating<a class="headerlink" href="#5-sharing-and-animating" title="Permanent link">&para;</a></h3>
+<p>After you have added appropriate annotations and designed a map to your liking, you can now take a snapshot of it by clicking the button within the snapshot tab (section iv).</p>
+<p>These snapshots allow you to share a series of maps with others.</p>
+<p>If you are satisfied with a static image, then you can simply export your map in the various ways shown in the export/share area (section v).</p>
+<p>However, if you would like to make an animated map, the following steps show you how.</p>
+<h4 id="making-an-animated-movie-of-your-map">Making an animated movie of your map:<a class="headerlink" href="#making-an-animated-movie-of-your-map" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Keep the zoom and area the same</li>
+<li>Take snapshots at different time periods but using the same data</li>
+<li>Or use different data during the same period</li>
+</ul>
+<p>After you finish taking the snapshots, then choose “Export to Powerpoint” option, and then download the resulting file.</p>
+<p>Open the file in powerpoint and then save as .wmv file.</p>
+<p>Now you have a video of your map!</p>
+<h2 id="demos">Demos<a class="headerlink" href="#demos" title="Permanent link">&para;</a></h2>
+<p><strong>Shared Map Demo:</strong> <a href="http://www.socialexplorer.com/89aacd3a4f1e4e1/view">http://www.socialexplorer.com/89aacd3a4f1e4e1/view</a></p>
+<p><strong>Powerpoint demo:</strong> <a href="http://www.socialexplorer.com/89AACD3A4F1E4E1/explore">http://www.socialexplorer.com/89AACD3A4F1E4E1/explore</a></p>
+<p><strong>Video Demo:</strong> <a href="https://docs.google.com/file/d/0Bw70UyvGZsQFeU5wRTdWaUR2cHM/edit?usp=sharing">https://docs.google.com/file/d/0Bw70UyvGZsQFeU5wRTdWaUR2cHM/edit?usp=sharing</a></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.tabs", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>

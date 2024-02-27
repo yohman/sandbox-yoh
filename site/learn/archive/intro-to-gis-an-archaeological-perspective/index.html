@@ -1,0 +1,1028 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>Intro to GIS: An Archaeological Perspective - OARC Technology Sandbox</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/style.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#part-1-introduction-to-gis-and-esri" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="OARC Technology Sandbox" class="md-header__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
+      
+  <img src="../../../logo.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OARC Technology Sandbox
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Intro to GIS: An Archaeological Perspective
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/IDREsandbox/sandbox" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../work/" class="md-tabs__link">
+        
+  
+    
+  
+  Work
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link">
+        
+  
+    
+  
+  Learn
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../connect/who/" class="md-tabs__link">
+          
+  
+    
+  
+  Connect
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../blog" class="md-tabs__link">
+        
+  
+    
+  
+  Musings
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="OARC Technology Sandbox" class="md-nav__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
+      
+  <img src="../../../logo.jpg" alt="logo">
+
+    </a>
+    OARC Technology Sandbox
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/IDREsandbox/sandbox" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../work/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Work
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Learn
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Connect
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Connect
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../connect/who/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Who we are
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../connect/consult/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Consult
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../connect/where/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Where is the Sandbox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Musings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-introduction-to-gis-and-esri" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 1: Introduction to GIS and ESRI
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-working-with-spatial-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 2: Working with spatial data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-i-introduction-to-gis-and-esri" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part I: Introduction to GIS and ESRI
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part I: Introduction to GIS and ESRI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gettin-down-and-dirty-with-esri" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gettin' down and dirty with ESRI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hello-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hello Map
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connecting-a-folder-in-arccatalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connecting a folder in ArcCatalog
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-and-preview-the-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      View and Preview the data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hello-egypt-setting-the-projection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hello Egypt: Setting the projection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Layers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#order-your-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Order your layers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#symbolization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Symbolization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#labeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Labeling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attributes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#choropleth-maps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choropleth Maps
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-working-with-spatial-data_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 2: Working with spatial data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 2: Working with spatial data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#acquiring-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acquiring data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-los-angeles-open-data-portal" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Los Angeles Open Data Portal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cleaning-up-those-coordinates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cleaning up those coordinates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lets-map-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let's map it!
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-the-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project the data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hot-spots" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hot spots?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-in-this-tutorial" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data in this tutorial
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thanks-for-attending-the-workshop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thanks for attending the workshop!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Thanks for attending the workshop!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#please-fill-out-the-feedback-form-to-see-what-we-can-improve-upon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Please fill out the feedback form to see what we can improve upon:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-more-learning-you-can-check-out-esris-tutorials" class="md-nav__link">
+    <span class="md-ellipsis">
+      For more learning you can check out ESRI's tutorials:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<p>[TBS_ALERT color="info" heading="Pre-class poll"]Welcome! Before we begin our adventure on "spatial thinking," please take a minute to <a href="https://onlinepoll.ucla.edu/polls/2665/responses/enter_password">take this poll</a>.</p>
+<p><a href="https://onlinepoll.ucla.edu/polls/2665/responses/enter_password">Pre-workshop poll</a> (password: "ucla") Bonus: <a href="https://onlinepoll.ucla.edu/polls/2665/responses/summary">Poll Results</a> | <a href="https://sandbox.idre.ucla.edu/tools/geocoder/">Batch geocoder</a></p>
+<p>After the workshop, please take this survey:</p>
+<p><a href="https://bit.ly/2RLCsBY">Post-workshop survey</a></p>
+<p>[/TBS_ALERT]</p>
+<h4 id="part-1-introduction-to-gis-and-esri"><a href="#part1"><strong>Part 1: Introduction to GIS and ESRI</strong></a><a class="headerlink" href="#part-1-introduction-to-gis-and-esri" title="Permanent link">&para;</a></h4>
+<ol>
+<li><a href="#background">Background: Geographical information in the U.S.</a></li>
+<li><a href="#hellomap">Hello Map: Thematic Mapping and the basics</a><ul>
+<li>Connecting a folder</li>
+<li>Adding Layers</li>
+<li>Setting the projection</li>
+<li>Attributes</li>
+<li>Symbolization</li>
+<li>Labeling</li>
+<li>Choropleth Maps</li>
+</ul>
+</li>
+</ol>
+<h4 id="part-2-working-with-spatial-data"><a href="#part2"><strong>Part 2: Working with spatial data</strong></a><a class="headerlink" href="#part-2-working-with-spatial-data" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Acquiring data</li>
+<li>The LA Data Portal</li>
+<li>Project the data</li>
+<li>Hot spot analysis</li>
+</ol>
+<h1 id="part-i-introduction-to-gis-and-esri">Part I: Introduction to GIS and ESRI<a class="headerlink" href="#part-i-introduction-to-gis-and-esri" title="Permanent link">&para;</a></h1>
+<h3 id="gettin-down-and-dirty-with-esri">Gettin' down and dirty with ESRI<a class="headerlink" href="#gettin-down-and-dirty-with-esri" title="Permanent link">&para;</a></h3>
+<p>The first step in this tutorial is to understand that we are covering the basics of desktop GIS analysis using ESRI's ArcGIS software suite. This is by no means an all encompassing "entirety of GIS" tutorial, but rather a view on how GIS can be used to build maps from ESRI's perspective, limited by the functionalities of the software being covered. There are many other tools you may want to consider to do your spatial analysis, including <a href="http://spatial.ly/r/">R</a>, Python, <a href="https://carto.com/">Carto</a>, <a href="https://www.mapbox.com/">Mapbox</a>, <a href="https://d3js.org/">D3</a>, and <a href="https://www.qgis.org/en/site/">qGIS</a>.</p>
+<p>The core function of the ESRI ArcGIS suite lies within two programs:</p>
+<ol>
+<li>ArcCatalog - for managing GIS datasets</li>
+<li>ArcMap - for mapping GIS datasets</li>
+</ol>
+<p><img alt="ArcIcons" src="images/ArcIcons.png" /></p>
+<p>[TBS_ALERT color="info" heading="What about OpenSource alternatives?"]</p>
+<p><a href="http://www.qgis.org/en/site/">QGIS</a> is as an alternative to ArcGIS that is free and openly available to the public on all computing platforms. Despite the accessibility of QGIS, there is a steeper learning curve for those learning GIS for the first time. However, those seeking a free low-cost alternative to ArcGIS can apply the concepts learned in this workshop with that program.</p>
+<p>[/TBS_ALERT]</p>
+<h3 id="hello-map">Hello Map<a class="headerlink" href="#hello-map" title="Permanent link">&para;</a></h3>
+<p>With geographical ideas in mind, it is finally time to map something! For this exercise, you are provided with a Workshop [simple_tooltip content='A geodatabase is shown as a folder. ']geodatabase[/simple_tooltip], which is a collection of GIS datasets. A GIS dataset can be any of the following:</p>
+<ol>
+<li>a vector layer - points, lines or polygons</li>
+<li>a raster layer - an image, Satellite imagery, elevation data</li>
+<li>tabular data - excel spreadsheet, csv, etc.</li>
+</ol>
+<p>[TBS_ALERT color="info" heading="Vector vs. Rasters"]Geographic data is stored either as <a href="http://support.esri.com/sitecore/content/support/Home/other-resources/gis-dictionary/term/vector">vector</a> data (as points, lines, or polygons) or <a href="http://support.esri.com/sitecore/content/support/Home/other-resources/gis-dictionary/term/raster">raster</a> data (as pixel grids).</p>
+<p>Because of these differences in data storage, vector data is best suited for a human geography context (ex. urban planning, transportation forecasting, asset mapping), while raster data are best used for storing data on physical geography (ex. satellite imagery, elevation, watersheds, vegetation).</p>
+<p>In ArcGIS, vector data is stored as individual .shp files or feature classes within a geodatabase. Raster data is stored as .tiffs, .jpgs, or other image formats. [/TBS_ALERT]</p>
+<p>Our geodatabase contains multiple GIS feature classes.</p>
+<ul>
+<li><a href="https://sandbox.idre.ucla.edu/Workshops/workshopData2018.zip">Workshop Data Download Link</a></li>
+</ul>
+<p>Download and [simple_tooltip content='Extracting means using a program, such as 7zip to unzip files from a single file.']extract[/simple_tooltip] Workshop.zip. Locate Workshop.gdb, and put it in a project folder for this workshop. You will learn how to inspect the geodatabase data in ArcCatalog, then use ArcMap to create some maps.</p>
+<p>Here is a look at our Workshop geodatabase:</p>
+<p>workshop2018.gdb
+|--us_cities
+|--us_counties
+|--us_states</p>
+<h3 id="connecting-a-folder-in-arccatalog">Connecting a folder in ArcCatalog<a class="headerlink" href="#connecting-a-folder-in-arccatalog" title="Permanent link">&para;</a></h3>
+<p>Open up ArcCatalog and click the second button to the left, which is the "Connect Folder" button.</p>
+<p><img alt="ArcCatalog3" src="images/ArcCatalog3.png" /></p>
+<p>Navigate to the <strong>Folder</strong> where you extracted the "workshopData2018.zip" file and then select "OK".</p>
+<p>[TBS_ALERT color="danger" heading="Do not try to connect a file!"]If you try to connect files, you will notice that the "OK" button is grayed out, connecting folders allows you only to choose folders.[/TBS_ALERT]</p>
+<h3 id="view-and-preview-the-data">View and Preview the data<a class="headerlink" href="#view-and-preview-the-data" title="Permanent link">&para;</a></h3>
+<p>After you've connected the folder, you can check <strong>Folder Connections</strong> and open the Folder which you've connected. Locate "<strong>workshop2018.gdb</strong>" and double click it to view its contents. Browse for <strong>us_states</strong> and click the "<strong>Preview</strong>" tab.</p>
+<h3 id="hello-egypt-setting-the-projection">Hello Egypt: Setting the projection<a class="headerlink" href="#hello-egypt-setting-the-projection" title="Permanent link">&para;</a></h3>
+<p>Geographic coordinate systems are typically measured in decimal degrees, and are useful when your data is global and/or comes with latitude and longitude coordinates. However, because of its angular units, it is not recommended for spatial analysis. Instead, one should consider using a projected coordinate system that is suited to the region of analysis.  Given that we are only working with <strong>Egypt</strong> based data, let's set our projection to the following UTM zone that is specifically optimized for our region of interest:</p>
+<ul>
+<li>WGS 1984 UTM Zone 36N</li>
+</ul>
+<p>Let's set our projection with this in mind:</p>
+<ol>
+<li>Right click on "<strong>Layers</strong>" and go to "<strong>properties</strong>" (or just double click on "Layers")</li>
+<li>Select the "<strong>Coordinate Systems</strong>" tab</li>
+<li>Go to "<strong>Projected Coordinate Systems</strong>", "<strong>UTM</strong>", "<strong>WGS 1984</strong>", "<strong>Northern Hemisphere</strong>", and choose "<strong>WGS 1984 UTM Zone 36N</strong>"</li>
+</ol>
+<p><img alt="" src="images/set-projection-e1549474617737.png" /></p>
+<p>[TBS_ALERT color="danger" heading="It's on the fly!"]The software will warn you that you are projecting your datasets on the fly (note that it is not <em>reprojecting</em> the actual data, it is doing so only within the scope of this project space). If you want to perform spatial analysis, it is recommended that all layers in your project be reprojected to an appropriate coordinate system. More information on how to do this can be found <a href="https://support.esri.com/en/technical-article/000004886">here</a>.[/TBS_ALERT]</p>
+<h3 id="adding-layers">Adding Layers<a class="headerlink" href="#adding-layers" title="Permanent link">&para;</a></h3>
+<p>Now the time has come to fire up ArcMap and become a digital cartographer! The first step for any GIS project is to have data (more on this later). In order to add data to your project click on the "<strong>Add data</strong>" button:</p>
+<p><img alt="addData" src="images/addData.png" /></p>
+<p>Notice how the connected folder can be selected and datasets be added now? Also, if your map is feeling a bit empty, you can add base maps by clicking the upside down triangle next to the <strong>Add Data</strong> button. Adding a basemap only provides reference information and nothing else.</p>
+<h3 id="order-your-layers">Order your layers<a class="headerlink" href="#order-your-layers" title="Permanent link">&para;</a></h3>
+<p>Vector layers are also referred to as "feature classes" in ESRI-Land. All GIS datasets can be added in this same way. Now drag each layer and re-order them. If you are familiar with Adobe Photoshop or Illustrator, you will recognize conceptual similarities with layering. What happens when layers are re-ordered? How does this dictate your strategy on building a single flattened map with multiple layers?</p>
+<p>[TBS_ALERT color="info" heading="Challenge Exercise"]Modify your map by changing fill colors, outline colors, symbol sizes, symbol colors to make it look like this:</p>
+<p><img alt="" src="images/US-Map-e1516301440489.png" /></p>
+<p>[/TBS_ALERT]</p>
+<h3 id="symbolization">Symbolization<a class="headerlink" href="#symbolization" title="Permanent link">&para;</a></h3>
+<p>Outlines, fills, colors, weight, action! Here is where the artist in you comes out and the design phase of creating a map begins. Consider color choices: grayscale? Color schemes? Color hierarchy? Inevitably, you will find yourselves in the throes of ESRI's symbolization quagmire...</p>
+<h3 id="labeling">Labeling<a class="headerlink" href="#labeling" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="images/Labeling-e1516302424726.png" /></p>
+<p>Map elements need labels at times. Consider what needs to be labeled, and what does not. Label sizes, fonts, weights, placement, colors are all things to consider for your map. Understand the relationship between labels, attributes, and layers.</p>
+<p>[TBS_ALERT color="info" heading="Labels hard to read? Halo it!"]Sometimes your labels may be hard to read, depending on what resides in the background. In this situation, you can add a white "halo" to your labels to make them "pop" some more. This feature is very, very hidden in ArcMap, but here is how to get to it:</p>
+<ol>
+<li>Go the <strong>Label</strong> tab</li>
+<li>Click "<strong>Symbol</strong>"</li>
+<li>Click "<strong>Edit symbol</strong>"</li>
+<li>Click "<strong>Mask</strong>"</li>
+<li>Choose "<strong>Halo</strong>"</li>
+</ol>
+<p><img alt="" src="images/Halo-e1516390561590.png" /></p>
+<p>[/TBS_ALERT]</p>
+<h3 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="images/Attribute-Table-1-e1516387556924.png" /></p>
+<p>Every layer (feature class) comes with attributes. This is the all-important "information" part of geographic "information" systems mapping. Data in the attribute tables dictates what <em>can</em> get mapped. Open the attribute table of each layer (right click on the layer from the table of contents, <strong>Open Attribute Table</strong>):</p>
+<p><img alt="open attribute table" src="images/open-attribute-table-e1538584340846.png" /></p>
+<p>Study how each row and column is tied to the mapped element. Questions we will answer include:</p>
+<ul>
+<li>What is the unique identifier for each row?</li>
+<li>What other attributes exist?</li>
+<li>What happens when you select a row on the attribute table?</li>
+<li>How do you sort elements?</li>
+<li>Can you build custom queries?</li>
+<li>Can you build graphs?</li>
+</ul>
+<h3 id="choropleth-maps">Choropleth Maps<a class="headerlink" href="#choropleth-maps" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="images/Choropleth-Map-e1516303937369.png" /></p>
+<p>For this section, we will focus on creating a choropleth (which just means a colored map based on numerical data)!</p>
+<p>When creating a choropleth the following needs to be considered:</p>
+<ol>
+<li>Is the data <em>choropleth-able</em>?<ol>
+<li>Choropleths work best when representing data where boundaries are important</li>
+<li>Conversely, choropleths do not work well when attempting to show data where boundaries are NOT important/irrelevant</li>
+</ol>
+</li>
+<li>Do you have the data in the geographic scale you wish to map it at?</li>
+<li>Can you connect the data to an existing layer?</li>
+<li>Which coloring style best represents your data?<ol>
+<li>If your information is continuous then use a single color gradient</li>
+<li>If your information has a positive or negative range, use an opposite color scheme</li>
+</ol>
+</li>
+</ol>
+<p>To create a choropleth map, follow these steps:</p>
+<ol>
+<li>Right click on <strong>us_counties</strong> and go to <strong>properties</strong> (or just double click it!)</li>
+<li>Select the <strong>Symbology</strong> tab, click on <strong>Quantities</strong>, and select <strong>POP2010</strong> for the Value field.</li>
+</ol>
+<p><img alt="" src="images/choropleth-settings-e1538512169989.png" /></p>
+<p>Now click on the <strong>Classify</strong> button. There are several methods to choose from. Look at the <a href="http://pro.arcgis.com/en/pro-app/help/mapping/layer-properties/data-classification-methods.htm">following documentation</a> to determine which method is best suited for your data.</p>
+<p><img alt="classification choices" src="images/classification-choices-e1538517900653.png" /></p>
+<h1 id="part-2-working-with-spatial-data_1">Part 2: Working with spatial data<a class="headerlink" href="#part-2-working-with-spatial-data_1" title="Permanent link">&para;</a></h1>
+<h3 id="acquiring-data">Acquiring data<a class="headerlink" href="#acquiring-data" title="Permanent link">&para;</a></h3>
+<p>The open data movement has made more and more data available for academics to download and use for their research. But how can we map this data? This workshop will take you through the process of acquiring data from the <a href="https://data.lacity.org/">Los Angeles Open Data portal</a> and visualizing it on ArcGIS for further analysis. <a href="https://data.lacity.org/">Los Angeles Open Data portal</a></p>
+<h3 id="the-los-angeles-open-data-portal">The Los Angeles Open Data Portal<a class="headerlink" href="#the-los-angeles-open-data-portal" title="Permanent link">&para;</a></h3>
+<p>Search for crime data</p>
+<p><img alt="" src="images/open-data-search-1-e1524853436494.png" /></p>
+<p>Inspect the data</p>
+<p><img alt="" src="images/open-data-crime-data-e1524853710964.png" /></p>
+<p>Almost 2 million records! Let's filter it down to something more manageable.</p>
+<p><img alt="view data" src="images/2018-10-02-08_57_05-Crime-Data-from-2010-to-Present-_-Los-Angeles-Open-Data-Portal-e1538496083813.png" /></p>
+<p>Now add the filter to narrow down the data to one month:</p>
+<p><img alt="filter crime data by date reported" src="images/filter-crime-data-by-date-reported-e1538496252882.png" /></p>
+<p><img alt="filter crime data by date reported" src="images/filter-crime-data-by-date-reported-1-e1538580605581.png" /></p>
+<p>Export the data</p>
+<p><img alt="export as csv" src="images/export-as-csv-e1538496456287.png" /></p>
+<h3 id="cleaning-up-those-coordinates">Cleaning up those coordinates<a class="headerlink" href="#cleaning-up-those-coordinates" title="Permanent link">&para;</a></h3>
+<p>Open the downloaded data in Excel. Scroll to the right until you see the Location column.</p>
+<p><img alt="" src="images/open-data-location-column-e1524865676923.png" /></p>
+<p>Hmm, that's strange, the latitude and longitude columns are in the same column! ArcGIS does not like this. Let's clean this up.</p>
+<p>First, find and replace the brackets.</p>
+<ol>
+<li>Select the Location column</li>
+<li>Bring up the find and replace tool (ctrl-h)</li>
+<li>For "Find what", enter an open bracket "("</li>
+<li>Click Replace All</li>
+</ol>
+<p><img alt="" src="images/open-data-replace-brackets-e1524869310445.png" /></p>
+<p>Repeat for the closing bracket.</p>
+<p>Split the column into two:</p>
+<p><img alt="" src="images/open-data-text-to-columns-e1524869544554.png" /></p>
+<p>Choose, delimited, check the "Comma" box, and finish.</p>
+<p><img alt="" src="images/open-data-text-to-columns2-e1524869659658.png" /></p>
+<p>Rename the column headers to Latitude and Longitude</p>
+<p><img alt="" src="images/open-data-lat-lon-e1524869765545.png" /></p>
+<h3 id="lets-map-it">Let's map it!<a class="headerlink" href="#lets-map-it" title="Permanent link">&para;</a></h3>
+<p>Start a brand new ArcMap project and add the csv file (remember the <strong>Add Data</strong> button?). Right click on the csv file and <strong>Display XY Data</strong>.</p>
+<p><img alt="" src="images/open-data-display-xy-e1524870101534.png" /></p>
+<ol>
+<li>Set X to <strong>Longitude</strong></li>
+<li>Set Y to <strong>Latitude</strong></li>
+<li>Click <strong>Edit</strong> for the coordinate system</li>
+<li>Enter "<strong>WGS 1984</strong>" in the search box</li>
+<li>Choose <strong>WGS 1984</strong></li>
+</ol>
+<p><img alt="" src="images/open-data-set-coordinate-system-e1524870277327.png" /></p>
+<p>Now save your new layer as a shapefile, or geodatabase:</p>
+<p><img alt="" src="images/open-data-export-data-e1525276046743.png" /></p>
+<p><img alt="" src="images/open-data-export-into-geodatabase-e1525276199611.png" /></p>
+<h3 id="project-the-data">Project the data<a class="headerlink" href="#project-the-data" title="Permanent link">&para;</a></h3>
+<p>Our data is currently in a geographic coordinate system (WGS1984). Let's change this to a projected coordinate system. The UTM zone for Los Angeles is <strong>UTM Zone 11N</strong>.</p>
+<p>Click on the search tool</p>
+<p><img alt="" src="images/search-tool-e1525277972537.png" /></p>
+<p>Type "project" and click on <strong>Project (Data Management)</strong></p>
+<p><img alt="" src="images/project-to-utm-e1525278207598.png" /></p>
+<p>Now, set the projection of the data frame. Right click on <strong>Layers</strong>, and go to <strong>properties</strong>. Then, set the coordinate system to <strong>NAD 1983 UTM Zone 11N</strong></p>
+<p><img alt="" src="images/open-data-set-utm-zone-1-e1525277078543.png" /></p>
+<h3 id="hot-spots">Hot spots?<a class="headerlink" href="#hot-spots" title="Permanent link">&para;</a></h3>
+<p>Let's find crime hot spots by race. Select incidents where the person arrested was classified as Hispanic (H). In the menu bar, go to <strong>Selection</strong>, <strong>Select by attribute.</strong> Enter the following SQL statement:</p>
+<p>Victim_Decent = 'H'</p>
+<p><img alt="" src="images/crime-by-race-1-e1525280021439.png" /></p>
+<p>Now perform a <a href="http://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/how-kernel-density-works.htm">kernel density</a> to visualize the density of Hispanic arrests in Los Angeles. In the search box, enter "<strong>kernel</strong>" and click on the <strong>Kernel Density (Spatial Analyst)</strong> tool. Enter the four boxes as shown below:</p>
+<p><img alt="" src="images/hispanic-kernel-e1525280163943.png" /></p>
+<p>Add a <strong>basemap</strong>, and change the <strong>symbology</strong> to make the visual more powerful:</p>
+<p><img alt="" src="images/kernel-crime-map-e1525280341147.png" /></p>
+<p>Repeat the process for other race categories:</p>
+<table><tbody><tr><td>Black <img class="alignnone size-full wp-image-3313" src="images/kernel-black-e1525280897233.png" alt="" width="991" height="731"></td><td>White<img class="alignnone size-full wp-image-3314" src="images/kernel-white-e1525281024184.png" alt="" width="991" height="731"></td><td>Hispanic<img class="alignnone size-full wp-image-3312" src="images/kernel-hispanic-e1525280752322.png" alt="" width="991" height="731"></td></tr></tbody></table>
+
+<h3 id="data-in-this-tutorial">Data in this tutorial<a class="headerlink" href="#data-in-this-tutorial" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="http://gis.ucla.edu/geodata/dataset/lapd-crime-data-2010">LAPD Crime Data 2010 (csv)</a></li>
+</ul>
+<h3 id="thanks-for-attending-the-workshop">Thanks for attending the workshop!<a class="headerlink" href="#thanks-for-attending-the-workshop" title="Permanent link">&para;</a></h3>
+<h4 id="please-fill-out-the-feedback-form-to-see-what-we-can-improve-upon">Please fill out the feedback form to see what we can improve upon:<a class="headerlink" href="#please-fill-out-the-feedback-form-to-see-what-we-can-improve-upon" title="Permanent link">&para;</a></h4>
+<p><a href="https://bit.ly/2RLCsBY">Post workshop survey</a></p>
+<h4 id="for-more-learning-you-can-check-out-esris-tutorials">For more learning you can check out ESRI's tutorials:<a class="headerlink" href="#for-more-learning-you-can-check-out-esris-tutorials" title="Permanent link">&para;</a></h4>
+<p><a href="http://www.esri.com/training/main/training-catalog/course-recommendations">http://www.esri.com/training/main/training-catalog/course-recommendations</a></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.tabs", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>

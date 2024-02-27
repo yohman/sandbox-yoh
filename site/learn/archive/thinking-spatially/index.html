@@ -1,0 +1,891 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>Thinking Spatially - OARC Technology Sandbox</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/style.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#thinking-spatially" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="OARC Technology Sandbox" class="md-header__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
+      
+  <img src="../../../logo.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OARC Technology Sandbox
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Thinking Spatially
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/IDREsandbox/sandbox" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../work/" class="md-tabs__link">
+        
+  
+    
+  
+  Work
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link">
+        
+  
+    
+  
+  Learn
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../connect/who/" class="md-tabs__link">
+          
+  
+    
+  
+  Connect
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../blog" class="md-tabs__link">
+        
+  
+    
+  
+  Musings
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="OARC Technology Sandbox" class="md-nav__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
+      
+  <img src="../../../logo.jpg" alt="logo">
+
+    </a>
+    OARC Technology Sandbox
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/IDREsandbox/sandbox" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../work/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Work
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Learn
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Connect
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Connect
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../connect/who/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Who we are
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../connect/consult/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Consult
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../connect/where/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Where is the Sandbox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Musings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#thinking-spatially" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thinking Spatially
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i-want-to-map-how-do-i-get-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      I want to map... how do I get started?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="I want to map... how do I get started?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#google-mapsapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google Maps/API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#social-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Social Explorer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-earth" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google Earth
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#palladio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Palladio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d3-geo" class="md-nav__link">
+    <span class="md-ellipsis">
+      D3-Geo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leaflet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leaflet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arcgismappro" class="md-nav__link">
+    <span class="md-ellipsis">
+      ArcGIS/Map/Pro
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arcgis-online" class="md-nav__link">
+    <span class="md-ellipsis">
+      ArcGIS Online
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-earth-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google Earth Engine
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tool-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tool Matrix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-text-to-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      From text to map
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-simple-web-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      A Simple Web Map
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#history-mapped" class="md-nav__link">
+    <span class="md-ellipsis">
+      History mapped
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="History mapped">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#age-of-los-angeles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Age of Los Angeles
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#palladio-workshop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Palladio Workshop
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>Thinking Spatially</h1>
+
+<h2 id="thinking-spatially">Thinking Spatially<a class="headerlink" href="#thinking-spatially" title="Permanent link">&para;</a></h2>
+<h2 id="i-want-to-map-how-do-i-get-started">I want to map... how do I get started?<a class="headerlink" href="#i-want-to-map-how-do-i-get-started" title="Permanent link">&para;</a></h2>
+<p>var name = "Rio"</p>
+<p>As members of an academic community with a myriad of research initiatives, the need to map information, to spatially analyze, to geoprocess, and to visualize space and time is becoming ubiquitous. But how do you get started? The answer to this question largely depends on <em>what</em> you want to map, and <em>how</em> you want to create your map. The <em>what</em> is usually easy. It is driven by your passion to pursue a research question and to have maps assist in the development of an argument. The <em>how</em> is the difficult part. It may depend on what data you have, what tools you have access to, how comfortable you are with software packages, if you are open to write code or use the command line. Often times, your research question lends itself to a spatial argument. However, providing insights to questions using spatial visualization tools is a process that involves any number of factors, including: data acquisition, data cleanup, geo-enabling data, geocoding data, georeferencing data, visualizing spatial data, overlaying other spatial data, conducting spatial analysis and/or geoprocessing, analyzing results, visualizing results, and publishing results. For obvious reasons, there is no single application that can accomplish every phase of your spatial process, but in the hopes that one can illuminate some clarity on which tools are available for what purposes, this document provides a broad summary of some of the most useful tools.</p>
+<h3 id="google-mapsapi">Google Maps/API<a class="headerlink" href="#google-mapsapi" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="images/Screen-Shot-2019-04-11-at-11.25.49-AM-e1555007184723-1024x511.png" /></p>
+<p>While we use Google Maps seemingly daily, let's not forget that it is most likely the world's most powerful GIS. Its features include a global reach, <a href="https://www.google.com/maps/@34.0687751,-118.4450444,3a,60y,311.36h,92.57t/data=!3m6!1e1!3m4!1srJo6WOkVunyPIFnKD9wT1w!2e0!7i16384!8i8192">temporality</a>, transportation metrics, satellite and street map imagery, 3D navigation, and participatory and private data creation. The Google eco-system contains a slate of developer API's, that is, programming interfaces that allows you to utilize their computational and visualizational libraries for your own purposes. For example, <a href="https://cloud.google.com/maps-platform/maps/">Google Maps Javascript API</a> lets you to create interactive Google web maps and overlay it with your own data; <a href="https://cloud.google.com/maps-platform/places/">Google Geocoding API</a> allows you to convert any text based location into map coordinates; <a href="https://developers.google.com/chart/">Google Charts API</a> allows you to visualize data in the form of <a href="https://developers.google.com/chart/interactive/docs/gallery/bubblechart">charts</a> and graphs. Is it free? <a href="https://cloud.google.com/maps-platform/pricing/">No</a>. For researchers, the caveat is that any Google process requires results to be shown on their products and in public the sphere. Deviations from this violate their <a href="https://cloud.google.com/maps-platform/terms/maps-service-terms/">user agreement</a>, or would come at a prohibitive cost.</p>
+<h3 id="social-explorer">Social Explorer<a class="headerlink" href="#social-explorer" title="Permanent link">&para;</a></h3>
+<p><img alt="Social Explorer" src="images/Social-Explorer-e1516309262695-1024x455.png" /></p>
+<p><a href="https://www.socialexplorer.com/">https://www.socialexplorer.com/</a></p>
+<p>Imagine a platform that gives you access to every census variable for every moment in history since it was collected (think 1790 onwards), has the ability to generate beautiful maps (including side-by-side maps for comparisons), allows you to create presentation narratives (think map centered power point), and let's you share, embed, and download your data and maps.</p>
+<h3 id="google-earth">Google Earth<a class="headerlink" href="#google-earth" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="images/Screen-Shot-2019-04-11-at-4.14.26-PM-e1555024496720-1024x470.png" /></p>
+<p><a href="https://www.google.com/earth/">https://www.google.com/earth/</a> | <a href="https://sandbox.idre.ucla.edu/kml/Los%20Angeles%20Historical%20Maps.kmz">Los Angeles Historical Map Collection (KMZ)</a></p>
+<p>Even before Google Maps, Google Earth existed in the name of "Keyhole Earth Viewer." Google would acquire Keyhole in 2004 and the rest, as they say, is history. While the boundaries between Google Maps and Google Earth are beginning to blur (Maps now includes 3D capabilities), Google Earth remains relevant as a 3D mapping platform to visualize historical imagery, and to create 3D geospatial narratives.</p>
+<h3 id="palladio">Palladio<a class="headerlink" href="#palladio" title="Permanent link">&para;</a></h3>
+<p><img alt="human-border-mapping" src="images/human-border-mapping-e1551810866736-1024x347.png" /></p>
+<p><a href="http://hdlab.stanford.edu/palladio/">Palladio Home</a> | <a href="http://miriamposner.com/blog/getting-started-with-palladio/">Miriam's excellent workshop</a></p>
+<p>Do you need a jack-of-all-trades data visualizer? <a href="http://hdlab.stanford.edu/palladio/">Palladio</a>, a data visualization tool built by the folks from <a href="http://hdlab.stanford.edu/">Stanford's Humanities Lab</a> combines mapping, temporal charts, faceted browsing, network diagrams, and gallery views.</p>
+<h3 id="d3-geo">D3-Geo<a class="headerlink" href="#d3-geo" title="Permanent link">&para;</a></h3>
+<p><img alt="d3 geo" src="images/Screen-Shot-2019-04-11-at-4.22.04-PM-e1555024966689-1024x614.png" /></p>
+<p><a href="https://d3js.org/">D3</a> | <a href="https://observablehq.com/collection/@d3/d3-geo">d3-geo</a> | <a href="https://medium.com/@mbostock/command-line-cartography-part-1-897aa8f8ca2c">command line D3</a>  </p>
+<p>Fancy yourself for your coding chops? Give D3 a whirl, a web-based platform for data visualization. What distinguishes D3 (which stands for Data Driven Documents) visualizations from other libraries is that mapping is but one of its many outputs. Data can be ingested and reimagined in seemingly endless possibilities. Maps can be designed to be static, <a href="https://bost.ocks.org/mike/nations/">animated</a>, 3D, <a href="https://bl.ocks.org/syntagmatic/ba569633d51ebec6ec6e">reprojected</a>, and data can be made to <a href="https://earth.nullschool.net/">move</a> if you so desire.</p>
+<h3 id="leaflet">Leaflet<a class="headerlink" href="#leaflet" title="Permanent link">&para;</a></h3>
+<p><img alt="leaflet js" src="images/Screen-Shot-2019-04-11-at-4.37.55-PM-e1555025987214.png" /></p>
+<p><a href="https://leafletjs.com/">https://leafletjs.com/</a></p>
+<p>What about an open source equivalent to Google Maps?</p>
+<h3 id="arcgismappro">ArcGIS/Map/Pro<a class="headerlink" href="#arcgismappro" title="Permanent link">&para;</a></h3>
+<p>Favored by many, ESRI's ArcGIS is the industry standard as a software package for digital mapping. ESRI has been around even before Microsoft, founded by the charismatic Jack Dangermond, an environmental scientist in 1969.</p>
+<h3 id="arcgis-online">ArcGIS Online<a class="headerlink" href="#arcgis-online" title="Permanent link">&para;</a></h3>
+<p><img alt="ArcGIS Online Hyper Dublin" src="images/Screen-Shot-2019-09-04-at-12.12.13-PM-e1567624364974-1024x445.png" /></p>
+<p><a href="https://www.arcgis.com/home/webmap/viewer.html?webmap=bb5d6e0845a9448bae2a317964ab7f8b">https://www.arcgis.com/home/webmap/viewer.html?webmap=bb5d6e0845a9448bae2a317964ab7f8b</a></p>
+<h3 id="google-earth-engine">Google Earth Engine<a class="headerlink" href="#google-earth-engine" title="Permanent link">&para;</a></h3>
+<p><img alt="Google Earth Engine" src="images/Screen-Shot-2019-04-11-at-4.59.59-PM-e1555027247448-1024x400.png" /></p>
+<p><a href="https://earthengine.google.com/">https://earthengine.google.com/</a></p>
+<p>Remote sensing technology has never been made more available than it is today, thanks to the efforts of the Google Earth Engine team. Now, with just a few lines of code, researchers are able to access a multi-petabyte catalog of satellite imagery and geospatial datasets for planetary-scale analysis.</p>
+<h2 id="tool-matrix">Tool Matrix<a class="headerlink" href="#tool-matrix" title="Permanent link">&para;</a></h2>
+<table class="wp-block-table" style="width:100%;font-size:0.8em"><tbody><tr><td></td><td>Open Source?</td><td>Coding?</td><td>Publishable?</td></tr><tr><td>Google Maps API</td><td>no, requires key,<br>pay as you go</td><td>javascript</td><td>yes, but only on<br>a google map</td></tr><tr><td>Google Earth</td><td>no, but application is<br>free to download</td><td>none</td><td>can export with<br>google logo</td></tr><tr><td>Google Earth Engine</td><td>no, requires direct<br>approval from Google</td><td>javascript</td><td>yes</td></tr><tr><td>Palladio</td><td>yes</td><td>none</td><td>no</td></tr><tr><td>Social Explorer</td><td>no, but licensed<br>to all UCLA users</td><td>none</td><td>yes</td></tr><tr><td>ArcMap/ArcPro</td><td>no, but licensed<br>to all UCLA users</td><td>none</td><td>yes</td></tr><tr><td>ArcGIS Online</td><td>no, but licensed<br>to all UCLA users</td><td>none</td><td>yes</td></tr><tr><td>QGIS</td><td>yes</td><td>none</td><td>yes</td></tr><tr><td>Leaflet</td><td>yes</td><td>javascript</td><td>yes</td></tr><tr><td>Mapbox</td><td>no, requires key,<br>pay as you go</td><td>javascript</td><td>yes</td></tr></tbody></table>
+
+<h2 id="from-text-to-map">From text to map<a class="headerlink" href="#from-text-to-map" title="Permanent link">&para;</a></h2>
+<p>Behind any beautiful digital map lies the reality that every point, line or polygon is generated by some form of numerical and textual data.  Here is an example of a "placemark" written in KML:</p>
+<p><Placemark>
+    <name>YRL</name>
+    <description>Don't fall asleep! Data is fun!</description>
+    <Point>
+        <coordinates>-118.441539, 34.074992</coordinates>
+    </Point>
+</Placemark></p>
+<p>A few more options...</p>
+<p><Placemark>
+    <name>YRL</name>
+    <description>Don't fall asleep! Data is fun!</description>
+    <LookAt>
+        <longitude>-118.441539</longitude>
+        <latitude>34.074992</latitude>
+        <heading>45</heading>
+        <tilt>50</tilt>
+        <range>500</range>
+    </LookAt>
+    <Point>
+        <coordinates>-118.441539,34.074992</coordinates>
+    </Point>
+</Placemark></p>
+<div class="highlight"><pre><span></span><code>&lt;Placemark&gt;
+    &lt;name&gt;YRL&lt;/name&gt;
+    &lt;description&gt;Don&#39;t fall asleep! Data is fun!&lt;/description&gt;
+    &lt;LookAt&gt;
+        &lt;longitude&gt;-118.441539&lt;/longitude&gt;
+        &lt;latitude&gt;34.074992&lt;/latitude&gt;
+        &lt;heading&gt;45&lt;/heading&gt;
+        &lt;tilt&gt;50&lt;/tilt&gt;
+        &lt;range&gt;500&lt;/range&gt;
+    &lt;/LookAt&gt;
+    &lt;Point&gt;
+        &lt;coordinates&gt;-118.441539,34.074992,1000&lt;/coordinates&gt;
+        &lt;altitudeMode&gt;absolute&lt;/altitudeMode&gt;       
+    &lt;/Point&gt;
+&lt;/Placemark&gt;
+</code></pre></div>
+<p><Placemark>
+    <name>YRL</name>
+    <description>Don't fall asleep! Data is fun!</description>
+    <LookAt>
+        <longitude>-118.441539</longitude>
+        <latitude>34.074992</latitude>
+        <heading>45</heading>
+        <tilt>50</tilt>
+        <range>500</range>
+    </LookAt>
+    <Point>
+        <coordinates>-118.441539,34.074992,1000</coordinates>
+        <altitudeMode>absolute</altitudeMode>     <br />
+    </Point>
+</Placemark></p>
+<p><Placemark>
+    <name>YRL</name>
+    <description>Don't fall asleep! Data is fun!</description>
+    <LookAt>
+        <longitude>-118.441539</longitude>
+        <latitude>34.074992</latitude>
+        <heading>45</heading>
+        <tilt>50</tilt>
+        <range>500</range>
+    </LookAt>
+    <Point>
+        <coordinates>-118.441539,34.074992,1000</coordinates>
+        <altitudeMode>absolute</altitudeMode>     <br />
+    </Point>
+</Placemark></p>
+<p>Instruction: Copy and paste this code into a text editor, and save it as a .kml file. Double click on the file to open it in Google Earth.</p>
+<h2 id="a-simple-web-map">A Simple Web Map<a class="headerlink" href="#a-simple-web-map" title="Permanent link">&para;</a></h2>
+<p>A different markup language produces a map for a different platform. Here, we combine CSS, HTML, and Javascript to produce a map using the open-source map library Leaflet:</p>
+<!-- leaflet css -->
+<p><link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/></p>
+<!-- leaflet javascript -->
+<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
+
+<!-- the map container -->
+<div id="map" style="width: 600px; height: 400px;"></div>
+
+<!-- the javascript to make the map -->
+<script>
+
+    var map = L.map('map').setView(\[34.074992,-118.441539\], 18);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    L.marker(\[34.074992,-118.441539\]).addTo(map)
+        .bindPopup("Don't fall asleep! Data is fun!")
+        .openPopup();
+
+</script>
+
+<p>Instructions: Paste this code into a text editor, and save it as an html file. Double click to open the map on a web browser.</p>
+<h2 id="history-mapped">History mapped<a class="headerlink" href="#history-mapped" title="Permanent link">&para;</a></h2>
+<p>A paper map can be scanned and made digital.  As an image, it does not know "where it is", in terms of its spatiality.  A process called "georeferencing" allows us to "spatialize" printed documents, and put them in the context of other spatial layers.  Here is an example of one of the most famous historical maps, the "John Snow Map" from 1854 that illustrates a Cholera outbreak that attacked London.</p>
+<p><a href="http://www.ph.ucla.edu/epi/snow/snowmap_1854.jpg"><img alt="John Snow Cholera map (1854)" src="images/snowmap_1854.jpg" /></a></p>
+<p>The same map can be visualized on a GIS platform, in this case, Google Earth:</p>
+<p><a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2015/04/johnsnow_ge.jpg"><img alt="John Snow map on google earth" src="images/johnsnow_ge-650x488.jpg" /></a></p>
+<p>[<a href="http://sandbox.idre.ucla.edu/kml/snow.kmz">John Snow in Google Earth</a>]</p>
+<p>[TBS_ALERT color="success" heading="How to view in Google Earth"]</p>
+<ol>
+<li>Right click on the hyperlink and select "copy link address"</li>
+<li>Open Google Earth, Add, Network Link</li>
+<li>Give the network link a name, and paste the hyperlink</li>
+</ol>
+<p>[/TBS_ALERT]</p>
+<h3 id="age-of-los-angeles">Age of Los Angeles<a class="headerlink" href="#age-of-los-angeles" title="Permanent link">&para;</a></h3>
+<p><a href="http://cityhubla.github.io/LA_Building_Age/"><img alt="" src="images/Age-of-Los-Angeles-e1540831518999.png" /></a></p>
+<p>[<a href="http://cityhubla.github.io/LA_Building_Age/">http://cityhubla.github.io/LA_Building_Age/</a>]</p>
+<h2 id="palladio-workshop">Palladio Workshop<a class="headerlink" href="#palladio-workshop" title="Permanent link">&para;</a></h2>
+<p><a href="https://sandbox.idre.ucla.edu/sandbox/palladio-workshop">Palladio Workshop</a></p>
+<p><a href="https://sandbox.idre.ucla.edu/sandbox/palladio-workshop"><img alt="" src="images/Palladio-1-e1523299347889-300x187.png" /></a></p>
+<p>Visualizing A Century of New Yorker Stories What does a century of stories, navigating through space…</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.tabs", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>

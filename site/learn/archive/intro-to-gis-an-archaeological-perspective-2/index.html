@@ -1,0 +1,1052 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>Intro to GIS, An Archaeological Perspective - OARC Technology Sandbox</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/style.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#intro-to-gis-an-archaeological-perspective" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="OARC Technology Sandbox" class="md-header__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
+      
+  <img src="../../../logo.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OARC Technology Sandbox
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Intro to GIS, An Archaeological Perspective
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/IDREsandbox/sandbox" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../work/" class="md-tabs__link">
+        
+  
+    
+  
+  Work
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link">
+        
+  
+    
+  
+  Learn
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../connect/who/" class="md-tabs__link">
+          
+  
+    
+  
+  Connect
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../blog" class="md-tabs__link">
+        
+  
+    
+  
+  Musings
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="OARC Technology Sandbox" class="md-nav__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
+      
+  <img src="../../../logo.jpg" alt="logo">
+
+    </a>
+    OARC Technology Sandbox
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/IDREsandbox/sandbox" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../work/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Work
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Learn
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Connect
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Connect
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../connect/who/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Who we are
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../connect/consult/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Consult
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../connect/where/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Where is the Sandbox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Musings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#intro-to-gis-an-archaeological-perspective" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intro to GIS: An Archaeological Perspective
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-introduction-to-gis-and-esri" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 1: Introduction to GIS and ESRI
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 1: Introduction to GIS and ESRI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gettin-down-and-dirty-with-esri" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gettin' down and dirty with ESRI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hello-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hello Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connecting-a-folder-in-arccatalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connecting a folder in ArcCatalog
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-and-preview-the-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      View and Preview the data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-hello-egypt-setting-the-projection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 2: Hello Egypt: Setting the projection
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 2: Hello Egypt: Setting the projection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#launching-arcmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Launching ArcMap
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-the-projection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting the projection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3-adding-data-in-arcmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 3: Adding Data in ArcMap
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 3: Adding Data in ArcMap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-data-from-a-total-station" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding data from a Total Station
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-total-station-data-to-a-geodatabase" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Total Station Data to a geodatabase
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-4-spatial-adjustment-lets-fly-to-egypt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 4: Spatial Adjustment, Let's fly to Egypt!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 4: Spatial Adjustment, Let's fly to Egypt!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#editor-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editor: On!
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spatial-adjustment-toolbar-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spatial Adjustment Toolbar: On!
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recalculate-feature-boundaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recalculate feature boundaries
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#midterm-exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      Midterm Exercise
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-5-georeference-field-drawings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 5: Georeference field drawings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 5: Georeference field drawings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-georeferencing-toolbar" class="md-nav__link">
+    <span class="md-ellipsis">
+      The georeferencing toolbar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bring-in-the-sketch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bring in the sketch!
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control-point-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Control point #1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control-point-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Control point #2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control-point-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Control point #3
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      Final Exercise
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>Intro to GIS, An Archaeological Perspective</h1>
+
+<h2 id="intro-to-gis-an-archaeological-perspective">Intro to GIS: An Archaeological Perspective<a class="headerlink" href="#intro-to-gis-an-archaeological-perspective" title="Permanent link">&para;</a></h2>
+<p>[TBS_ALERT color="info" heading="Special Thanks"] The data used in this workshop has kindly been made available by the University of Jaén.</p>
+<p>Name of the project: <strong>Qubbet el-Hawa</strong><br />
+Institution: <strong>University of Jaén</strong><br />
+Website: <a href="http://www.ujaen.es/investiga/qubbetelhawa/index.php">http://www.ujaen.es/investiga/qubbetelhawa/index.php</a><br />
+Special thanks to <strong>Alejandro Jiménez Serrano</strong> (director of the archaeological project and professor at the University of Jaén), <strong>Luisa García González</strong> (field director and PhD candidate, University of Jaén), and <strong>Patricia Mora Riudavets</strong> (archeological photographer and PhD candidate, University of Alcalá de Henares).  </p>
+<p>[/TBS_ALERT]</p>
+<p><img alt="" src="images/sergio-in-aswan-e1550084765566-1024x665.jpg" /></p>
+<h2 id="part-1-introduction-to-gis-and-esri">Part 1: Introduction to GIS and ESRI<a class="headerlink" href="#part-1-introduction-to-gis-and-esri" title="Permanent link">&para;</a></h2>
+<h3 id="gettin-down-and-dirty-with-esri">Gettin' down and dirty with ESRI<a class="headerlink" href="#gettin-down-and-dirty-with-esri" title="Permanent link">&para;</a></h3>
+<p>The first step in this tutorial is to understand that we are covering the basics of desktop GIS analysis using ESRI's ArcGIS software suite. This is by no means an all encompassing "entirety of GIS" tutorial, but rather a view on how GIS can be used to build maps from ESRI's perspective, limited by the functionalities of the software being covered. There are many other tools you may want to consider to do your spatial analysis, including <a href="http://spatial.ly/r/">R</a>, Python, <a href="https://carto.com/">Carto</a>, <a href="https://www.mapbox.com/">Mapbox</a>, <a href="https://d3js.org/">D3</a>, and <a href="https://www.qgis.org/en/site/">qGIS</a>.</p>
+<p>The core function of the ESRI ArcGIS suite lies within two programs:</p>
+<ol>
+<li>ArcCatalog - for managing GIS datasets</li>
+<li>ArcMap - for mapping GIS datasets</li>
+<li>ArcScene - for 3D mapping</li>
+</ol>
+<p><img alt="arcgis icons" src="images/arcgis-icons-1-e1550260015966.png" /></p>
+<p>[TBS_ALERT color="info" heading="What about OpenSource alternatives?"]</p>
+<p><a href="http://www.qgis.org/en/site/">QGIS</a> is as an alternative to ArcGIS that is free and openly available to the public on all computing platforms. Despite the accessibility of QGIS, there is a steeper learning curve for those learning GIS for the first time. However, those seeking a free low-cost alternative to ArcGIS can apply the concepts learned in this workshop with that program.</p>
+<p>[/TBS_ALERT]</p>
+<h3 id="hello-data">Hello Data<a class="headerlink" href="#hello-data" title="Permanent link">&para;</a></h3>
+<p>A GIS dataset can be any of the following:</p>
+<ol>
+<li>a vector layer - points, lines or polygons</li>
+<li>a raster layer - a drawing (image), Satellite imagery, elevation data</li>
+<li>tabular data - excel spreadsheet, csv, etc.</li>
+<li>AutoCAD data - .dxf export from an Electronic Total Station</li>
+</ol>
+<p>Our workshop data contains multiple files and can be downloaded here:</p>
+<p><a href="https://sandbox.idre.ucla.edu/workshops/data/ArchaeologyWorkshop.zip">Workshop Data Download Link</a></p>
+<p>Create a project folder in your harddrive, and download and unzip ArchaeologyWorkshop.zip. You will learn how to inspect the geodatabase data in ArcCatalog, then use ArcMap to create some maps.</p>
+<p>Here is a look at our workshop data:</p>
+<p>ArchaeologyWorkshop<br />
+|--C7.dxf<br />
+|--C9.dxf<br />
+|--QH35P.dxf<br />
+|--QH36_C7.jpg<br />
+|--QH36_C9.jpg<br />
+|--aswan_google_satellite.jpg</p>
+<h3 id="connecting-a-folder-in-arccatalog">Connecting a folder in ArcCatalog<a class="headerlink" href="#connecting-a-folder-in-arccatalog" title="Permanent link">&para;</a></h3>
+<p>Open ArcCatalog, find the top menu bar, and click the second button to the left, which is the "Connect Folder" button.</p>
+<p><img alt="ArcCatalog3" src="images/ArcCatalog3.png" /></p>
+<p>Navigate to the <strong>Folder</strong> where you extracted the "workshopData2018.zip" file and then select "OK".</p>
+<p>[TBS_ALERT color="danger" heading="Do not try to connect a file!"]If you try to connect files, you will notice that the "OK" button is grayed out, connecting folders allows you only to choose folders.[/TBS_ALERT]</p>
+<h3 id="view-and-preview-the-data">View and Preview the data<a class="headerlink" href="#view-and-preview-the-data" title="Permanent link">&para;</a></h3>
+<p>After you've connected the folder, you can check <strong>Folder Connections</strong> and open the Folder which you've connected. Locate "ArchaeologyWorkshop " and expand its contents. Click on the <strong>aswan_google_satellite</strong> raster. It should look like this:</p>
+<p><img alt="arccatalog-workshop-data" src="images/arccatalog-workshop-data-e1550260415713.png" /></p>
+<h2 id="part-2-hello-egypt-setting-the-projection">Part 2: Hello Egypt: Setting the projection<a class="headerlink" href="#part-2-hello-egypt-setting-the-projection" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../images/Africa.png" /></p>
+<p>Source: https://www.xmswiki.com/wiki/UTM_Coordinate_System</p>
+<p>Geographic coordinate systems are typically measured in decimal degrees, and are useful when your data is global and/or comes with latitude and longitude coordinates. However, because of its angular units, it is not recommended for spatial analysis. Instead, one should consider using a projected coordinate system that is suited to the region of analysis.  Given that we are only working with <strong>Egypt</strong> based data, let's set our projection to the following UTM zone that is specifically optimized for our region of interest:</p>
+<ul>
+<li>WGS 1984 UTM Zone 36N</li>
+</ul>
+<p>[TBS_ALERT color="danger" heading="So what does UTM 36N look like?"] There are 60 longitudinal UTM Grid Zones of the World, numbered 1 to 60 starting at 180°W. Each of these zones is 6 degrees wide, apart from a few exceptions around Norway and Svalbard (<a href="http://www.dmap.co.uk/utmworld.htm">source</a>). So what does UTM 36N look like? As you can see from the map below, it prioritizes a small (6 degree) sliver of the Earth with Egypt positioned within it. The green circle represents the 0,0 center of the zone.</p>
+<p><img alt="" src="images/utm36n-791x1024.jpg" /></p>
+<p>[/TBS_ALERT]</p>
+<h3 id="launching-arcmap">Launching ArcMap<a class="headerlink" href="#launching-arcmap" title="Permanent link">&para;</a></h3>
+<p>The time has come to fire up ArcMap and take the first step to become a digital cartographer. If prompted with a <strong>Getting Started</strong> window, click <strong>Cancel</strong>.</p>
+<p>Take note of the layout:</p>
+<p><img alt="" src="images/arcmap-layout-e1550599569967.png" /></p>
+<ol>
+<li>Menu items and shortcut buttons</li>
+<li>Table of content options<ul>
+<li>List by source is on by default</li>
+<li>Switch to <strong>List by drawing order</strong> when reordering layers</li>
+</ul>
+</li>
+<li>Layers<ul>
+<li>This is where your data layers will show up</li>
+</ul>
+</li>
+<li>Map Canvas</li>
+<li>ArcCatalog tab</li>
+<li>Search tab</li>
+</ol>
+<h3 id="setting-the-projection">Setting the projection<a class="headerlink" href="#setting-the-projection" title="Permanent link">&para;</a></h3>
+<p>Let's set our projection with this in mind:</p>
+<ol>
+<li>Right click on "<strong>Layers</strong>" and go to "<strong>properties</strong>" (or just double click on "Layers")</li>
+<li>Select the "<strong>Coordinate Systems</strong>" tab</li>
+<li>Go to "<strong>Projected Coordinate Systems</strong>", "<strong>UTM</strong>", "<strong>WGS 1984</strong>", "<strong>Northern Hemisphere</strong>", and choose "<strong>WGS 1984 UTM Zone 36N</strong>"</li>
+<li>Click on the "Add to favorites" button to save this projection</li>
+</ol>
+<p><img alt="" src="images/set-projection-2-e1549478766774.png" /></p>
+<p>[TBS_ALERT color="danger" heading="It's on the fly!"]The software will warn you that you are projecting your datasets on the fly (note that it is not <em>reprojecting</em> the actual data, it is doing so only within the scope of this project space). If you want to perform spatial analysis, it is recommended that all layers in your project be reprojected to an appropriate coordinate system. More information on how to do this can be found <a href="https://support.esri.com/en/technical-article/000004886">here</a>.[/TBS_ALERT]</p>
+<h2 id="part-3-adding-data-in-arcmap">Part 3: Adding Data in ArcMap<a class="headerlink" href="#part-3-adding-data-in-arcmap" title="Permanent link">&para;</a></h2>
+<p>There are two ways to add data to your ArcMap project.</p>
+<ol>
+<li>Click on the <strong>Add Data</strong> button, or...</li>
+<li>Click on the <strong>Catalog tab</strong>, and drag your data into the canvas</li>
+</ol>
+<p><img alt="arcmap add data" src="images/arcmap-add-data-e1550600677548.png" /></p>
+<h3 id="adding-data-from-a-total-station">Adding data from a Total Station<a class="headerlink" href="#adding-data-from-a-total-station" title="Permanent link">&para;</a></h3>
+<p><img alt="sergio-with-total-station" src="images/sergio-with-total-station-1024x684.jpg" /></p>
+<p>Data from an archaeological fieldwork site is typically collected from an Electronic Total Station. In this workshop we will focus on data collected and extracted in the AutoCAD format having a .dxf file extension. When exploring dxf files in ArcCatalog, a single file expands to reveal the following subsections:</p>
+<p><img alt="" src="images/dxf-subsections-2-e1549481275318.png" /></p>
+<p>Dragging the dxf file, in this case, <strong>C7_1.dxf</strong>, into the ArcMap project window will draw the layer. Repeat this process for both <strong>C7</strong> and <strong>C9</strong>. Click <strong>OK</strong> if you get an <strong>Unknown Spatial Reference</strong> warning (more on this later).  </p>
+<p><img alt="" src="images/add-dxf-to-arcmap-e1549481535585-1024x688.png" /></p>
+<p>Expand the Group layers in the table of contents on the left. Each dxf subsection is displayed as a separate layer with a checkbox that can be turned on or off.</p>
+<p>[TBS_ALERT color="danger" heading=" It's only in memory!"]While ArcMap does a wonderful job to display the raw dxf data, this visual representation is only recorded in memory. In order to modify and work with this data, we must copy and transform the data to a GIS format. We will use a <em>geodatabase,</em> a format that is widely used and supported in ArcGIS projects.[/TBS_ALERT]</p>
+<h3 id="adding-total-station-data-to-a-geodatabase">Adding Total Station Data to a geodatabase<a class="headerlink" href="#adding-total-station-data-to-a-geodatabase" title="Permanent link">&para;</a></h3>
+<p>Create a <a href="http://desktop.arcgis.com/en/arcmap/latest/manage-data/geodatabases/what-is-a-geodatabase.htm"><strong>geodatabase</strong></a>. Essentially, a geodatabase is a container of spatial data, it will allow us to store multiple spatial layers used in our project into a single geodatabase.</p>
+<ol>
+<li>Click the <strong>Catalog</strong> Tab</li>
+<li>Right click on the parent folder where you want to create your geodatabase (in this case, it will be your <strong>ArchaeologyWorkshop</strong> folder)</li>
+<li>Go to <strong>New, File Geodatabase, New File Geodatabase</strong></li>
+<li>Rename the geodatabase to <strong>EgyptGIS.gdb</strong>.</li>
+</ol>
+<p><img alt="" src="images/create-geodatabase-e1549482694329.png" /></p>
+<p>Before moving on, make this geodatabase the DEFAULT geodatabase for our project. This is generally good practice, and will save us time in future steps.</p>
+<ol>
+<li>Go to <strong>File</strong>, <strong>Map Document Properties</strong></li>
+<li>At the bottom, change the <strong>Default Geodatabase</strong> to <strong>EgyptGIS.gdb</strong>.</li>
+<li>Also, change <strong>Pathnames</strong> to "<strong>relative</strong>" by clicking on the checkbox</li>
+</ol>
+<p><img alt="" src="images/change-default-database-e1549497062143.png" /></p>
+<p>Next, add the total station point data to the newly created geodatabase.</p>
+<ol>
+<li>Expand the <strong>C7</strong> and <strong>C9</strong> layers to reveal their contents in the table of contents</li>
+<li>Right click on <strong>C7.dxf Point, Data, Export Data.</strong>..</li>
+</ol>
+<p><img alt="" src="images/export-CAD-to-geodatabase-e1549495972898.png" /></p>
+<p>In the Export Data dialog box:</p>
+<ol>
+<li>Use the coordinate system as: <strong>the data frame &lt;- VERY IMPORTANT!</strong></li>
+<li>choose the <strong>EgyptGIS.gdb</strong> and name your data "<strong>C9</strong>"</li>
+</ol>
+<p><img alt="" src="images/export-data-1-e1549655575470.png" /></p>
+<p>Repeat for <strong>C9</strong>. Remove the original dxf files from your project.</p>
+<h2 id="part-4-spatial-adjustment-lets-fly-to-egypt">Part 4: Spatial Adjustment, Let's fly to Egypt!<a class="headerlink" href="#part-4-spatial-adjustment-lets-fly-to-egypt" title="Permanent link">&para;</a></h2>
+<p>Although we have set our projection to a UTM that is based in Egypt, the data from the Total Station are mapped relative to the total station. When we load the data in ArcMap onto a UTM 36N project, it positions our data relative to the 0,0 point of origin. We will now need to "snap" the data points to their correct locations.</p>
+<p><img alt="" src="images/spatial-adjustment-overview-e1549913242487.png" /></p>
+<h3 id="editor-on">Editor: On!<a class="headerlink" href="#editor-on" title="Permanent link">&para;</a></h3>
+<p>Turn on the "<strong>Editor</strong>." This is a necessary step in order to start to "edit" our data, as we are set to move our data points to a new location.</p>
+<p>Go to <strong>Customize</strong>, <strong>Toolbars</strong>, <strong>Editor</strong></p>
+<p><img alt="" src="images/editor-toolbar-e1549914333199.png" /></p>
+<p>In the editor toolbar, click on <strong>Editor, Start Editing</strong></p>
+<p><img alt="" src="images/start-editing-e1549914513218.png" /></p>
+<h3 id="spatial-adjustment-toolbar-on">Spatial Adjustment Toolbar: On!<a class="headerlink" href="#spatial-adjustment-toolbar-on" title="Permanent link">&para;</a></h3>
+<p>Enable the <strong>Spatial Adjustment</strong> toolbar. Go to <strong>Customize, Toolbars, Spatial Adjustment</strong></p>
+<p><img alt="" src="images/spatial-adjustment-toolbar-e1549914754556.png" /></p>
+<p>We are ready to spatially adjust our data. Choose the data to adjust.</p>
+<p><img alt="" src="images/set-adjust-data-e1549934952900.png" /></p>
+<p><img alt="" src="images/choose-data-to-adjust-e1549934818977.png" /></p>
+<p>Center the data points in your screen by right clicking on either <strong>C9</strong> or <strong>C7</strong>, and go to <strong>Zoom to layer.</strong> There are three reference points used in this project.</p>
+<p><img alt="" src="images/reference-points-e1549559923280.png" /></p>
+<p>In the Spatial Adjustment toolbar, click on the <strong>New Displacement Link t</strong>ool</p>
+<p><img alt="" src="images/New-Displacement-Link-Tool-e1549933268375.png" /></p>
+<p>Hover over point 1. It should now highlight the point with the label "<strong>C9 point</strong>"</p>
+<p><img alt="" src="images/hover-point-in-spatial-adjustment-e1549933646208.png" /></p>
+<p>Move the mouse off of the point. An arrow should show up. Click to position the point away from the original point. Do not worry about where it is positioned at the moment.</p>
+<p><img alt="" src="images/spatial-adjustment-arrow-e1549933869311.png" /></p>
+<p>Repeat the process for all three reference points.</p>
+<p><img alt="" src="images/repeat-3-points-spatial-adjustment-e1549933995247.png" /></p>
+<p>Open the link table.</p>
+<p><img alt="" src="images/Open-the-link-table-e1549934105585.png" /></p>
+<p>Add the following coordinates to the link table*</p>
+<table class="wp-block-table"><tbody><tr><td>Reference point</td><td>x</td><td>y</td></tr><tr><td>1</td><td>488828.660</td><td>2665694.686</td></tr><tr><td>2</td><td>488832.470</td><td>2665708.021</td></tr><tr><td>3</td><td>488823.844</td><td>2665703.100</td></tr></tbody></table>
+
+<p><img alt="" src="images/Link-Table-1-e1549934632660.png" /></p>
+<p>* <em>These numbers are estimates created for the sole purpose of this workshop, and are not reflective of the real numbers derived from the total station.</em> </p>
+<p>Finalize the adjustment:</p>
+<p><img alt="" src="images/adjust-e1549935231144.png" /></p>
+<p>Your data disappears from your screen. But don't panic! It just means that it has warped (or spatially adjusted) itself to its new location.</p>
+<p>Add the satellite image <strong>aswan_google_satellite.jpg</strong> to your map. Right click on it from the table of contents, and <strong>Zoom to Layer</strong>. Zoom in further to the extent of the data points.</p>
+<p><img alt="" src="images/aswan-with-data-points-e1549935751303.png" /></p>
+<h3 id="recalculate-feature-boundaries">Recalculate feature boundaries<a class="headerlink" href="#recalculate-feature-boundaries" title="Permanent link">&para;</a></h3>
+<p>When data is "adjusted" spatially, the boundaries are modified. ArcMap does not record the new extent automatically. Let's recalculate the boundaries for our C7 and C9 layers. This will allow us to easily navigate to each layer in our project</p>
+<ol>
+<li>Bring up the search window (<strong>Ctrl-F</strong>)</li>
+<li>Type "<strong>Recalculate extent</strong>" in the search box</li>
+<li>Click on "<strong>Recalculate Feature Class Extent</strong>"</li>
+<li>Select <strong>C9</strong> for the input features and click OK</li>
+<li>Right click on <strong>C9</strong> from the table of contents, and <strong>Zoom to Layer</strong></li>
+<li>Repeat for <strong>C7</strong></li>
+</ol>
+<h2 id="midterm-exercise">Midterm Exercise<a class="headerlink" href="#midterm-exercise" title="Permanent link">&para;</a></h2>
+<p>Practice makes perfect. In your workshop data folder, find the autocad file QH35P.dxf. Repeat the steps above to spatially adjust the data. Here are some helpful tips to get you going:</p>
+<ul>
+<li>Note that QH35P, like C7 and C9, also has the same three reference points to help you adjust your data</li>
+<li>Make sure to export and save the data into your geodatabase <em>before</em> you start spatial adjustment</li>
+<li>Also make sure to export the data using the coordinate system of the Data Frame (not the layer's source data)</li>
+</ul>
+<h2 id="part-5-georeference-field-drawings">Part 5: Georeference field drawings<a class="headerlink" href="#part-5-georeference-field-drawings" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="images/QH36_C9-1-1024x859.jpg" /></p>
+<p>The above drawing was authored by Sergio during his fieldwork in Aswan. It is drawn to scale, with great attention to detail. Each data point collected by the total station is marked clearly with a "+" sign, as indicated in the following zoomed in view:</p>
+<p><img alt="" src="images/sergio-and-his-xs-e1550012786314.png" /></p>
+<p>The challenge then lies in overlaying this sketch to match the data points collected by the total station, the results of which would greatly enhance the visual reproduction of our archaeological site.</p>
+<h3 id="the-georeferencing-toolbar">The georeferencing toolbar<a class="headerlink" href="#the-georeferencing-toolbar" title="Permanent link">&para;</a></h3>
+<p>Much like the spatial adjustment toolbar (which allowed us to "move" vector data), the georeferencing toolbar allows us to "move" raster data. Since our sketch is a scanned jpeg image, we will use the georeferencing toolbar to scale and rotate it to its correct spatial location.</p>
+<p>Go to <strong>Customize</strong>, <strong>Toolbars</strong>, <strong>Georeferencing</strong> to enable the georeferencing toolbar. Notice that most of the functions are grayed out for now.</p>
+<p><img alt="" src="images/georeferencing-toolbar-e1550014209651.png" /></p>
+<h3 id="bring-in-the-sketch">Bring in the sketch!<a class="headerlink" href="#bring-in-the-sketch" title="Permanent link">&para;</a></h3>
+<p>Add Sergio's beautiful field sketch, <strong>QH36_C9.jpg</strong> from the workshop data folder, into the ArcMap window.</p>
+<p>[TBS_ALERT color="info" heading="Where is my image?"]</p>
+<p>When the image is first added to ArcMap as a jpg (or other image formats like tiff's or png's), it has no spatial reference. In other words, it does not know where it is in the world. ArcMap automatically assigns the top left corner of the image to the 0,0 point of origin of the current map layout. Each pixel is given one meter in length, so an image that is 4000 pixels wide would stretch from (0,0) to (4000,0).</p>
+<p>[/TBS_ALERT]</p>
+<p>Now let's georeference this image. Right click on the <strong>C9</strong> layer of points from the table of contents, and <strong>Zoom to Layer.</strong></p>
+<ol>
+<li>In the Georeferencing toolbar, you should now see <strong>QH36_C9.jpg</strong> selected in the dropdown box.</li>
+<li>Click on the Georeferencing menu dropdown, and select <strong>Fit To Display</strong></li>
+</ol>
+<p><img alt="" src="images/fit-to-display-e1550016757153.png" /></p>
+<p>The drawing should now be "placed" on the map.</p>
+<p><img alt="" src="images/placed-image-for-georeferencing-e1550016929959.png" /></p>
+<p>The drawing is placed within the current window, making it easier to see it in reference to the total station reference points. Now we want to match the drawing to our points. There is no "correct" way to do this per se, but we will try to match three points from three corners of our drawing.</p>
+<h3 id="control-point-1">Control point #1<a class="headerlink" href="#control-point-1" title="Permanent link">&para;</a></h3>
+<p>Zoom in to the tip of the "finger" (bottom left). Our first control point will be the point circled below.</p>
+<p><img alt="" src="images/first-control-point-e1550079761469.png" /></p>
+<ol>
+<li>On the georeferencing toolbar, select the <strong>Add control point</strong> button</li>
+<li>Click on our first control point location</li>
+</ol>
+<p><img alt="" src="images/add-control-point-button-1-e1550080158894.png" /></p>
+<p>Zoom out (use the scroll wheel), and pan the map (hold down "c") to the location of the <strong>C9</strong> total station points. Find the matching dot and click to record the first control point.</p>
+<p><img alt="" src="images/first-control-point-match-e1550081606500.png" /></p>
+<h3 id="control-point-2">Control point #2<a class="headerlink" href="#control-point-2" title="Permanent link">&para;</a></h3>
+<p>Zoom back out and zoom into the bottom right corner of the sketch. Locate the following point, and mark it as a new control point.</p>
+<p><img alt="" src="images/second-control-point-e1550081761918.png" /></p>
+<p>Zoom back out and back in to the matching total station point, and click to record our second control point. Are you getting the hang of this now?</p>
+<p><img alt="" src="images/second-control-point-match-e1550082540719.png" /></p>
+<h3 id="control-point-3">Control point #3<a class="headerlink" href="#control-point-3" title="Permanent link">&para;</a></h3>
+<p>For our final control point, zoom out and in to the top left corner of our drawing, which has now been scaled and rotated based on our first 2 control points. It is almost, but not quite, perfectly situated, so let's make a final adjustment. Click on a crosshair from the drawing (1) and click on the total station dot next to it (2).</p>
+<p><img alt="" src="images/third-control-point-e1550082903975.png" /></p>
+<p>Zoom out to observe your work, and marvel at Sergio's immaculate field sketch precision.</p>
+<p><img alt="C9-georeferenced" src="images/C9-georeferenced-e1550083080599.png" /></p>
+<p>The final - and important - step is to save your georeferenced image. Go to the georeferencing toolbar and <strong>Update Georeferencing.</strong> This ensures that your work is saved.</p>
+<p><img alt="" src="images/update-georeferencing-e1550617249772.png" /></p>
+<h2 id="final-exercise">Final Exercise<a class="headerlink" href="#final-exercise" title="Permanent link">&para;</a></h2>
+<p>More practice makes more perfect! Find the image file QH36_C7.jpg in the workshop data folder, and repeat the steps to georeference the image to the C7 total station points.</p>
+<ul>
+<li>Don't forget to "fit to display" to make the process easier</li>
+<li>Choose at least three points from the sketch as reference points to georeference the image</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.tabs", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>

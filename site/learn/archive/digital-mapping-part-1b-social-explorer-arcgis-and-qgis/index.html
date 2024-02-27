@@ -1,0 +1,732 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>Digital Mapping - Part 1b: Social Explorer and ArcGIS - OARC Technology Sandbox</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/style.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#social-explorer" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="OARC Technology Sandbox" class="md-header__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
+      
+  <img src="../../../logo.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OARC Technology Sandbox
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Digital Mapping - Part 1b: Social Explorer and ArcGIS
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/IDREsandbox/sandbox" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../work/" class="md-tabs__link">
+        
+  
+    
+  
+  Work
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link">
+        
+  
+    
+  
+  Learn
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../connect/who/" class="md-tabs__link">
+          
+  
+    
+  
+  Connect
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../blog" class="md-tabs__link">
+        
+  
+    
+  
+  Musings
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="OARC Technology Sandbox" class="md-nav__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
+      
+  <img src="../../../logo.jpg" alt="logo">
+
+    </a>
+    OARC Technology Sandbox
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/IDREsandbox/sandbox" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../work/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Work
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Learn
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Connect
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Connect
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../connect/who/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Who we are
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../connect/consult/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Consult
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../connect/where/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Where is the Sandbox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Musings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#httpwwwsocialexplorercom" class="md-nav__link">
+    <span class="md-ellipsis">
+      http://www.socialexplorer.com
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#is-social-explorer-right-for-me" class="md-nav__link">
+    <span class="md-ellipsis">
+      Is Social Explorer right for me?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Is Social Explorer right for me?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#do-use-social-explorer-if-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do use Social Explorer if you…
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do-not-use-social-explorer-if-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do NOT use Social Explorer if you…
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#percentage-below-us-poverty-line-mapping-data-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Percentage below U.S. Poverty Line mapping: Data Layers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#making-visually-appealing-maps-symbology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Making Visually Appealing Maps: Symbology
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exporting-data-out-of-social-explorer-using-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exporting data out of Social Explorer: Using Reports
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fancy-use-of-social-explorer-comparing-swiping-and-stories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fancy use of Social Explorer: Comparing, swiping, and stories
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<p>This part of the first Desktop Mapping series will cover Social Explorer and ArcGIS as tools to process and generate digital maps.</p>
+<h1 id="social-explorer">Social Explorer:<a class="headerlink" href="#social-explorer" title="Permanent link">&para;</a></h1>
+<h3 id="httpwwwsocialexplorercom"><a href="http://www.socialexplorer.com">http://www.socialexplorer.com</a><a class="headerlink" href="#httpwwwsocialexplorercom" title="Permanent link">&para;</a></h3>
+<p>Social Explorer is an online GIS tool that allows you to interrogate data from the U.S. Census from the very first census to the most recent. While this portion of the workshop will assume some interest in using Social Explorer, like all other platforms, there are benefits and drawbacks for selecting this particular application.</p>
+<h3 id="is-social-explorer-right-for-me">Is Social Explorer right for me?<a class="headerlink" href="#is-social-explorer-right-for-me" title="Permanent link">&para;</a></h3>
+<h4 id="do-use-social-explorer-if-you">Do use Social Explorer if you…<a class="headerlink" href="#do-use-social-explorer-if-you" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Have access to the internet</li>
+<li>Plan to use only U.S. census data</li>
+<li>Focus on the “story” of a map rather than a fully customized map</li>
+<li>Would like to use graphs from other data sources</li>
+<li>Want to share online maps</li>
+</ul>
+<h4 id="do-not-use-social-explorer-if-you">Do NOT use Social Explorer if you…<a class="headerlink" href="#do-not-use-social-explorer-if-you" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Intend to use geographic data not a part of the U.S. census database</li>
+<li>
+<p>Want to show data beyond:</p>
+</li>
+<li>
+<p>State</p>
+</li>
+<li>County</li>
+<li>Census Tract</li>
+<li>
+<p>Census Block Group</p>
+</li>
+<li>
+<p>Want to customize your own data symbolization</p>
+</li>
+<li>Want your maps put into GoogleEarth, ArcGIS, or other desktop-based GIS solutions</li>
+</ul>
+<h4 id="percentage-below-us-poverty-line-mapping-data-layers">Percentage below U.S. Poverty Line mapping: Data Layers<a class="headerlink" href="#percentage-below-us-poverty-line-mapping-data-layers" title="Permanent link">&para;</a></h4>
+<p><a href="http://www.socialexplorer.com/69d085f68e/explore"><img alt="poverty2010_acs" src="images/poverty2010_acs.png" /></a></p>
+<p><a href="http://www.socialexplorer.com/12df69da74/view"><img alt="dotDensity" src="images/dotDensity-1024x260.png" /></a></p>
+<p><a href="http://www.socialexplorer.com/dfbb9c804e/explore"><img alt="graduatedCylinder" src="images/graduatedCylinder.png" /></a></p>
+<h4 id="making-visually-appealing-maps-symbology">Making Visually Appealing Maps: Symbology<a class="headerlink" href="#making-visually-appealing-maps-symbology" title="Permanent link">&para;</a></h4>
+<p><a href="http://www.socialexplorer.com/9db4837e78/view"><img alt="badColor_0_6groups" src="images/badColor_0_6groups.png" /></a></p>
+<p><a href="http://www.socialexplorer.com/8927fe8dbb/view"><img alt="BadColor_2" src="images/BadColor_2.png" /></a></p>
+<p><a href="http://www.socialexplorer.com/6ddecccb56/view"><img alt="bad_cutoffpoints" src="images/bad_cutoffpoints.png" /></a></p>
+<p><a href="http://www.socialexplorer.com/02152ded7f/view"><img alt="goodColor_f1" src="images/goodColor_f1.png" /></a></p>
+<h4 id="exporting-data-out-of-social-explorer-using-reports">Exporting data out of Social Explorer: Using Reports<a class="headerlink" href="#exporting-data-out-of-social-explorer-using-reports" title="Permanent link">&para;</a></h4>
+<p><a href="http://www.socialexplorer.com/tables/ACS2013_5yr/R10930921"><img alt="se_DataTable" src="images/se_DataTable.png" /></a></p>
+<h4 id="fancy-use-of-social-explorer-comparing-swiping-and-stories">Fancy use of Social Explorer: Comparing, swiping, and stories<a class="headerlink" href="#fancy-use-of-social-explorer-comparing-swiping-and-stories" title="Permanent link">&para;</a></h4>
+<p><a href="http://www.socialexplorer.com/d6d7183365/view"><img alt="comparisonMap" src="images/comparisonMap.png" /></a></p>
+<p><a href="http://www.socialexplorer.com/0a440cebff/view"><img alt="Poverty_Story_SocialExplorer" src="images/Poverty_Story_SocialExplorer.png" /></a></p>
+<h1 id="an-easy-way-to-gis-more-like-an-way-to-gis-arcgis">An EASY way to GIS? More like an <a href="http://www.esri.com/"><img alt="New-esri-logo" src="images/New-esri-logo.gif" /></a> way to GIS: ArcGIS<a class="headerlink" href="#an-easy-way-to-gis-more-like-an-way-to-gis-arcgis" title="Permanent link">&para;</a></h1>
+<p>The first step is to understand that we are covering the basics of desktop GIS analysis using ESRI's ArcGIS software suite. This is by no means an all encompassing "this is GIS" demo, but rather a view on how GIS is used to build maps from ESRI's perspective, limited by the functionalities of the software provided.</p>
+<p>Generally speaking, the ESRI ArcGIS suite consists of 3 parts:</p>
+<ol>
+<li>ArcCatalog</li>
+<li>ArcMap</li>
+<li>3D GIS (ArcGlobe/ArcScene)</li>
+</ol>
+<p><a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2014/09/icons.png"><img alt="icons" src="images/icons.png" /></a></p>
+<p>For the workshop, we will use only ArcCatalog and the ArcMap to demo the top 10 most used functions of GIS. Strap yourselves in and pay attention because there's bound to be some confusion when we are visiting the wondrous land of ESRI.</p>
+<p>[TBS_ALERT color="info" heading="A note about OpenSource Alternatives"]</p>
+<p><a href="http://www.qgis.org/en/site/">QGIS</a> is as an alternative to ArcGIS that is free and openly available to the public on all computing platforms. Despite the accessibility of QGIS, there is a steeper learning curve for those learning GIS for the first time. However, those seeking a free low-cost alternative to ArcGIS can apply the concepts learned in this workshop with that program.</p>
+<p>For those interested in seeing the comparison between QGIS and ArcGIS you can check out this external article here: <a href="http://www.xyht.com/spatial-itgis/qgis-v-arcgis/">http://www.xyht.com/spatial-itgis/qgis-v-arcgis/</a></p>
+<p>[/TBS_ALERT]</p>
+<p>1. Attribute data</p>
+<p><img alt="ArcGIS_data_Table" src="images/ArcGIS_data_Table.png" /></p>
+<p>2. Editing data</p>
+<p><img alt="ArcMap_editor_good" src="images/ArcMap_editor_good.png" /></p>
+<p>3. Joining data</p>
+<p><img alt="ArcGIS_joining" src="images/ArcGIS_joining.png" /></p>
+<p>4. Geocoding [<a href="http://sandbox.idre.ucla.edu/workshops/DigitalMappingWorkshop2015/AddressLocator.zip">Address Locator download</a> (2.1gb)]</p>
+<p><img alt="ArcGIS_geoCode" src="images/ArcGIS_geoCode.png" /></p>
+<p>5. Buffer Analysis</p>
+<p><img alt="ArcGIS_buffer" src="images/ArcGIS_buffer.png" /></p>
+<p>6. Clip</p>
+<p><img alt="ArcGIS_clip" src="images/ArcGIS_clip.png" /></p>
+<p>7. Merge data sets</p>
+<p><img alt="ArcGIS_merge" src="images/ArcGIS_merge.png" /></p>
+<p>8. Network Analysis - Service Areas [<a href="http://sandbox.idre.ucla.edu/workshops/DigitalMappingWorkshop2015/StreetData.zip">Network Dataset Download</a>] (2.38 gb)]</p>
+<p><img alt="ArcGIS_serviceMap" src="images/ArcGIS_serviceMap.png" /></p>
+<p>9. Network Analysis - Routing</p>
+<p><img alt="network_analysis_tut" src="images/network_analysis_tut-1024x216.png" /></p>
+<p>10. Spatial Statistics</p>
+<p>[iframe src="https://www.google.com/fusiontables/embedviz?q=select+col4+from+1fQpEM0xAbUC4NtQZim11lZgJqHofnei5Lz9m94w&amp;viz=MAP&amp;h=false&amp;lat=33.163621188510625&amp;lng=66.52446556249991&amp;t=1&amp;z=7&amp;l=col4&amp;y=1&amp;tmplt=1&amp;hml=TWO_COL_LAT_LNG" height="150"]</p>
+<p>[<a href="http://sandbox.idre.ucla.edu/workshops/DigitalMappingWorkshop2015/Part1.zip">Tutorial Data for 1 - 9</a>]</p>
+<p>[<a href="http://sandbox.idre.ucla.edu/?page_id=211" title="Workshop: How to map your data with Google Fusion Tables and ArcGIS">Spatial Statistics Tutorial (10) and Data</a>]</p>
+<p>[<a href="http://sandbox.idre.ucla.edu/workshops/DigitalMappingWorkshop2015/AddressLocator.zip">Address Locator</a>] (2.24 gb)</p>
+<p>[<a href="http://sandbox.idre.ucla.edu/workshops/DigitalMappingWorkshop2015/StreetData.zip">North America Street Network + Los Angeles Street Data</a>] (2.38gb)</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.tabs", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>
