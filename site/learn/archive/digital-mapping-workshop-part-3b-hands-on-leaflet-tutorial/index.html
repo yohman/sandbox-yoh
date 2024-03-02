@@ -1,0 +1,978 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>Digital Mapping Workshop - Part 3c: Hands-on Leaflet Tutorial - OARC Technology Sandbox</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/style.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lets-dive-into-making-our-very-first-web-map" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="OARC Technology Sandbox" class="md-header__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
+      
+  <img src="../../../logo.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OARC Technology Sandbox
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Digital Mapping Workshop - Part 3c: Hands-on Leaflet Tutorial
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/IDREsandbox/sandbox" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../work/" class="md-tabs__link">
+        
+  
+    
+  
+  Work
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link">
+        
+  
+    
+  
+  Learn
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../connect/who/" class="md-tabs__link">
+          
+  
+    
+  
+  Connect
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../blog" class="md-tabs__link">
+        
+  
+    
+  
+  Musings
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="OARC Technology Sandbox" class="md-nav__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
+      
+  <img src="../../../logo.jpg" alt="logo">
+
+    </a>
+    OARC Technology Sandbox
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/IDREsandbox/sandbox" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../work/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Work
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Learn
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Connect
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Connect
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../connect/who/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Who we are
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../connect/consult/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Consult
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../connect/where/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Where is the Sandbox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Musings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-setting-up-your-html-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      1) Setting up your HTML page:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-adding-javascript-libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      2) Adding Javascript Libraries:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-creating-your-leaflet-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      3) Creating your Leaflet Map:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-add-a-marker" class="md-nav__link">
+    <span class="md-ellipsis">
+      4) Add a marker:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-customizing-it-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      5) Customizing it up:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-adding-your-data-from-geojsonio" class="md-nav__link">
+    <span class="md-ellipsis">
+      6) Adding your data from GeoJSON.io:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="lets-dive-into-making-our-very-first-web-map">Let’s dive into making our very first web map!<a class="headerlink" href="#lets-dive-into-making-our-very-first-web-map" title="Permanent link">&para;</a></h1>
+<h2 id="1-setting-up-your-html-page">1) Setting up your HTML page:<a class="headerlink" href="#1-setting-up-your-html-page" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Open a text editor (we recommend <a href="http://www.sublimetext.com/2">Sublime Text 2</a>)</li>
+<li>
+<p>Start with a basic HTML page, as follows:</p>
+<p>&lt;!DOCTYPE html&gt;
+<html>
+<head>
+    <title>Digital Mapping Leaflet Example</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+</body>
+</html></p>
+</li>
+<li>
+<p>Add a section for the map, called "div":</p>
+<p><div id="map"></div></p>
+</li>
+<li>
+<p>Add some CSS to give spacing for the div and the overall body of the page:</p>
+<p><style type="text/css">
+    html {height: 100%}
+    body {height: 100%}
+    #map {height:100%;}
+</style></p>
+</li>
+</ol>
+<h2 id="2-adding-javascript-libraries">2) Adding Javascript Libraries:<a class="headerlink" href="#2-adding-javascript-libraries" title="Permanent link">&para;</a></h2>
+<p>Now that our page is setup, we can begin with adding content, instead of creating our own applications, we can add-on other functions to our website by including <strong>Javascript Libraries</strong>.</p>
+<ol>
+<li>
+<p>First we will bring in <a href="http://www.leafletjs.com/">Leaflet</a> which is our mapping library:</p>
+<p><!-- Leaflet -->
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" /></p>
+</li>
+<li>
+<p>Next is <a href="http://www.jquery.com/">jQuery</a> for making Javascript easier and less complicated:</p>
+<p><!-- jQuery -->
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script></p>
+</li>
+<li>
+<p><em>(Optional)</em> For prettier styles we can also include <a href="http://www.getbootstrap.com/">Bootstrap</a>:</p>
+<p><!-- bootstrap -->
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script></p>
+</li>
+</ol>
+<h2 id="3-creating-your-leaflet-map">3) Creating your Leaflet Map:<a class="headerlink" href="#3-creating-your-leaflet-map" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>So far, your HTML page should look like the following:</p>
+<p>&lt;!DOCTYPE html&gt;
+<html>
+<head>
+    <title>Leaflet Quick Start Guide Example</title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+    html {height: 100%}
+    body {height: 100%}
+    #map {height: 100%;}
+    </style>
+    <!-- Leaflet -->
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" /></p>
+<div class="codehilite"><pre><span></span><code><span class="cm">&lt;!-- jquery  --&gt;</span><span class="w">        </span>
+<span class="nt">&lt;script</span><span class="w"> </span><span class="na">src=</span><span class="s">&quot;http://code.jquery.com/jquery-1.11.0.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script</span><span class="w"> </span><span class="na">src=</span><span class="s">&quot;http://code.jquery.com/jquery-migrate-1.2.1.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+
+<span class="cm">&lt;!-- bootstrap --&gt;</span>
+<span class="nt">&lt;link</span><span class="w"> </span><span class="na">href=</span><span class="s">&quot;http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css&quot;</span><span class="w"> </span><span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;script</span><span class="w"> </span><span class="na">src=</span><span class="s">&quot;//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div>
+
+<p></head>
+<body>
+    <div id="map"></div>
+</body>
+</html></p>
+</li>
+<li>
+<p>We will add a function for the Leaflet map that loads with the page, like so <body onload="init()"></p>
+</li>
+<li>
+<p>Next, put this init function below the header:</p>
+<p><script type="text/javascript">
+    //make map a global variable
+    var map;</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">function</span><span class="w"> </span><span class="nt">init</span><span class="o">()</span><span class="p">{</span>
+<span class="w">    </span><span class="err">map</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">L.map(&#39;map&#39;).setView(\</span><span class="cp">[</span><span class="mf">34.06949867805522</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">118.44327126718139</span><span class="o">\</span><span class="cp">]</span><span class="err">,</span><span class="w"> </span><span class="err">17)</span><span class="p">;</span>
+
+<span class="w">    </span><span class="err">L.tileLayer(&#39;</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="err">{</span><span class="n">s</span><span class="p">}.</span><span class="nc">tiles</span><span class="p">.</span><span class="nc">mapbox</span><span class="p">.</span><span class="nc">com</span><span class="o">/</span><span class="nt">v3</span><span class="o">/</span><span class="p">{</span><span class="err">id</span><span class="p">}</span><span class="o">/</span><span class="p">{</span><span class="err">z</span><span class="p">}</span><span class="o">/</span><span class="p">{</span><span class="err">x</span><span class="p">}</span><span class="o">/</span><span class="p">{</span><span class="err">y</span><span class="p">}.</span><span class="nc">png</span><span class="s1">&#39;, {</span>
+<span class="s1">        maxZoom: 18,</span>
+<span class="s1">        id: &#39;</span><span class="nt">examples</span><span class="p">.</span><span class="nc">map-i875mjb7</span><span class="err">&#39;</span>
+<span class="w">    </span><span class="err">}</span><span class="o">)</span><span class="p">.</span><span class="nc">addTo</span><span class="o">(</span><span class="nt">map</span><span class="o">);</span>
+<span class="err">}</span>
+</code></pre></div>
+
+</script>
+</li>
+<li>
+<p>Save your HTML page and you will now see a Leaflet map centered around our location!</p>
+</li>
+</ol>
+<p><a href="http://sandbox.idre.ucla.edu/Workshops/DigitalMappingWorkshop2015/Leaflet_1_3v2.html">Example</a></p>
+<h2 id="4-add-a-marker">4) Add a marker:<a class="headerlink" href="#4-add-a-marker" title="Permanent link">&para;</a></h2>
+<p>You can create markers in Leaflet by using a basic L.marker([lat],[long]).addTo(map), but we can automate this process by creating a function, like follows:</p>
+<ol>
+<li>
+<p>We'll give a name to the function "createMarker" and 3 parameters; "latitude", "longitude", and "popupContent":</p>
+<p>function createMarker(latitude,longitude,popupContent){
+}</p>
+</li>
+<li>
+<p>Next let's use the parameters to create the markers in the function:</p>
+<p>function createMarker(latitude,longitude,popupContent){
+    L.marker([latitude,longitude]).addTo(map)
+        .bindPopup(popupContent);
+}</p>
+</li>
+<li>
+<p>Finally, we want to createMarkers when the page loads, so at the end of our init function we will add the following:</p>
+<p>createMarker(34.06961421319362, -118.44321762300109,"This was a marker made from our function!")</p>
+</li>
+<li>
+<p>Your code should look like the following:</p>
+<p>&lt;!DOCTYPE html&gt;
+<html>
+<head>
+    <title>Leaflet Quick Start Guide Example</title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+    html {height: 100%}
+    body {height: 100%}
+    #map {height: 100%;}
+    </style>
+    <!-- Leaflet -->
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" /></p>
+<div class="codehilite"><pre><span></span><code><span class="cm">&lt;!-- jquery  --&gt;</span><span class="w">        </span>
+<span class="nt">&lt;script</span><span class="w"> </span><span class="na">src=</span><span class="s">&quot;http://code.jquery.com/jquery-1.11.0.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script</span><span class="w"> </span><span class="na">src=</span><span class="s">&quot;http://code.jquery.com/jquery-migrate-1.2.1.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+
+<span class="cm">&lt;!-- bootstrap --&gt;</span>
+<span class="nt">&lt;link</span><span class="w"> </span><span class="na">href=</span><span class="s">&quot;http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css&quot;</span><span class="w"> </span><span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;script</span><span class="w"> </span><span class="na">src=</span><span class="s">&quot;//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+
+<span class="nt">&lt;script</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span>var<span class="w"> </span>map;
+
+<span class="w">    </span>function<span class="w"> </span>init(){
+<span class="w">        </span>map<span class="w"> </span>=<span class="w"> </span>L.map(&#39;map&#39;).setView(\[34.07381780761041,<span class="w"> </span>-118.44177995896911\],<span class="w"> </span>17);
+
+<span class="w">        </span>L.tileLayer(&#39;https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png&#39;,<span class="w"> </span>{
+<span class="w">            </span>maxZoom:<span class="w"> </span>18,
+<span class="w">            </span>id:<span class="w"> </span>&#39;examples.map-i875mjb7&#39;
+<span class="w">        </span>}).addTo(map);
+<span class="w">        </span>createMarker(34.06961421319362,<span class="w"> </span>-118.44321762300109,&quot;This<span class="w"> </span>was<span class="w"> </span>a<span class="w"> </span>marker<span class="w"> </span>made<span class="w"> </span>from<span class="w"> </span>our<span class="w"> </span>function!&quot;)
+<span class="w">    </span>}
+
+<span class="w">    </span>function<span class="w"> </span>createMarker(latitude,longitude,popupContent){
+<span class="w">        </span>L.marker(\[latitude,longitude\]).addTo(map)
+<span class="w">            </span>.bindPopup(popupContent);
+<span class="w">    </span>}
+
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div>
+
+<p></head>
+<body onload="init()">
+    <div id="map"></div>
+</body>
+</html></p>
+<p><a href="http://sandbox.idre.ucla.edu/Workshops/DigitalMappingWorkshop2015/Leaflet_1_4.html">Example</a></p>
+</li>
+</ol>
+<h2 id="5-customizing-it-up">5) Customizing it up:<a class="headerlink" href="#5-customizing-it-up" title="Permanent link">&para;</a></h2>
+<p>Say you'd like to change your base map, you can do so by simply replacing Lines 27 to 30 ("L.tileLayer...")on the previous sample code. But where would you find some sample base maps? <a href="http://leaflet-extras.github.io/leaflet-providers/preview/">Leaflet Providers</a> which gives you both code snippets and examples of what options are available.</p>
+<ol>
+<li>Go to Leaflet Providers</li>
+<li>Find a base map you would like to try on the right side panel (1): <a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2015/04/leafletProvider.png"><img alt="leafletProvider" src="images/leafletProvider-1024x672.png" /></a></li>
+<li>Copy the "Plain JavaScript" code snippet in the top middle of the page (2)</li>
+<li>Delete the current tileLayer and add the new one, while making sure to add it to the map with .addTo(map).</li>
+<li>
+<p>Your final code should look like the following:</p>
+<p>&lt;!DOCTYPE html&gt;
+<html>
+<head>
+    <title>Leaflet Quick Start Guide Example</title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+    html {height: 100%}
+    body {height: 100%}
+    #map {height: 100%;}
+    </style>
+    <!-- Leaflet -->
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" /></p>
+<div class="codehilite"><pre><span></span><code><span class="cm">&lt;!-- jquery  --&gt;</span><span class="w">        </span>
+<span class="nt">&lt;script</span><span class="w"> </span><span class="na">src=</span><span class="s">&quot;http://code.jquery.com/jquery-1.11.0.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script</span><span class="w"> </span><span class="na">src=</span><span class="s">&quot;http://code.jquery.com/jquery-migrate-1.2.1.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+
+<span class="cm">&lt;!-- bootstrap --&gt;</span>
+<span class="nt">&lt;link</span><span class="w"> </span><span class="na">href=</span><span class="s">&quot;http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css&quot;</span><span class="w"> </span><span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;script</span><span class="w"> </span><span class="na">src=</span><span class="s">&quot;//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+
+<span class="nt">&lt;script</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
+var<span class="w"> </span>map;
+function<span class="w"> </span>init(){
+<span class="w">    </span>map<span class="w"> </span>=<span class="w"> </span>L.map(&#39;map&#39;).setView(\[34.07381780761041,<span class="w"> </span>-118.44177995896911\],<span class="w"> </span>17);
+
+<span class="w">    </span>var<span class="w"> </span>Esri\_WorldImagery<span class="w"> </span>=<span class="w"> </span>L.tileLayer(&#39;http://server.arcgisonline.com/ArcGIS/rest/services/World\_Imagery/MapServer/tile/{z}/{y}/{x}&#39;,<span class="w"> </span>{
+<span class="w">        </span>attribution:<span class="w"> </span>&#39;Tiles<span class="w"> </span><span class="ni">&amp;copy;</span><span class="w"> </span>Esri<span class="w"> </span><span class="ni">&amp;mdash;</span><span class="w"> </span>Source:<span class="w"> </span>Esri,<span class="w"> </span>i-cubed,<span class="w"> </span>USDA,<span class="w"> </span>USGS,<span class="w"> </span>AEX,<span class="w"> </span>GeoEye,<span class="w"> </span>Getmapping,<span class="w"> </span>Aerogrid,<span class="w"> </span>IGN,<span class="w"> </span>IGP,<span class="w"> </span>UPR-EGP,<span class="w"> </span>and<span class="w"> </span>the<span class="w"> </span>GIS<span class="w"> </span>User<span class="w"> </span>Community&#39;
+<span class="w">    </span>}).addTo(map);
+
+<span class="w">    </span>createMarker(34.06961421319362,<span class="w"> </span>-118.44321762300109,&quot;This<span class="w"> </span>was<span class="w"> </span>a<span class="w"> </span>marker<span class="w"> </span>made<span class="w"> </span>from<span class="w"> </span>our<span class="w"> </span>function!&quot;)
+}
+
+function<span class="w"> </span>createMarker(latitude,longitude,popupContent){
+<span class="w">    </span>L.marker(\[latitude,longitude\]).addTo(map)
+<span class="w">        </span>.bindPopup(popupContent);
+<span class="w">    </span>}
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div>
+
+<p></head>
+<body onload="init()">
+    <div id="map"></div>
+</body>
+</html></p>
+</li>
+</ol>
+<p><a href="http://sandbox.idre.ucla.edu/Workshops/DigitalMappingWorkshop2015/Leaflet_1_5a.html">Example</a></p>
+<ol>
+<li>Notice that Lines 28 - 30 use ESRI's satellite base map now; and that's all there is to change your base map!</li>
+</ol>
+<h2 id="6-adding-your-data-from-geojsonio">6) Adding your data from GeoJSON.io:<a class="headerlink" href="#6-adding-your-data-from-geojsonio" title="Permanent link">&para;</a></h2>
+<p>GeoJSON.io allows us to author web content in various formats that can also be consumed by Leaflet (with the help of jQuery).</p>
+<ol>
+<li>Visit <a href="http://geojson.io/">GeoJSON.io</a> to author some points or load your data into it!</li>
+<li>Save as a GeoJSON file and move it to the same directory as your HTML webpage.</li>
+<li>
+<p>Create a function called "getData" that will load the geoJSON file:</p>
+<p>function getData()
+{
+    var url = 'map.geojson'
+    $.getJSON(url,function(data){
+        $.each(data.features,function(i,val){
+            if(val.geometry.type == "Point"){
+                lng = val.geometry.coordinates[0];
+                lat = val.geometry.coordinates[1];
+                popup = val.properties.name;
+                createMarker(lat,lng,popup);
+            }
+            else
+            {
+                L.geoJson(val,{onEachFeature: onEachFeature}).addTo(map)
+            }
+        });
+    })
+}</p>
+</li>
+<li>
+<p>Notice that "url = map.geojson" is the name as the file we just saved.</p>
+</li>
+<li>
+<p>Let's add an event listener for each click, by using Leaflet's onEachFeature function:</p>
+<p>function onEachFeature(feature, layer) {
+    // runs only if this feature a property named 'name'
+    if (feature.properties &amp;&amp; feature.properties.name) {
+        layer.bindPopup(feature.properties.name);
+    }
+}</p>
+</li>
+<li>
+<p>Add the getData(); function to the init function to make it load when the page runs, and congratulations, you have successfully connected a geojson file to Leaflet, as per the sample code below:</p>
+<p>&lt;!DOCTYPE html&gt;
+<html>
+<head>
+    <title>Leaflet Quick Start Guide Example</title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+    html {height: 100%}
+    body {height: 100%}
+    #map {height: 100%;}
+    </style>
+    <!-- Leaflet -->
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" /></p>
+<div class="codehilite"><pre><span></span><code><span class="cm">&lt;!-- jquery  --&gt;</span><span class="w">        </span>
+<span class="nt">&lt;script</span><span class="w"> </span><span class="na">src=</span><span class="s">&quot;http://code.jquery.com/jquery-1.11.0.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script</span><span class="w"> </span><span class="na">src=</span><span class="s">&quot;http://code.jquery.com/jquery-migrate-1.2.1.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+
+<span class="cm">&lt;!-- bootstrap --&gt;</span>
+<span class="nt">&lt;link</span><span class="w"> </span><span class="na">href=</span><span class="s">&quot;http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css&quot;</span><span class="w"> </span><span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;script</span><span class="w"> </span><span class="na">src=</span><span class="s">&quot;//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+
+<span class="nt">&lt;script</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
+var<span class="w"> </span>map;
+function<span class="w"> </span>init(){
+<span class="w">    </span>map<span class="w"> </span>=<span class="w"> </span>L.map(&#39;map&#39;).setView(\[34.07381780761041,<span class="w"> </span>-118.44177995896911\],<span class="w"> </span>17);
+
+<span class="w">    </span>var<span class="w"> </span>Esri\_WorldImagery<span class="w"> </span>=<span class="w"> </span>L.tileLayer(&#39;http://server.arcgisonline.com/ArcGIS/rest/services/World\_Imagery/MapServer/tile/{z}/{y}/{x}&#39;,<span class="w"> </span>{
+<span class="w">        </span>attribution:<span class="w"> </span>&#39;Tiles<span class="w"> </span><span class="ni">&amp;copy;</span><span class="w"> </span>Esri<span class="w"> </span><span class="ni">&amp;mdash;</span><span class="w"> </span>Source:<span class="w"> </span>Esri,<span class="w"> </span>i-cubed,<span class="w"> </span>USDA,<span class="w"> </span>USGS,<span class="w"> </span>AEX,<span class="w"> </span>GeoEye,<span class="w"> </span>Getmapping,<span class="w"> </span>Aerogrid,<span class="w"> </span>IGN,<span class="w"> </span>IGP,<span class="w"> </span>UPR-EGP,<span class="w"> </span>and<span class="w"> </span>the<span class="w"> </span>GIS<span class="w"> </span>User<span class="w"> </span>Community&#39;
+<span class="w">    </span>}).addTo(map);
+<span class="w">    </span>getData();
+}
+
+function<span class="w"> </span>createMarker(latitude,longitude,popupContent){
+<span class="w">    </span>L.marker(\[latitude,longitude\]).addTo(map)
+<span class="w">        </span>.bindPopup(popupContent);
+<span class="w">    </span>}
+
+function<span class="w"> </span>getData()
+{
+<span class="w">    </span>var<span class="w"> </span>url<span class="w"> </span>=<span class="w"> </span>&#39;map.geojson&#39;
+<span class="w">    </span>$.getJSON(url,function(data){
+<span class="w">        </span>$.each(data.features,function(i,val){
+<span class="w">            </span>if(val.geometry.type<span class="w"> </span>==<span class="w"> </span>&quot;Point&quot;){
+<span class="w">                </span>lng<span class="w"> </span>=<span class="w"> </span>val.geometry.coordinates\[0\];
+<span class="w">                </span>lat<span class="w"> </span>=<span class="w"> </span>val.geometry.coordinates\[1\];
+<span class="w">                </span>popup<span class="w"> </span>=<span class="w"> </span>val.properties.name;
+<span class="w">                </span>createMarker(lat,lng,popup);
+<span class="w">            </span>}
+<span class="w">            </span>else
+<span class="w">            </span>{
+<span class="w">                </span>L.geoJson(val,{onEachFeature:<span class="w"> </span>onEachFeature}).addTo(map)
+<span class="w">            </span>}
+<span class="w">        </span>});
+<span class="w">    </span>})
+}
+
+function<span class="w"> </span>onEachFeature(feature,<span class="w"> </span>layer)<span class="w"> </span>{
+<span class="w">    </span>//<span class="w"> </span>runs<span class="w"> </span>only<span class="w"> </span>if<span class="w"> </span>this<span class="w"> </span>feature<span class="w"> </span>a<span class="w"> </span>property<span class="w"> </span>named<span class="w"> </span>&#39;name&#39;
+<span class="w">    </span>if<span class="w"> </span>(feature.properties<span class="w"> </span><span class="err">&amp;&amp;</span><span class="w"> </span>feature.properties.name)<span class="w"> </span>{
+<span class="w">        </span>layer.bindPopup(feature.properties.name);
+<span class="w">    </span>}
+}
+
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div>
+
+<p></head>
+<body onload="init()">
+    <div id="map"></div>
+</body>
+</html></p>
+<p><a href="http://sandbox.idre.ucla.edu/Workshops/DigitalMappingWorkshop2015/Leaflet_1_6.html">Example</a></p>
+</li>
+</ol>
+<p>[iframe src="http://sandbox.idre.ucla.edu/Workshops/DigitalMappingWorkshop2015/Leaflet_1_6.html"]</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.tabs", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>

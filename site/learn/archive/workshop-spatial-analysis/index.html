@@ -1,0 +1,732 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>Workshop: Spatial Analysis - OARC Technology Sandbox</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/style.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#setting-up-your-project" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="OARC Technology Sandbox" class="md-header__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
+      
+  <img src="../../../logo.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OARC Technology Sandbox
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Workshop: Spatial Analysis
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/IDREsandbox/sandbox" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../work/" class="md-tabs__link">
+        
+  
+    
+  
+  Work
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link">
+        
+  
+    
+  
+  Learn
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../connect/who/" class="md-tabs__link">
+          
+  
+    
+  
+  Connect
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../blog" class="md-tabs__link">
+        
+  
+    
+  
+  Musings
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="OARC Technology Sandbox" class="md-nav__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
+      
+  <img src="../../../logo.jpg" alt="logo">
+
+    </a>
+    OARC Technology Sandbox
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/IDREsandbox/sandbox" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../work/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Work
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Learn
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Connect
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Connect
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../connect/who/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Who we are
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../connect/consult/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Consult
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../connect/where/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Where is the Sandbox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Musings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-your-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting up your project
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#load-your-layers-and-set-your-environment-for-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Load your layers and set your environment for analysis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#as-the-crow-flies-euclidean-distances-and-allocations" class="md-nav__link">
+    <span class="md-ellipsis">
+      As the crow flies... Euclidean Distances and Allocations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-the-cheapest-route-between-two-cities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finding the "cheapest" route between two cities
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>Workshop: Spatial Analysis</h1>
+
+<p>Network analysis, using vector based data layers, can be useful to determine precise routing directions on a given road network. Here, we will determine best routes between destinations using raster datasets that determine cost based on cumulatively calculated cell values. We will use ESRI's Spatial Analyst tools to perform least cost path analysis.</p>
+<p>To begin, download the workshop geodatabase here:</p>
+<ul>
+<li><a href="http://sandbox.idre.ucla.edu/workshops/sa_workshop2018.gdb.zip">Spatial Analyst Workshop Geodatabase</a></li>
+</ul>
+<h3 id="setting-up-your-project">Setting up your project<a class="headerlink" href="#setting-up-your-project" title="Permanent link">&para;</a></h3>
+<p>Through the process of this workshop, you will be creating many new data layers. It is always good practice to designate a path to the geodatabase that you will use to store the layers.</p>
+<ol>
+<li>Go to File, Map Document Properties...</li>
+<li>Change the default geodatabase by finding the path to the workshop geodatabase you just downloaded.</li>
+<li>Also click on the checkbox next to Store relative pathnames to data sources <img alt="" src="images/sa-map-document-properties-e1518639638350.png" /></li>
+</ol>
+<h3 id="load-your-layers-and-set-your-environment-for-analysis">Load your layers and set your environment for analysis<a class="headerlink" href="#load-your-layers-and-set-your-environment-for-analysis" title="Permanent link">&para;</a></h3>
+<ol>
+<li>From the workshop geodatabase, add the following layers to the map (you can drag and drop them from the ArcCatalog side panel on the right:<ol>
+<li>la</li>
+<li>ny</li>
+<li>us_rail</li>
+<li>us_roads</li>
+<li>us_state_capitals</li>
+<li>us_states</li>
+</ol>
+</li>
+<li>Go to Geoprocessing, Environment<ol>
+<li>Set the Processing Extent to us_states</li>
+<li>Set Raster Analysis, Cell Size to 10000 (meters)</li>
+<li>Set Mask to us_states <img alt="" src="images/sa-environment-settings-e1518641520884.png" /></li>
+</ol>
+</li>
+</ol>
+<p>[TBS_ALERT color="info" heading="What are my units?"]</p>
+<p>Are we using feet? Inches? Miles? Or are we more non-American and using meters and kilometers? Your cell sizes and measurements in spatial analysis are dictated by what you chose as the coordinate system for your project. The layers in this workshop's geodatabase have all been projected to USA Contiguous Albers Equal Area Conic USGS, which has a linear unit of Meters.</p>
+<p><img alt="" src="images/sa-current-coordinate-system-e1518716634789.png" /></p>
+<p>[/TBS_ALERT]</p>
+<h3 id="as-the-crow-flies-euclidean-distances-and-allocations">As the crow flies... Euclidean Distances and Allocations<a class="headerlink" href="#as-the-crow-flies-euclidean-distances-and-allocations" title="Permanent link">&para;</a></h3>
+<p>How clustered are our state capitals? Which areas of our country are not even remotely close to a state capital? We can visually depict distances from any location in the country to their closest state capital by creating raster layers with cell data with distance measure.</p>
+<ol>
+<li>Open the search box and enter <strong>euclidean distance</strong></li>
+<li>Click on the <strong>Euclidean Distance (Spatial Analyst)</strong> tool<ol>
+<li>For input raster, choose <strong>us_state_capitals</strong></li>
+<li>For output raster, choose your geodatabase, and name it <strong>us_state_capitals_euclidean</strong></li>
+<li>Maximum distance: <strong>500000</strong></li>
+<li>For output cell size, enter <strong>10000 <img alt="" src="images/sa-euclidean-distance-values-1-e1518809963917.png" /></strong> </li>
+</ol>
+</li>
+</ol>
+<p>[TBS_ALERT color="info" heading="What does the map tell us?"]<img alt="" src="images/sa-euclidean-map-e1518656157318.png" /></p>
+<p>Examine the map and explain what you are able to observe. What do the colors represent? What does that tell us about the spatial distribution of our state capitals? Which city is not within 500km of a state capital?</p>
+<p>[/TBS_ALERT]</p>
+<p>Now, what if we were to redraw our state boundaries? And what if we were asked to do so in away that every single location in the country was allocated to its closest state capital?</p>
+<ol>
+<li>Open the search panel, and enter <strong>euclidean allocation</strong></li>
+<li>Click on the <strong>Euclidean Allocation (Spatial Analyst)</strong> tool<ol>
+<li>For input raster, <strong>us_state_capitals</strong></li>
+<li>For source field, <strong>NAME</strong></li>
+<li>Name the output allocation raster <strong>us_state_capitals_allocation</strong></li>
+<li>For output cell size, enter <strong>10000</strong></li>
+</ol>
+</li>
+</ol>
+<p><img alt="" src="images/sa-euclidean-allocation-values-e1518657029747.png" /></p>
+<p>[TBS_ALERT color="info" heading="What does the map tell us?"]</p>
+<p><img alt="" src="images/sa-euclidean-allocation-e1518657094580.png" /></p>
+<p>Examine the map and explain what you are able to observe. What do the colors represent? What state would Los Angeles be in?</p>
+<p>[/TBS_ALERT]</p>
+<h3 id="finding-the-cheapest-route-between-two-cities">Finding the "cheapest" route between two cities<a class="headerlink" href="#finding-the-cheapest-route-between-two-cities" title="Permanent link">&para;</a></h3>
+<p>First, convert the layers that we will use for our cost analysis into rasters. For this workshop, we will convert our roads and railways.</p>
+<ol>
+<li>In the search box, enter <strong>Feature to Raster</strong> and click on the tool<ol>
+<li>Input features: <strong>us_roads</strong></li>
+<li>Field: <strong>NewClass</strong></li>
+<li>Output raster: <strong>us_roads_raster</strong></li>
+<li>Output cell size: <strong>10000</strong></li>
+</ol>
+</li>
+<li>Repeat the process but perform it with us_rail<ol>
+<li>Input features: <strong>us_rail</strong></li>
+<li>Field: <strong>Class</strong></li>
+<li>Output raster: <strong>us_rail_raster</strong></li>
+<li>Output cell size: <strong>10000</strong></li>
+</ol>
+</li>
+</ol>
+<p>In order to calculate the accumulated cost distance from LA, we need to create two rasters: one for distance, and one for direction. This will allow us to later calculate the least cost path from LA to any destination in the US.</p>
+<ol>
+<li>Search for cost distance and click on the tool<ol>
+<li>Input source: <strong>la</strong></li>
+<li>Input cost raster: <strong>us_roads_raster</strong></li>
+<li>Output distance raster: <strong>CostDistance_LA_roads</strong></li>
+<li>Output backlink raster: <strong>CostDirection_LA_roads</strong> <img alt="" src="images/sa-cost-distance-parameters-2-e1518810643870.png" /></li>
+</ol>
+</li>
+<li>Also create the cost distance rasters for the railways:<ol>
+<li>Input source: <strong>la</strong></li>
+<li>Input cost raster: <strong>us_rail_raster</strong></li>
+<li>Output distance raster: <strong>CostDistance_LA_rail</strong></li>
+<li>Output backlink raster: <strong>CostDirection_LA_rail</strong></li>
+</ol>
+</li>
+</ol>
+<p>Finally, we are ready to calculate the least cost path between Los Angeles and New York.</p>
+<ol>
+<li>Search for <strong>cost path</strong> and click on the tool<ol>
+<li>Input raster destination: <strong>ny</strong></li>
+<li>Destination field: <strong>OBJECTID</strong></li>
+<li>Input cost distance raster: <strong>CostDistance_LA_roads</strong></li>
+<li>Input cost backlink raster: <strong>CostDirection_LA_roads</strong></li>
+<li>Output raster: <strong>CostPath_LA_NY_roads</strong> <img alt="" src="images/sa-cost-path-la-ny-roads-e1518724367977.png" /></li>
+</ol>
+</li>
+<li>Repeat the steps for the railways<ol>
+<li>Input raster destination: <strong>ny</strong></li>
+<li>Destination field: <strong>OBJECTID</strong></li>
+<li>Input cost distance raster: <strong>CostDistance_LA_rail</strong></li>
+<li>Input cost backlink raster: <strong>CostDirection_LA_rail</strong></li>
+<li>Output raster: <strong>CostPath_LA_NY_rail</strong></li>
+</ol>
+</li>
+</ol>
+<p>[TBS_ALERT color="info" heading="What does the map tell us?"]</p>
+<p><img alt="" src="images/sa-cost-path-map-e1518724599880.png" /></p>
+<p>Which path has a higher cost? How many state capitals does each path travel through?</p>
+<p>[/TBS_ALERT]</p>
+<p>[TBS_ALERT color="alert" heading="Where can I find out more?"]</p>
+<p>Find out more about cost distance analysis <a href="http://desktop.arcgis.com/en/arcmap/10.5/tools/spatial-analyst-toolbox/how-the-cost-distance-tools-work.htm">here</a>.</p>
+<p>[/TBS_ALERT]</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.tabs", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>

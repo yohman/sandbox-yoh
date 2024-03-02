@@ -2,18 +2,38 @@ site_name: OARC Technology Sandbox
 repo_url: https://github.com/IDREsandbox/sandbox
 theme:
   name: material
-  features:
-    - navigation.tabs
-    - navigation.expand
-    - navigation.path
-    - search.suggest
-    - search.highlight
-    - toc.follow
+  logo: logo.jpg
+  use_directory_urls: true
+  scheme: slate
+  palette:
+    primary: "white"
+    accent: "amber"
 
-  icon:
-    logo: material/earth-box
-  favicon: material/earth-box
-  custom_dir: 'theme'
+  font:
+    text: "Roboto"
+    code: "Roboto Mono"
+  language: "en"
+  features:
+    - navigation.footer
+    - navigation.tabs
+    - navigation.indexes
+extra:
+  generator: false
+
+# Navigation
+nav:
+  - "Work": work/index.md
+  - Learn: learn/index.md
+    # - "Workshops": learn/resources.md
+    # - "Tutorials": learn/tutorials.md
+  - Connect:
+    - "Who we are": connect/who.md
+    - "Consult": connect/consult.md
+    - "Where is the Sandbox": connect/where.md
+  - "Musings": blog
+
+extra_css:
+  - css/style.css
 
 # Extensions
 markdown_extensions:
@@ -31,5 +51,7 @@ markdown_extensions:
 
 plugins:
   - search
-  - glightbox:
-      auto_caption: true
+  # - glightbox:
+  #     auto_caption: true
+  - blog:
+      blog_dir: musings

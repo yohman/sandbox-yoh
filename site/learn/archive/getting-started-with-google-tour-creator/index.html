@@ -1,0 +1,624 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>Getting Started with Google Tour Creator - OARC Technology Sandbox</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/style.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="OARC Technology Sandbox" class="md-header__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
+      
+  <img src="../../../logo.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OARC Technology Sandbox
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Getting Started with Google Tour Creator
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/IDREsandbox/sandbox" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../work/" class="md-tabs__link">
+        
+  
+    
+  
+  Work
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link">
+        
+  
+    
+  
+  Learn
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../connect/who/" class="md-tabs__link">
+          
+  
+    
+  
+  Connect
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../blog" class="md-tabs__link">
+        
+  
+    
+  
+  Musings
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="OARC Technology Sandbox" class="md-nav__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
+      
+  <img src="../../../logo.jpg" alt="logo">
+
+    </a>
+    OARC Technology Sandbox
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/IDREsandbox/sandbox" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../work/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Work
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Learn
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Connect
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Connect
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../connect/who/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Who we are
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../connect/consult/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Consult
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../connect/where/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Where is the Sandbox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Musings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>Getting Started with Google Tour Creator</h1>
+
+<p>For the tutorial, download this <a href="https://drive.google.com/drive/folders/1paPeJevFdqrJhOSfSrCqF1tqzFXOsOsz?usp=sharing">example set of 360° images</a>. They are 360° photos of outdoor spaces around UCLA campus and a few other images that will be used in the tutorial. The 360° photos were taken with a second generation <a href="https://www.samsung.com/global/galaxy/gear-360/">Samsung Gear 360</a>, which retail for a little less than <a href="https://www.amazon.com/Samsung-Gear-Camera-Version-Warranty/dp/B06XR9SGXL">$200</a>. The images were also lightly edited with Adobe Photoshop 2020 to remove the tripod from the bottom of each image.</p>
+<p>Go to the <a href="https://arvr.google.com/tourcreator/">Google Tour Creator</a> site.</p>
+<p><img alt="" src="images/Picture1-1.png" /></p>
+<p><em>Keep in mind the other XR creator tools that Google has to offer.</em> </p>
+<p><img alt="" src="images/Picture2.png" /></p>
+<ul>
+<li><a href="https://arvr.google.com/blocks/">Google Blocks</a></li>
+<li><a href="https://poly.google.com/">Google Poly</a></li>
+<li><a href="https://tiltbrush.com/">Tilt Brush</a></li>
+</ul>
+<p><img alt="" src="images/Picture3.png" /></p>
+<p>Sign in using your google account. <em>*Note that your educational google account (e.g.</em> <a href="mailto:username@g.ucla.edu">username@g.ucla.edu</a><em>) may not work if your school does not have an agreement with google that includes Tour Creator in their GSuite package. A personal gmail account will be able to access tour creator. However, requiring students to use a personal account may carry FERPA concerns in terms of student privacy, which they may need to waive.</em></p>
+<hr />
+<p>Once your logged in to Tour Creator, you can: </p>
+<ol>
+<li>Bring in a tour from a template</li>
+<li>Creator your own tour</li>
+<li>Edit a tour you've already started</li>
+</ol>
+<p><img alt="" src="images/Picture4.png" /></p>
+<p><img alt="" src="images/Picture5.png" /></p>
+<p>If you don't have access to a 360° camera, you can still use tour creator! The templates let you use content previously generated by others.</p>
+<p>Since we have a set of 360° images to use, select "+ New Tour" and assign your new project a title, description, category, and cover photo. </p>
+<p><img alt="" src="images/Picture6.png" /></p>
+<p>Selecting a category allows you to tag your project for search. If you publish your tour and make it public, others can use Google Poly to find your work.</p>
+<p><img alt="" src="images/Picture7.png" /></p>
+<p>Click "Create" when you're finished. You can come back and edit this information later, if you wish.</p>
+<p><img alt="" src="images/Picture8.png" /></p>
+<hr />
+<p>Next you will add your "scene." A "scene" is any 180 or 360 image. Once again, if you don't have your own camera or content, you can use "Street View" to search for a place to use. </p>
+<p><img alt="" src="images/Picture9.png" /></p>
+<p>Since we have our own 360 images to use, for now, we will select "Upload," pick one of the 360 files from our desktop, and click "Add Scene." </p>
+<p><img alt="" src="images/Picture10.png" /></p>
+<p><img alt="" src="images/Picture11.png" /></p>
+<p><img alt="" src="images/Picture12.png" /></p>
+<hr />
+<p>In the scene editor, you can label your image with basic metadata, set a starting view, add ambient audio and scene narration, and annotate it with "points of interest." Think of your scenes like slides. Use the menu on the bottom of your window to add additional scenes and navigate and rearrange your scenes once you've created several.</p>
+<p><img alt="" src="images/Picture13.png" /></p>
+<hr />
+<p>This time, you can add a scene from "Street View" by searching a location. For example, try "UCLA sculpture garden."</p>
+<p><img alt="" src="images/Picture14.png" /></p>
+<p>By adding points of interest, you can overlay the scene with clickable annotations. These can be text, audio, image, or a combination.</p>
+<p><img alt="" src="images/Picture15.png" /></p>
+<p><em>Note, however, that text annotations can only be 50 words.</em> </p>
+<p><img alt="" src="images/Picture16.png" /></p>
+<p>Finalize your tour's structure by moving your scenes left or right using the 3dot menu that appears when you hover over your scene navigation items.</p>
+<p><img alt="" src="images/Picture17.png" /></p>
+<p><img alt="" src="images/Picture18.png" /></p>
+<hr />
+<p>Your tour is automatically saved as you work. When you're finished you can use the top menu items to:</p>
+<ul>
+<li>Go back to your tour creator home page and start a new tour. Your current tour will then be saved as a draft and available to edit by reselecting it from the home page.</li>
+<li>Use the 3dot menu to edit your tours description info or delete your tour.</li>
+<li>Publish your tour to Google Poly</li>
+</ul>
+<p><img alt="" src="images/Picture19.png" /></p>
+<p>When publishing, you can choose to make your tour "Public" or "Unlisted." "Unlisted" provides you with a private link to your tour. Unless a person has that link, they will not be able to locate or see your tour on Google Poly. By making your tour "Public," anyone searching Google Poly can find your tour. Once you've made your selection, you can click "Publish." You can always go back in and edit your tour and re-publish it, if you want to make changes. </p>
+<p><img alt="" src="images/Picture20.png" /></p>
+<p>Once your tour is "Published," you will be provided a link to allow you to view your tour. Click "View tour" to immediately review your tour on your desktop. If you copy the link, using the icon on the right, you can send and use that link on a mobile device to view the tour in a headset.</p>
+<p><img alt="" src="images/Picture21.png" /></p>
+<p>When you open the link on your phone, you can swipe your finger across the screen to rotate your view. At the top, you can select the icon to the right to turn on or off the 360 degree view. This would make the experience mixed reality; as you moved your phone, the image would be viewed from a different angle. If you select the mask-like icon on the left, you will enter a stereo view. Once you're in a stereo view, you can place the tour in a headset and view it in a more immersive fashion.</p>
+<p><img alt="" src="images/Picture22.png" /></p>
+<p><img alt="" src="images/Picture23.png" /></p>
+<p><em><strong>*Note:</strong></em></p>
+<p><em>Not all mobile web browsers or cell phones may be compatible. Settings may need to be adjusted to allow these features to be enabled. Currently, this is only support on older IOS12 devices. Hopefully, Google will be updating Tour Creator Mobile VR modes for IOS13.</em></p>
+<hr />
+<p>Happy touring!</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.tabs", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>

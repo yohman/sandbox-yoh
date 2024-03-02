@@ -1,3 +1,0 @@
-## Contact Us
-
-## Find Us

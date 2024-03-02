@@ -1,0 +1,693 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>Spatializing Data with R - OARC Technology Sandbox</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/style.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#spatializing-data-with-r" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="OARC Technology Sandbox" class="md-header__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
+      
+  <img src="../../../logo.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OARC Technology Sandbox
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Spatializing Data with R
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/IDREsandbox/sandbox" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../work/" class="md-tabs__link">
+        
+  
+    
+  
+  Work
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link">
+        
+  
+    
+  
+  Learn
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../connect/who/" class="md-tabs__link">
+          
+  
+    
+  
+  Connect
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../blog" class="md-tabs__link">
+        
+  
+    
+  
+  Musings
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="OARC Technology Sandbox" class="md-nav__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
+      
+  <img src="../../../logo.jpg" alt="logo">
+
+    </a>
+    OARC Technology Sandbox
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/IDREsandbox/sandbox" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../work/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Work
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Learn
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Connect
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Connect
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../connect/who/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Who we are
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../connect/consult/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Consult
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../connect/where/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Where is the Sandbox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Musings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r-rstudio" class="md-nav__link">
+    <span class="md-ellipsis">
+      R + RStudio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-tmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing tmap
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="spatializing-data-with-r">Spatializing Data with R<a class="headerlink" href="#spatializing-data-with-r" title="Permanent link">&para;</a></h1>
+<p>While WYSIWYG software packages like <a href="https://www.esri.com/en-us/arcgis/about-arcgis/overview">ArcGIS</a> and <a href="https://www.qgis.org/">QGIS</a> remain a standard in cartographic representations, open source, scripting solutions have always had a strong cadre of support, especially for advanced spatial research initiatives. With a development history that harks back to the late 1990s, <a href="https://www.r-project.org/">R</a> has been championed as the free and open source programming tool for statisticians the world over. With its growth and foray into data viz, more and more researchers are adopting R as a solution for their spatial needs, due to its scripting capability, and strong statistical integration.</p>
+<p>Here, we introduce you to <a href="https://github.com/mtennekes/tmap">tmap</a> (thematic maps), an actively maintained open-source <a href="http://stackoverflow.com/tags/r/info">R</a>-library for drawing thematic maps, written by <a href="http://stackoverflow.com/users/1393348/martijn-tennekes">Martijn Tennekes</a>. </p>
+<h3 id="data">Data<a class="headerlink" href="#data" title="Permanent link">&para;</a></h3>
+<p>This workshop presumes that you have a basic knowledge on spatial research, and follows up on the <a href="https://sandbox.idre.ucla.edu/sandbox/getting-started-with-spatial-research">Getting Started Spatial Research workshop</a>. Data can be obtained from the <a href="https://data.lacity.org/">LA Data Portal</a> following <a href="https://ucladataguides.readthedocs.io/en/latest/working_with_data/data_portal.html">this tutorial</a>.</p>
+<p>You can also use any of the data here:</p>
+<p>Sample datasets:</p>
+<ul>
+<li><a href="http://sandbox.idre.ucla.edu/data/Arrest_Data_2019_09.csv">Los Angeles Arrests in September 2019</a></li>
+<li><a href="https://sandbox.idre.ucla.edu/data/gis%20workshop/STOLEN%20BIKE%202019.csv">Stolen Bikes in Los Angeles 2019</a> (<a href="https://data.lacity.org/A-Safe-City/Crime-Data-from-2010-to-Present/63jg-8b9z">source</a>)</li>
+<li><a href="https://sandbox.idre.ucla.edu/data/gis%20workshop/CHILD%20ABUSE%202019.csv">Child Abuse 2019</a> (<a href="https://data.lacity.org/A-Safe-City/Crime-Data-from-2010-to-Present/63jg-8b9z">source</a>)</li>
+</ul>
+<h3 id="r-rstudio">R + RStudio<a class="headerlink" href="#r-rstudio" title="Permanent link">&para;</a></h3>
+<p><a href="https://www.r-project.org/">R</a> is a programming language that is especially powerful for data exploration, visualization, and statistical analysis. To interact with R, we use <a href="https://www.rstudio.com/">RStudio</a>. Follow these instructions to ensure that you have the proper environment to get started with your R-based research.</p>
+<p><strong>MacOS setup</strong></p>
+<p><a href="https://www.youtube.com/watch?v=5-ly3kyxwEg">Video Tutorial</a></p>
+<p>Install R by downloading and running <a href="https://cran.r-project.org/bin/macosx/R-latest.pkg">this .pkg file</a> from <a href="https://cran.r-project.org/index.html">CRAN</a>. Also, please install the <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio IDE</a>.</p>
+<p><strong>Windows setup</strong></p>
+<p><a href="https://www.youtube.com/watch?v=q0PjTAylwoU">Video Tutorial</a></p>
+<p>Install R by downloading and running <a href="https://cran.r-project.org/bin/windows/base/release.htm">this .exe file</a> from <a href="https://cran.r-project.org/index.html">CRAN</a>. Also, please install the <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio IDE</a>. Note that if you have separate user and admin accounts, you should run the installers as administrator (right-click on .exe file and select "Run as administrator" instead of double-clicking). Otherwise problems may occur later, for example when installing R packages.</p>
+<h3 id="installing-tmap">Installing tmap<a class="headerlink" href="#installing-tmap" title="Permanent link">&para;</a></h3>
+<p>Launch RStudio to get started. Use the console to follow the commands throughout this workshop. Start with the installation of the "tmap" package. Note that this may take up to <strong>5 minutes</strong> to install (yes, there are lots of dependencies here):</p>
+<div class="highlight"><pre><span></span><code>install.packages(&quot;tmap&quot;)
+</code></pre></div>
+<p>Now that the tmap package is installed, add the following libraries to your current session. Note that "sf" is the library that stands for "<a href="https://r-spatial.github.io/sf/">Simple Features</a>" which allows data to be spatialized for R.</p>
+<div class="highlight"><pre><span></span><code>library(tmap)
+library(sf)
+</code></pre></div>
+<p>Load the data. Data can be obtained from the <a href="https://data.lacity.org/">LA Data Portal</a> following <a href="https://ucladataguides.readthedocs.io/en/latest/working_with_data/data_portal.html">this tutorial</a>, or you can download sample datasets from the links provided in the Data section above. Once downloaded, rename the data file to "arrests.csv," and take note of its path in your computer. Enter the following command to assign a variable "arrests" to your data and change the path accordingly.</p>
+<p>MacOS example:</p>
+<div class="highlight"><pre><span></span><code>arrests &lt;- read.csv(&quot;~/Downloads/gis/arrests.csv&quot;)
+</code></pre></div>
+<p>Windows example (use double back slashes):</p>
+<div class="highlight"><pre><span></span><code>arrests &lt;- read.csv(&quot;C:\\Users\\yohman\\Downloads\\arrests.csv&quot;)
+</code></pre></div>
+<p>Check your environment tab to see your data, and make sure the "lat" and "lon" columns exist:</p>
+<p><img alt="rstudio-arrests-data" src="images/rstudio-arrests-data-1024x298.png" /></p>
+<p>Convert "arrests" into a "simple feature" – a spatial geometry format that is tmap readable – by identifying the longitude and latitude columns, and create a new variable "arrests_sf." Also, set the projection (crs) to <a href="https://epsg.io/4326">4326</a>, which stands for WGS84, a geographic coordinate system that reads decimal degrees globally:</p>
+<div class="highlight"><pre><span></span><code>arrests_sf &lt;- st_as_sf(arrests, coords = c(&quot;Lon&quot;, &quot;Lat&quot;), crs = 4326)
+</code></pre></div>
+<p>Visualize the tabular data and take notice on the new "geometry" column:</p>
+<div class="highlight"><pre><span></span><code>view(arrests_sf)
+</code></pre></div>
+<p><img alt="view-arrests_sf" src="images/view-arrests_sf.png" /></p>
+<p>Now starts the tmap magic. With just one command "qtm" which stands for "<a href="https://www.rdocumentation.org/packages/tmap/versions/2.3-1/topics/qtm">quick thematic map plot</a>," you can instantly output a map of your data</p>
+<div class="highlight"><pre><span></span><code>qtm(arrests_sf)
+</code></pre></div>
+<p><img alt="simple dot map" src="images/image-e1579211829540.png" /></p>
+<p>Let's change the map into an interactive leaflet map.</p>
+<div class="highlight"><pre><span></span><code>tmap_mode(&quot;view&quot;)
+qtm(arrests_sf)
+</code></pre></div>
+<p><img alt="leaflet" src="images/leaflet.png" /></p>
+<p>Change it back to the original view:</p>
+<div class="highlight"><pre><span></span><code>tmap_mode(&quot;plot&quot;)
+</code></pre></div>
+<p>To give our data spatial bearing, let's bring in a layer for Los Angeles Council Districts. You can download it in SHP (shapefile) format from the <a href="http://boundaries.latimes.com/sets/">LA Times data portal.</a> Save the file and create a variable for the data.</p>
+<p><img alt="council-districts-from-LA-Times" src="images/council-districts-from-LA-Times.png" /></p>
+<div class="highlight"><pre><span></span><code>la_council_districts &lt;- read_sf(&quot;C:\\Users\\yohman\\Downloads\\l.a. city council district (2012).shp&quot;)
+</code></pre></div>
+<p>Visualize the council districts.</p>
+<div class="highlight"><pre><span></span><code>qtm(la_council_districts, borders = &#39;gray&#39;,fill=NULL)
+</code></pre></div>
+<p>Visualize arrests and districts together.</p>
+<div class="highlight"><pre><span></span><code>qtm(arrests_sf)+
+    qtm(la_council_districts, borders = &#39;gray&#39;,fill=NULL)
+</code></pre></div>
+<p><img alt="arrests-with-council-districts" src="images/arrests-with-council-districts.png" /></p>
+<p>Color dots by charge description.</p>
+<div class="highlight"><pre><span></span><code>qtm(arrests_sf, dots.col = &quot;Charge.Group.Description&quot;,dots.size = 0.1)+
+    qtm(la_council_districts, borders = &#39;darkgray&#39;,fill=NULL)
+</code></pre></div>
+<p><img alt="map-by-charge-type" src="images/map-by-charge-type.png" /></p>
+<p>One map per charge description.</p>
+<div class="highlight"><pre><span></span><code>qtm(arrests_sf, dots.col = &quot;Charge.Group.Description&quot;,dots.size = 0.1,by = &quot;Charge.Group.Description&quot;)+
+    qtm(la_council_districts, borders = &#39;darkgray&#39;,fill=NULL)
+</code></pre></div>
+<p><img alt="maps-by-charge-type" src="images/maps-by-charge-type.png" /></p>
+<h3 id="sources">Sources<a class="headerlink" href="#sources" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://github.com/mtennekes/tmap">tmap github</a></li>
+<li><a href="https://cran.r-project.org/web/packages/tmap/vignettes/tmap-getstarted.html">tmap: get started!</a></li>
+<li>Tennekes, Martijn. "<a href="https://www.jstatsoft.org/article/view/v084i06">tmap: Thematic Maps in R.</a>" <em>Journal of Statistical Software</em> [Online], 84.6 (2018): 1 - 39. Web. 17 Jan. 2020</li>
+<li><a href="http://zevross.com/blog/2018/10/02/creating-beautiful-demographic-maps-in-r-with-the-tidycensus-and-tmap-packages/">Creating beautiful demographic maps in R with the tidycensus and tmap packages</a></li>
+<li><a href="https://cran.r-project.org/web/packages/tmap/tmap.pdf">tmap official documentation (pdf)</a></li>
+<li><a href="https://geocompr.robinlovelace.net/adv-map.html">Geocomputation with R</a></li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.tabs", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,709 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>Advanced Practical Python #3: File Data Visualization - OARC Technology Sandbox</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/style.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#part-2-time-to-chart-our-data" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="OARC Technology Sandbox" class="md-header__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
+      
+  <img src="../../../logo.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OARC Technology Sandbox
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Advanced Practical Python #3: File Data Visualization
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/IDREsandbox/sandbox" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../work/" class="md-tabs__link">
+        
+  
+    
+  
+  Work
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link">
+        
+  
+    
+  
+  Learn
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../connect/who/" class="md-tabs__link">
+          
+  
+    
+  
+  Connect
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../blog" class="md-tabs__link">
+        
+  
+    
+  
+  Musings
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="OARC Technology Sandbox" class="md-nav__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
+      
+  <img src="../../../logo.jpg" alt="logo">
+
+    </a>
+    OARC Technology Sandbox
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/IDREsandbox/sandbox" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../work/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Work
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Learn
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Connect
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Connect
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../connect/who/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Who we are
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../connect/consult/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Consult
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../connect/where/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Where is the Sandbox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Musings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-time-to-chart-our-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 2 Time to Chart Our Data!
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3-customizing-your-graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 3. Customizing your graphs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#make-sure-the-y-limits-start-at-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      make sure the y limits start at 0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="make sure the y limits start at 0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-part" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra Part
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<p>Ahoy Python Workshop'eneers! Time to head to uncharted waters with our data and attempt to graph it!</p>
+<p>We will start by installing Seaborn through our command line/terminal:</p>
+<p>pip install seaborn</p>
+<p>pip install git+https://github.com/mwaskom/seaborn.git</p>
+<p>Doing so will install all the requirments and Seaborn, notably "pandas" and "numpy." Python's Pandas is actually not pronounced like the cuddly herbivorous bear:</p>
+<p><img alt="Image result for panda and python" src="https://i1.wp.com/klopmp.com/wp-content/uploads/panda.jpg?resize=1024%2C683" />But instead:</p>
+<p><img alt="Image result for pan" src="http://media.4rgos.it/i/Argos/8615002_R_Z001A_UC910382?$Web$&amp;$DefaultPDP570$" />+<img alt="DAS logo" src="https://www.insuranceage.co.uk/sites/insuranceage/files/styles/landscape_750_463/public/import/IMG/309/60309/das-logo-580x358.jpg?itok=v0KF7gyZ" title="DAS logo" /></p>
+<p>And it stands for "panel data" and has a wide range of other uses. We will also install "matplotlib" which is the math plotting library for Python:</p>
+<p>pip install matplotlib</p>
+<p>We could forgo Seaborn and use those three packages on their own (matplotlib, pandas, and numpy) but Seaborn provides us with prettier graphs and a more streamlined way to interact with our data.</p>
+<p>With the installations out of the way, we will now start scripting!</p>
+<p>Let's start by bringing in Pandas for handling the data. For these imports we will be using an alias, so that we can type "pd" instead of typing in "pandas" each time we want to use pandas.</p>
+<p># use pandas for data frame
+import pandas as pd</p>
+<p>Now we'll bring in matplotlib to customize our graphs:</p>
+<p>from matplotlib import pyplot as plt</p>
+<p>Our last import will be the Seaborn module:</p>
+<p>import seaborn as sns</p>
+<p>Now let's bring in our data set:</p>
+<p>df = pd.read_csv('filelist.csv')</p>
+<p>Here we named a variable called dataframe and used read_csv to open the "filelist.csv" csv file from our previous session.</p>
+<p>Let's look at our data using the head() command:</p>
+<p>result = df.head()
+print "{}".format()</p>
+<p>What this does is pull the first 5 records of our dataset to see how it looks.</p>
+<p>Using Pandas we can also do neat stuff like look at descriptive statistics of the data:</p>
+<p>result = df.describe()
+print "{}".format(result)</p>
+<h2 id="part-2-time-to-chart-our-data">Part 2 Time to Chart Our Data!<a class="headerlink" href="#part-2-time-to-chart-our-data" title="Permanent link">&para;</a></h2>
+<p>Now that we have a good grasp of how our data looks, we are going to create a neat little chart representing it.</p>
+<p>We will first sort the data to go from largest to smallest by setting ascending to "False" on the field called "Number":</p>
+<p>result = df.sort_values(by='Number',ascending=False)</p>
+<p>Now we will finally use Seaborn to graph the data:</p>
+<p>sns.barplot(x='File Types', y='Number', data=result)</p>
+<p>The syntax is pretty straightforward, where sns is Seaborn, barplot and chart type.</p>
+<p>x = is the X-Axis, y= is the Y-Axis, and data=result selects the data.</p>
+<p>We are able to alter the charts by adding various methods to it.</p>
+<p>Since you might have a lot of file types, we can choose the top 10 results by adding an index location of 10:</p>
+<p>sns.barplot(x='File Types', y='Number', data=result).iloc[:10]</p>
+<p>If you run your code now... nothing will happen (unless you are using a Jupyter notebook)</p>
+<p>What we need to add is:</p>
+<p>plt.show()</p>
+<p>And there you arrrrrre! Your chart should appear:</p>
+<h2 id="_1"><a href="https://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2018/04/Figure_1-e1522895257244.png"><img alt="" src="images/Figure_1-e1522895257244.png" /></a><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>If you got lost along the way, here is how your code should look:</p>
+<p>import pandas as pd
+from matplotlib import pyplot as plt
+import seaborn as sns</p>
+<p>df = pd.read_csv('filelist.csv')</p>
+<p>result = df.sort_values(by='Number',ascending=False)</p>
+<p>sns.barplot(x='File Types', y='Number', data=result.iloc[:10],palette=colors)</p>
+<p>plt.show()</p>
+<h2 id="part-3-customizing-your-graphs">Part 3. Customizing your graphs<a class="headerlink" href="#part-3-customizing-your-graphs" title="Permanent link">&para;</a></h2>
+<p>You should add a title to your graph by adding the following line before plt.show():</p>
+<p>plt.title("File Frequencies")</p>
+<p>You can style your graphs too using Seaborn's themes:</p>
+<p>sns.set_style('whitegrid')</p>
+<p>There are a total of 5 to choose from: <code>darkgrid</code>, <code>whitegrid</code>, <code>dark</code>, <code>white</code>, and <code>ticks</code>. But wait you want more?</p>
+<p>You can also set your own colors, and then use the palette option:</p>
+<p>colors = ['#78C850',
+            '#F8D030', 
+            '#E0C068']</p>
+<p>sns.barplot(x='File Types', y='Number', data=result.iloc[:10],palette=colors)</p>
+<p>Finally, you can customize the x-axis and y-axis labels using .set(xlabel='some x axis', ylabel='some y axis') :</p>
+<p>sns.barplot(x='File Types', y='Number', data=result.iloc[:10],palette=colors).set(
+    xlabel='File Extension', ylabel='Frequency')</p>
+<p>There's a lot more you can do with Seaborn in addition to creating regression lines and histograms.</p>
+<p>You can learn more about the types of Seaborn charts available by looking at the gallery below:</p>
+<p><a href="http://seaborn.pydata.org/examples/index.html"><img alt="" src="images/2018-04-04-19_seaborn_docmentation-e1522894628620-1024x449.png" /></a>Just a warning that the documentation on their website can be difficult to navigate!</p>
+<p>Here is the final code:</p>
+<p>import pandas as pd
+from matplotlib import pyplot as plt
+import seaborn as sns</p>
+<p>df = pd.read_csv('filelist.csv')</p>
+<p>sns.set_style('whitegrid')</p>
+<p>result = df.sort_values(by='Number',ascending=False)
+print "{}".format(result)</p>
+<p>colors = ['#78C850',
+            '#F8D030', 
+            '#E0C068']</p>
+<p>sns.barplot(x='File Types', y='Number', data=result.iloc[:10],palette=colors).set(
+    xlabel='File Extension', ylabel='Frequency')</p>
+<h1 id="make-sure-the-y-limits-start-at-0">make sure the y limits start at 0<a class="headerlink" href="#make-sure-the-y-limits-start-at-0" title="Permanent link">&para;</a></h1>
+<p>plt.ylim(0, None)
+plt.title("File Frequencies")</p>
+<p>plt.show()</p>
+<p>Onto the final tutorial: semantic analysis with Python!</p>
+<h2 id="extra-part">Extra Part<a class="headerlink" href="#extra-part" title="Permanent link">&para;</a></h2>
+<p>Time permitting, sail on over to the Los Angeles Open Data Portal and try to make some charts with the Los Angeles Police Department Crime Data:</p>
+<p><a href="https://data.lacity.org/A-Safe-City/Crime-Data-from-2010-to-Present/y8tr-7khq">https://data.lacity.org/A-Safe-City/Crime-Data-from-2010-to-Present/y8tr-7khq</a></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.tabs", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>
