@@ -74,9 +74,9 @@
 		}
 
 		.handscan {
-			position: absolute;
-			right: -80px;
-			top: 50%;
+			position: relative;
+			left: 200px;
+			top: -200px;
 			width: 40px;
 			height: 100px;
 			background-color: black;
@@ -99,7 +99,8 @@
 		function handleScanClick() {
 			var code = prompt("Enter your 4 digit code");
 			if (code == "4328") {
-				window.location.href = 'work';
+				// pass an argument that they went through the door
+				window.location.href = 'work?gamified=1';
 			} else {
 				alert("Wrong passcode");
 			}
@@ -111,14 +112,17 @@
 		<div>Technology Sandbox</div>
 		<div class="room">Room 4328</div>
 	</div>
-	<div class="door">
-		<div class="title">Sandbox</div>
-		<div class="handscan" onclick="handleScanClick()">
-			<span class="dial">1 2 3 4 5 6 7 8 9 * 0 #</span>
-			<br>
+	
 
-			🤚🏻
-		</div>
+
+	<div class="door" onclick="window.location.href='work'">
+		<div class="title">Sandbox</div>
+	</div>
+	<div class="handscan" onclick="handleScanClick()">
+		<span class="dial">1 2 3 4 5 6 7 8 9 * 0 #</span>
+		<br>
+
+		🤚🏻
 	</div>
 </body>
 </html>
