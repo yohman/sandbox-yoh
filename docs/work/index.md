@@ -4,6 +4,15 @@ hide:
   - toc
 ---
 
+<script>
+// get url params and check if door is one of them
+var urlParams = new URLSearchParams(window.location.search);
+if(urlParams.has('gamified')) {
+	alert("You have chosen the gamified version!");
+}
+
+</script>
+
 <div class="gallery">
 	<div class="gallery-item">
 		<a href="https://idre.ucla.edu/vsimvs">
