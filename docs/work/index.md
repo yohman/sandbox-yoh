@@ -14,28 +14,69 @@ if(urlParams.has('gamified')) {
 </script>
 
 <div class="gallery">
-	<div class="gallery-item">
-		<a href="https://idre.ucla.edu/vsimvs">
-			<img src="images/vsim.jpg" alt="vsim">
-			<div class="caption">VSim | Real-time exploration of highly detailed, three-dimensional computer models.</div>
-		</a>
-	</div>
-	<div class="gallery-item">
-		<a href="https://oarc.ucla.edu/about/our-team/francesca-albrezziF">
-			<img src="images/roman.jpg" alt="Francesca">
-			<div class="caption">Digital Roman Forum | A digital model of the Roman Forum as it appeared in late antiquity.</div>
-		</a>
-	</div>
-	<div class="gallery-item">
-		<a href="https://my.matterport.com/show/?m=WNKBj4tkkVe">
-			<img src="images/fowler.jpg" alt="Virtual Exhibition Tours">
-			<div class="caption">Virtual Exhibition Tours | Myrlande Constant: The Work of Radiance</div>
-		</a>
-	</div>
-	<div class="gallery-item">
-		<a href="https://fowler.ucla.edu/art-africa-african-diaspora/">
-			<img src="images/africa.jpg" alt="Art of Africa and the African Diaspora">
-			<div class="caption"> | Art of Africa and the African Diaspora</div>
-		</a>
-	</div>
+	
 </div> 
+
+
+<script>
+
+
+function init(){
+	counter = 0;
+	sectionData.forEach(function(row) {
+		let galleryItem = document.createElement('div');
+		galleryItem.className = 'gallery-item';
+
+		let link = document.createElement('a');
+		link.href = 'projects/?id='+counter; // Assuming the second column in the sheet is the URL
+		counter++;
+
+		let img = document.createElement('img');
+		img.src = '../'+section+'/images/'+row[4]; // Assuming the first column in the sheet is the image name
+		img.alt = row[1]; // Assuming the third column in the sheet is the alt text
+
+		let caption = document.createElement('div');
+		caption.className = 'caption';
+		caption.innerHTML = row[0]+'<br>'+row[1]; 
+		
+		img.style.filter = "grayscale(100%)";
+		img.onmouseover = function() {
+			img.style.filter = "grayscale(0%)";
+		}
+		img.onmouseout = function() {
+			img.style.filter = "grayscale(100%)";
+		}
+		caption.onmouseover = function() {
+			img.style.filter = "grayscale(0%)";
+		}
+		caption.onmouseout = function() {
+			img.style.filter = "grayscale(100%)";
+		}
+
+		link.appendChild(img);
+		link.appendChild(caption);
+		galleryItem.appendChild(link);
+
+		document.querySelector('.gallery').appendChild(galleryItem);
+		let tags = row[6]; // Assuming the ninth column in the sheet contains the tags
+		if (tags) {
+			let tagList = tags.split(','); // Split the tags by comma
+			let tagContainer = document.createElement('div');
+			tagContainer.className = 'tag-container';
+
+			tagList.forEach(function(tag) {
+				let tagItem = document.createElement('div');
+				tagItem.className = 'tag';
+				tagItem.textContent = tag.trim();
+
+				tagContainer.appendChild(tagItem);
+			});
+
+			// galleryItem.appendChild(tagContainer);
+			document.querySelector('.gallery').appendChild(tagContainer);
+		}
+
+	});
+}
+
+</script>

@@ -218,6 +218,7 @@ small {
 }
 
 .tag {
+    line-height: 1.2;
     background-color: red;
     padding: 5px;
     font-size: 0.6rem;
@@ -227,4 +228,22 @@ small {
     color:#fff;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
     text-align: center;
+}
+
+#title {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: "Arial Black", sans-serif;
+    color: rgb(0, 0, 0) !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 0 0 -0.5rem !important;
+
+}
+#secondary-title {
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: "Arial", sans-serif;
+    color: rgb(87, 87, 87) !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 0 0 -2rem !important;
 }

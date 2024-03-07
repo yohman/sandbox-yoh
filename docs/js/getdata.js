@@ -1,8 +1,14 @@
+// get current url to find out what page we are on
+const fullUrl = window.location.href;
+console.log(fullUrl);
+// get the section name from the url, which is the first part of the url after the domain
+const section = fullUrl.split('/')[3];
+console.log('section: ',section);
 
-const sheetname = 'workshops'
+const sheetname = section
 const apiUrl = 'https://sheets.googleapis.com/v4/spreadsheets/1bQDVVO-R3tt99eR7ageBYu5XK8lnnlxHZLzJghYSLa0/values/'+sheetname+'?key=AIzaSyAUi4KazffmDZV_dQUnMUKA1jJt4i0mqlU';
 
-let workshops = null;
+let sectionData = null;
 
 // Use the fetch function to make a GET request
 fetch(apiUrl)
@@ -16,10 +22,10 @@ fetch(apiUrl)
 })
 .then(data => {
     // Handle the JSON data here
-    workshops = data.values
+    sectionData = data.values
     // get rid of first row
-    workshops.shift()
-    console.log(workshops)
+    sectionData.shift()
+    console.log(sectionData)
     init()
 
 })
