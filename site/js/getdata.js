@@ -1,8 +1,27 @@
 // get current url to find out what page we are on
 const fullUrl = window.location.href;
 console.log(fullUrl);
-// get the section name from the url, which is the first part of the url after the domain
-const section = fullUrl.split('/')[3];
+
+// get the section name from the url, which is the last part
+// of the url after the last slash if there is text or the second to last part if there is no text after the last slash
+
+// split the url into an array of strings
+// get the last part of the array
+// if the last part is empty, get the second to last part
+// if the last part is not empty, get the last part
+// set the section variable to the last part
+const urlArray = fullUrl.split('/');
+const lastPart = urlArray[urlArray.length - 1];
+const secondToLastPart = urlArray[urlArray.length - 2];
+const section = lastPart ? lastPart : secondToLastPart;
+
+
+
+
+
+// const section = fullUrl.split('/')[3];
+
+
 console.log('section: ',section);
 
 const sheetname = section
