@@ -1,4 +1,5 @@
 <h1 id="title"></h1>
+<span id="secondary-title"></span>
 <div id="workshop-container"></div>
 
 
@@ -13,25 +14,30 @@ function init(){
 	var params = getUrlParams();
 	
 	// Check if "val" parameter exists and set it as a variable
-	var workshopid = params["workshopid"];
+	var id = params["id"];
 	
-	// add workshopid to the input
-	if (workshopid == undefined) {
-		workshopid = "No value found";
+	// add id to the input
+	if (id == undefined) {
+		id = "No value found";
+
 	}
 	else
 	{		
-		createWorkshop(workshopid);	
+		createWorkshop(id);	
 	}
 }
 	
-function createWorkshop(workshopid) {
+function createWorkshop(id) {
 	// find the workshop in the workshops array
-	let workshop = sectionData[workshopid];
+	let workshop = data.learn.values[id];
 	// add the title
 	// get the h1 element title
 	let title = document.getElementById('title');
-	title.textContent = workshop[0];
+	title.innerHTML = workshop[0];
+
+	// add secondary title
+	let secondaryTitle = document.getElementById('secondary-title');
+	secondaryTitle.innerHTML = workshop[1];
 
 	// create a div for the workshop
 	let workshopDiv = document.createElement('div');
@@ -42,9 +48,16 @@ function createWorkshop(workshopid) {
 	video.innerHTML = workshop[6];
 	workshopDiv.appendChild(video);
 
+	// add the link to the youtube video
+	let link = document.createElement('a');
+	link.href = workshop[5];
+	link.innerHTML = "Watch on YouTube";
+	workshopDiv.appendChild(link);
+	
+
 	// add the description
 	let description = document.createElement('p');
-	description.textContent = workshop[3];
+	description.innerHTML = workshop[3];
 	workshopDiv.appendChild(description);
 
 	// add the tags
@@ -54,7 +67,7 @@ function createWorkshop(workshopid) {
 	tags.forEach(function(tag) {
 		let tagDiv = document.createElement('div');
 		tagDiv.className = 'tag';
-		tagDiv.textContent = tag.trim();
+		tagDiv.innerHTML = tag.trim();
 		tagContainer.appendChild(tagDiv);
 	});
 	workshopDiv.appendChild(tagContainer);

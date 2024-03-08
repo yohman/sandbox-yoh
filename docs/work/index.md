@@ -4,6 +4,8 @@ hide:
   - toc
 ---
 
+<div class="gallery"></div> 
+
 <script>
 // get url params and check if door is one of them
 var urlParams = new URLSearchParams(window.location.search);
@@ -11,19 +13,12 @@ if(urlParams.has('gamified')) {
 	alert("You have chosen the gamified version!");
 }
 
-</script>
-
-<div class="gallery">
-	
-</div> 
-
-
-<script>
-
+let section = 'work'
 
 function init(){
+
 	counter = 0;
-	sectionData.forEach(function(row) {
+	data.work.values.forEach(function(row) {
 		let galleryItem = document.createElement('div');
 		galleryItem.className = 'gallery-item';
 

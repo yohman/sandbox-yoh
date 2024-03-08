@@ -14,12 +14,12 @@ hide:
 
 function init(){
 	counter = 0;
-	sectionData.forEach(function(row) {
+	data.learn.values.forEach(function(row) {
 		let galleryItem = document.createElement('div');
 		galleryItem.className = 'gallery-item';
 
 		let link = document.createElement('a');
-		link.href = 'workshop/?workshopid='+counter; // Assuming the second column in the sheet is the URL
+		link.href = 'workshop/?id='+counter; // Assuming the second column in the sheet is the URL
 		counter++;
 
 		let img = document.createElement('img');
