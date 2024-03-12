@@ -51,7 +51,16 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -571,18 +580,18 @@
 <p>The open data movement has made more and more data available for academics to download and use for their research. But how can we map this data? This workshop will take you through the process of acquiring data from the <a href="https://data.lacity.org/">Los Angeles Open Data portal</a> and visualizing it on ArcGIS for further analysis.</p>
 <h3 id="the-los-angeles-open-data-portal">The Los Angeles Open Data Portal<a class="headerlink" href="#the-los-angeles-open-data-portal" title="Permanent link">&para;</a></h3>
 <p><a href="https://data.lacity.org/">https://data.lacity.org/</a></p>
-<p><img alt="" src="images/open-data-search-1-e1524853436494.png" /></p>
+<p><a class="glightbox" href="images/open-data-search-1-e1524853436494.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/open-data-search-1-e1524853436494.png" /></a></p>
 <p>Inspect the data</p>
-<p><img alt="" src="images/open-data-crime-data-e1524853710964.png" /></p>
+<p><a class="glightbox" href="images/open-data-crime-data-e1524853710964.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/open-data-crime-data-e1524853710964.png" /></a></p>
 <p>Almost 2 million records! Let's filter it down to something more manageable.</p>
-<p><img alt="" src="images/open-data-vizualize-e1524861110176.png" /></p>
+<p><a class="glightbox" href="images/open-data-vizualize-e1524861110176.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/open-data-vizualize-e1524861110176.png" /></a></p>
 <p>Now add the filter:</p>
-<p><img alt="" src="images/open-data-filter-e1524861049921.png" /></p>
+<p><a class="glightbox" href="images/open-data-filter-e1524861049921.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/open-data-filter-e1524861049921.png" /></a></p>
 <p>Export the data</p>
-<p><img alt="" src="images/open-data-export-csv-e1524861203772.png" /></p>
+<p><a class="glightbox" href="images/open-data-export-csv-e1524861203772.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/open-data-export-csv-e1524861203772.png" /></a></p>
 <h3 id="cleaning-up-those-coordinates">Cleaning up those coordinates<a class="headerlink" href="#cleaning-up-those-coordinates" title="Permanent link">&para;</a></h3>
 <p>Open the downloaded data in Excel. Scroll to the right until you see the Location column.</p>
-<p><img alt="" src="images/open-data-location-column-e1524865676923.png" /></p>
+<p><a class="glightbox" href="images/open-data-location-column-e1524865676923.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/open-data-location-column-e1524865676923.png" /></a></p>
 <p>Hmm, that's strange, the latitude and longitude columns are in the same column! ArcGIS does not like this. Let's clean this up.</p>
 <p>First, find and replace the brackets.</p>
 <ol>
@@ -591,17 +600,17 @@
 <li>For "Find what", enter an open bracket "("</li>
 <li>Click Replace All</li>
 </ol>
-<p><img alt="" src="images/open-data-replace-brackets-e1524869310445.png" /></p>
+<p><a class="glightbox" href="images/open-data-replace-brackets-e1524869310445.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/open-data-replace-brackets-e1524869310445.png" /></a></p>
 <p>Repeat for the closing bracket.</p>
 <p>Split the column into two:</p>
-<p><img alt="" src="images/open-data-text-to-columns-e1524869544554.png" /></p>
+<p><a class="glightbox" href="images/open-data-text-to-columns-e1524869544554.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/open-data-text-to-columns-e1524869544554.png" /></a></p>
 <p>Choose, delimited, check the "Comma" box, and finish.</p>
-<p><img alt="" src="images/open-data-text-to-columns2-e1524869659658.png" /></p>
+<p><a class="glightbox" href="images/open-data-text-to-columns2-e1524869659658.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/open-data-text-to-columns2-e1524869659658.png" /></a></p>
 <p>Rename the column headers to Latitude and Longitude</p>
-<p><img alt="" src="images/open-data-lat-lon-e1524869765545.png" /></p>
+<p><a class="glightbox" href="images/open-data-lat-lon-e1524869765545.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/open-data-lat-lon-e1524869765545.png" /></a></p>
 <h3 id="lets-map-it">Let's map it!<a class="headerlink" href="#lets-map-it" title="Permanent link">&para;</a></h3>
 <p>Add the csv file to a new ArcMap project. Right click, Display XY Data...</p>
-<p><img alt="" src="images/open-data-display-xy-e1524870101534.png" /></p>
+<p><a class="glightbox" href="images/open-data-display-xy-e1524870101534.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/open-data-display-xy-e1524870101534.png" /></a></p>
 <ol>
 <li>Set X to Longitude</li>
 <li>Set Y to Latitude</li>
@@ -609,28 +618,28 @@
 <li>Enter "WGS 1984" in the search box</li>
 <li>Choose WGS 1984</li>
 </ol>
-<p><img alt="" src="images/open-data-set-coordinate-system-e1524870277327.png" /></p>
+<p><a class="glightbox" href="images/open-data-set-coordinate-system-e1524870277327.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/open-data-set-coordinate-system-e1524870277327.png" /></a></p>
 <p>Now save your new layer as a shapefile, or geodatabase:</p>
-<p><img alt="" src="images/open-data-export-data-e1525276046743.png" /></p>
-<p><img alt="" src="images/open-data-export-into-geodatabase-e1525276199611.png" /></p>
+<p><a class="glightbox" href="images/open-data-export-data-e1525276046743.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/open-data-export-data-e1525276046743.png" /></a></p>
+<p><a class="glightbox" href="images/open-data-export-into-geodatabase-e1525276199611.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/open-data-export-into-geodatabase-e1525276199611.png" /></a></p>
 <h3 id="project-the-data">Project the data<a class="headerlink" href="#project-the-data" title="Permanent link">&para;</a></h3>
 <p>Our data is currently in a geographic coordinate system (WGS1984). Let's change this to a projected coordinate system (UTM Zone 11N).</p>
 <p>Click on the search tool</p>
-<p><img alt="" src="images/search-tool-e1525277972537.png" /></p>
+<p><a class="glightbox" href="images/search-tool-e1525277972537.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/search-tool-e1525277972537.png" /></a></p>
 <p>Type "project" and click on <strong>Project (Data Management)</strong></p>
-<p><img alt="" src="images/project-to-utm-e1525278207598.png" /></p>
+<p><a class="glightbox" href="images/project-to-utm-e1525278207598.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/project-to-utm-e1525278207598.png" /></a></p>
 <p>Now, set the projection of the data frame. Right click on <strong>Layers</strong>, and go to <strong>properties</strong>. Then, set the coordinate system to <strong>NAD 1983 UTM Zone 11N</strong></p>
-<p><img alt="" src="images/open-data-set-utm-zone-1-e1525277078543.png" /></p>
+<p><a class="glightbox" href="images/open-data-set-utm-zone-1-e1525277078543.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/open-data-set-utm-zone-1-e1525277078543.png" /></a></p>
 <h3 id="hot-spots">Hot spots?<a class="headerlink" href="#hot-spots" title="Permanent link">&para;</a></h3>
 <p>Let's find crime hot spots by race. Select incidents where the person arrested was classified as Hispanic (H). In the menu bar, go to <strong>Selection</strong>, <strong>Select by attribute.</strong> Enter the following SQL statement:</p>
 <p>Victim_Decent = 'H'</p>
-<p><img alt="" src="images/crime-by-race-1-e1525280021439.png" /></p>
+<p><a class="glightbox" href="images/crime-by-race-1-e1525280021439.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/crime-by-race-1-e1525280021439.png" /></a></p>
 <p>Now perform a kernel density to visualize the density of Hispanic arrests in Los Angeles. In the search box, enter "kernel" and click on the Kernel Density (Spatial Analyst) tool. Enter the four boxes as shown below:</p>
-<p><img alt="" src="images/hispanic-kernel-e1525280163943.png" /></p>
+<p><a class="glightbox" href="images/hispanic-kernel-e1525280163943.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/hispanic-kernel-e1525280163943.png" /></a></p>
 <p>Add a basemap, and change the symbology to make the visual more powerful:</p>
-<p><img alt="" src="images/kernel-crime-map-e1525280341147.png" /></p>
+<p><a class="glightbox" href="images/kernel-crime-map-e1525280341147.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/kernel-crime-map-e1525280341147.png" /></a></p>
 <p>Repeat the process for other race categories:</p>
-<table><tbody><tr><td>Black <img class="alignnone size-full wp-image-3313" src="images/kernel-black-e1525280897233.png" alt="" width="991" height="731"></td><td>White<img class="alignnone size-full wp-image-3314" src="images/kernel-white-e1525281024184.png" alt="" width="991" height="731"></td><td>Hispanic<img class="alignnone size-full wp-image-3312" src="images/kernel-hispanic-e1525280752322.png" alt="" width="991" height="731"></td></tr></tbody></table>
+<table><tbody><tr><td>Black <a class="glightbox" href="images/kernel-black-e1525280897233.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img class="alignnone size-full wp-image-3313" src="images/kernel-black-e1525280897233.png" alt="" width="991" height="731"></a></td><td>White<a class="glightbox" href="images/kernel-white-e1525281024184.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img class="alignnone size-full wp-image-3314" src="images/kernel-white-e1525281024184.png" alt="" width="991" height="731"></a></td><td>Hispanic<a class="glightbox" href="images/kernel-hispanic-e1525280752322.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img class="alignnone size-full wp-image-3312" src="images/kernel-hispanic-e1525280752322.png" alt="" width="991" height="731"></a></td></tr></tbody></table>
 
 <h3 id="data-in-this-tutorial">Data in this tutorial<a class="headerlink" href="#data-in-this-tutorial" title="Permanent link">&para;</a></h3>
 <ul>
@@ -687,6 +696,12 @@
     
       <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
+        <script src="../../../js/getdata.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

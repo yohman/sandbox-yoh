@@ -51,7 +51,16 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -878,8 +887,8 @@
 <li>Area</li>
 </ol>
 <p>In short, in order to preserve one of these elements with highest fidelity, the other elements are to be sacrificed to some degree.</p>
-<p>[caption id="attachment_2149" align="aligncenter" width="465"]<img alt="Source: https://en.wikipedia.org/wiki/Mercator_projection#/media/File:Mercator_projection_SW.jpg" src="images/1024px-Mercator_projection_SW-744x631.jpg" /> https://en.wikipedia.org/wiki/Mercator_projection#/media/File:Mercator_projection_SW.jpg[/caption]</p>
-<p>[caption id="attachment_2112" align="aligncenter" width="453"]<img alt="Impact of map projections. Source: http://makingmapsblog.tumblr.com/post/97906950351/source-comparative-map-africa-vs-us-china" src="images/projectionafrica.jpg" /> Impact of map projections. Source: <a href="https://www.flickr.com/photos/internetarchivebookimages/14762351614/">https://www.flickr.com/photos/internetarchivebookimages/14762351614/</a>[/caption]</p>
+<p>[caption id="attachment_2149" align="aligncenter" width="465"]<a class="glightbox" href="images/1024px-Mercator_projection_SW-744x631.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Source: https://en.wikipedia.org/wiki/Mercator_projection#/media/File:Mercator_projection_SW.jpg" src="images/1024px-Mercator_projection_SW-744x631.jpg" /></a> https://en.wikipedia.org/wiki/Mercator_projection#/media/File:Mercator_projection_SW.jpg[/caption]</p>
+<p>[caption id="attachment_2112" align="aligncenter" width="453"]<a class="glightbox" href="images/projectionafrica.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Impact of map projections. Source: http://makingmapsblog.tumblr.com/post/97906950351/source-comparative-map-africa-vs-us-china" src="images/projectionafrica.jpg" /></a> Impact of map projections. Source: <a href="https://www.flickr.com/photos/internetarchivebookimages/14762351614/">https://www.flickr.com/photos/internetarchivebookimages/14762351614/</a>[/caption]</p>
 <hr />
 <h1 id="history-of-mapping">History of Mapping<a class="headerlink" href="#history-of-mapping" title="Permanent link">&para;</a></h1>
 <h3 id="john-snow">John Snow<a class="headerlink" href="#john-snow" title="Permanent link">&para;</a></h3>
@@ -893,9 +902,9 @@
 <p>Each line represents a death, and a concentration can be seen around a certain street. After having identified the problem, this map allowed Snow to write a letter to the authorities and prompted the end of cholera outbreaks in the locale.</p>
 <h3 id="minard">Minard<a class="headerlink" href="#minard" title="Permanent link">&para;</a></h3>
 <p>The representation of 3 dimensional space onto a flat, 2 dimensional platform–a map–brings with it many challenges and compromises (e.g. projection systems). Every "flat" map in existence compromises on one geographical element: <strong>Shape</strong>, <strong>Area</strong>, <strong>Distance</strong> or <strong>Direction</strong>. So too, does the representation of the "fourth dimension", or time, bring about much to contemplate on how best to summarize and eventually effectively visualize geo-temporal data. Historically, inventive methods employed in visualizing change over time has produced infamous graphics such as Minard's map of Napoleon's Russian Campaign in 1812.</p>
-<p><img alt="Minard Map" src="../images/p12p2-lg.jpg" /></p>
+<p><a class="glightbox" href="../images/p12p2-lg.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Minard Map" src="../images/p12p2-lg.jpg" /></a></p>
 <h3 id="bunge">Bunge<a class="headerlink" href="#bunge" title="Permanent link">&para;</a></h3>
-<p>[caption id="attachment_2134" align="aligncenter" width="594"]<img alt="Bunge, W. 1971. Fitzgerald: Geography of a revolution. Cambridge, MA : Schenkman." src="images/neighborbunge-744x353.jpg" /> Bunge, W. 1971. Fitzgerald: Geography of a revolution. Cambridge, MA : Schenkman.[/caption]</p>
+<p>[caption id="attachment_2134" align="aligncenter" width="594"]<a class="glightbox" href="images/neighborbunge-744x353.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Bunge, W. 1971. Fitzgerald: Geography of a revolution. Cambridge, MA : Schenkman." src="images/neighborbunge-744x353.jpg" /></a> Bunge, W. 1971. Fitzgerald: Geography of a revolution. Cambridge, MA : Schenkman.[/caption]</p>
 <p>Radical and critical cartography has seen a recent resurgence in academia and popular media. William Bunge was an early innovator of radical cartography and helped to found the <a href="https://civic.mit.edu/blog/kanarinka/the-detroit-geographic-expedition-and-institute-a-case-study-in-civic-mapping">Detroit Geographic Expedition</a>. His work was community focused and was in part influenced by the 1967 Detroit riots. Here is an example of two maps using the same data. One created by a city agency and the other created by Bunge. Can you tell the difference?</p>
 <iframe class="juxtapose" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=b4a4df00-0278-11e6-a524-0e7075bba956" width="100%" height="554" frameborder="0"></iframe>
 
@@ -1036,6 +1045,12 @@
     
       <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
+        <script src="../../../js/getdata.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

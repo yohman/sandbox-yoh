@@ -51,7 +51,16 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -588,14 +597,14 @@
 <p>Google Fusion Tables: <a href="https://www.google.com/fusiontables/">https://www.google.com/fusiontables/</a> | <a href="http://sandbox.idre.ucla.edu/Workshops/Getty2015/fusiontables/S%20Coupland%20Carolingian%20Hoards%20-%20AD%20751-987vAlbert.csv">coin data</a></p>
 <p><a href="https://www.google.com/fusiontables/DataSource?docid=1b0UORNDP9llY-u2ZauWcmeWjSuwNjQKMp2LzqKBb"><img alt="2015-07-09 18_14_17-S Coupland Carolingian Hoards - AD 751-987vAlbert - Google Fusion Tables" src="images/2015-07-09-18_14_17-S-Coupland-Carolingian-Hoards-AD-751-987vAlbert-Google-Fusion-Tables.png" /></a></p>
 <p>Palladio: <a href="http://palladio.designhumanities.org/">http://palladio.designhumanities.org/</a> | <a href="http://sandbox.idre.ucla.edu/Workshops/Getty2015/palladio/Michael%20McCormick%20et%20al.,%20Summary%20Geodatabase%20of%20Shipwrecks%20AD%201-1500,%20Status%202008.csv">ship wreck data</a></p>
-<p><img alt="2015-07-09 18_38_08-Palladio" src="images/2015-07-09-18_38_08-Palladio-1200x444.png" /></p>
+<p><a class="glightbox" href="images/2015-07-09-18_38_08-Palladio-1200x444.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="2015-07-09 18_38_08-Palladio" src="images/2015-07-09-18_38_08-Palladio-1200x444.png" /></a></p>
 <h2 id="timelines-and-maps">Timelines and Maps<a class="headerlink" href="#timelines-and-maps" title="Permanent link">&para;</a></h2>
 <p>VisJS: <a href="http://visjs.org/">http://visjs.org/</a></p>
 <p><a href="http://sandbox.idre.ucla.edu/dh150/2015/ChrisTripp/TimeMapFinal/timemap.html"><img alt="2015-07-09 18_42_34-JewishOrg" src="images/2015-07-09-18_42_34-JewishOrg-1200x394.png" /></a></p>
 <p>Timeline JS: <a href="http://timeline.knightlab.com/">http://timeline.knightlab.com/</a></p>
 <p><a href="http://backtoghana.com/timeline"><img alt="2015timlineJS" src="images/2015timlineJS-1200x676.png" /></a></p>
 <p>SIMILE: <a href="http://simile-widgets.org/timeline/">http://simile-widgets.org/timeline/</a></p>
-<p><img alt="2015TimelineSIMILIE" src="images/2015TimelineSIMILIE-1200x302.png" /></p>
+<p><a class="glightbox" href="images/2015TimelineSIMILIE-1200x302.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="2015TimelineSIMILIE" src="images/2015TimelineSIMILIE-1200x302.png" /></a></p>
 
 
 
@@ -647,6 +656,12 @@
     
       <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
+        <script src="../../../js/getdata.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

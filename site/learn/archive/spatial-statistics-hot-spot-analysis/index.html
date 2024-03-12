@@ -51,7 +51,16 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -620,15 +629,15 @@
 <ol>
 <li>Go to <strong>File, Map Document Properties...</strong></li>
 <li>Change the default geodatabase by finding the path to the workshop geodatabase you just downloaded.</li>
-<li>Also click on the checkbox next to <strong>Store relative pathnames to data sources</strong> <img alt="" src="images/sa-map-document-properties-e1518639638350.png" /></li>
+<li>Also click on the checkbox next to <strong>Store relative pathnames to data sources</strong> <a class="glightbox" href="images/sa-map-document-properties-e1518639638350.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/sa-map-document-properties-e1518639638350.png" /></a></li>
 </ol>
 <p>We will also be performing various geoprocessing tasks. In order to make it easy for us to interpret our results in real time, let's "disable" background processing of our geoprocessing tasks.</p>
 <ol>
-<li>Click on Geoprocessing from the menu, and go to Geoprocessing options <img alt="" src="images/image-e1523405673365.png" /></li>
-<li>Make sure that Background Processing is unchecked<img alt="" src="images/image-1-e1523405797504.png" /></li>
+<li>Click on Geoprocessing from the menu, and go to Geoprocessing options <a class="glightbox" href="images/image-e1523405673365.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/image-e1523405673365.png" /></a></li>
+<li>Make sure that Background Processing is unchecked<a class="glightbox" href="images/image-1-e1523405797504.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/image-1-e1523405797504.png" /></a></li>
 </ol>
 <h2 id="is-there-clustering">Is there clustering?<a class="headerlink" href="#is-there-clustering" title="Permanent link">&para;</a></h2>
-<p><img alt="" src="../images/GUID-5CCEE7E5-839C-46E8-A88B-FCD02F07B209-web.gif" /></p>
+<p><a class="glightbox" href="../images/GUID-5CCEE7E5-839C-46E8-A88B-FCD02F07B209-web.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/GUID-5CCEE7E5-839C-46E8-A88B-FCD02F07B209-web.gif" /></a></p>
 <p>In order to begin hot spot analysis, we must first determine whether, statistically speaking, there is clustering evident in our data. One approach to do so is to run our data through the Spatial Autocorrelation (Global Moran's I). This tool helps us determine whether or not our data is randomly distributed or not. In other words, what are the chances that the incidents in your data are located where they are randomly? Or perhaps, are there certain incidents located closer to other incidents? And what may explain this clustering? Let's find out if the data we will use in this class (crime data in Los Angeles) has evidence of clustering or dispersion.</p>
 <h3 id="choose-a-neighborhood">Choose a neighborhood<a class="headerlink" href="#choose-a-neighborhood" title="Permanent link">&para;</a></h3>
 <p>We could perform our hot spot analysis on the entire dataset, but two reasons prevent us from doing so. One, the data is very big (hundreds of thousands of records), and performing large scale statistical analysis on this amount of data will be very time consuming. Second, the scale is too big, meaning, that we would not get much variation at the local level. For the purposes of this tutorial, we will work at the neighborhood level, to allow us to see hot spots within individual neighborhood. Let's begin by load the following layers to our map:</p>
@@ -640,49 +649,49 @@
 <ol>
 <li>
 <ol>
-<li>Click on the select tool <img alt="" src="images/select-feature-tool-e1517358308800.png" /></li>
+<li>Click on the select tool <a class="glightbox" href="images/select-feature-tool-e1517358308800.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/select-feature-tool-e1517358308800.png" /></a></li>
 <li>Click on the Downtown polygon on the map</li>
 </ol>
 </li>
 </ol>
 <p>Select all the crime incidents that occurred within the downtown boundaries.</p>
 <ol>
-<li>Go to <strong>Selection</strong>, <strong>Select by Location</strong>, and enter the following information: <img alt="" src="images/select-by-location-1-e1523055215405.png" /></li>
-<li>Turn on the crime layer. You should see the crime incidents inside the downtown polygon selected. In the table of contents, right click on <strong>la_crime_2010</strong> and <strong>Export Data</strong>: <img alt="" src="images/export-downtown-crime-e1523055367239.png" /></li>
-<li>Export the data into your geodatabase: <img alt="" src="images/export-downtown-crime-2-e1523055536706.png" /></li>
+<li>Go to <strong>Selection</strong>, <strong>Select by Location</strong>, and enter the following information: <a class="glightbox" href="images/select-by-location-1-e1523055215405.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/select-by-location-1-e1523055215405.png" /></a></li>
+<li>Turn on the crime layer. You should see the crime incidents inside the downtown polygon selected. In the table of contents, right click on <strong>la_crime_2010</strong> and <strong>Export Data</strong>: <a class="glightbox" href="images/export-downtown-crime-e1523055367239.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/export-downtown-crime-e1523055367239.png" /></a></li>
+<li>Export the data into your geodatabase: <a class="glightbox" href="images/export-downtown-crime-2-e1523055536706.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/export-downtown-crime-2-e1523055536706.png" /></a></li>
 <li>Click "yes" to add the data to the map</li>
 </ol>
 <h3 id="count-overlapping-incidents">Count overlapping incidents<a class="headerlink" href="#count-overlapping-incidents" title="Permanent link">&para;</a></h3>
-<p><img alt="" src="../images/GUID-520B7CB1-0A0B-4E81-A2A2-57A337D7564A-web.gif" /></p>
+<p><a class="glightbox" href="../images/GUID-520B7CB1-0A0B-4E81-A2A2-57A337D7564A-web.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/GUID-520B7CB1-0A0B-4E81-A2A2-57A337D7564A-web.gif" /></a></p>
 <p>The LAPD records arrest locations to the closest intersection of where it occurred. What this means is that many incidents that happen close-by are visually stacked on top of one another, appearing as a single point. In order to provide an aggregate of overlapping points, let's run the <strong>Collect Events</strong> tool.</p>
 <ol>
-<li><strong>ArcToolbox, Spatial Statistics Tools, Utilities, Collect Events</strong> <img alt="" src="images/collect-events-tool-e1523054314640.png" /></li>
-<li>Enter the following information: <img alt="" src="images/collect-events-1-e1523055795527.png" /></li>
+<li><strong>ArcToolbox, Spatial Statistics Tools, Utilities, Collect Events</strong> <a class="glightbox" href="images/collect-events-tool-e1523054314640.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/collect-events-tool-e1523054314640.png" /></a></li>
+<li>Enter the following information: <a class="glightbox" href="images/collect-events-1-e1523055795527.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/collect-events-1-e1523055795527.png" /></a></li>
 </ol>
 <h3 id="determine-whether-there-is-clustering">Determine whether there is clustering<a class="headerlink" href="#determine-whether-there-is-clustering" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Run the <strong>Spatial Autocorrelation</strong> tool on the selected geography (in this case, downtown Los Angeles)<ol>
-<li><strong>ArcToolbox, Spatial Statistics Tools, Analyzing Patterns, Spatial Autocorrelation</strong> <img alt="" src="images/spatial-autocorrelation-tool-e1523053979494.png" /></li>
-<li>Enter the following information: <img alt="" src="images/spatial-autocorrelation-entry-e1523055973468.png" /></li>
-<li>To see your results, go to <strong>Geoprocessing, Results <img alt="" src="images/geoprocessing-results-e1523406290690.png" /></strong> </li>
-<li>Then expand Current Session, Spatial Autocorrelation, and double click on the Report File <img alt="" src="images/spatial-autocorrelation-results-e1523056123378.png" /></li>
+<li><strong>ArcToolbox, Spatial Statistics Tools, Analyzing Patterns, Spatial Autocorrelation</strong> <a class="glightbox" href="images/spatial-autocorrelation-tool-e1523053979494.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/spatial-autocorrelation-tool-e1523053979494.png" /></a></li>
+<li>Enter the following information: <a class="glightbox" href="images/spatial-autocorrelation-entry-e1523055973468.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/spatial-autocorrelation-entry-e1523055973468.png" /></a></li>
+<li>To see your results, go to <strong>Geoprocessing, Results <a class="glightbox" href="images/geoprocessing-results-e1523406290690.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/geoprocessing-results-e1523406290690.png" /></a></strong> </li>
+<li>Then expand Current Session, Spatial Autocorrelation, and double click on the Report File <a class="glightbox" href="images/spatial-autocorrelation-results-e1523056123378.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/spatial-autocorrelation-results-e1523056123378.png" /></a></li>
 </ol>
 </li>
 </ol>
 <p>[TBS_ALERT color="info" heading="What do the results tell us?"]</p>
-<p><img alt="" src="images/Spatial-Autocorrelation-Report-e1523460164888.png" /></p>
+<p><a class="glightbox" href="images/Spatial-Autocorrelation-Report-e1523460164888.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Spatial-Autocorrelation-Report-e1523460164888.png" /></a></p>
 <p>[/TBS_ALERT]</p>
 <h3 id="hot-spot-analysis">Hot Spot Analysis<a class="headerlink" href="#hot-spot-analysis" title="Permanent link">&para;</a></h3>
-<p><img alt="" src="../images/GUID-595F969A-A1F3-453B-83AD-E4B3AC6277BF-web.png" /></p>
+<p><a class="glightbox" href="../images/GUID-595F969A-A1F3-453B-83AD-E4B3AC6277BF-web.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/GUID-595F969A-A1F3-453B-83AD-E4B3AC6277BF-web.png" /></a></p>
 <p>Now that we have determined that there is, indeed, statistically significant spatial clustering in our data, let's find out <em>where</em> there are hot spots and cold spots in our data. Hot spots are areas that show statistically higher tendencies to cluster spatially. This is determined by looking at each incident within the context of neighboring features. In other words, a single point with high values isn't necessarily a hot spot. It becomes a hot spot only when its neighbors also have high values.</p>
 <p>Let's run the hot spot analysis tool on our downtown crime data. In your <strong>Spatial Statistics Tools</strong>, expand <strong>Mapping Clusters</strong>, and double click on <strong>Optimized Hot Spot Analysis</strong>.</p>
-<p><img alt="" src="images/Optimized-Hot-Spot-Analysis-tool-e1523461298314.png" /></p>
+<p><a class="glightbox" href="images/Optimized-Hot-Spot-Analysis-tool-e1523461298314.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Optimized-Hot-Spot-Analysis-tool-e1523461298314.png" /></a></p>
 <p>In the pop up window, select <strong>downtown_crime_2010</strong>, and make sure that <strong>COUNT_INCIDENTS_WITHIN_FISHNET_POLYGONS</strong> is selected. This will create a bunch of grid cells wherever there are incidents of crime present.</p>
-<p><img alt="" src="images/Optimized-Hot-Spot-Analysis-entry-e1523056416363.png" /></p>
+<p><a class="glightbox" href="images/Optimized-Hot-Spot-Analysis-entry-e1523056416363.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Optimized-Hot-Spot-Analysis-entry-e1523056416363.png" /></a></p>
 <p>Nice! We have now converted our overlapping incidents into color coded grid cells.</p>
-<p><img alt="" src="images/Hot-Spots-Downtown-1-e1523461648655.png" /></p>
-<p>Notice the legend for our results. <img alt="" src="images/hot-spots-legend-1-e1523461878466.png" /></p>
-<p>Also open the attribute table. Right click on downtown_crime_2010_HotSpot, and Open Attribute Table<img alt="" src="images/open-attribute-table-e1523461988729.png" /></p>
+<p><a class="glightbox" href="images/Hot-Spots-Downtown-1-e1523461648655.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Hot-Spots-Downtown-1-e1523461648655.png" /></a></p>
+<p>Notice the legend for our results. <a class="glightbox" href="images/hot-spots-legend-1-e1523461878466.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/hot-spots-legend-1-e1523461878466.png" /></a></p>
+<p>Also open the attribute table. Right click on downtown_crime_2010_HotSpot, and Open Attribute Table<a class="glightbox" href="images/open-attribute-table-e1523461988729.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/open-attribute-table-e1523461988729.png" /></a></p>
 <p>The table represents each displayed cell.</p>
 <ul>
 <li><strong>JOIN_COUNT</strong> tells us how many incidents fall within a cell</li>
@@ -691,14 +700,14 @@
 <li><strong>NNeighbors</strong> is the number of neighboring incidents that it has taken into account to compare to the sum of the entire dataset</li>
 <li><strong>Gi_Bin</strong> gives us a number that is associated to the confidence level displayed on the map</li>
 </ul>
-<p><img alt="" src="images/hot-spot-attribute-table-e1523462083375.png" /></p>
+<p><a class="glightbox" href="images/hot-spot-attribute-table-e1523462083375.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/hot-spot-attribute-table-e1523462083375.png" /></a></p>
 <p>Finally, let's label the grid cells with the JOIN_COUNT to give us an idea of why certain areas are hot, and others are cold.</p>
 <ol>
 <li>Right click on <strong>downtown_crime_2010_HotSpot</strong>, click on <strong>Properties</strong>, and click on the <strong>Labels</strong> tab.</li>
 <li>Check the box to label the features, and choose <strong>JOIN_COUNT</strong> for the label field</li>
 </ol>
-<p><img alt="" src="images/Joint-Count-labels-e1523056563949.png" /></p>
-<p>[TBS_ALERT color="info" heading="What do these numbers tell us?"]<img alt="" src="images/Hot-Spots-Downtown-e1523056605908.png" /></p>
+<p><a class="glightbox" href="images/Joint-Count-labels-e1523056563949.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Joint-Count-labels-e1523056563949.png" /></a></p>
+<p>[TBS_ALERT color="info" heading="What do these numbers tell us?"]<a class="glightbox" href="images/Hot-Spots-Downtown-e1523056605908.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Hot-Spots-Downtown-e1523056605908.png" /></a></p>
 <p>[/TBS_ALERT]</p>
 <h3 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h3>
 <ul>
@@ -762,6 +771,12 @@
     
       <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
+        <script src="../../../js/getdata.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

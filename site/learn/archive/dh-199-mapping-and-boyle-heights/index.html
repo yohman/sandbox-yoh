@@ -51,7 +51,16 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -566,14 +575,14 @@
 <p>Link to the Social Explorer tutorial:</p>
 <p><a href="http://sandbox.idre.ucla.edu/sandbox/getting-started-with-social-explorer-and-exporting-data">http://sandbox.idre.ucla.edu/sandbox/getting-started-with-social-explorer-and-exporting-data</a></p>
 <h4 id="ii-mapbox-and-geojsonio">II. Mapbox and GeoJSON.io<a class="headerlink" href="#ii-mapbox-and-geojsonio" title="Permanent link">&para;</a></h4>
-<p><img alt="2016-04-19 12_45_34-Mapbox _ Design and publish beautiful maps" src="images/2016-04-19-12_45_34-Mapbox-_-Design-and-publish-beautiful-maps-744x257.png" /></p>
+<p><a class="glightbox" href="images/2016-04-19-12_45_34-Mapbox-_-Design-and-publish-beautiful-maps-744x257.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="2016-04-19 12_45_34-Mapbox _ Design and publish beautiful maps" src="images/2016-04-19-12_45_34-Mapbox-_-Design-and-publish-beautiful-maps-744x257.png" /></a></p>
 <p>These are tools that allow you to add data and work across multiple geospatial platforms and create geospatial data.</p>
 <h2 id="iii-creating-dynamically-updated-maps-with-leaflet">III. Creating dynamically updated maps with Leaflet<a class="headerlink" href="#iii-creating-dynamically-updated-maps-with-leaflet" title="Permanent link">&para;</a></h2>
 <p>You can use data from live google spreadsheets or MapBox maps in order to visually demonstrate various data sets.</p>
 <ol>
 <li>Copy Boyle Heights Template Spreadsheet:</li>
 <li>Then go to the gsJson return and copy the ids of the worksheets: <a href="http://sandbox.idre.ucla.edu/tools/gsJson/">http://sandbox.idre.ucla.edu/tools/gsJson/</a></li>
-<li>Paste the spreadsheet id into line 103: <img alt="2016-04-19 13_36_55-__whippet.ats.ucla.edu_inetpub2_wwwroot_testroom_fairfax_template.html (fairfax)" src="images/2016-04-19-13_36_55-__whippet.ats_.ucla_.edu_inetpub2_wwwroot_testroom_fairfax_template.html-fairfax-744x212.png" /></li>
+<li>Paste the spreadsheet id into line 103: <a class="glightbox" href="images/2016-04-19-13_36_55-__whippet.ats_.ucla_.edu_inetpub2_wwwroot_testroom_fairfax_template.html-fairfax-744x212.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="2016-04-19 13_36_55-__whippet.ats.ucla.edu_inetpub2_wwwroot_testroom_fairfax_template.html (fairfax)" src="images/2016-04-19-13_36_55-__whippet.ats_.ucla_.edu_inetpub2_wwwroot_testroom_fairfax_template.html-fairfax-744x212.png" /></a></li>
 <li>You now have a basic mapping template for a side-by-side comparison map!</li>
 <li>Manipulating "MapMetaData" a) To change the map, you have to make sure the correct "DataField" is chosen.b) Each map to be loaded is represented by an ID, under the column "MapsUsed"c) Maniuplating MapData: a) Each map needs to have a geoJSON file attached to it, which is stored within a subdirectory, i.e.: boyleHeightsmap/geoJSON; so create a folder called "geoJSON".b) The geoJSONs in this folder should be named exactly the same as the geoJSON file name!c) You can change the data by putting numbers into the spreadsheet! (Please do not use text or percent signs.d) The "mapID" are the list of maps which are being called when a particular map is being shown</li>
 </ol>
@@ -630,6 +639,12 @@
     
       <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
+        <script src="../../../js/getdata.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
