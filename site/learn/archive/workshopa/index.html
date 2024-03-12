@@ -51,7 +51,16 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -560,44 +569,44 @@
 <ol>
 <li>Go to File, Map Document Properties...</li>
 <li>Change the default geodatabase by finding the path to the workshop geodatabase you just downloaded.</li>
-<li>Also click on the checkbox next to Store relative pathnames to data sources <img alt="" src="images/sa-map-document-properties-e1518639638350.png" /></li>
+<li>Also click on the checkbox next to Store relative pathnames to data sources <a class="glightbox" href="images/sa-map-document-properties-e1518639638350.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/sa-map-document-properties-e1518639638350.png" /></a></li>
 </ol>
 <h3 id="finding-the-center-mean-for-different-population-groups">Finding the center mean for different population groups<a class="headerlink" href="#finding-the-center-mean-for-different-population-groups" title="Permanent link">&para;</a></h3>
-<p><img alt="" src="../images/GUID-1F7217DA-FC4E-46A2-B91C-7AB5E53DDA9C-web.png" /></p>
+<p><a class="glightbox" href="../images/GUID-1F7217DA-FC4E-46A2-B91C-7AB5E53DDA9C-web.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/GUID-1F7217DA-FC4E-46A2-B91C-7AB5E53DDA9C-web.png" /></a></p>
 <ol>
 <li>Open ArcMap and add the <strong>us_states</strong> and <strong>us_counties</strong> layers</li>
 <li>Go to <strong>Windows</strong>, <strong>Catalog</strong> to open the Catalog panel on the right</li>
-<li>Expand <strong>Toolboxes</strong>, <strong>System Toolboxes, Spatial Statistics Tools, Measuring Geographic Distributions</strong> <img alt="" src="images/ss-spatial-stats-toolbox-e1518735321785.png" /></li>
+<li>Expand <strong>Toolboxes</strong>, <strong>System Toolboxes, Spatial Statistics Tools, Measuring Geographic Distributions</strong> <a class="glightbox" href="images/ss-spatial-stats-toolbox-e1518735321785.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/ss-spatial-stats-toolbox-e1518735321785.png" /></a></li>
 <li>Double click on the <strong>Mean Center</strong> tool<ol>
 <li>Input: <strong>us_counties</strong></li>
 <li>Output: <strong>us_counties_MeanCenter_white</strong></li>
 <li>Weight: <strong>WHITE</strong></li>
-<li>Case field: <strong>STATE_FIPS</strong> (this creates a different point per state) <img alt="" src="images/ss-mean-center-params-e1518735528487.png" /></li>
-<li>A new layer should appear on your map. Modify the symbology: <img alt="" src="images/ss-symbology-e1518735688788.png" /></li>
+<li>Case field: <strong>STATE_FIPS</strong> (this creates a different point per state) <a class="glightbox" href="images/ss-mean-center-params-e1518735528487.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/ss-mean-center-params-e1518735528487.png" /></a></li>
+<li>A new layer should appear on your map. Modify the symbology: <a class="glightbox" href="images/ss-symbology-e1518735688788.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/ss-symbology-e1518735688788.png" /></a></li>
 <li>Repeat steps 1~5, choosing <strong>BLACK</strong> and <strong>HISPANIC</strong> respectively to produce 3 different colored dots per state.</li>
 </ol>
 </li>
 </ol>
 <p>[TBS_ALERT color="info" heading="What does the map tell us?"]</p>
-<p><img alt="" src="images/ss-mean-center-map-e1518735947903.png" /></p>
+<p><a class="glightbox" href="images/ss-mean-center-map-e1518735947903.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/ss-mean-center-map-e1518735947903.png" /></a></p>
 <p>Examine the map and explain what you are able to observe. What do the colors represent? What does that tell us about the spatial distribution of our population by race categories?</p>
 <p>[/TBS_ALERT]</p>
 <h3 id="measuring-directional-distribution">Measuring directional distribution<a class="headerlink" href="#measuring-directional-distribution" title="Permanent link">&para;</a></h3>
-<p><img alt="" src="../images/GUID-13B1B03F-A692-49E5-B371-C2095CADCA5A-web.png" /></p>
+<p><a class="glightbox" href="../images/GUID-13B1B03F-A692-49E5-B371-C2095CADCA5A-web.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/GUID-13B1B03F-A692-49E5-B371-C2095CADCA5A-web.png" /></a></p>
 <p>Now let's see if there are any central tendencies, dispersion, and directional trends to our data.</p>
 <ol>
 <li>From the Spatial Statistics Toolbox, double click on the <strong>Directional Distribution (Standard Deviational Ellipse)</strong> tool<ol>
 <li>Input: <strong>us_counties</strong></li>
 <li>Output: <strong>us_counties_DirectionalDistr_white</strong></li>
 <li>Weight Field: <strong>WHITE</strong></li>
-<li>Case Field: <strong>STATE_FIPS</strong> <img alt="" src="images/ss-directional-distribution-params-e1518737242917.png" /> [TBS_ALERT color="info" heading="How big is my ellipse?"] Notice the option to choose 1, 2, or 3 standard deviations for your ellipse size. For 2-dimensional data, that is, data with an x and a y,  one standard deviational ellipse will cover approximately 63 percent of the features; two standard deviations will contain approximately 98 percent of the features; and three standard deviations will cover approximately 99.9 percent of the features. [/TBS_ALERT]</li>
+<li>Case Field: <strong>STATE_FIPS</strong> <a class="glightbox" href="images/ss-directional-distribution-params-e1518737242917.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/ss-directional-distribution-params-e1518737242917.png" /></a> [TBS_ALERT color="info" heading="How big is my ellipse?"] Notice the option to choose 1, 2, or 3 standard deviations for your ellipse size. For 2-dimensional data, that is, data with an x and a y,  one standard deviational ellipse will cover approximately 63 percent of the features; two standard deviations will contain approximately 98 percent of the features; and three standard deviations will cover approximately 99.9 percent of the features. [/TBS_ALERT]</li>
 </ol>
 </li>
 <li>Modify the symbology of the ellipse to match the color of the mean center dot for the same race category</li>
 <li>Repeat steps 1~2 for <strong>BLACK</strong> and <strong>HISPANIC</strong></li>
 </ol>
 <p>[TBS_ALERT color="info" heading="What does the map tell us?"]</p>
-<p><img alt="" src="images/ss-directional-distribution-map-e1518737520215.png" />Examine the map and explain what you are able to observe. What do the colors represent? What insights do the size, shape, and overlap of ellipses provide?</p>
+<p><a class="glightbox" href="images/ss-directional-distribution-map-e1518737520215.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/ss-directional-distribution-map-e1518737520215.png" /></a>Examine the map and explain what you are able to observe. What do the colors represent? What insights do the size, shape, and overlap of ellipses provide?</p>
 <p>[/TBS_ALERT]</p>
 <h3 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h3>
 <ul>
@@ -662,5 +671,5 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

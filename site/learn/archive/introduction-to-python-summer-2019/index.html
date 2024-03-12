@@ -51,7 +51,16 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -571,7 +580,7 @@
 
   <h1>Introduction to Python Summer 2019 for Engineering</h1>
 
-<p><img alt="" src="images/albyPython_v2-e1516215728323-1024x523.png" /></p>
+<p><a class="glightbox" href="images/albyPython_v2-e1516215728323-1024x523.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/albyPython_v2-e1516215728323-1024x523.png" /></a></p>
 <h2 id="navigate-here-to-find-the-workshop">Navigate here to find the workshop:<a class="headerlink" href="#navigate-here-to-find-the-workshop" title="Permanent link">&para;</a></h2>
 <h3 id="httpssandboxidreuclaedusandboxintroduction-to-python-summer-2019"><a href="https://sandbox.idre.ucla.edu/sandbox/introduction-to-python-summer-2019">https://sandbox.idre.ucla.edu/sandbox/introduction-to-python-summer-2019</a><a class="headerlink" href="#httpssandboxidreuclaedusandboxintroduction-to-python-summer-2019" title="Permanent link">&para;</a></h3>
 <h2 id="workshop-outline">Workshop Outline:<a class="headerlink" href="#workshop-outline" title="Permanent link">&para;</a></h2>
@@ -659,5 +668,5 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

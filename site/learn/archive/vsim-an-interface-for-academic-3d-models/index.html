@@ -51,7 +51,16 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -554,17 +563,17 @@
 <p>The VSim interface is flexible, and can fit into any classroom.</p>
 <h2 id="download-and-install">Download and Install<a class="headerlink" href="#download-and-install" title="Permanent link">&para;</a></h2>
 <p>Go to <a href="https://vsim.library.ucla.edu/xmlui/">https://vsim.library.ucla.edu/xmlui/</a>  and visit the Download page.</p>
-<p><img alt="" src="images/Screen-Shot-2020-07-28-at-10.20.58-PM-1024x491.png" /></p>
+<p><a class="glightbox" href="images/Screen-Shot-2020-07-28-at-10.20.58-PM-1024x491.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Screen-Shot-2020-07-28-at-10.20.58-PM-1024x491.png" /></a></p>
 <p>VSim 2.0 works best for PCs, though there is a Mac version available.</p>
-<p><img alt="" src="images/Screen-Shot-2020-07-28-at-10.23.50-PM-1024x638.png" /></p>
+<p><a class="glightbox" href="images/Screen-Shot-2020-07-28-at-10.23.50-PM-1024x638.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Screen-Shot-2020-07-28-at-10.23.50-PM-1024x638.png" /></a></p>
 <p>Once the download is complete, unzip and extract all the files.</p>
-<p><img alt="" src="images/vsim1-1024x539.png" /></p>
+<p><a class="glightbox" href="images/vsim1-1024x539.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/vsim1-1024x539.png" /></a></p>
 <p>In the unzipped <strong>VSim_BETA_Windows_Dec2018</strong> folder, open the folder dated <strong>2018_12_12</strong>.</p>
-<p><img alt="" src="images/Vsim2-1024x195.png" /></p>
+<p><a class="glightbox" href="images/Vsim2-1024x195.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Vsim2-1024x195.png" /></a></p>
 <p>Scroll to the bottom of the folder and double click on the blue VSim pyramid icon to launch the application.</p>
-<p><img alt="" src="images/Vsim3.png" /></p>
+<p><a class="glightbox" href="images/Vsim3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Vsim3.png" /></a></p>
 <p>Your VSim application window will launch. Start with the VSim tutorial narrative to become familiar with VSim's navigation and main features.</p>
-<p><img alt="" src="images/VSim4.png" /></p>
+<p><a class="glightbox" href="images/VSim4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/VSim4.png" /></a></p>
 <p>Also, take a look at VSim's <a href="https://www.google.com/url?q=https%3A%2F%2Fidre.ucla.edu%2Fwp-content%2Fuploads%2F2018%2F12%2FVSim_AbridgedUsersGuide_Dec20_2018.pdf%3Fx83242&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNG6txJgwZ1RaAAWXn3nfrbZV_VaBA"><strong>Abridged User Guide</strong></a> before you get started.</p>
 <h2 id="basic-navigation">Basic Navigation<a class="headerlink" href="#basic-navigation" title="Permanent link">&para;</a></h2>
 <p>VSim’s navigation tools facilitate real-time interaction with 3D content in first person (WASD), flight simulation, or Google Earth-style object rotation mode. In all modes, the spacebar toggles between freeze (so that you can interact with the narratives and embedded resources) and unfreeze (so that you can navigate through the environment). In both first person and flight mode, the ‘G’ key toggles ground mode on and off to tether you to the ground at pedestrian height.</p>
@@ -588,25 +597,25 @@
 <h2 id="get-started">Get Started<a class="headerlink" href="#get-started" title="Permanent link">&para;</a></h2>
 <p>For this section of the tutorial, I am using a <a href="https://www.google.com/url?q=https%3A%2F%2Fsketchfab.com%2F3d-models%2F105794-smk-hercules-lansdowne-37474f59a3f04487900d8144548e4d69&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNEXpIR0-EjeQgsxygYJmlwAcwKoOw">model of Hercules</a> that I downloaded from <a href="https://www.google.com/url?q=https%3A%2F%2Fsketchfab.com%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNHzxeyDk0JnmkyWGPa7BZ64iarwiA">SketchFab</a>. The geometry was so dense, it took an extremely long time to load into VSim, so modifications were made to decrease the models files size. You can access a VSim file of the model <a href="https://drive.google.com/open?id=1Fn30-KdAwGxirgE03qVBV4B5klbmgZsT">here</a> for this demo.</p>
 <p>To clear the VSim tutorial and start a new project, go to 'File' and select 'New'. Select 'Yes,' when the pop-up window asks if you're sure that you want to create a new file.</p>
-<p><img alt="" src="images/VSim9.png" /></p>
+<p><a class="glightbox" href="images/VSim9.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/VSim9.png" /></a></p>
 <p>Go back to 'File' and select 'Open.' to upload your model file. In this case, we will be using the LansdowneHercules.vsim file. (This Windows-compatible version of VSim opens .dae, .flt., .ive, .obj, and .vsim model files).</p>
-<p><img alt="" src="images/Vsim11.png" /></p>
+<p><a class="glightbox" href="images/Vsim11.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Vsim11.png" /></a></p>
 <p>Navigate to where your model file is stored on your computer. If you don't see the file at first, make sure you adjust to show "All File Types." You will see a pop-up window when your file is uploading. It may take a minute to import your file, depending on its size.. The larger the file, the longer you will have to wait.</p>
-<p><img alt="" src="images/Vsim12-1024x747.png" /></p>
+<p><a class="glightbox" href="images/Vsim12-1024x747.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Vsim12-1024x747.png" /></a></p>
 <p>Once your model file is open, you can begin adding embedded resources and your narrative(s).</p>
-<p><img alt="" src="images/Vsim13-1024x825.png" /></p>
+<p><a class="glightbox" href="images/Vsim13-1024x825.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Vsim13-1024x825.png" /></a></p>
 <p>To build a narrative, click the '+' in the upper left corner and give your project a title, description, and author.</p>
-<p><img alt="" src="images/Vsim14.png" /></p>
+<p><a class="glightbox" href="images/Vsim14.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Vsim14.png" /></a></p>
 <p>Double click on your narrative or select 'Open' to open the Narrative Editor and begin adding Nodes.</p>
-<p><img alt="" src="images/Vsim15.png" /></p>
+<p><a class="glightbox" href="images/Vsim15.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Vsim15.png" /></a></p>
 <p>Use the navigation to set your first view, and then click the '+' to add a Node to your Narrative. Select Edit to add text labels or images to your Node.</p>
-<p><img alt="" src="images/Vsim16-1024x827.png" /></p>
+<p><a class="glightbox" href="images/Vsim16-1024x827.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Vsim16-1024x827.png" /></a></p>
 <p>For adding text to your Nodes, VSim comes pre-programmed with two header styles, a body style, and a label style. You can adjust these on the fly using the features in the Node Editor. To program all your labels with a new style, go to the 'Settings' menu and select 'Font and Color Styles.'</p>
-<p><img alt="" src="images/Vsim17-1024x823.png" /></p>
+<p><a class="glightbox" href="images/Vsim17-1024x823.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Vsim17-1024x823.png" /></a></p>
 <p>Here, you can adjust each label's settings, so they become your preset text styles in your Node Editor.</p>
-<p><img alt="" src="images/Vsim18.png" /></p>
+<p><a class="glightbox" href="images/Vsim18.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Vsim18.png" /></a></p>
 <p>To save your work, you have a few options. You can save your model, with the embedded resources and narratives you've created by selecting 'Save As' from your File menu. However, you can also export your narratives and embedded resources as separate files . You can load these in as needed and that way your VSim file does not have to be so big. To do so, go to the File menu and select 'Export Narrative...' or 'Export Resources...'</p>
-<p><img alt="" src="images/Vsim19.png" /></p>
+<p><a class="glightbox" href="images/Vsim19.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Vsim19.png" /></a></p>
 <p>Want to learn more? Watch this <a href="https://www.youtube.com/watch?v=TUz086WMGNU">video demonstration</a> of the prototype of VSim with Dr. Lisa Snyder.</p>
 
 
@@ -666,5 +675,5 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

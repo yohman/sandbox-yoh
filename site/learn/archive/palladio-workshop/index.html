@@ -51,7 +51,16 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -611,7 +620,7 @@
   <h1>Palladio Workshop</h1>
 
 <h2 id="visualizing-a-century-of-new-yorker-stories"><strong>Visualizing A Century of New Yorker Stories</strong><a class="headerlink" href="#visualizing-a-century-of-new-yorker-stories" title="Permanent link">&para;</a></h2>
-<p><img alt="" src="images/Screen-Shot-2018-04-10-at-8.45.02-AM-e1523375184846.png" /></p>
+<p><a class="glightbox" href="images/Screen-Shot-2018-04-10-at-8.45.02-AM-e1523375184846.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Screen-Shot-2018-04-10-at-8.45.02-AM-e1523375184846.png" /></a></p>
 <p>What does a century of stories, navigating through space and time, look like as a digital visualization? <a href="http://hdlab.stanford.edu/palladio/">Palladio</a>, a data visualization platform built by the Digital Humanities lab at Stanford University, purports to be able to “visualize complex historical data with ease.” Let’s put this claim to the test, and see what it can do with 100 years of New Yorker stories.</p>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <p>Download the following course dataset. The data is password protected, so make sure to ask your instructor for the password:<br />
@@ -634,7 +643,7 @@
 <li>Rows: <strong>Country where the author was born</strong></li>
 <li>
 <p>Values: **Country where the author was born  </p>
-<p><img alt="" src="images/Screen-Shot-2018-04-09-at-10.45.26-AM-e1523295959456.png" /></p>
+<p><a class="glightbox" href="images/Screen-Shot-2018-04-09-at-10.45.26-AM-e1523295959456.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Screen-Shot-2018-04-09-at-10.45.26-AM-e1523295959456.png" /></a></p>
 <p>**  </p>
 </li>
 </ol>
@@ -649,38 +658,38 @@
 <li>Paste the countries into the INPUT box</li>
 <li>Add the header for "ADDRESS" at the top, and then click on the <strong><em>*geocode</em></strong><em> </em><em>addresses</em>* button.</li>
 </ol>
-<p><img alt="geocoder input" src="images/Screen-Shot-2019-04-25-at-10.05.18-AM-e1556211972838.png" /></p>
+<p><a class="glightbox" href="images/Screen-Shot-2019-04-25-at-10.05.18-AM-e1556211972838.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="geocoder input" src="images/Screen-Shot-2019-04-25-at-10.05.18-AM-e1556211972838.png" /></a></p>
 <p>Examine the results and copy them to your clipboard.</p>
-<p><img alt="geocode results" src="images/Screen-Shot-2019-04-25-at-10.08.17-AM-e1556212170417.png" /></p>
+<p><a class="glightbox" href="images/Screen-Shot-2019-04-25-at-10.08.17-AM-e1556212170417.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="geocode results" src="images/Screen-Shot-2019-04-25-at-10.08.17-AM-e1556212170417.png" /></a></p>
 <h3 id="data-cleanup"><strong>Data cleanup</strong><a class="headerlink" href="#data-cleanup" title="Permanent link">&para;</a></h3>
 <p>Palladio accepts spatial data, but it is very picky on <em>how</em> the spatial data is organized. The coordinates must be put in a <em>single</em> column, rather than a more typical two column format (latitude, longitude). Let’s clean up our data to adhere to Palladio’s format. In this step, we will combine the latitude and longitude columns by putting double quotes around them. Sublime is a great text editor that makes doing this process fun and easy.</p>
 <p>Open Sublime and paste the results from the web geocoder. Add the following headers:</p>
-<p><img alt="sublime headers" src="images/Screen-Shot-2019-04-25-at-10.16.15-AM-e1556212626980-1024x232.png" /></p>
+<p><a class="glightbox" href="images/Screen-Shot-2019-04-25-at-10.16.15-AM-e1556212626980-1024x232.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="sublime headers" src="images/Screen-Shot-2019-04-25-at-10.16.15-AM-e1556212626980-1024x232.png" /></a></p>
 <p>Now it's data cleanup time. Notice the two commas followed by the word "APPROXIMATE". We need to get rid of these, and then we need to add double quotes around the coordinate numbers</p>
 <p>Do a find (cmd-f/ctrl-f), type “,,APPROXIMATE," and click on the Find All button. You should now have a cursor on every row. Very cool!  </p>
-<p><img alt="" src="images/sublime find all.gif" /> </p>
+<p><a class="glightbox" href="images/sublime find all.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/sublime find all.gif" /></a> </p>
 <p>Add the quote before the first number and then go to the end of the line (cmd + right arrow or ctrl + right arrow) to add the closing quote:</p>
-<p><img alt="" src="images/sublime adding quotes.gif" /></p>
+<p><a class="glightbox" href="images/sublime adding quotes.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/sublime adding quotes.gif" /></a></p>
 <p>Save the file as <strong>Countries.csv</strong></p>
 <h3 id="lets-palladio"><strong>Let’s Palladio!</strong><a class="headerlink" href="#lets-palladio" title="Permanent link">&para;</a></h3>
 <p>Let's review what we have just accomplished. We have a rich table of almost 10,000 records of New Yorker fiction stories that span 100 years. Check. We have a second table with every distinct country represented in our stories, <em>and</em> we have given them spatial coordinates so that we can plot them on a map. Check. We have modified the coordinate fields to conform to Palladio's format. Check. Now our data is finally ready for some <a href="http://hdlab.stanford.edu/palladio/">Palladio</a> fun!</p>
 <p>Go to <a href="http://hdlab.stanford.edu/palladio/">Palladio</a> and start a new project</p>
 <p>Drag and drop your Stories.csv file into the box  </p>
-<p><img alt="" src="images/Screen-Shot-2018-04-09-at-10.49.50-AM-e1523296230799.png" /></p>
+<p><a class="glightbox" href="images/Screen-Shot-2018-04-09-at-10.49.50-AM-e1523296230799.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Screen-Shot-2018-04-09-at-10.49.50-AM-e1523296230799.png" /></a></p>
 <p>Click on <strong>Country</strong> from the list of columns in your primary table</p>
-<p><img alt="palladio countries" src="images/Screen-Shot-2019-04-25-at-10.50.44-AM-e1556214828981.png" /></p>
+<p><a class="glightbox" href="images/Screen-Shot-2019-04-25-at-10.50.44-AM-e1556214828981.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="palladio countries" src="images/Screen-Shot-2019-04-25-at-10.50.44-AM-e1556214828981.png" /></a></p>
 <p>Click on <strong>Add a new table</strong></p>
 <p>Drag and drop your Countries.csv file into the box:  </p>
-<p><img alt="" src="images/palladiojoin.gif" /></p>
+<p><a class="glightbox" href="images/palladiojoin.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/palladiojoin.gif" /></a></p>
 <p>Rename your tables to “<strong>Stories</strong>” and “<strong>Countries</strong>” respectively</p>
 <h3 id="mapping"><strong>Mapping</strong><a class="headerlink" href="#mapping" title="Permanent link">&para;</a></h3>
 <p>Now that our stories are loaded in Palladio, linked to its country table, we can see what our stories will look like on a map.</p>
 <ol>
 <li>
 <p>Click on the <strong>Map</strong> tab  </p>
-<p><img alt="" src="images/Palladio-2-1-e1523381606725.png" />
+<p><a class="glightbox" href="images/Palladio-2-1-e1523381606725.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Palladio-2-1-e1523381606725.png" /></a>
 2. Click on **New Layer  </p>
-<p><img alt="" src="images/Palladio-3-1-e1523381683845.png" /></p>
+<p><a class="glightbox" href="images/Palladio-3-1-e1523381683845.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Palladio-3-1-e1523381683845.png" /></a></p>
 <p><strong><br />
 1. Name: </strong>Stories<strong>
 2. Places: </strong>Country<strong>
@@ -700,40 +709,40 @@
 </ol>
 <p>[TBS_ALERT color="info" heading="Nice map!"]</p>
 <p>Hurray! We have a beautiful map with lots of circles on it. But, what does this visual tell us? Perhaps more importantly, is all the information on the map <em>accurate</em>? Never trust a graphic without special inspection. Hover over each circle, reflect on the size of them, consider its location, inspect the label... Can you find any errors?</p>
-<p><img alt="" src="images/Screen-Shot-2018-04-09-at-10.52.57-AM-e1523296398246.png" /></p>
+<p><a class="glightbox" href="images/Screen-Shot-2018-04-09-at-10.52.57-AM-e1523296398246.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Screen-Shot-2018-04-09-at-10.52.57-AM-e1523296398246.png" /></a></p>
 <p>[/TBS_ALERT]</p>
 <h3 id="timeline">Timeline<a class="headerlink" href="#timeline" title="Permanent link">&para;</a></h3>
-<p><img alt="" src="images/Palladio-4-e1523381871193.png" /></p>
+<p><a class="glightbox" href="images/Palladio-4-e1523381871193.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Palladio-4-e1523381871193.png" /></a></p>
 <p>Now that we have the "space" out of the way, let's work on the "time."  Click on the tab (at the bottom left of the page) labeled Timeline.  </p>
 <p>[TBS_ALERT color="info" heading="What does this timeline tell you? "]</p>
-<p><img alt="" src="images/Screen-Shot-2018-04-09-at-11.10.48-AM-e1523297485348.png" /></p>
+<p><a class="glightbox" href="images/Screen-Shot-2018-04-09-at-11.10.48-AM-e1523297485348.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Screen-Shot-2018-04-09-at-11.10.48-AM-e1523297485348.png" /></a></p>
 <p>What are the temporal trends over the course of the past 100 years of New Yorker fiction articles? Also notice that the data is grouped by gender. What does the timeline tell us about gender?</p>
 <p>[/TBS_ALERT]</p>
 <p>Now click on the Group By dropdown.</p>
-<p><img alt="" src="images/Palladio-5-e1523382025543.png" /></p>
-<p><img alt="" src="images/Screen-Shot-2018-04-09-at-11.45.54-AM-e1523299605929.png" /></p>
+<p><a class="glightbox" href="images/Palladio-5-e1523382025543.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Palladio-5-e1523382025543.png" /></a></p>
+<p><a class="glightbox" href="images/Screen-Shot-2018-04-09-at-11.45.54-AM-e1523299605929.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Screen-Shot-2018-04-09-at-11.45.54-AM-e1523299605929.png" /></a></p>
 <p>Choose Author  </p>
-<p><img alt="" src="images/Screen-Shot-2018-04-09-at-11.47.17-AM-e1523299699540.png" /></p>
+<p><a class="glightbox" href="images/Screen-Shot-2018-04-09-at-11.47.17-AM-e1523299699540.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Screen-Shot-2018-04-09-at-11.47.17-AM-e1523299699540.png" /></a></p>
 <p>What happened to the timeline? Inspect the timeline by hovering over the timeline. What do you notice?  </p>
 <p>Switch the grouping back to gender. Position your cursor on the left edge of the timeline, and drag towards the right. Select the first few bars on the timeline. Notice the effect that this has on the map.</p>
-<p><img alt="" src="images/Palladio-e1523298927810.png" /></p>
+<p><a class="glightbox" href="images/Palladio-e1523298927810.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Palladio-e1523298927810.png" /></a></p>
 <p>Now position your cursor at the right edge of the light blue box you just created, and drag the edge of the blue box towards the right.</p>
-<p><img alt="" src="images/palladio.gif" /></p>
+<p><a class="glightbox" href="images/palladio.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/palladio.gif" /></a></p>
 <p>This process cumulatively adds the stories that were written over the years. It is as if you are traversing 100 years of history! Notice how different points on the globe light up the more "global" the stories become over the years.</p>
 <h3 id="facets">Facets<a class="headerlink" href="#facets" title="Permanent link">&para;</a></h3>
 <p>Now let's look at facet browsing. Facets are a fancy way of filtering our data. Just like a real life filter, facets begin to narrow down what we are looking at based on different attributes in our data. What makes facets interesting is that we can <em>combine</em> facets. So, for example, if we have one facet that filters our data by gender, a second facet that filters it by country, and a third facet that displays the authors, we can display a count of all female authors in the United Kingdom. Let's give it a spin.</p>
 <p>Click the Facet button. Click on the <strong>Dimensions</strong> button and choose <strong>Gender</strong>, <strong>Country</strong>, and <strong>Author</strong> <em>in this order</em>.</p>
-<p><img alt="" src="images/Palladio-2-e1523304942903.png" /></p>
+<p><a class="glightbox" href="images/Palladio-2-e1523304942903.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Palladio-2-e1523304942903.png" /></a></p>
 <p>Click on the <strong>Count</strong> button and select <strong>Number of Stories</strong>. You should now see the three facets. On the first facet, click on F (female), on the second facet, click on United States.</p>
-<p><img alt="" src="images/Screen-Shot-2018-04-09-at-12.06.40-PM-e1523300827867.png" /></p>
+<p><a class="glightbox" href="images/Screen-Shot-2018-04-09-at-12.06.40-PM-e1523300827867.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Screen-Shot-2018-04-09-at-12.06.40-PM-e1523300827867.png" /></a></p>
 <p>Now let's regenerate our timeline based on our facet. Click on the trash can next to the existing timeline.</p>
-<p><img alt="" src="images/Palladio_and_Pushbullet_-_Your_devices_working_better_together-e1523305172782.png" /></p>
+<p><a class="glightbox" href="images/Palladio_and_Pushbullet_-_Your_devices_working_better_together-e1523305172782.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Palladio_and_Pushbullet_-_Your_devices_working_better_together-e1523305172782.png" /></a></p>
 <p>Click on the <strong>Timeline</strong> button again. Click on the <strong>Group by</strong> button, and select <strong>Author</strong>.</p>
-<p><img alt="" src="images/Screen-Shot-2018-04-09-at-1.21.09-PM-e1523305301451.png" /></p>
+<p><a class="glightbox" href="images/Screen-Shot-2018-04-09-at-1.21.09-PM-e1523305301451.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Screen-Shot-2018-04-09-at-1.21.09-PM-e1523305301451.png" /></a></p>
 <p>How is this timeline different from the overall timeline you generated earlier? What does this tell us about female authors from the United States?</p>
 <h3 id="gallery">Gallery<a class="headerlink" href="#gallery" title="Permanent link">&para;</a></h3>
 <p>The last Palladio tool we will cover is the Gallery. It may seem innocuous, but it is in fact, yet another powerful tool that can convey visual significance. However, in order to make the Gallery come to life, additional data fields are necessary. Specifically, we want to add two columns to our data: an image URL, and a link to the article. Once this is accomplished, we can visualize the stories in the Gallery, complete with a view of the associated image (in this case, the representing graphic on the New Yorker site). Clicking on one of the boxes will then take you directly to the article page.</p>
-<p><img alt="" src="images/Screen-Shot-2018-04-10-at-10.25.47-AM-e1523381384917.png" /></p>
+<p><a class="glightbox" href="images/Screen-Shot-2018-04-10-at-10.25.47-AM-e1523381384917.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Screen-Shot-2018-04-10-at-10.25.47-AM-e1523381384917.png" /></a></p>
 <h3 id="thinking-forward">Thinking forward<a class="headerlink" href="#thinking-forward" title="Permanent link">&para;</a></h3>
 <p>Now that you are familiar with the power of Palladio, think of what future applications of its usage may be. What kind of data can you add that would provide a powerful visual narrative?</p>
 
@@ -794,5 +803,5 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

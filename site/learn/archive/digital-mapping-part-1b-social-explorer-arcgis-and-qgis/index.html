@@ -51,7 +51,16 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -653,23 +662,23 @@
 <p>For those interested in seeing the comparison between QGIS and ArcGIS you can check out this external article here: <a href="http://www.xyht.com/spatial-itgis/qgis-v-arcgis/">http://www.xyht.com/spatial-itgis/qgis-v-arcgis/</a></p>
 <p>[/TBS_ALERT]</p>
 <p>1. Attribute data</p>
-<p><img alt="ArcGIS_data_Table" src="images/ArcGIS_data_Table.png" /></p>
+<p><a class="glightbox" href="images/ArcGIS_data_Table.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="ArcGIS_data_Table" src="images/ArcGIS_data_Table.png" /></a></p>
 <p>2. Editing data</p>
-<p><img alt="ArcMap_editor_good" src="images/ArcMap_editor_good.png" /></p>
+<p><a class="glightbox" href="images/ArcMap_editor_good.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="ArcMap_editor_good" src="images/ArcMap_editor_good.png" /></a></p>
 <p>3. Joining data</p>
-<p><img alt="ArcGIS_joining" src="images/ArcGIS_joining.png" /></p>
+<p><a class="glightbox" href="images/ArcGIS_joining.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="ArcGIS_joining" src="images/ArcGIS_joining.png" /></a></p>
 <p>4. Geocoding [<a href="http://sandbox.idre.ucla.edu/workshops/DigitalMappingWorkshop2015/AddressLocator.zip">Address Locator download</a> (2.1gb)]</p>
-<p><img alt="ArcGIS_geoCode" src="images/ArcGIS_geoCode.png" /></p>
+<p><a class="glightbox" href="images/ArcGIS_geoCode.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="ArcGIS_geoCode" src="images/ArcGIS_geoCode.png" /></a></p>
 <p>5. Buffer Analysis</p>
-<p><img alt="ArcGIS_buffer" src="images/ArcGIS_buffer.png" /></p>
+<p><a class="glightbox" href="images/ArcGIS_buffer.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="ArcGIS_buffer" src="images/ArcGIS_buffer.png" /></a></p>
 <p>6. Clip</p>
-<p><img alt="ArcGIS_clip" src="images/ArcGIS_clip.png" /></p>
+<p><a class="glightbox" href="images/ArcGIS_clip.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="ArcGIS_clip" src="images/ArcGIS_clip.png" /></a></p>
 <p>7. Merge data sets</p>
-<p><img alt="ArcGIS_merge" src="images/ArcGIS_merge.png" /></p>
+<p><a class="glightbox" href="images/ArcGIS_merge.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="ArcGIS_merge" src="images/ArcGIS_merge.png" /></a></p>
 <p>8. Network Analysis - Service Areas [<a href="http://sandbox.idre.ucla.edu/workshops/DigitalMappingWorkshop2015/StreetData.zip">Network Dataset Download</a>] (2.38 gb)]</p>
-<p><img alt="ArcGIS_serviceMap" src="images/ArcGIS_serviceMap.png" /></p>
+<p><a class="glightbox" href="images/ArcGIS_serviceMap.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="ArcGIS_serviceMap" src="images/ArcGIS_serviceMap.png" /></a></p>
 <p>9. Network Analysis - Routing</p>
-<p><img alt="network_analysis_tut" src="images/network_analysis_tut-1024x216.png" /></p>
+<p><a class="glightbox" href="images/network_analysis_tut-1024x216.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="network_analysis_tut" src="images/network_analysis_tut-1024x216.png" /></a></p>
 <p>10. Spatial Statistics</p>
 <p>[iframe src="https://www.google.com/fusiontables/embedviz?q=select+col4+from+1fQpEM0xAbUC4NtQZim11lZgJqHofnei5Lz9m94w&amp;viz=MAP&amp;h=false&amp;lat=33.163621188510625&amp;lng=66.52446556249991&amp;t=1&amp;z=7&amp;l=col4&amp;y=1&amp;tmplt=1&amp;hml=TWO_COL_LAT_LNG" height="150"]</p>
 <p>[<a href="http://sandbox.idre.ucla.edu/workshops/DigitalMappingWorkshop2015/Part1.zip">Tutorial Data for 1 - 9</a>]</p>
@@ -734,5 +743,5 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

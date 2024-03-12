@@ -51,7 +51,16 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -925,7 +934,7 @@
 <li>ArcCatalog - for managing GIS datasets</li>
 <li>ArcMap - for mapping GIS datasets</li>
 </ol>
-<p><img alt="ArcIcons" src="images/ArcIcons.png" /></p>
+<p><a class="glightbox" href="images/ArcIcons.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="ArcIcons" src="images/ArcIcons.png" /></a></p>
 <p>[TBS_ALERT color="info" heading="What about OpenSource Alternatives?"]</p>
 <p><a href="http://www.qgis.org/en/site/">QGIS</a> is as an alternative to ArcGIS that is free and openly available to the public on all computing platforms. Despite the accessibility of QGIS, there is a steeper learning curve for those learning GIS for the first time. However, those seeking a free low-cost alternative to ArcGIS can apply the concepts learned in this workshop with that program.</p>
 <p>For those interested in seeing the comparison between QGIS and ArcGIS you can check out this external article here: <a href="http://www.xyht.com/spatial-itgis/qgis-v-arcgis/">http://www.xyht.com/spatial-itgis/qgis-v-arcgis/</a></p>
@@ -970,7 +979,7 @@
    |--LA_ACS_Poverty</p>
 <h2 id="connecting-a-folder-in-arccatalog">Connecting a folder in ArcCatalog<a class="headerlink" href="#connecting-a-folder-in-arccatalog" title="Permanent link">&para;</a></h2>
 <p>Open up ArcCatalog and click the second button to left, which is the "Connect Folder" button.</p>
-<p><img alt="ArcCatalog3" src="images/ArcCatalog3.png" /></p>
+<p><a class="glightbox" href="images/ArcCatalog3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="ArcCatalog3" src="images/ArcCatalog3.png" /></a></p>
 <p>Navigate to the <strong>Folder</strong> where you extracted the "Workshop.zip" file and then select "OK".</p>
 <p>[TBS_ALERT color="danger" heading="Do not try to connect a file!"]If you try to connect files, you will notice that the "OK" button is grayed out, connecting folders allows you only to choose folders.[/TBS_ALERT]</p>
 <h2 id="view-and-preview-the-data">View and Preview the data<a class="headerlink" href="#view-and-preview-the-data" title="Permanent link">&para;</a></h2>
@@ -980,13 +989,13 @@
 <h2 id="adding-layers">Adding Layers<a class="headerlink" href="#adding-layers" title="Permanent link">&para;</a></h2>
 <p>Now the time has come to fire up ArcMap and get to map making!</p>
 <p>The first step for any GIS project is to have data (more on this later!). In order to add data to your project click on the "Add data" button:</p>
-<p><img alt="addData" src="images/addData.png" /></p>
+<p><a class="glightbox" href="images/addData.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="addData" src="images/addData.png" /></a></p>
 <p>Notice how the connected folder can be selected and datasets be added now? Also, if your map is feeling a bit empty, you can add base maps by clicking the upside down triangle next to the Add Data button. Adding a basemap only provides reference information and nothing else.</p>
 <p>[TBS_ALERT color="info" heading="ArcCatalog in ArcMap?"] You can also connect folders in ArcMap by clicking a button, but we didn't do so because we wanted to demo ArcCatalog. You can even access ArcCatalog in ArcMap, but the view is rather constrained, so we opted to demo the standalone program.[/TBS_ALERT]</p>
 <p>Vector layers are also referred to as "feature classes" in ESRILand. All GIS datasets can be added in this same way. Now drag each layer and re-order them. If you are familiar with Adobe Photoshop or Illustrator, you will recognize conceptual similarities with layering. What happens when layers are re-ordered? How does this dictate your strategy on building a single flattened map with multiple layers?</p>
 <p><a href="http://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2014/09/workshop1.png"><img alt="workshop1" src="images/workshop1-510x188.png" /></a></p>
 <h2 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link">&para;</a></h2>
-<p><img alt="TableView" src="images/TableView.png" /></p>
+<p><a class="glightbox" href="images/TableView.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="TableView" src="images/TableView.png" /></a></p>
 <p>Every layer (feature class) comes with attributes. This is the all-important "information" part of geographic "information" systems mapping. Data in the attribute tables dictates what <em>can</em> get mapped. Open the attribute table of each layer, and study how each row and column is tied to the mapped element. Questions we will answer include:</p>
 <ul>
 <li>What is the unique identifier for each row?</li>
@@ -1045,7 +1054,7 @@
 <p>B) <a href="http://www.socialexplorer.com/">Social Explorer</a> (<a href="http://www.socialexplorer.com/">http://www.socialexplorer.com/</a>) is a website that enables access to Census Data.</p>
 <h4 id="optional-social-explorer-tutorial-for-getting-data">Optional: <a href="http://sandbox.idre.ucla.edu/sandbox/?p=1815">Social Explorer Tutorial for getting data</a><a class="headerlink" href="#optional-social-explorer-tutorial-for-getting-data" title="Permanent link">&para;</a></h4>
 <p>Regardless of where the data is coming from, the key is that there has to be a column which is able to link the non-geographic data to some spatial data set, such as States, Countries, FIPS Codes, Zipcodes.</p>
-<p><img alt="joining" src="images/joining.png" /></p>
+<p><a class="glightbox" href="images/joining.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="joining" src="images/joining.png" /></a></p>
 <h5 id="sources-of-labor-data">Sources of Labor Data:<a class="headerlink" href="#sources-of-labor-data" title="Permanent link">&para;</a></h5>
 <ul>
 <li><a href="http://www.labormarketinfo.edd.ca.gov/msa/lalb.html">http://www.labormarketinfo.edd.ca.gov/msa/lalb.html</a></li>
@@ -1098,7 +1107,7 @@
 <p>Finally, your data points will then load on to your map!</p>
 <h2 id="exporting-maps">Exporting maps<a class="headerlink" href="#exporting-maps" title="Permanent link">&para;</a></h2>
 <p>To export a map, you go to File -&gt; Export.</p>
-<p><img alt="Export" src="images/Export.png" /></p>
+<p><a class="glightbox" href="images/Export.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Export" src="images/Export.png" /></a></p>
 <h1 id="extra-material-geoprocessing-conducting-spatial-analysis">Extra Material - Geoprocessing: Conducting spatial analysis<a class="headerlink" href="#extra-material-geoprocessing-conducting-spatial-analysis" title="Permanent link">&para;</a></h1>
 <p>In addition to editing and visualizing data, GIS can be used to create new data as well. There are three geoprocessing functions that will be covered, which only is a tip of the iceberg when it comes to the various tools that ArcMap provides. Most geoprocessing tools can be found under "Geoprocessing," aside from geocoding.</p>
 <h2 id="geoprocessing-menu">Geoprocessing Menu<a class="headerlink" href="#geoprocessing-menu" title="Permanent link">&para;</a></h2>
@@ -1175,5 +1184,5 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

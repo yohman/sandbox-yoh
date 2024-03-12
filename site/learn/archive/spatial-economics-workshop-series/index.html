@@ -51,7 +51,16 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -770,14 +779,14 @@
 <li>ArcCatalog - for managing GIS datasets</li>
 <li>ArcMap - for mapping GIS datasets</li>
 </ol>
-<p><img alt="ArcIcons" src="images/ArcIcons.png" /></p>
+<p><a class="glightbox" href="images/ArcIcons.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="ArcIcons" src="images/ArcIcons.png" /></a></p>
 <p>[TBS_ALERT color="info" heading="What about OpenSource Alternatives?"]</p>
 <p><a href="http://www.qgis.org/en/site/">QGIS</a> is as an alternative to ArcGIS that is free and openly available to the public on all computing platforms. Despite the accessibility of QGIS, there is a steeper learning curve for those learning GIS for the first time. However, those seeking a free low-cost alternative to ArcGIS can apply the concepts learned in this workshop with that program.</p>
 <p>For those interested in seeing the comparison between QGIS and ArcGIS you can check out this external article here: <a href="http://www.xyht.com/spatial-itgis/qgis-v-arcgis/">http://www.xyht.com/spatial-itgis/qgis-v-arcgis/</a></p>
 <p>[/TBS_ALERT]</p>
 <h3 id="a-little-background-geographical-information-in-the-usa">A little background: Geographical information in the U.S.A.<a class="headerlink" href="#a-little-background-geographical-information-in-the-usa" title="Permanent link">&para;</a></h3>
 <p>Demographic information in the USA is typically arranged in a hierarchical geography, starting from large to small. Starting from States, information gets broken down into Counties or Metropolitan Statistical Areas (MSAs). Each of those are comprised of Census Places which are similar to cities in their size and composition. The neighborhoods of each city are broken down into a Census Tract. Census Tracts are then subdivided further into Census Block Groups. Finally, Census Block Groups compose of Census Blocks, but data is not usually published at this level for privacy concerns.</p>
-<p><img alt="" src="images/US-Geographies-e1516386477547.png" /></p>
+<p><a class="glightbox" href="images/US-Geographies-e1516386477547.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/US-Geographies-e1516386477547.png" /></a></p>
 <p>[TBS_ALERT color="info" heading=""]In short US geography is organized like this:</p>
 <p><strong>States</strong> → <strong>Counties / Metropolitan Statistical Areas</strong> → <strong>Census Places</strong> → <strong>Census Tract</strong> → <strong>Census Block Group</strong> → <strong>Census Block</strong></p>
 <p>[/TBS_ALERT]</p>
@@ -804,7 +813,7 @@
 |--us_states</p>
 <h3 id="connecting-a-folder-in-arccatalog">Connecting a folder in ArcCatalog<a class="headerlink" href="#connecting-a-folder-in-arccatalog" title="Permanent link">&para;</a></h3>
 <p>Open up ArcCatalog and click the second button to left, which is the "Connect Folder" button.</p>
-<p><img alt="ArcCatalog3" src="images/ArcCatalog3.png" /></p>
+<p><a class="glightbox" href="images/ArcCatalog3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="ArcCatalog3" src="images/ArcCatalog3.png" /></a></p>
 <p>Navigate to the <strong>Folder</strong> where you extracted the "Workshop.zip" file and then select "OK".</p>
 <p>[TBS_ALERT color="danger" heading="Do not try to connect a file!"]If you try to connect files, you will notice that the "OK" button is grayed out, connecting folders allows you only to choose folders.[/TBS_ALERT]</p>
 <h3 id="view-and-preview-the-data">View and Preview the data<a class="headerlink" href="#view-and-preview-the-data" title="Permanent link">&para;</a></h3>
@@ -814,7 +823,7 @@
 <h3 id="adding-layers">Adding Layers<a class="headerlink" href="#adding-layers" title="Permanent link">&para;</a></h3>
 <p>Now the time has come to fire up ArcMap and get to map making!</p>
 <p>The first step for any GIS project is to have data (more on this later!). In order to add data to your project click on the "Add data" button:</p>
-<p><img alt="addData" src="images/addData.png" /></p>
+<p><a class="glightbox" href="images/addData.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="addData" src="images/addData.png" /></a></p>
 <p>Notice how the connected folder can be selected and datasets be added now? Also, if your map is feeling a bit empty, you can add base maps by clicking the upside down triangle next to the Add Data button. Adding a basemap only provides reference information and nothing else.</p>
 <p>[TBS_ALERT color="info" heading="ArcCatalog in ArcMap?"] You can also connect folders in ArcMap by clicking a button, but we didn't do so because we wanted to demo ArcCatalog. You can even access ArcCatalog in ArcMap, but the view is rather constrained, so we opted to demo the standalone program.[/TBS_ALERT]</p>
 <h3 id="setting-the-projection">Setting the projection<a class="headerlink" href="#setting-the-projection" title="Permanent link">&para;</a></h3>
@@ -824,15 +833,15 @@
 <li>Select the "coordinate systems" tab</li>
 <li>Go to "Projected Coordinate Systems", "Continental", "North America", and choose "USA Contiguous Albers Equal Area Conic USGS"</li>
 </ol>
-<p><img alt="" src="images/projection-e1516301085784.png" /></p>
+<p><a class="glightbox" href="images/projection-e1516301085784.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/projection-e1516301085784.png" /></a></p>
 <p>[TBS_ALERT color="danger" heading="It's on the fly!"]The software will warn you that you are projecting your datasets on the fly (note that it is not <em>reprojecting</em> the actual data, it is doing so only within the scope of this project space). If you want to perform spatial analysis, it is recommended that all layers in your project be reprojected to an appropriate coordinate system. More information on how to do this can be found <a href="https://support.esri.com/en/technical-article/000004886">here</a>.[/TBS_ALERT]</p>
 <h3 id="order-your-layers">Order your layers<a class="headerlink" href="#order-your-layers" title="Permanent link">&para;</a></h3>
 <p>Vector layers are also referred to as "feature classes" in ESRILand. All GIS datasets can be added in this same way. Now drag each layer and re-order them. If you are familiar with Adobe Photoshop or Illustrator, you will recognize conceptual similarities with layering. What happens when layers are re-ordered? How does this dictate your strategy on building a single flattened map with multiple layers?</p>
 <p>[TBS_ALERT color="info" heading="Challenge Exercise"]Modify your map by changing fill colors, outline colors, symbol sizes, symbol colors to make it look like this:</p>
-<p><img alt="" src="images/US-Map-e1516301440489.png" /></p>
+<p><a class="glightbox" href="images/US-Map-e1516301440489.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/US-Map-e1516301440489.png" /></a></p>
 <p>[/TBS_ALERT]</p>
 <h3 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link">&para;</a></h3>
-<p><img alt="" src="images/Attribute-Table-1-e1516387556924.png" /></p>
+<p><a class="glightbox" href="images/Attribute-Table-1-e1516387556924.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Attribute-Table-1-e1516387556924.png" /></a></p>
 <p>Every layer (feature class) comes with attributes. This is the all-important "information" part of geographic "information" systems mapping. Data in the attribute tables dictates what <em>can</em> get mapped. Open the attribute table of each layer, and study how each row and column is tied to the mapped element. Questions we will answer include:</p>
 <ul>
 <li>What is the unique identifier for each row?</li>
@@ -849,7 +858,7 @@
 <li>Quantities -&gt; Graduated colors</li>
 </ol>
 <h3 id="labeling">Labeling<a class="headerlink" href="#labeling" title="Permanent link">&para;</a></h3>
-<p><img alt="" src="images/Labeling-e1516302424726.png" /></p>
+<p><a class="glightbox" href="images/Labeling-e1516302424726.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Labeling-e1516302424726.png" /></a></p>
 <p>Map elements need labels at times. Consider what needs to be labeled, and what does not. Label sizes, fonts, weights, placement, colors are all things to consider for your map. Understand the relationship between labels, attributes, and layers.</p>
 <p>[TBS_ALERT color="info" heading="Labels hard to read? Halo it!"]Sometimes your labels may be hard to read, depending on what resides in the background. In this situation, you can add a white "halo" to your labels to make them "pop" some more. This feature is very, very hidden in ArcMap, but here is how to get to it:</p>
 <ol>
@@ -859,10 +868,10 @@
 <li>Click "<strong>Mask</strong>"</li>
 <li>Choose "<strong>Halo</strong>"</li>
 </ol>
-<p><img alt="" src="images/Halo-e1516390561590.png" /></p>
+<p><a class="glightbox" href="images/Halo-e1516390561590.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Halo-e1516390561590.png" /></a></p>
 <p>[/TBS_ALERT]</p>
 <h3 id="choropleth-maps">Choropleth Maps<a class="headerlink" href="#choropleth-maps" title="Permanent link">&para;</a></h3>
-<p><img alt="" src="images/Choropleth-Map-e1516303937369.png" /></p>
+<p><a class="glightbox" href="images/Choropleth-Map-e1516303937369.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Choropleth-Map-e1516303937369.png" /></a></p>
 <p>For this section, we will focus on creating a choropleth (which just means a colored map based on numerical data)!</p>
 <p>When creating a choropleth the following needs to be considered:</p>
 <ol>
@@ -880,7 +889,7 @@
 </li>
 </ol>
 <h2 id="part-2-working-with-social-explorer">Part 2: Working with Social Explorer<a class="headerlink" href="#part-2-working-with-social-explorer" title="Permanent link">&para;</a></h2>
-<h3 id="_1"><img alt="" src="images/Social-Explorer-e1516309262695.png" /><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<h3 id="_1"><a class="glightbox" href="images/Social-Explorer-e1516309262695.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Social-Explorer-e1516309262695.png" /></a><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <h3 id="data-data-data">Data, data, data!<a class="headerlink" href="#data-data-data" title="Permanent link">&para;</a></h3>
 <p>Let's talk about data manipulation in ArcMap, which is one of the core functions of any GIS program. Within ArcMap "joining" or "connecting" data is a fundamental task for working between data from different sources. There are two basic "joining" method available:</p>
 <ol>
@@ -896,10 +905,10 @@
 <li>Go to <a href="https://www.socialexplorer.com/">Social Explorer</a> and click on the "<strong>Tables</strong>" tab</li>
 <li>Select "<strong>American Community Survey (5-Year Estimates)"</strong></li>
 <li>Click on "<strong>Begin Report</strong>" for the newest survey</li>
-<li>Select "<strong>County</strong>" for geographic type, highlight "<strong>All counties</strong>" and click the "<strong>Add</strong>" button, and then click on "<strong>Proceed to Tables</strong>"<img alt="" src="images/ACS-Selection-e1516309472262.png" /></li>
+<li>Select "<strong>County</strong>" for geographic type, highlight "<strong>All counties</strong>" and click the "<strong>Add</strong>" button, and then click on "<strong>Proceed to Tables</strong>"<a class="glightbox" href="images/ACS-Selection-e1516309472262.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/ACS-Selection-e1516309472262.png" /></a></li>
 <li>Click on the "<strong>Select by Keyword</strong>" tab, and enter "<strong>employment</strong>"</li>
-<li>Highlight "<strong>T33. Employment Status for Total Populations 16 Years and Over</strong>" and click on "<strong>Add</strong>" and then "<strong>Show results</strong>"<img alt="" src="images/Social-Explorer-data-preview-e1516309689183.png" /></li>
-<li>Click on the <strong>header</strong> for the table to go to the Data Dictionary page that describes this data. This will open in a new window. Keep this window open, we will come back to it later. <img alt="" src="images/Table-details-e1516309847621.png" /></li>
+<li>Highlight "<strong>T33. Employment Status for Total Populations 16 Years and Over</strong>" and click on "<strong>Add</strong>" and then "<strong>Show results</strong>"<a class="glightbox" href="images/Social-Explorer-data-preview-e1516309689183.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Social-Explorer-data-preview-e1516309689183.png" /></a></li>
+<li>Click on the <strong>header</strong> for the table to go to the Data Dictionary page that describes this data. This will open in a new window. Keep this window open, we will come back to it later. <a class="glightbox" href="images/Table-details-e1516309847621.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Table-details-e1516309847621.png" /></a></li>
 <li>Go back to the report page, and click on the "<strong>Data Download</strong>" tab</li>
 <li>Click on the "<strong>County data (CSV)</strong>" link to download the data into your project folder. Name the file "<strong>employment.csv</strong>"</li>
 </ol>
@@ -920,36 +929,36 @@
 <li>SE_T033_007</li>
 </ol>
 </li>
-<li>Right click on the table again, and click on "open" (or use the CTRL-T shortcut)<img alt="" src="images/Employment-Data-view-e1516310782269.png" /></li>
-<li>Let's add this table to our workshop geodatabase. Right click on the table, click "<strong>Data</strong>", and "<strong>Export</strong>"<img alt="" src="images/Export-data-e1516310980190.png" /></li>
-<li>Click on the <strong>yellow folder</strong> button, navigate to your "<strong>workshop.gdb</strong>" geodatabase, and save the table as "<strong>employment</strong>". Choose "<strong>yes</strong>" to add it to your project.<img alt="" src="images/Save-into-geodatabase-e1516311348374.png" /></li>
+<li>Right click on the table again, and click on "open" (or use the CTRL-T shortcut)<a class="glightbox" href="images/Employment-Data-view-e1516310782269.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Employment-Data-view-e1516310782269.png" /></a></li>
+<li>Let's add this table to our workshop geodatabase. Right click on the table, click "<strong>Data</strong>", and "<strong>Export</strong>"<a class="glightbox" href="images/Export-data-e1516310980190.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Export-data-e1516310980190.png" /></a></li>
+<li>Click on the <strong>yellow folder</strong> button, navigate to your "<strong>workshop.gdb</strong>" geodatabase, and save the table as "<strong>employment</strong>". Choose "<strong>yes</strong>" to add it to your project.<a class="glightbox" href="images/Save-into-geodatabase-e1516311348374.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Save-into-geodatabase-e1516311348374.png" /></a></li>
 <li>Right click on <strong>employment.csv</strong> and remove it from your project</li>
 </ol>
 <h3 id="the-leading-zero-nightmare">The leading zero nightmare...<a class="headerlink" href="#the-leading-zero-nightmare" title="Permanent link">&para;</a></h3>
 <p>Open the attribute table for your employment table. Notice the column Geo_FIPS. The first record is for Autauga County in Alabama. The Geo_FIPS is "1001". However, <a href="https://www.nrcs.usda.gov/wps/portal/nrcs/detail/national/home/?cid=nrcs143_013697">the "real" FIPS code for Autauga County is "01001"</a> (with a leading "0"). Arc interprets the column as numeric, and therefore crops any leading zeroes in the column. This poses a problem when we need to use this column to join the data to another layer with the same FIPS code. The following python code fixes this problem by creating a new column and adding the leading zeroes:</p>
 <ol>
-<li>Click on the table menu button, and click "<strong>Add Field...</strong>" <img alt="" src="images/Table-menu-button-e1516314140452.png" /></li>
-<li>Name the new field "<strong>FIPS</strong>", type "<strong>Text</strong>", and Length "<strong>5</strong>" <img alt="" src="images/FIPS-field-settings-e1516314360489.png" /></li>
-<li>In the table view, right click on the new column header, and click "<strong>Field Calculator</strong>" <img alt="" src="images/Field-calculator-e1516314596382.png" /></li>
-<li>In the field calculator, choose the "Python" parser, and enter the following formula: str( !Geo_FIPS! ).zfill(5) <img alt="" src="images/Python-zero-fill-e1516314778730.png" /></li>
+<li>Click on the table menu button, and click "<strong>Add Field...</strong>" <a class="glightbox" href="images/Table-menu-button-e1516314140452.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Table-menu-button-e1516314140452.png" /></a></li>
+<li>Name the new field "<strong>FIPS</strong>", type "<strong>Text</strong>", and Length "<strong>5</strong>" <a class="glightbox" href="images/FIPS-field-settings-e1516314360489.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/FIPS-field-settings-e1516314360489.png" /></a></li>
+<li>In the table view, right click on the new column header, and click "<strong>Field Calculator</strong>" <a class="glightbox" href="images/Field-calculator-e1516314596382.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Field-calculator-e1516314596382.png" /></a></li>
+<li>In the field calculator, choose the "Python" parser, and enter the following formula: str( !Geo_FIPS! ).zfill(5) <a class="glightbox" href="images/Python-zero-fill-e1516314778730.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Python-zero-fill-e1516314778730.png" /></a></li>
 </ol>
 <h3 id="joining-data">Joining data<a class="headerlink" href="#joining-data" title="Permanent link">&para;</a></h3>
 <p>Now we are ready to join our employment data to our county layer.</p>
 <ol>
-<li>Right click on "<strong>us_counties</strong>", "<strong>Joins and relates</strong>", "<strong>Join...</strong>" <img alt="" src="images/Joining-data-e1516314901827.png" /></li>
-<li>Choose "<strong>FIPS</strong>" as the field to join, select the "<strong>employment</strong>" table, and also choose "<strong>FIPS</strong>" to base the join on. <img alt="" src="images/Joining-data-options-e1516315059616.png" /></li>
-<li>Right click on "<strong>us_counties</strong>" and go to "<strong>Properties</strong>", "<strong>Symbology</strong>". Now... remember the Data Dictionary tab that you opened when you downloaded the data from Social Explorer? Here is where it comes handy, as the data fields are not descriptive. In case you lost the tab, here it is again: <img alt="" src="images/Table-details-e1516309847621.png" /></li>
+<li>Right click on "<strong>us_counties</strong>", "<strong>Joins and relates</strong>", "<strong>Join...</strong>" <a class="glightbox" href="images/Joining-data-e1516314901827.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Joining-data-e1516314901827.png" /></a></li>
+<li>Choose "<strong>FIPS</strong>" as the field to join, select the "<strong>employment</strong>" table, and also choose "<strong>FIPS</strong>" to base the join on. <a class="glightbox" href="images/Joining-data-options-e1516315059616.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Joining-data-options-e1516315059616.png" /></a></li>
+<li>Right click on "<strong>us_counties</strong>" and go to "<strong>Properties</strong>", "<strong>Symbology</strong>". Now... remember the Data Dictionary tab that you opened when you downloaded the data from Social Explorer? Here is where it comes handy, as the data fields are not descriptive. In case you lost the tab, here it is again: <a class="glightbox" href="images/Table-details-e1516309847621.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Table-details-e1516309847621.png" /></a></li>
 <li>Let's map the nation's unemployment rate. For "<strong>Value</strong>", select "<strong>Unemployed</strong>", or "<strong>SE_T033_006</strong>".</li>
-<li>Let's also normalize the data by the employable population. For "<strong>Normalization</strong>", select "<strong>Population 16 Years and Over</strong>", or "<strong>SE_T033_001</strong>" <img alt="" src="images/Employment-layer-properties-e1516316613304.png" /></li>
+<li>Let's also normalize the data by the employable population. For "<strong>Normalization</strong>", select "<strong>Population 16 Years and Over</strong>", or "<strong>SE_T033_001</strong>" <a class="glightbox" href="images/Employment-layer-properties-e1516316613304.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Employment-layer-properties-e1516316613304.png" /></a></li>
 <li>The employment rate in December 2017 is at <strong>4.1%</strong>. Let's build a map that will visually reflects this rate.</li>
 <li>Click on the "<strong>Classify</strong>" button</li>
 <li>Select "<strong>Manual</strong>"</li>
-<li>In the "<strong>Break Values</strong>" box, enter the following breaks: <strong>0.02, 0.04, 0.06, 0.08</strong> <img alt="" src="images/Employment-classification-e1516316865748.png" /></li>
+<li>In the "<strong>Break Values</strong>" box, enter the following breaks: <strong>0.02, 0.04, 0.06, 0.08</strong> <a class="glightbox" href="images/Employment-classification-e1516316865748.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Employment-classification-e1516316865748.png" /></a></li>
 <li>Click <strong>OK</strong>. Back in the layer property screen, choose a color ramp that goes from "cold" to "hot". Red colors should generally be used to symbolize problem areas, so flip the colors if necessary (right click on the header "<strong>Symbol</strong>").</li>
-<li>In the "<strong>Label</strong>" column, label each symbol as follows: <img alt="" src="images/Employment-color-and-label-properties-e1516317152397.png" /></li>
+<li>In the "<strong>Label</strong>" column, label each symbol as follows: <a class="glightbox" href="images/Employment-color-and-label-properties-e1516317152397.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Employment-color-and-label-properties-e1516317152397.png" /></a></li>
 </ol>
 <p>[TBS_ALERT color="info" heading="You are done!"]Your final map should look like this:</p>
-<p><img alt="" src="images/US-Unemployment-e1516317910846.png" /></p>
+<p><a class="glightbox" href="images/US-Unemployment-e1516317910846.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/US-Unemployment-e1516317910846.png" /></a></p>
 <p>[/TBS_ALERT]</p>
 <h2 id="assignment">Assignment<a class="headerlink" href="#assignment" title="Permanent link">&para;</a></h2>
 <p>Choose a topic of interest that can be visualized as a county based US map from data that is available on Social Explorer. Download your data of choice from Social Explorer, join it to the county layer provided in this workshop, and symbolize it to create a choropleth map. Add a short paragraph description that describes the map.</p>
@@ -1012,5 +1021,5 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

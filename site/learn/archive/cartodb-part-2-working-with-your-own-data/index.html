@@ -51,7 +51,16 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -544,12 +553,12 @@
 <h4 id="adding-your-own-data">Adding your own data<a class="headerlink" href="#adding-your-own-data" title="Permanent link">&para;</a></h4>
 <ol>
 <li>Download the class dataset here: <a href="https://ucla.box.com/s/8iqzhhb2fw8wb4ur81e7irt4khuvvfqs">LA Times Photo Archive</a></li>
-<li>In CartoDB, go back to your dashboard.  If you are in DATA or MAP edit mode, click on the bent arrow at the top left of your window. This will take you to your dashboard: <img alt="dashboard button" src="images/Screen_Shot_2016-04-25_at_5_16_07_PM.jpg" /></li>
-<li>If you are in Maps view, make sure to switch to Datasets view <img alt="datasets view" src="images/Screen-Shot-2016-04-25-at-5.20.12-PM.jpg" /></li>
-<li>Click on the new dataset button <img alt="new dataset" src="images/Screen-Shot-2016-04-25-at-5.24.20-PM.jpg" /></li>
+<li>In CartoDB, go back to your dashboard.  If you are in DATA or MAP edit mode, click on the bent arrow at the top left of your window. This will take you to your dashboard: <a class="glightbox" href="images/Screen_Shot_2016-04-25_at_5_16_07_PM.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="dashboard button" src="images/Screen_Shot_2016-04-25_at_5_16_07_PM.jpg" /></a></li>
+<li>If you are in Maps view, make sure to switch to Datasets view <a class="glightbox" href="images/Screen-Shot-2016-04-25-at-5.20.12-PM.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="datasets view" src="images/Screen-Shot-2016-04-25-at-5.20.12-PM.jpg" /></a></li>
+<li>Click on the new dataset button <a class="glightbox" href="images/Screen-Shot-2016-04-25-at-5.24.20-PM.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="new dataset" src="images/Screen-Shot-2016-04-25-at-5.24.20-PM.jpg" /></a></li>
 <li>Find and add the class dataset that you downloaded, and click on the "Connect dataset" button</li>
 <li>Inspect the data in data view (what do you notice?), and then switch to "MAP VIEW"</li>
-<li>Navigate the map until you are centered in Los Angeles<img alt="" src="../images/latimesmap1.jpg" /></li>
+<li>Navigate the map until you are centered in Los Angeles<a class="glightbox" href="../images/latimesmap1.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/latimesmap1.jpg" /></a></li>
 </ol>
 <h3 id="creating-interactivity">Creating interactivity<a class="headerlink" href="#creating-interactivity" title="Permanent link">&para;</a></h3>
 <p>We would like a photo to appear when we hover over each marker. Also, if you click on a marker, we would like the popup window to show a larger photo.</p>
@@ -558,7 +567,7 @@
 <li>Change the width to 400</li>
 <li>
 <p>Click on the "change HTML" button</p>
-<p><img alt="" src="../images/infowindow_click2.png" />
+<p><a class="glightbox" href="../images/infowindow_click2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/infowindow_click2.png" /></a>
 4. Type the following code into the custom HTML window:</p>
 <p>&lt;div class\="cartodb-popup v2"&gt;
     &lt;a href\="#close" class\="cartodb-popup-close-button close"&gt;x&lt;/a&gt;
@@ -592,10 +601,10 @@
 <li>Click the "OK, CREATE MAP" button</li>
 <li>
 <p>Click the "Edit metadata..." link</p>
-<p><img alt="" src="../images/edit_metadata.png" />
+<p><a class="glightbox" href="../images/edit_metadata.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/edit_metadata.png" /></a>
 4. Add a title (Map Name) and Description and save
 5. Go to "Options" and add "Fixed title" and "Fixed description"</p>
-<p><img alt="" src="../images/latimes-options.jpg" />
+<p><a class="glightbox" href="../images/latimes-options.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/latimes-options.jpg" /></a>
 6. Find and click the "PUBLISH" button on the top right hand corner of the page
 7. Notice the different options to publish your map.</p>
 </li>
@@ -658,5 +667,5 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

@@ -51,7 +51,16 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -649,7 +658,7 @@
 <ul>
 <li><a href="https://docs.google.com/document/d/11loPFABGybOtgTbNqU0SsOm3PkLQWK_RUq0-3bvuAjQ/edit#">Last week's assignment</a></li>
 </ul>
-<p><img alt="" src="images/OD-Matrix-map-e1517532333380.png" /></p>
+<p><a class="glightbox" href="images/OD-Matrix-map-e1517532333380.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/OD-Matrix-map-e1517532333380.png" /></a></p>
 <p>What is the optimal route to get to a group of locations? And what happens when there is a "disruption" on particular pathways? This workshop examines the amount of time (cost) that it takes to traverse a given network of roads between a series of provided locations.</p>
 <h2 id="part-i-download-and-prepare-the-data">Part I. Download and prepare the data<a class="headerlink" href="#part-i-download-and-prepare-the-data" title="Permanent link">&para;</a></h2>
 <p>First, download and unzip the states, county, and city geodatabase from our class server:</p>
@@ -669,15 +678,15 @@
 <ol>
 <li>Open <strong>ArcMap</strong></li>
 <li>Add <strong>NHPNLine.shp</strong> and <strong>US_States</strong></li>
-<li>Turn off <strong>NHPNLine</strong>, and highlight <strong>California</strong> (use the selection tool) <img alt="" src="images/select-feature-tool-e1517358308800.png" /></li>
-<li>Go to <strong>Selection</strong>, <strong>Select by Location</strong>, <strong>select features from NHPLine</strong>, source layer: <strong>us_states</strong>, and check the "<strong>use selected features</strong>" <img alt="" src="images/Save-selected-e1517354614265.png" /></li>
-<li>Right click on <strong>NHPNLine</strong>, <strong>Data</strong>, <strong>Export Data</strong>, put it in your geodatabase, and give it the filename <strong>ca_roads</strong> <img alt="" src="images/export-data-ca-roads-e1517354783997.png" /></li>
+<li>Turn off <strong>NHPNLine</strong>, and highlight <strong>California</strong> (use the selection tool) <a class="glightbox" href="images/select-feature-tool-e1517358308800.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/select-feature-tool-e1517358308800.png" /></a></li>
+<li>Go to <strong>Selection</strong>, <strong>Select by Location</strong>, <strong>select features from NHPLine</strong>, source layer: <strong>us_states</strong>, and check the "<strong>use selected features</strong>" <a class="glightbox" href="images/Save-selected-e1517354614265.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Save-selected-e1517354614265.png" /></a></li>
+<li>Right click on <strong>NHPNLine</strong>, <strong>Data</strong>, <strong>Export Data</strong>, put it in your geodatabase, and give it the filename <strong>ca_roads</strong> <a class="glightbox" href="images/export-data-ca-roads-e1517354783997.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/export-data-ca-roads-e1517354783997.png" /></a></li>
 </ol>
 <h3 id="extract-the-counties-for-california">Extract the counties for California.<a class="headerlink" href="#extract-the-counties-for-california" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Add <strong>us_counties</strong> to ArcMap</li>
 <li>Go to <strong>Selection</strong>, <strong>Select by Attributes</strong></li>
-<li>The FIPS code for California is <strong>06</strong>. Enter the following SQL query and apply: <img alt="" src="images/Select-by-Attribute-Counties-e1517436521502.png" /></li>
+<li>The FIPS code for California is <strong>06</strong>. Enter the following SQL query and apply: <a class="glightbox" href="images/Select-by-Attribute-Counties-e1517436521502.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Select-by-Attribute-Counties-e1517436521502.png" /></a></li>
 <li>Right click on <strong>us_counties</strong>, <strong>data</strong>, <strong>export data</strong>, and save it as <strong>ca_counties</strong> in your geodatabase.</li>
 </ol>
 <h3 id="extract-the-cities-for-california">Extract the cities for California<a class="headerlink" href="#extract-the-cities-for-california" title="Permanent link">&para;</a></h3>
@@ -691,7 +700,7 @@
 <li>Drag and drop the three California datasets into the the input feature class box</li>
 <li>For Output Workspace, navigate to your <strong>workshop2018.gdb</strong> geodatabase</li>
 <li>For Output Coordinate System, choose <strong>NAD 1983 UTM Zone 11N</strong> (type in the search box to find it)</li>
-<li>Click <strong>OK <img alt="" src="images/batch-project-utm-e1517506013123.png" /></strong> </li>
+<li>Click <strong>OK <a class="glightbox" href="images/batch-project-utm-e1517506013123.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/batch-project-utm-e1517506013123.png" /></a></strong> </li>
 <li>You should now have three new layers in your geodatabase. Rename them as:<ol>
 <li>ca_cities_1 -&gt; <strong>ca_cities_utm</strong></li>
 <li>ca_counties_1 -&gt; <strong>ca_counties_utm</strong></li>
@@ -701,7 +710,7 @@
 </ol>
 <h2 id="part-ii-calculating-cost">Part II. Calculating Cost<a class="headerlink" href="#part-ii-calculating-cost" title="Permanent link">&para;</a></h2>
 <p>We now have all our data projected and ready to go. But before we do any network analysis, we want to create "cost" fields in our network dataset. Essentially, we want to measure cost as a factor of time. Faster roads, like interstate and freeways, will assume a lower cost of travel (less minutes), while slower roads, like arterial roads, will assume a higher cost (more minutes to travel).</p>
-<p>Let's take a look at how the Department of Transportation classifies different roads on the network. The metadata is available on their website <a href="https://www.fhwa.dot.gov/planning/processes/tools/nhpn/2015/nhpnmetadata.txt">here</a>. Scroll down until you find the documentation on the FCLASS field. <img alt="" src="images/FCLASS-documatation-e1517510992548.png" /></p>
+<p>Let's take a look at how the Department of Transportation classifies different roads on the network. The metadata is available on their website <a href="https://www.fhwa.dot.gov/planning/processes/tools/nhpn/2015/nhpnmetadata.txt">here</a>. Scroll down until you find the documentation on the FCLASS field. <a class="glightbox" href="images/FCLASS-documatation-e1517510992548.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/FCLASS-documatation-e1517510992548.png" /></a></p>
 <p>In order to simplify our cost calculation, we will create our own reclassification using only 3 classes. To do so, we will group all freeways and interstates into one class, arterial roads in another, and all the remaining roads as a third class.</p>
 <ol>
 <li>Open a new ArcMap project</li>
@@ -725,7 +734,7 @@ else
 end if</p>
 </li>
 <li>
-<p>Enter "<strong>n</strong>" in the second box labeled <strong>NewClass=</strong> <img alt="" src="images/Field-Calculator-NewClass-e1517356709530.png" /></p>
+<p>Enter "<strong>n</strong>" in the second box labeled <strong>NewClass=</strong> <a class="glightbox" href="images/Field-Calculator-NewClass-e1517356709530.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Field-Calculator-NewClass-e1517356709530.png" /></a></p>
 </li>
 <li>Now let's assign speed limits to each class. Create a new field, and title it <strong>Speed</strong> of type <strong>Short Integer</strong>.</li>
 <li>
@@ -753,14 +762,14 @@ end if</p>
 <ol>
 <li>Create a new field for our disrupted cost, and name it <strong>Time_Minutes_LA</strong></li>
 <li>Give it a type <strong>Float</strong></li>
-<li>In the field calculator, copy the values from <strong>Time_Minutes</strong> <img alt="" src="images/field-calculator-time_minutes-e1517518909130.png" /></li>
+<li>In the field calculator, copy the values from <strong>Time_Minutes</strong> <a class="glightbox" href="images/field-calculator-time_minutes-e1517518909130.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/field-calculator-time_minutes-e1517518909130.png" /></a></li>
 <li>Now select only the roads that are within LA County.</li>
-<li>Use the selection tool to highlight LA County <img alt="" src="images/Highlight-LA-County-e1517519121551.png" /></li>
+<li>Use the selection tool to highlight LA County <a class="glightbox" href="images/Highlight-LA-County-e1517519121551.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Highlight-LA-County-e1517519121551.png" /></a></li>
 <li>Go to <strong>Selection</strong>, <strong>Select by Location</strong>.</li>
-<li>Select features from <strong>ca_roads_utm</strong> that <strong>intersect</strong> with <strong>selected features</strong> (checkbox) from <strong>ca_counties_utm</strong> <img alt="" src="images/Select-roads-in-LA-County-e1517519385933.png" /></li>
-<li>In the attribute table for the ca_roads_utm, notice that 8878 out of 61,973 segments are selected. Click on the "Show selected records button" <img alt="" src="images/selected-roads-e1517519585261.png" /></li>
+<li>Select features from <strong>ca_roads_utm</strong> that <strong>intersect</strong> with <strong>selected features</strong> (checkbox) from <strong>ca_counties_utm</strong> <a class="glightbox" href="images/Select-roads-in-LA-County-e1517519385933.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Select-roads-in-LA-County-e1517519385933.png" /></a></li>
+<li>In the attribute table for the ca_roads_utm, notice that 8878 out of 61,973 segments are selected. Click on the "Show selected records button" <a class="glightbox" href="images/selected-roads-e1517519585261.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/selected-roads-e1517519585261.png" /></a></li>
 <li>Click on the header for Time_Minutes_LA and bring up the field calculator.</li>
-<li>Add 10% cost to the selected LA County Roads <img alt="" src="images/adding-10-disruption-cost-e1517519677577.png" /></li>
+<li>Add 10% cost to the selected LA County Roads <a class="glightbox" href="images/adding-10-disruption-cost-e1517519677577.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/adding-10-disruption-cost-e1517519677577.png" /></a></li>
 <li>Save your project as <strong>NetworkWorkshop.mdb</strong></li>
 <li>Close ArcMap</li>
 </ol>
@@ -772,7 +781,7 @@ end if</p>
 <li>Add a new <strong>feature dataset</strong> and call it "<strong>ca_transportation</strong>"</li>
 <li>Give it a NAD 1983 UTM Zone 11N coordinate system.</li>
 <li>Ignore the other options, and finish.</li>
-<li>Drag the ca_roads_utm layer into the ca_transportation feature dataset you just created <img alt="" src="images/drag-roads-to-feature-e1517520307186.png" /></li>
+<li>Drag the ca_roads_utm layer into the ca_transportation feature dataset you just created <a class="glightbox" href="images/drag-roads-to-feature-e1517520307186.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/drag-roads-to-feature-e1517520307186.png" /></a></li>
 <li>Right click on <strong>ca_transportation</strong>, <strong>New</strong>, <strong>Network Dataset</strong><a href="https://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2018/01/2_networkdataset-e1517447394919.png"><img alt="" src="images/2_networkdataset-e1517447394919.png" /></a></li>
 <li>Proceed through the New Network Dataset Wizard:<ol>
 <li>Give it a name <a href="https://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2018/01/3_New-Network-Dataset-e1517447451780.png"><img alt="" src="images/3_New-Network-Dataset-e1517447451780-1024x988.png" /></a></li>
@@ -809,18 +818,18 @@ end if</p>
 <li>Go to "<strong>Customize</strong>" and then "<strong>Extensions</strong>".</li>
 <li>Make sure the Network Analyst Extension has a check mark next to it, indicating that it is on.</li>
 <li>Right click anywhere near the toolbar and click on "<strong>Network Analyst</strong>" to turn on the <strong>Network Analyst Toolbar:</strong></li>
-<li>Click the <strong>Network Analysis Window Icon</strong>: <img alt="" src="images/network-analyst-toolbar-e1517528424491.png" /></li>
+<li>Click the <strong>Network Analysis Window Icon</strong>: <a class="glightbox" href="images/network-analyst-toolbar-e1517528424491.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/network-analyst-toolbar-e1517528424491.png" /></a></li>
 <li>Our task will be to calculate an Origin-Destination Cost Matrix from the most populous city in California to the next 10 populous cities.</li>
 <li>Click the <strong>Network Analyst</strong> dropdown and select "<strong>New OD Cost Matrix</strong>"</li>
 <li>New layers should propagate in both the Network Analysis window and the Table of Contents for the project.</li>
 <li>Open the attribute table for <strong>ca_cities_utm</strong> and order by <strong>population_2007</strong>.</li>
 <li>Select the highest value, which happens to be <strong>Los Angeles.</strong></li>
-<li>With the city highlighted, we will right click on "<strong>Origins</strong>" and click "<strong>Load locations</strong>" <img alt="" src="images/load-locations-e1517528584980.png" /></li>
-<li>Return to the attribute table and choose the next 10 cities: <img alt="" src="images/next-10-cities-e1517528651541.png" /></li>
+<li>With the city highlighted, we will right click on "<strong>Origins</strong>" and click "<strong>Load locations</strong>" <a class="glightbox" href="images/load-locations-e1517528584980.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/load-locations-e1517528584980.png" /></a></li>
+<li>Return to the attribute table and choose the next 10 cities: <a class="glightbox" href="images/next-10-cities-e1517528651541.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/next-10-cities-e1517528651541.png" /></a></li>
 <li>Right click on Destinations:</li>
-<li>Load the data in. <img alt="" src="images/origin-destination-list-e1517528744567.png" /></li>
+<li>Load the data in. <a class="glightbox" href="images/origin-destination-list-e1517528744567.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/origin-destination-list-e1517528744567.png" /></a></li>
 <li>Close the attribute table.</li>
-<li>Go back to the Network Analyst toolbar and click on "Solve" <img alt="" src="images/solve-button-e1517528817343.png" /></li>
+<li>Go back to the Network Analyst toolbar and click on "Solve" <a class="glightbox" href="images/solve-button-e1517528817343.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/solve-button-e1517528817343.png" /></a></li>
 <li>The Origin-Destinations will be calculated.</li>
 <li>Right click on "<strong>Lines</strong>" and open the attribute table for the to see to OD-Matrix.</li>
 <li>Export as a csv file to save it out of ArcMap.</li>
@@ -828,9 +837,9 @@ end if</p>
 <li>First, let's copy the OD Matrix we just made. Right click on <strong>OD Cost Matrix</strong> in the table of contents and click <strong>Copy</strong></li>
 <li>Right click on the <strong>Layers</strong> and choose <strong>Paste Layer</strong></li>
 <li>You should rename the layer to <strong>OD Cost Matrix LA</strong></li>
-<li>Now on the Network Analyst window click on <strong>OD Matrix Properties <img alt="" src="images/OD-Matrix-Properties-button-e1517529052758.png" /></strong> </li>
+<li>Now on the Network Analyst window click on <strong>OD Matrix Properties <a class="glightbox" href="images/OD-Matrix-Properties-button-e1517529052758.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/OD-Matrix-Properties-button-e1517529052758.png" /></a></strong> </li>
 <li>Switch to the "Analysis Settings" tab</li>
-<li>Choose Minutes_LA <img alt="" src="images/choose-minutes-LA-for-cost-e1517529152724.png" /></li>
+<li>Choose Minutes_LA <a class="glightbox" href="images/choose-minutes-LA-for-cost-e1517529152724.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/choose-minutes-LA-for-cost-e1517529152724.png" /></a></li>
 <li>Choose to solve the analysis again.</li>
 <li>Open the attribute table for the lines.</li>
 <li>Compare the two OD-Matrices.</li>
@@ -897,5 +906,5 @@ end if</p>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

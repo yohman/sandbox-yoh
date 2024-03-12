@@ -51,7 +51,16 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -575,24 +584,24 @@
 </ol>
 <h4 id="create-your-first-map">Create your first map<a class="headerlink" href="#create-your-first-map" title="Permanent link">&para;</a></h4>
 <ol>
-<li>Look for the following button: <img alt="new map" src="images/Screen-Shot-2016-04-25-at-11.42.41-AM.jpg" /></li>
-<li>Choose "Data library", then click on the search (magnifying glass) <img alt="nav" src="images/Screen-Shot-2016-04-25-at-11.43.50-AM-420x67.jpg" /></li>
+<li>Look for the following button: <a class="glightbox" href="images/Screen-Shot-2016-04-25-at-11.42.41-AM.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="new map" src="images/Screen-Shot-2016-04-25-at-11.42.41-AM.jpg" /></a></li>
+<li>Choose "Data library", then click on the search (magnifying glass) <a class="glightbox" href="images/Screen-Shot-2016-04-25-at-11.43.50-AM-420x67.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="nav" src="images/Screen-Shot-2016-04-25-at-11.43.50-AM-420x67.jpg" /></a></li>
 <li>In the search box, enter "earthquake"</li>
-<li>Find the dataset titled "Realtime Earthquakes" provided by the U.S. Geological Survey. Click on it and press the Create Map button. <img alt="create map" src="images/Screen-Shot-2016-04-25-at-11.49.01-AM-420x304.jpg" /></li>
+<li>Find the dataset titled "Realtime Earthquakes" provided by the U.S. Geological Survey. Click on it and press the Create Map button. <a class="glightbox" href="images/Screen-Shot-2016-04-25-at-11.49.01-AM-420x304.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="create map" src="images/Screen-Shot-2016-04-25-at-11.49.01-AM-420x304.jpg" /></a></li>
 </ol>
 <h4 id="understand-data-vs-map-view">Understand DATA vs MAP view<a class="headerlink" href="#understand-data-vs-map-view" title="Permanent link">&para;</a></h4>
-<p><img alt="data vs map" src="images/Screen-Shot-2016-04-25-at-4.23.13-PM.jpg" /></p>
+<p><a class="glightbox" href="images/Screen-Shot-2016-04-25-at-4.23.13-PM.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="data vs map" src="images/Screen-Shot-2016-04-25-at-4.23.13-PM.jpg" /></a></p>
 <p><a href="https://yohman.cartodb.com/viz/97996f24-0b16-11e6-a825-0e674067d321/table"><img alt="data view" src="images/Screen-Shot-2016-04-25-at-4.25.46-PM-420x351.jpg" /></a><a href="https://yohman.cartodb.com/viz/97996f24-0b16-11e6-a825-0e674067d321/map"><img alt="map view" src="images/Screen-Shot-2016-04-25-at-4.24.45-PM-420x344.jpg" /></a></p>
 <h4 id="customize-your-map">Customize your map<a class="headerlink" href="#customize-your-map" title="Permanent link">&para;</a></h4>
 <ol>
-<li>Click on the "wizards" icon on the right <img alt="wizard" src="images/Screen-Shot-2016-04-25-at-11.53.03-AM.jpg" /></li>
+<li>Click on the "wizards" icon on the right <a class="glightbox" href="images/Screen-Shot-2016-04-25-at-11.53.03-AM.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="wizard" src="images/Screen-Shot-2016-04-25-at-11.53.03-AM.jpg" /></a></li>
 <li>Scroll until you find "BUBBLE" as a map option and select it</li>
 <li>For column, choose "mag" (magnitude)</li>
-<li>Experiment with the various options made available to you and note the changes on your map <img alt="earthquake map" src="images/Screen-Shot-2016-04-25-at-11.55.30-AM-420x507.jpg" /></li>
+<li>Experiment with the various options made available to you and note the changes on your map <a class="glightbox" href="images/Screen-Shot-2016-04-25-at-11.55.30-AM-420x507.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="earthquake map" src="images/Screen-Shot-2016-04-25-at-11.55.30-AM-420x507.jpg" /></a></li>
 <li>For interactive functionalities, play with the settings</li>
 </ol>
 <h4 id="export-your-map">Export your map<a class="headerlink" href="#export-your-map" title="Permanent link">&para;</a></h4>
-<p><img alt="export" src="images/Screen-Shot-2016-04-25-at-4.32.24-PM.jpg" /></p>
+<p><a class="glightbox" href="images/Screen-Shot-2016-04-25-at-4.32.24-PM.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="export" src="images/Screen-Shot-2016-04-25-at-4.32.24-PM.jpg" /></a></p>
 <ol>
 <li>Experiment with the various functionalities to create a layout for your map</li>
 <li>Export your map image, and copy the map into the <a href="https://goo.gl/Yde3w8">class notebook</a> map gallery!</li>
@@ -600,9 +609,9 @@
 <h4 id="adding-your-own-data">Adding your own data<a class="headerlink" href="#adding-your-own-data" title="Permanent link">&para;</a></h4>
 <ol>
 <li>Download the class dataset: <a href="https://ucla.box.com/s/8iqzhhb2fw8wb4ur81e7irt4khuvvfqs">LA Times Photo Archive</a></li>
-<li>In CartoDB, go back to your dashboard.  If you are in DATA or MAP edit mode, click on the bent arrow at the top left of your window: <img alt="dashboard button" src="images/Screen_Shot_2016-04-25_at_5_16_07_PM.jpg" /></li>
-<li>If you are in Maps view, switch to Datasets view <img alt="datasets view" src="images/Screen-Shot-2016-04-25-at-5.20.12-PM.jpg" /></li>
-<li>Click on the new dataset button <img alt="new dataset" src="images/Screen-Shot-2016-04-25-at-5.24.20-PM.jpg" /></li>
+<li>In CartoDB, go back to your dashboard.  If you are in DATA or MAP edit mode, click on the bent arrow at the top left of your window: <a class="glightbox" href="images/Screen_Shot_2016-04-25_at_5_16_07_PM.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="dashboard button" src="images/Screen_Shot_2016-04-25_at_5_16_07_PM.jpg" /></a></li>
+<li>If you are in Maps view, switch to Datasets view <a class="glightbox" href="images/Screen-Shot-2016-04-25-at-5.20.12-PM.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="datasets view" src="images/Screen-Shot-2016-04-25-at-5.20.12-PM.jpg" /></a></li>
+<li>Click on the new dataset button <a class="glightbox" href="images/Screen-Shot-2016-04-25-at-5.24.20-PM.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="new dataset" src="images/Screen-Shot-2016-04-25-at-5.24.20-PM.jpg" /></a></li>
 <li>Add the class dataset and connect dataset</li>
 </ol>
 
@@ -663,5 +672,5 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

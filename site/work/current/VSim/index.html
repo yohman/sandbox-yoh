@@ -51,7 +51,16 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -523,7 +532,7 @@
 
   <h1>VSim</h1>
 
-<p><img alt="VSIM demo image" src="../images/VSim2_DemoImage_Dec2018.jpg" /></p>
+<p><a class="glightbox" href="images/VSim2_DemoImage_Dec2018.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="VSIM demo image" src="images/VSim2_DemoImage_Dec2018.jpg" /></a></p>
 <h2 id="vsim-20-beta-now-available">VSim 2.0 BETA Now Available!<a class="headerlink" href="#vsim-20-beta-now-available" title="Permanent link">&para;</a></h2>
 <p>VSim facilitates the real-time exploration of highly detailed, three-dimensional computer models in both formal and informal educational settings. Funded by a Digital Humanities Implementation Grant from the National Endowment for the Humanities, this software addresses the greatest challenge for building knowledge through the use of three-dimensional computer models by providing scholars and educators the mechanism to explore, annotate, craft narratives, and build arguments within the 3D space – in essence, facilitating the creation of virtual learning environments that can be broadly disseminated to educators and learners across grade levels and humanities disciplines.</p>
 <p>Beyond real-time interaction with three-dimensional content, the software offers two critical functions for academic use of interactive computer models: the narrative feature that allows users to create linear presentations within the virtual space (think PowerPoint or Prezi within a three-dimensional world), and the embedded resources feature that allows users to embed annotations and links to primary and secondary resources within the virtual environment.</p>
@@ -586,5 +595,5 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

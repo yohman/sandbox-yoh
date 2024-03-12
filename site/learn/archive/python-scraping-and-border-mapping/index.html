@@ -51,7 +51,16 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -551,7 +560,7 @@
 <p><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Mi&#47;MigrantDeaths\_15804327495940&#47;Dashboard1&#47;1\_rss.png' style='border: none' /></a></p>
 <script type="text/javascript">var divElement = document.getElementById('viz1580509086766'); var vizElement = divElement.getElementsByTagName('object')[0]; if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='877px';} var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>
 
-<p><img alt="human-border-mapping" src="images/human-border-mapping-e1551810866736-1024x347.png" /></p>
+<p><a class="glightbox" href="images/human-border-mapping-e1551810866736-1024x347.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="human-border-mapping" src="images/human-border-mapping-e1551810866736-1024x347.png" /></a></p>
 <p>No data, no justice. As we try to imagine what border deaths <em>looks</em> like, we need information, data to enable our visual production. Borders can be defined in any number of ways. A drawn line produced by pen on paper, or a digitally enabled cartographic vector line can demarcate one side from another; a physical barrier, such as an impenetrable wall may symbolize a contested and divisive border. Cognitive borders, however, may not be as easily defined as a simple drawing of a line, or a construction of a massive barrier. As Sarah Mekdjian notes in her article on <em>Mapping Mobile Borders</em>, "Borders cannot be reduced to a linear and territorial conception."</p>
 <p>How then do we go about mapping human borders? This article/tutorial is a practical approach that seeks to address this question through the experimental mapping of <em>border deaths</em> along the southern border of California and Mexico. It does so through the amalgamation of a suite of digital concepts and technologies, using <strong>Python</strong> for web-scraping border deaths, and various data visualization tools such as <strong>Palladio</strong> to inform us on the temporal and spatial implications of the humans who navigate and perish in the border lands.</p>
 <h3 id="national-missing-and-unidentified-persons">National Missing and Unidentified Persons<a class="headerlink" href="#national-missing-and-unidentified-persons" title="Permanent link">&para;</a></h3>
@@ -561,7 +570,7 @@
 <h3 id="web-scraping-with-python">Web-scraping with Python<a class="headerlink" href="#web-scraping-with-python" title="Permanent link">&para;</a></h3>
 <p>Users can search NamUs using a myriad of data options: by demographic attributes like sex, race, estimated age, or by a more harrowing set of attributes such as by <em>details of recovery</em> that include options for: all parts recovered, head not recovered, torso not recovered, one or more limbs not recovered, or one or both hands not recovered. One can also search by <em>location found</em> which narrows our search results to only those recovered in California.</p>
 <p>While the search interface provides an impressive array of options, the site does not provide a <em>download</em> option. With an impetus to match unidentified persons with their loved ones, downloading entire datasets has not been a priority for NamUs, despite their efforts for transparency and freedom of data access. The front-end interface provides a search result set as either a list of gallery view with a subset of the attributes for quick viewing purposes. Clicking on individual records then expands on any individual record to reveal its entire array of attributes.</p>
-<p><img alt="Sample search results screenshot from NamUs" src="../images/namus-dashboard.png" /></p>
+<p><a class="glightbox" href="../images/namus-dashboard.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Sample search results screenshot from NamUs" src="../images/namus-dashboard.png" /></a></p>
 <p>Sample search results screenshot from NamUs</p>
 <p>Peaking into the backend, the NamUs website is driven by a robust and well defined api to navigate, filter, and produce its search results. Python allows us to intercept, or configure these web requests using re-usable code. For example, the following script calls the NamUs API to get a summary list results for unidentified persons in California:</p>
 <div class="highlight"><pre><span></span><code>import requests
@@ -701,5 +710,5 @@ with open(&#39;jsondata7.json&#39;,&#39;w&#39;) as outfile:
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

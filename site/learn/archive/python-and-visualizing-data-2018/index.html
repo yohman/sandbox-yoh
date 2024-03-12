@@ -51,7 +51,16 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -552,8 +561,8 @@
 <p>pip install seaborn</p>
 <p>pip install git+https://github.com/mwaskom/seaborn.git</p>
 <p>Doing so will install all the requirments and Seaborn, notably "pandas" and "numpy." Python's Pandas is actually not pronounced like the cuddly herbivorous bear:</p>
-<p><img alt="Image result for panda and python" src="https://i1.wp.com/klopmp.com/wp-content/uploads/panda.jpg?resize=1024%2C683" />But instead:</p>
-<p><img alt="Image result for pan" src="http://media.4rgos.it/i/Argos/8615002_R_Z001A_UC910382?$Web$&amp;$DefaultPDP570$" />+<img alt="DAS logo" src="https://www.insuranceage.co.uk/sites/insuranceage/files/styles/landscape_750_463/public/import/IMG/309/60309/das-logo-580x358.jpg?itok=v0KF7gyZ" title="DAS logo" /></p>
+<p><a class="glightbox" href="https://i1.wp.com/klopmp.com/wp-content/uploads/panda.jpg?resize=1024%2C683" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image result for panda and python" src="https://i1.wp.com/klopmp.com/wp-content/uploads/panda.jpg?resize=1024%2C683" /></a>But instead:</p>
+<p><a class="glightbox" href="http://media.4rgos.it/i/Argos/8615002_R_Z001A_UC910382?$Web$&amp;$DefaultPDP570$" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image result for pan" src="http://media.4rgos.it/i/Argos/8615002_R_Z001A_UC910382?$Web$&amp;$DefaultPDP570$" /></a>+<a class="glightbox" href="https://www.insuranceage.co.uk/sites/insuranceage/files/styles/landscape_750_463/public/import/IMG/309/60309/das-logo-580x358.jpg?itok=v0KF7gyZ" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="DAS logo" src="https://www.insuranceage.co.uk/sites/insuranceage/files/styles/landscape_750_463/public/import/IMG/309/60309/das-logo-580x358.jpg?itok=v0KF7gyZ" title="DAS logo" /></a></p>
 <p>And it stands for "panel data" and has a wide range of other uses. We will also install "matplotlib" which is the math plotting library for Python:</p>
 <p>pip install matplotlib</p>
 <p>We could forgo Seaborn and use those three packages on their own (matplotlib, pandas, and numpy) but Seaborn provides us with prettier graphs and a more streamlined way to interact with our data.</p>
@@ -655,5 +664,5 @@ import seaborn as sns</p>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

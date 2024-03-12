@@ -51,7 +51,16 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -586,28 +595,28 @@ library(sf)
 <div class="highlight"><pre><span></span><code>arrests &lt;- read.csv(&quot;C:\\Users\\yohman\\Downloads\\arrests.csv&quot;)
 </code></pre></div>
 <p>Check your environment tab to see your data, and make sure the "lat" and "lon" columns exist:</p>
-<p><img alt="rstudio-arrests-data" src="images/rstudio-arrests-data-1024x298.png" /></p>
+<p><a class="glightbox" href="images/rstudio-arrests-data-1024x298.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="rstudio-arrests-data" src="images/rstudio-arrests-data-1024x298.png" /></a></p>
 <p>Convert "arrests" into a "simple feature" – a spatial geometry format that is tmap readable – by identifying the longitude and latitude columns, and create a new variable "arrests_sf." Also, set the projection (crs) to <a href="https://epsg.io/4326">4326</a>, which stands for WGS84, a geographic coordinate system that reads decimal degrees globally:</p>
 <div class="highlight"><pre><span></span><code>arrests_sf &lt;- st_as_sf(arrests, coords = c(&quot;Lon&quot;, &quot;Lat&quot;), crs = 4326)
 </code></pre></div>
 <p>Visualize the tabular data and take notice on the new "geometry" column:</p>
 <div class="highlight"><pre><span></span><code>view(arrests_sf)
 </code></pre></div>
-<p><img alt="view-arrests_sf" src="images/view-arrests_sf.png" /></p>
+<p><a class="glightbox" href="images/view-arrests_sf.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="view-arrests_sf" src="images/view-arrests_sf.png" /></a></p>
 <p>Now starts the tmap magic. With just one command "qtm" which stands for "<a href="https://www.rdocumentation.org/packages/tmap/versions/2.3-1/topics/qtm">quick thematic map plot</a>," you can instantly output a map of your data</p>
 <div class="highlight"><pre><span></span><code>qtm(arrests_sf)
 </code></pre></div>
-<p><img alt="simple dot map" src="images/image-e1579211829540.png" /></p>
+<p><a class="glightbox" href="images/image-e1579211829540.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="simple dot map" src="images/image-e1579211829540.png" /></a></p>
 <p>Let's change the map into an interactive leaflet map.</p>
 <div class="highlight"><pre><span></span><code>tmap_mode(&quot;view&quot;)
 qtm(arrests_sf)
 </code></pre></div>
-<p><img alt="leaflet" src="images/leaflet.png" /></p>
+<p><a class="glightbox" href="images/leaflet.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="leaflet" src="images/leaflet.png" /></a></p>
 <p>Change it back to the original view:</p>
 <div class="highlight"><pre><span></span><code>tmap_mode(&quot;plot&quot;)
 </code></pre></div>
 <p>To give our data spatial bearing, let's bring in a layer for Los Angeles Council Districts. You can download it in SHP (shapefile) format from the <a href="http://boundaries.latimes.com/sets/">LA Times data portal.</a> Save the file and create a variable for the data.</p>
-<p><img alt="council-districts-from-LA-Times" src="images/council-districts-from-LA-Times.png" /></p>
+<p><a class="glightbox" href="images/council-districts-from-LA-Times.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="council-districts-from-LA-Times" src="images/council-districts-from-LA-Times.png" /></a></p>
 <div class="highlight"><pre><span></span><code>la_council_districts &lt;- read_sf(&quot;C:\\Users\\yohman\\Downloads\\l.a. city council district (2012).shp&quot;)
 </code></pre></div>
 <p>Visualize the council districts.</p>
@@ -617,17 +626,17 @@ qtm(arrests_sf)
 <div class="highlight"><pre><span></span><code>qtm(arrests_sf)+
     qtm(la_council_districts, borders = &#39;gray&#39;,fill=NULL)
 </code></pre></div>
-<p><img alt="arrests-with-council-districts" src="images/arrests-with-council-districts.png" /></p>
+<p><a class="glightbox" href="images/arrests-with-council-districts.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="arrests-with-council-districts" src="images/arrests-with-council-districts.png" /></a></p>
 <p>Color dots by charge description.</p>
 <div class="highlight"><pre><span></span><code>qtm(arrests_sf, dots.col = &quot;Charge.Group.Description&quot;,dots.size = 0.1)+
     qtm(la_council_districts, borders = &#39;darkgray&#39;,fill=NULL)
 </code></pre></div>
-<p><img alt="map-by-charge-type" src="images/map-by-charge-type.png" /></p>
+<p><a class="glightbox" href="images/map-by-charge-type.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="map-by-charge-type" src="images/map-by-charge-type.png" /></a></p>
 <p>One map per charge description.</p>
 <div class="highlight"><pre><span></span><code>qtm(arrests_sf, dots.col = &quot;Charge.Group.Description&quot;,dots.size = 0.1,by = &quot;Charge.Group.Description&quot;)+
     qtm(la_council_districts, borders = &#39;darkgray&#39;,fill=NULL)
 </code></pre></div>
-<p><img alt="maps-by-charge-type" src="images/maps-by-charge-type.png" /></p>
+<p><a class="glightbox" href="images/maps-by-charge-type.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="maps-by-charge-type" src="images/maps-by-charge-type.png" /></a></p>
 <h3 id="sources">Sources<a class="headerlink" href="#sources" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="https://github.com/mtennekes/tmap">tmap github</a></li>
@@ -695,5 +704,5 @@ qtm(arrests_sf)
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

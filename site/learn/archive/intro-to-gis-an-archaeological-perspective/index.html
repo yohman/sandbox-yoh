@@ -51,7 +51,16 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -789,7 +798,7 @@
 <li>ArcCatalog - for managing GIS datasets</li>
 <li>ArcMap - for mapping GIS datasets</li>
 </ol>
-<p><img alt="ArcIcons" src="images/ArcIcons.png" /></p>
+<p><a class="glightbox" href="images/ArcIcons.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="ArcIcons" src="images/ArcIcons.png" /></a></p>
 <p>[TBS_ALERT color="info" heading="What about OpenSource alternatives?"]</p>
 <p><a href="http://www.qgis.org/en/site/">QGIS</a> is as an alternative to ArcGIS that is free and openly available to the public on all computing platforms. Despite the accessibility of QGIS, there is a steeper learning curve for those learning GIS for the first time. However, those seeking a free low-cost alternative to ArcGIS can apply the concepts learned in this workshop with that program.</p>
 <p>[/TBS_ALERT]</p>
@@ -815,7 +824,7 @@
 |--us_states</p>
 <h3 id="connecting-a-folder-in-arccatalog">Connecting a folder in ArcCatalog<a class="headerlink" href="#connecting-a-folder-in-arccatalog" title="Permanent link">&para;</a></h3>
 <p>Open up ArcCatalog and click the second button to the left, which is the "Connect Folder" button.</p>
-<p><img alt="ArcCatalog3" src="images/ArcCatalog3.png" /></p>
+<p><a class="glightbox" href="images/ArcCatalog3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="ArcCatalog3" src="images/ArcCatalog3.png" /></a></p>
 <p>Navigate to the <strong>Folder</strong> where you extracted the "workshopData2018.zip" file and then select "OK".</p>
 <p>[TBS_ALERT color="danger" heading="Do not try to connect a file!"]If you try to connect files, you will notice that the "OK" button is grayed out, connecting folders allows you only to choose folders.[/TBS_ALERT]</p>
 <h3 id="view-and-preview-the-data">View and Preview the data<a class="headerlink" href="#view-and-preview-the-data" title="Permanent link">&para;</a></h3>
@@ -831,21 +840,21 @@
 <li>Select the "<strong>Coordinate Systems</strong>" tab</li>
 <li>Go to "<strong>Projected Coordinate Systems</strong>", "<strong>UTM</strong>", "<strong>WGS 1984</strong>", "<strong>Northern Hemisphere</strong>", and choose "<strong>WGS 1984 UTM Zone 36N</strong>"</li>
 </ol>
-<p><img alt="" src="images/set-projection-e1549474617737.png" /></p>
+<p><a class="glightbox" href="images/set-projection-e1549474617737.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/set-projection-e1549474617737.png" /></a></p>
 <p>[TBS_ALERT color="danger" heading="It's on the fly!"]The software will warn you that you are projecting your datasets on the fly (note that it is not <em>reprojecting</em> the actual data, it is doing so only within the scope of this project space). If you want to perform spatial analysis, it is recommended that all layers in your project be reprojected to an appropriate coordinate system. More information on how to do this can be found <a href="https://support.esri.com/en/technical-article/000004886">here</a>.[/TBS_ALERT]</p>
 <h3 id="adding-layers">Adding Layers<a class="headerlink" href="#adding-layers" title="Permanent link">&para;</a></h3>
 <p>Now the time has come to fire up ArcMap and become a digital cartographer! The first step for any GIS project is to have data (more on this later). In order to add data to your project click on the "<strong>Add data</strong>" button:</p>
-<p><img alt="addData" src="images/addData.png" /></p>
+<p><a class="glightbox" href="images/addData.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="addData" src="images/addData.png" /></a></p>
 <p>Notice how the connected folder can be selected and datasets be added now? Also, if your map is feeling a bit empty, you can add base maps by clicking the upside down triangle next to the <strong>Add Data</strong> button. Adding a basemap only provides reference information and nothing else.</p>
 <h3 id="order-your-layers">Order your layers<a class="headerlink" href="#order-your-layers" title="Permanent link">&para;</a></h3>
 <p>Vector layers are also referred to as "feature classes" in ESRI-Land. All GIS datasets can be added in this same way. Now drag each layer and re-order them. If you are familiar with Adobe Photoshop or Illustrator, you will recognize conceptual similarities with layering. What happens when layers are re-ordered? How does this dictate your strategy on building a single flattened map with multiple layers?</p>
 <p>[TBS_ALERT color="info" heading="Challenge Exercise"]Modify your map by changing fill colors, outline colors, symbol sizes, symbol colors to make it look like this:</p>
-<p><img alt="" src="images/US-Map-e1516301440489.png" /></p>
+<p><a class="glightbox" href="images/US-Map-e1516301440489.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/US-Map-e1516301440489.png" /></a></p>
 <p>[/TBS_ALERT]</p>
 <h3 id="symbolization">Symbolization<a class="headerlink" href="#symbolization" title="Permanent link">&para;</a></h3>
 <p>Outlines, fills, colors, weight, action! Here is where the artist in you comes out and the design phase of creating a map begins. Consider color choices: grayscale? Color schemes? Color hierarchy? Inevitably, you will find yourselves in the throes of ESRI's symbolization quagmire...</p>
 <h3 id="labeling">Labeling<a class="headerlink" href="#labeling" title="Permanent link">&para;</a></h3>
-<p><img alt="" src="images/Labeling-e1516302424726.png" /></p>
+<p><a class="glightbox" href="images/Labeling-e1516302424726.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Labeling-e1516302424726.png" /></a></p>
 <p>Map elements need labels at times. Consider what needs to be labeled, and what does not. Label sizes, fonts, weights, placement, colors are all things to consider for your map. Understand the relationship between labels, attributes, and layers.</p>
 <p>[TBS_ALERT color="info" heading="Labels hard to read? Halo it!"]Sometimes your labels may be hard to read, depending on what resides in the background. In this situation, you can add a white "halo" to your labels to make them "pop" some more. This feature is very, very hidden in ArcMap, but here is how to get to it:</p>
 <ol>
@@ -855,12 +864,12 @@
 <li>Click "<strong>Mask</strong>"</li>
 <li>Choose "<strong>Halo</strong>"</li>
 </ol>
-<p><img alt="" src="images/Halo-e1516390561590.png" /></p>
+<p><a class="glightbox" href="images/Halo-e1516390561590.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Halo-e1516390561590.png" /></a></p>
 <p>[/TBS_ALERT]</p>
 <h3 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link">&para;</a></h3>
-<p><img alt="" src="images/Attribute-Table-1-e1516387556924.png" /></p>
+<p><a class="glightbox" href="images/Attribute-Table-1-e1516387556924.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Attribute-Table-1-e1516387556924.png" /></a></p>
 <p>Every layer (feature class) comes with attributes. This is the all-important "information" part of geographic "information" systems mapping. Data in the attribute tables dictates what <em>can</em> get mapped. Open the attribute table of each layer (right click on the layer from the table of contents, <strong>Open Attribute Table</strong>):</p>
-<p><img alt="open attribute table" src="images/open-attribute-table-e1538584340846.png" /></p>
+<p><a class="glightbox" href="images/open-attribute-table-e1538584340846.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="open attribute table" src="images/open-attribute-table-e1538584340846.png" /></a></p>
 <p>Study how each row and column is tied to the mapped element. Questions we will answer include:</p>
 <ul>
 <li>What is the unique identifier for each row?</li>
@@ -871,7 +880,7 @@
 <li>Can you build graphs?</li>
 </ul>
 <h3 id="choropleth-maps">Choropleth Maps<a class="headerlink" href="#choropleth-maps" title="Permanent link">&para;</a></h3>
-<p><img alt="" src="images/Choropleth-Map-e1516303937369.png" /></p>
+<p><a class="glightbox" href="images/Choropleth-Map-e1516303937369.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Choropleth-Map-e1516303937369.png" /></a></p>
 <p>For this section, we will focus on creating a choropleth (which just means a colored map based on numerical data)!</p>
 <p>When creating a choropleth the following needs to be considered:</p>
 <ol>
@@ -893,27 +902,27 @@
 <li>Right click on <strong>us_counties</strong> and go to <strong>properties</strong> (or just double click it!)</li>
 <li>Select the <strong>Symbology</strong> tab, click on <strong>Quantities</strong>, and select <strong>POP2010</strong> for the Value field.</li>
 </ol>
-<p><img alt="" src="images/choropleth-settings-e1538512169989.png" /></p>
+<p><a class="glightbox" href="images/choropleth-settings-e1538512169989.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/choropleth-settings-e1538512169989.png" /></a></p>
 <p>Now click on the <strong>Classify</strong> button. There are several methods to choose from. Look at the <a href="http://pro.arcgis.com/en/pro-app/help/mapping/layer-properties/data-classification-methods.htm">following documentation</a> to determine which method is best suited for your data.</p>
-<p><img alt="classification choices" src="images/classification-choices-e1538517900653.png" /></p>
+<p><a class="glightbox" href="images/classification-choices-e1538517900653.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="classification choices" src="images/classification-choices-e1538517900653.png" /></a></p>
 <h1 id="part-2-working-with-spatial-data_1">Part 2: Working with spatial data<a class="headerlink" href="#part-2-working-with-spatial-data_1" title="Permanent link">&para;</a></h1>
 <h3 id="acquiring-data">Acquiring data<a class="headerlink" href="#acquiring-data" title="Permanent link">&para;</a></h3>
 <p>The open data movement has made more and more data available for academics to download and use for their research. But how can we map this data? This workshop will take you through the process of acquiring data from the <a href="https://data.lacity.org/">Los Angeles Open Data portal</a> and visualizing it on ArcGIS for further analysis. <a href="https://data.lacity.org/">Los Angeles Open Data portal</a></p>
 <h3 id="the-los-angeles-open-data-portal">The Los Angeles Open Data Portal<a class="headerlink" href="#the-los-angeles-open-data-portal" title="Permanent link">&para;</a></h3>
 <p>Search for crime data</p>
-<p><img alt="" src="images/open-data-search-1-e1524853436494.png" /></p>
+<p><a class="glightbox" href="images/open-data-search-1-e1524853436494.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/open-data-search-1-e1524853436494.png" /></a></p>
 <p>Inspect the data</p>
-<p><img alt="" src="images/open-data-crime-data-e1524853710964.png" /></p>
+<p><a class="glightbox" href="images/open-data-crime-data-e1524853710964.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/open-data-crime-data-e1524853710964.png" /></a></p>
 <p>Almost 2 million records! Let's filter it down to something more manageable.</p>
-<p><img alt="view data" src="images/2018-10-02-08_57_05-Crime-Data-from-2010-to-Present-_-Los-Angeles-Open-Data-Portal-e1538496083813.png" /></p>
+<p><a class="glightbox" href="images/2018-10-02-08_57_05-Crime-Data-from-2010-to-Present-_-Los-Angeles-Open-Data-Portal-e1538496083813.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="view data" src="images/2018-10-02-08_57_05-Crime-Data-from-2010-to-Present-_-Los-Angeles-Open-Data-Portal-e1538496083813.png" /></a></p>
 <p>Now add the filter to narrow down the data to one month:</p>
-<p><img alt="filter crime data by date reported" src="images/filter-crime-data-by-date-reported-e1538496252882.png" /></p>
-<p><img alt="filter crime data by date reported" src="images/filter-crime-data-by-date-reported-1-e1538580605581.png" /></p>
+<p><a class="glightbox" href="images/filter-crime-data-by-date-reported-e1538496252882.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="filter crime data by date reported" src="images/filter-crime-data-by-date-reported-e1538496252882.png" /></a></p>
+<p><a class="glightbox" href="images/filter-crime-data-by-date-reported-1-e1538580605581.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="filter crime data by date reported" src="images/filter-crime-data-by-date-reported-1-e1538580605581.png" /></a></p>
 <p>Export the data</p>
-<p><img alt="export as csv" src="images/export-as-csv-e1538496456287.png" /></p>
+<p><a class="glightbox" href="images/export-as-csv-e1538496456287.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="export as csv" src="images/export-as-csv-e1538496456287.png" /></a></p>
 <h3 id="cleaning-up-those-coordinates">Cleaning up those coordinates<a class="headerlink" href="#cleaning-up-those-coordinates" title="Permanent link">&para;</a></h3>
 <p>Open the downloaded data in Excel. Scroll to the right until you see the Location column.</p>
-<p><img alt="" src="images/open-data-location-column-e1524865676923.png" /></p>
+<p><a class="glightbox" href="images/open-data-location-column-e1524865676923.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/open-data-location-column-e1524865676923.png" /></a></p>
 <p>Hmm, that's strange, the latitude and longitude columns are in the same column! ArcGIS does not like this. Let's clean this up.</p>
 <p>First, find and replace the brackets.</p>
 <ol>
@@ -922,17 +931,17 @@
 <li>For "Find what", enter an open bracket "("</li>
 <li>Click Replace All</li>
 </ol>
-<p><img alt="" src="images/open-data-replace-brackets-e1524869310445.png" /></p>
+<p><a class="glightbox" href="images/open-data-replace-brackets-e1524869310445.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/open-data-replace-brackets-e1524869310445.png" /></a></p>
 <p>Repeat for the closing bracket.</p>
 <p>Split the column into two:</p>
-<p><img alt="" src="images/open-data-text-to-columns-e1524869544554.png" /></p>
+<p><a class="glightbox" href="images/open-data-text-to-columns-e1524869544554.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/open-data-text-to-columns-e1524869544554.png" /></a></p>
 <p>Choose, delimited, check the "Comma" box, and finish.</p>
-<p><img alt="" src="images/open-data-text-to-columns2-e1524869659658.png" /></p>
+<p><a class="glightbox" href="images/open-data-text-to-columns2-e1524869659658.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/open-data-text-to-columns2-e1524869659658.png" /></a></p>
 <p>Rename the column headers to Latitude and Longitude</p>
-<p><img alt="" src="images/open-data-lat-lon-e1524869765545.png" /></p>
+<p><a class="glightbox" href="images/open-data-lat-lon-e1524869765545.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/open-data-lat-lon-e1524869765545.png" /></a></p>
 <h3 id="lets-map-it">Let's map it!<a class="headerlink" href="#lets-map-it" title="Permanent link">&para;</a></h3>
 <p>Start a brand new ArcMap project and add the csv file (remember the <strong>Add Data</strong> button?). Right click on the csv file and <strong>Display XY Data</strong>.</p>
-<p><img alt="" src="images/open-data-display-xy-e1524870101534.png" /></p>
+<p><a class="glightbox" href="images/open-data-display-xy-e1524870101534.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/open-data-display-xy-e1524870101534.png" /></a></p>
 <ol>
 <li>Set X to <strong>Longitude</strong></li>
 <li>Set Y to <strong>Latitude</strong></li>
@@ -940,28 +949,28 @@
 <li>Enter "<strong>WGS 1984</strong>" in the search box</li>
 <li>Choose <strong>WGS 1984</strong></li>
 </ol>
-<p><img alt="" src="images/open-data-set-coordinate-system-e1524870277327.png" /></p>
+<p><a class="glightbox" href="images/open-data-set-coordinate-system-e1524870277327.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/open-data-set-coordinate-system-e1524870277327.png" /></a></p>
 <p>Now save your new layer as a shapefile, or geodatabase:</p>
-<p><img alt="" src="images/open-data-export-data-e1525276046743.png" /></p>
-<p><img alt="" src="images/open-data-export-into-geodatabase-e1525276199611.png" /></p>
+<p><a class="glightbox" href="images/open-data-export-data-e1525276046743.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/open-data-export-data-e1525276046743.png" /></a></p>
+<p><a class="glightbox" href="images/open-data-export-into-geodatabase-e1525276199611.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/open-data-export-into-geodatabase-e1525276199611.png" /></a></p>
 <h3 id="project-the-data">Project the data<a class="headerlink" href="#project-the-data" title="Permanent link">&para;</a></h3>
 <p>Our data is currently in a geographic coordinate system (WGS1984). Let's change this to a projected coordinate system. The UTM zone for Los Angeles is <strong>UTM Zone 11N</strong>.</p>
 <p>Click on the search tool</p>
-<p><img alt="" src="images/search-tool-e1525277972537.png" /></p>
+<p><a class="glightbox" href="images/search-tool-e1525277972537.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/search-tool-e1525277972537.png" /></a></p>
 <p>Type "project" and click on <strong>Project (Data Management)</strong></p>
-<p><img alt="" src="images/project-to-utm-e1525278207598.png" /></p>
+<p><a class="glightbox" href="images/project-to-utm-e1525278207598.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/project-to-utm-e1525278207598.png" /></a></p>
 <p>Now, set the projection of the data frame. Right click on <strong>Layers</strong>, and go to <strong>properties</strong>. Then, set the coordinate system to <strong>NAD 1983 UTM Zone 11N</strong></p>
-<p><img alt="" src="images/open-data-set-utm-zone-1-e1525277078543.png" /></p>
+<p><a class="glightbox" href="images/open-data-set-utm-zone-1-e1525277078543.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/open-data-set-utm-zone-1-e1525277078543.png" /></a></p>
 <h3 id="hot-spots">Hot spots?<a class="headerlink" href="#hot-spots" title="Permanent link">&para;</a></h3>
 <p>Let's find crime hot spots by race. Select incidents where the person arrested was classified as Hispanic (H). In the menu bar, go to <strong>Selection</strong>, <strong>Select by attribute.</strong> Enter the following SQL statement:</p>
 <p>Victim_Decent = 'H'</p>
-<p><img alt="" src="images/crime-by-race-1-e1525280021439.png" /></p>
+<p><a class="glightbox" href="images/crime-by-race-1-e1525280021439.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/crime-by-race-1-e1525280021439.png" /></a></p>
 <p>Now perform a <a href="http://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/how-kernel-density-works.htm">kernel density</a> to visualize the density of Hispanic arrests in Los Angeles. In the search box, enter "<strong>kernel</strong>" and click on the <strong>Kernel Density (Spatial Analyst)</strong> tool. Enter the four boxes as shown below:</p>
-<p><img alt="" src="images/hispanic-kernel-e1525280163943.png" /></p>
+<p><a class="glightbox" href="images/hispanic-kernel-e1525280163943.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/hispanic-kernel-e1525280163943.png" /></a></p>
 <p>Add a <strong>basemap</strong>, and change the <strong>symbology</strong> to make the visual more powerful:</p>
-<p><img alt="" src="images/kernel-crime-map-e1525280341147.png" /></p>
+<p><a class="glightbox" href="images/kernel-crime-map-e1525280341147.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/kernel-crime-map-e1525280341147.png" /></a></p>
 <p>Repeat the process for other race categories:</p>
-<table><tbody><tr><td>Black <img class="alignnone size-full wp-image-3313" src="images/kernel-black-e1525280897233.png" alt="" width="991" height="731"></td><td>White<img class="alignnone size-full wp-image-3314" src="images/kernel-white-e1525281024184.png" alt="" width="991" height="731"></td><td>Hispanic<img class="alignnone size-full wp-image-3312" src="images/kernel-hispanic-e1525280752322.png" alt="" width="991" height="731"></td></tr></tbody></table>
+<table><tbody><tr><td>Black <a class="glightbox" href="images/kernel-black-e1525280897233.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img class="alignnone size-full wp-image-3313" src="images/kernel-black-e1525280897233.png" alt="" width="991" height="731"></a></td><td>White<a class="glightbox" href="images/kernel-white-e1525281024184.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img class="alignnone size-full wp-image-3314" src="images/kernel-white-e1525281024184.png" alt="" width="991" height="731"></a></td><td>Hispanic<a class="glightbox" href="images/kernel-hispanic-e1525280752322.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img class="alignnone size-full wp-image-3312" src="images/kernel-hispanic-e1525280752322.png" alt="" width="991" height="731"></a></td></tr></tbody></table>
 
 <h3 id="data-in-this-tutorial">Data in this tutorial<a class="headerlink" href="#data-in-this-tutorial" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1030,5 +1039,5 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

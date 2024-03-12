@@ -51,7 +51,16 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -608,16 +617,16 @@ Institution: <strong>University of Jaén</strong><br />
 Website: <a href="http://www.ujaen.es/investiga/qubbetelhawa/index.php">http://www.ujaen.es/investiga/qubbetelhawa/index.php</a><br />
 Special thanks to <strong>Alejandro Jiménez Serrano</strong> (director of the archaeological project and professor at the University of Jaén), <strong>Luisa García González</strong> (field director and PhD candidate, University of Jaén), and <strong>Patricia Mora Riudavets</strong> (archeological photographer and PhD candidate, University of Alcalá de Henares).  </p>
 <p>[/TBS_ALERT]</p>
-<p><img alt="" src="images/DAE-e1551219681720-1024x612.jpg" /></p>
+<p><a class="glightbox" href="images/DAE-e1551219681720-1024x612.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/DAE-e1551219681720-1024x612.jpg" /></a></p>
 <h2 id="terminology">Terminology<a class="headerlink" href="#terminology" title="Permanent link">&para;</a></h2>
 <p><strong>Photogrammetry/Structure-from-Motion:</strong> having to do with measurements from photographs; however, in archaeology (and other disciplines) often shorthand for the process of creating 3D models from a series of photographs taken systematically; link to more information: http://culturalheritageimaging.org/Technologies/Photogrammetry/</p>
-<p><img alt="Photogrammetry" src="images/oven_photogrammetry2-e1551293733592.jpg" /></p>
+<p><a class="glightbox" href="images/oven_photogrammetry2-e1551293733592.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Photogrammetry" src="images/oven_photogrammetry2-e1551293733592.jpg" /></a></p>
 <p><strong>DEM - Digital Elevation Model</strong>: representation of terrain based on elevation data; typically shown with lighter color indicating a higher elevation and darker color lower. DEMs can be used within ArcMap when running analyses that take into account elevation changes.</p>
-<p><img alt="DEM mudbrick example" src="images/DEM-e1551293759390.png" /></p>
+<p><a class="glightbox" href="images/DEM-e1551293759390.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="DEM mudbrick example" src="images/DEM-e1551293759390.png" /></a></p>
 <p><strong>Ortho(photo/image/mosaic):</strong> aerial photograph or an image that has been geometrically corrected to eliminate distortion and create a uniform scale similar to a map</p>
-<p><img alt="Draped ortho" src="images/draped_ortho-e1551293793927.png" /></p>
+<p><a class="glightbox" href="images/draped_ortho-e1551293793927.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Draped ortho" src="images/draped_ortho-e1551293793927.png" /></a></p>
 <p><strong>TIN - Triangular Irregular Network:</strong> points (vertices) with elevation data that are joined together to form a model. TINs can be used in ArcScene as a tool to "drape" points or orthoimages so they can be viewed in three dimensions.</p>
-<p><img alt="TIN example" src="images/tin2-e1551293820178.png" /></p>
+<p><a class="glightbox" href="images/tin2-e1551293820178.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="TIN example" src="images/tin2-e1551293820178.png" /></a></p>
 <p><strong>AYSOAY - Are You Sick of Acronyms Yet?</strong></p>
 <hr />
 <h2 id="arcscene-demo">ArcScene Demo<a class="headerlink" href="#arcscene-demo" title="Permanent link">&para;</a></h2>
@@ -625,13 +634,13 @@ Special thanks to <strong>Alejandro Jiménez Serrano</strong> (director of the a
 <h2 id="photoscanmetashape-models-in-arcscene">Photoscan/Metashape Models in ArcScene<a class="headerlink" href="#photoscanmetashape-models-in-arcscene" title="Permanent link">&para;</a></h2>
 <h3 id="before-taking-the-photographs">Before taking the photographs<a class="headerlink" href="#before-taking-the-photographs" title="Permanent link">&para;</a></h3>
 <p>Print markers from Photoscan - Tools/Markers/Print markers</p>
-<p><img alt="Print markers" src="images/print_markers-e1551300533278.jpg" /></p>
+<p><a class="glightbox" href="images/print_markers-e1551300533278.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Print markers" src="images/print_markers-e1551300533278.jpg" /></a></p>
 <h3 id="while-taking-the-photographs">While taking the photographs<a class="headerlink" href="#while-taking-the-photographs" title="Permanent link">&para;</a></h3>
 <p>Place markers around area you plan to photograph (distribute throughout taking into account height) and take points on each of the markers (don't forget to label which marker is which!)</p>
-<p><img alt="Distributed markers" src="images/markers-e1551300558192.jpg" /></p>
+<p><a class="glightbox" href="images/markers-e1551300558192.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Distributed markers" src="images/markers-e1551300558192.jpg" /></a></p>
 <h3 id="processing-the-photographs">Processing the photographs<a class="headerlink" href="#processing-the-photographs" title="Permanent link">&para;</a></h3>
 <p>Process the model as you typically would but run the detect markers tool so Photoscan can add targets to each marker. The details of the process is dependent on the software version. A workshop on photogrammetry is typically offered in the Fall or Spring.</p>
-<p><img alt="Detect markers" src="images/detect_markers-e1551300592669.jpg" /></p>
+<p><a class="glightbox" href="images/detect_markers-e1551300592669.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Detect markers" src="images/detect_markers-e1551300592669.jpg" /></a></p>
 <p>In order to render appropriately in ArcScene you will need to export the model twice from Photoscan. The first will be a georeferenced version while the second will not. Export to Collada (dae)</p>
 <ul>
 <li>Go to File/Export/Export model</li>
@@ -648,12 +657,12 @@ Special thanks to <strong>Alejandro Jiménez Serrano</strong> (director of the a
 <li>Create a file geodatabase in your project folder</li>
 <li>Search for the <strong>"Import 3D Files"</strong> tool</li>
 </ul>
-<p><img alt="Import- Step 1" src="images/import_1-e1551312742303-1024x650.png" /></p>
-<p><img alt="Import- Step 2" src="images/import_2-1-e1551312773910-1024x648.png" /></p>
+<p><a class="glightbox" href="images/import_1-e1551312742303-1024x650.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Import- Step 1" src="images/import_1-e1551312742303-1024x650.png" /></a></p>
+<p><a class="glightbox" href="images/import_2-1-e1551312773910-1024x648.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Import- Step 2" src="images/import_2-1-e1551312773910-1024x648.png" /></a></p>
 <ul>
 <li>Import the <strong><em>georeferenced model</em></strong> and save the feature class to the file geodatabase you created- it will look strange and blocky...do not be alarmed!</li>
 </ul>
-<p><img alt="blocky" src="images/blocky-e1551300617560.png" /></p>
+<p><a class="glightbox" href="images/blocky-e1551300617560.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="blocky" src="images/blocky-e1551300617560.png" /></a></p>
 <ul>
 <li>Right click on the model layer on the Table of Contents and select Edit Features/Start Editing</li>
 <li>The 3D Editor toolbar should open (if not open it through Customize/Toolbars)</li>
@@ -725,5 +734,5 @@ Special thanks to <strong>Alejandro Jiménez Serrano</strong> (director of the a
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

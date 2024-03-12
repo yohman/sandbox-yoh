@@ -51,7 +51,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -504,11 +513,11 @@
 <div id="project-container"></div>
 
 <script>
-// ---------------------------- //
-//                              //
-//    Function to get URL       //
-//                              //
-// ---------------------------- //
+// -------------------------------- //
+//                                  //
+//    Function to get project       //
+//                                  //
+// -------------------------------- //
 function init(){
     // Get URL parameters
     var params = getUrlParams();
@@ -524,11 +533,18 @@ function init(){
     createProject(projectid);   
 }
 
+// -------------------------------- //
+//                                  //
+//    Function to create project    //
+//                                  //
+// -------------------------------- //
 function createProject(projectid) {
     // find the project in the projects array
     let project = data.work.values[projectid];
-    // add the title
-    // get the h1 element title
+
+    // -------------------------------- //
+    // Title and secondary title        //
+    // -------------------------------- //
     let title = document.getElementById('title');
     title.innerHTML = project[0];
 
@@ -540,42 +556,88 @@ function createProject(projectid) {
     let projectDiv = document.createElement('div');
     projectDiv.className = 'project';
 
-    // add the project image
+    // -------------------------------- //
+    // Project image                    //
+    // -------------------------------- //
     let image = document.createElement('img');
     image.src = '../../work/images/'+project[4]; // Assuming the first column in the sheet is the image name
     image.alt = project[1]; // Assuming the third column in the sheet is the alt text
+    // assign maxheight to the image
+    image.style.maxHeight = '500px';
     projectDiv.appendChild(image);
 
-    // add project link project[5]
-    let link = document.createElement('a');
-    link.href = project[5];
-    link.innerHTML = "Project Link";
-    projectDiv.appendChild(link);
+    // -------------------------------- //
+    // Project link                     //
+    // -------------------------------- //
+    if (project[5] !== undefined) {
+        // create a paragraph, then put the link in the paragraph, then put the paragraph in the project div
+        let linkParagraph = document.createElement('p');
+        let link = document.createElement('a');
+        link.href = project[5];
+        link.innerHTML = "Project Link";
+        linkParagraph.appendChild(link);
+        projectDiv.appendChild(linkParagraph);
+    }
 
-    // add the description
-    // allow for html in the description    
+    // -------------------------------- //
+    // Description                      //
+    // -------------------------------- //
+    if (project[3] !== undefined) {
+        let description = document.createElement('p');
+        description.innerHTML = project[3];
+        projectDiv.appendChild(description);
+    }   
 
-    let description = document.createElement('p');
-    description.innerHTML = project[3];
-    projectDiv.appendChild(description);
+    // -------------------------------- //
+    // YouTube video                    //
+    // -------------------------------- //
+    if (project[9] !== undefined) {
+        // add a title
+        let videoTitle = document.createElement('h3');
+        videoTitle.innerHTML = "Watch";
+        projectDiv.appendChild(videoTitle);
+        let video = document.createElement('iframe');
+        video.src = project[9];
+        video.width = "560";
+        video.height = "315";
+        video.frameborder = "0";
+        video.allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture";
+        video.allowfullscreen = true;
+        projectDiv.appendChild(video);
+        // add description project[10]
+        let videoDescription = document.createElement('p');
+        videoDescription.innerHTML = project[10];
+        projectDiv.appendChild(videoDescription);
+    }
 
-    // add contributors project[7]
-    let contributorsTitle = document.createElement('h3');
-    contributorsTitle.innerHTML = "Contributors";
-    projectDiv.appendChild(contributorsTitle);
-    let contributors = document.createElement('p');
-    contributors.innerHTML = project[7];
-    projectDiv.appendChild(contributors);
+    // -------------------------------- //
+    // Contributors                     //
+    // -------------------------------- //
+    if (project[7] !== undefined) {
+        console.log('contributors exist: ' + project[7])
+        let contributorsTitle = document.createElement('h3');
+        contributorsTitle.innerHTML = "Contributors";
+        projectDiv.appendChild(contributorsTitle);
+        let contributors = document.createElement('p');
+        contributors.innerHTML = project[7];
+        projectDiv.appendChild(contributors);
+    }
 
-    // add supported by project[8]
-    let supportedByTitle = document.createElement('h3');
-    supportedByTitle.innerHTML = "Supported by";
-    projectDiv.appendChild(supportedByTitle);
-    let supportedBy = document.createElement('p');
-    supportedBy.innerHTML = project[8];
-    projectDiv.appendChild(supportedBy);
+    // -------------------------------- //
+    // Supported by                     //
+    // -------------------------------- //
+    if (project[8] !== undefined) { 
+        let supportedByTitle = document.createElement('h3');
+        supportedByTitle.innerHTML = "Supported by";
+        projectDiv.appendChild(supportedByTitle);
+        let supportedBy = document.createElement('p');
+        supportedBy.innerHTML = project[8];
+        projectDiv.appendChild(supportedBy);
+    }
 
-    // add the tags
+    // -------------------------------- //
+    // Tags                             //
+    // -------------------------------- //
     let tags = project[6].split(',');
     let tagContainer = document.createElement('div');
     tagContainer.className = 'tag-container';
@@ -590,9 +652,26 @@ function createProject(projectid) {
     // add the project to the page
     document.getElementById('project-container').appendChild(projectDiv);
 
-
-
-
+    // -------------------------------- //
+    // Image gallery                    //
+    // -------------------------------- //
+    if (project[11] !== undefined) {
+        // add a title
+        let galleryTitle = document.createElement('h3');
+        galleryTitle.innerHTML = "Gallery";
+        projectDiv.appendChild(galleryTitle);
+        // add the images
+        let images = project[11].split(',');
+        images.forEach(function(image) {
+            let imageDiv = document.createElement('div');
+            imageDiv.className = 'glightbox';
+            let img = document.createElement('img');
+            img.src = '../../work/projects/images/'+image.trim();
+            img.alt = project[1];
+            imageDiv.appendChild(img);
+            projectDiv.appendChild(imageDiv);
+        });
+    }
 }
 </script>
 
@@ -650,5 +729,5 @@ function createProject(projectid) {
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

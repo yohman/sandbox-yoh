@@ -51,7 +51,16 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -662,7 +671,7 @@
 <p>As mentioned at the top of the syllabus for this course, space and time are dimensions that are forever intertwined due to their ontological nature. So far, we have mastered the skills necessary to put objects onto an interactive map, but how then, can we combine the temporal dimension into our visual representation of our subject matter? More importantly, is temporality not the single most important component to complete our spatial narrative?</p>
 <h2 id="minard">Minard<a class="headerlink" href="#minard" title="Permanent link">&para;</a></h2>
 <p>The representation of 3 dimensional space onto a flat, 2 dimensional platform–a map–brings with it many challenges and compromises (e.g. projection systems). Every "flat" map in existence compromises on one geographical element: <strong>S</strong>hape, <strong>A</strong>rea, <strong>D</strong>istance or <strong>D</strong>irection. So too, does the representation of the "fourth dimension", or time, bring about much to contemplate on how best to summarize and eventually effectively visualize geo-temporal data. Historically, inventive methods employed in visualizing change over time has produced infamous graphics such as Minard's map of Napoleon's Russian Campaign in 1812.</p>
-<p><img alt="Minard Map" src="../images/p12p2-lg.jpg" /></p>
+<p><a class="glightbox" href="../images/p12p2-lg.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Minard Map" src="../images/p12p2-lg.jpg" /></a></p>
 <h2 id="hans">Hans<a class="headerlink" href="#hans" title="Permanent link">&para;</a></h2>
 <p>Equally inventive and in ways revolutionary to the modern day digital world was the wizardry employed by the exuberant "Jedi Master of data visualization", Hans Rosling. His <a href="http://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen">legendary TED talk</a> in 2006 was premised by a tool he created called <a href="http://www.gapminder.org/">Gapminder</a>, later to be <a href="http://venturebeat.com/2007/03/19/google-buys-gapminder-a-graphical-display-company/">bought out by Google in 2007</a>. As a data visualization tool, Gapminder cleverly incorporates temporal global data on a 2D bubble chart, utilizing choreographed animation sequences to depict change over time. Spatiality is defined by a bubble-per-country, and via the colors of the bubbles, each swath representing a geographic region. Yet, what makes this representation of information compelling is not just in its ability to animate data over time, but more so in its ability to <em>interact</em> with time, pausing, rewinding, forwarding, slowing down and speeding up.</p>
 <p><a href="http://www.gapminder.org/world/#$majorMode=chart$is;shi=t;ly=2003;lb=f;il=t;fs=11;al=30;stl=t;st=t;nsl=t;se=t$wst;tts=C$ts;sp=5.59290322580644;ti=2013$zpv;v=0$inc_x;mmid=XCOORDS;iid=phAwcNAVuyj1jiMAkmq1iMg;by=ind$inc_y;mmid=YCOORDS;iid=phAwcNAVuyj2tPLxKvvnNPA;by=ind$inc_s;uniValue=8.21;iid=phAwcNAVuyj0XOoBL_n5tAQ;by=ind$inc_c;uniValue=255;gid=CATID0;by=grp$map_x;scale=log;dataMin=194;dataMax=96846$map_y;scale=lin;dataMin=23;dataMax=86$map_s;sma=49;smi=2.65$cd;bd=0$inds=;modified=60"><img alt="gap minder" src="images/Screen-Shot-2015-05-07-at-11.16.55-AM-744x228.png" /></a></p>
@@ -699,20 +708,20 @@
 <p>Now that you have a better understanding of the spatial and temporal components of a map, you may wonder how can I extract locations from my data?</p>
 <p>One way to do so is to use Google Fusion tables on data fields such as "Address" or "City Name".</p>
 <p>First go to <a href="https://www.google.com/fusiontables/data?dsrcid=implicit">https://www.google.com/fusiontables/data?dsrcid=implicit</a> and import your CSV table (<a href="https://www.dropbox.com/s/smp8k8txvhakeno/S%20Coupland%20Carolingian%20Hoards%20-%20AD%20751-987vAlbert.csv?dl=0">Sample Coin Data Set here</a>):</p>
-<p><img alt="1fusion" src="images/1fusion-744x529.png" /></p>
-<p>Then click on next, after choosing your header row.<img alt="2fusion" src="images/2fusion-744x536.png" /></p>
+<p><a class="glightbox" href="images/1fusion-744x529.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="1fusion" src="images/1fusion-744x529.png" /></a></p>
+<p>Then click on next, after choosing your header row.<a class="glightbox" href="images/2fusion-744x536.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="2fusion" src="images/2fusion-744x536.png" /></a></p>
 <p>To start the geocoding, go to "File" then "Geocode":</p>
-<p><img alt="2015-11-04 12_04_11-" src="images/2015-11-04-12_04_11--744x384.png" />Finally, choose the field with your location data, it can be either city name, latitude/longitude, addresses, etc.</p>
-<p><img alt="2015-11-04 12_04_47-S Coupland Carolingian Hoards - AD 751-987vAlbert - Google Fusion Tables" src="images/2015-11-04-12_04_47-S-Coupland-Carolingian-Hoards-AD-751-987vAlbert-Google-Fusion-Tables1-744x357.png" /></p>
+<p><a class="glightbox" href="images/2015-11-04-12_04_11--744x384.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="2015-11-04 12_04_11-" src="images/2015-11-04-12_04_11--744x384.png" /></a>Finally, choose the field with your location data, it can be either city name, latitude/longitude, addresses, etc.</p>
+<p><a class="glightbox" href="images/2015-11-04-12_04_47-S-Coupland-Carolingian-Hoards-AD-751-987vAlbert-Google-Fusion-Tables1-744x357.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="2015-11-04 12_04_47-S Coupland Carolingian Hoards - AD 751-987vAlbert - Google Fusion Tables" src="images/2015-11-04-12_04_47-S-Coupland-Carolingian-Hoards-AD-751-987vAlbert-Google-Fusion-Tables1-744x357.png" /></a></p>
 <p>The geocoder will attempt to match the field to a coordinate then you can click on "Map" to view your results.</p>
-<p><img alt="2015-11-04 12_15_29-S Coupland Carolingian Hoards - AD 751-987vAlbert - Google Fusion Tables" src="images/2015-11-04-12_15_29-S-Coupland-Carolingian-Hoards-AD-751-987vAlbert-Google-Fusion-Tables-744x360.png" /></p>
+<p><a class="glightbox" href="images/2015-11-04-12_15_29-S-Coupland-Carolingian-Hoards-AD-751-987vAlbert-Google-Fusion-Tables-744x360.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="2015-11-04 12_15_29-S Coupland Carolingian Hoards - AD 751-987vAlbert - Google Fusion Tables" src="images/2015-11-04-12_15_29-S-Coupland-Carolingian-Hoards-AD-751-987vAlbert-Google-Fusion-Tables-744x360.png" /></a></p>
 <p>You can tell the Google Fusion Table to treat any field as a "Location" by clicking on the arrow next to the field header and clicking "Change":</p>
-<p><img alt="2015-11-04 12_06_23-S Coupland Carolingian Hoards - AD 751-987vAlbert - Google Fusion Tables" src="images/2015-11-04-12_06_23-S-Coupland-Carolingian-Hoards-AD-751-987vAlbert-Google-Fusion-Tables.png" /></p>
-<p>In this case we are going to make "NAT" (which is Nation) the location: <img alt="2015-11-04 12_06_36-S Coupland Carolingian Hoards - AD 751-987vAlbert - Google Fusion Tables" src="images/2015-11-04-12_06_36-S-Coupland-Carolingian-Hoards-AD-751-987vAlbert-Google-Fusion-Tables-744x631.png" /></p>
+<p><a class="glightbox" href="images/2015-11-04-12_06_23-S-Coupland-Carolingian-Hoards-AD-751-987vAlbert-Google-Fusion-Tables.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="2015-11-04 12_06_23-S Coupland Carolingian Hoards - AD 751-987vAlbert - Google Fusion Tables" src="images/2015-11-04-12_06_23-S-Coupland-Carolingian-Hoards-AD-751-987vAlbert-Google-Fusion-Tables.png" /></a></p>
+<p>In this case we are going to make "NAT" (which is Nation) the location: <a class="glightbox" href="images/2015-11-04-12_06_36-S-Coupland-Carolingian-Hoards-AD-751-987vAlbert-Google-Fusion-Tables-744x631.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="2015-11-04 12_06_36-S Coupland Carolingian Hoards - AD 751-987vAlbert - Google Fusion Tables" src="images/2015-11-04-12_06_36-S-Coupland-Carolingian-Hoards-AD-751-987vAlbert-Google-Fusion-Tables-744x631.png" /></a></p>
 <p>Now you can geocode it:</p>
-<p><img alt="2015-11-04 12_13_50-S Coupland Carolingian Hoards - AD 751-987vAlbert - Google Fusion Tables" src="images/2015-11-04-12_13_50-S-Coupland-Carolingian-Hoards-AD-751-987vAlbert-Google-Fusion-Tables1-744x481.png" /></p>
+<p><a class="glightbox" href="images/2015-11-04-12_13_50-S-Coupland-Carolingian-Hoards-AD-751-987vAlbert-Google-Fusion-Tables1-744x481.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="2015-11-04 12_13_50-S Coupland Carolingian Hoards - AD 751-987vAlbert - Google Fusion Tables" src="images/2015-11-04-12_13_50-S-Coupland-Carolingian-Hoards-AD-751-987vAlbert-Google-Fusion-Tables1-744x481.png" /></a></p>
 <p>And there you have it!</p>
-<p><img alt="2015-11-04 12_23_41-S Coupland Carolingian Hoards - AD 751-987vAlbert - Google Fusion Tables" src="images/2015-11-04-12_23_41-S-Coupland-Carolingian-Hoards-AD-751-987vAlbert-Google-Fusion-Tables-744x373.png" /></p>
+<p><a class="glightbox" href="images/2015-11-04-12_23_41-S-Coupland-Carolingian-Hoards-AD-751-987vAlbert-Google-Fusion-Tables-744x373.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="2015-11-04 12_23_41-S Coupland Carolingian Hoards - AD 751-987vAlbert - Google Fusion Tables" src="images/2015-11-04-12_23_41-S-Coupland-Carolingian-Hoards-AD-751-987vAlbert-Google-Fusion-Tables-744x373.png" /></a></p>
 <h2 id="mapping-maps">Mapping Maps<a class="headerlink" href="#mapping-maps" title="Permanent link">&para;</a></h2>
 <p>Mapbox: <a href="https://www.mapbox.com/">https://www.mapbox.com/</a> | <a href="http://sandbox.idre.ucla.edu/Workshops/Getty2015/mapbox/LocationsAncientWorld.csv">port data</a></p>
 <p><a href="https://www.mapbox.com/editor/?id=albertkun.mm2h1bgm#"><img alt="2015-07-09 18_03_50-Mapbox _ Design and publish beautiful maps" src="images/2015-07-09-18_03_50-Mapbox-_-Design-and-publish-beautiful-maps.png" /></a></p>
@@ -728,7 +737,7 @@
 <p>Google Fusion Tables: <a href="https://www.google.com/fusiontables/">https://www.google.com/fusiontables/</a> | <a href="http://sandbox.idre.ucla.edu/Workshops/Getty2015/fusiontables/S%20Coupland%20Carolingian%20Hoards%20-%20AD%20751-987vAlbert.csv">coin data</a></p>
 <p><a href="https://www.google.com/fusiontables/DataSource?docid=1b0UORNDP9llY-u2ZauWcmeWjSuwNjQKMp2LzqKBb"><img alt="2015-07-09 18_14_17-S Coupland Carolingian Hoards - AD 751-987vAlbert - Google Fusion Tables" src="images/2015-07-09-18_14_17-S-Coupland-Carolingian-Hoards-AD-751-987vAlbert-Google-Fusion-Tables.png" /></a></p>
 <p>Palladio: <a href="http://palladio.designhumanities.org/">http://palladio.designhumanities.org/</a> | <a href="http://sandbox.idre.ucla.edu/Workshops/Getty2015/palladio/Michael%20McCormick%20et%20al.,%20Summary%20Geodatabase%20of%20Shipwrecks%20AD%201-1500,%20Status%202008.csv">ship wreck data</a></p>
-<p><img alt="2015-07-09 18_38_08-Palladio" src="images/2015-07-09-18_38_08-Palladio-1200x444.png" /></p>
+<p><a class="glightbox" href="images/2015-07-09-18_38_08-Palladio-1200x444.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="2015-07-09 18_38_08-Palladio" src="images/2015-07-09-18_38_08-Palladio-1200x444.png" /></a></p>
 
 
 
@@ -787,5 +796,5 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

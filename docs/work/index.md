@@ -23,7 +23,7 @@ function init(){
 		galleryItem.className = 'gallery-item';
 
 		let link = document.createElement('a');
-		link.href = 'projects/?id='+counter; // Assuming the second column in the sheet is the URL
+		link.href = 'projects/?id='+counter; 
 		counter++;
 
 		let img = document.createElement('img');
@@ -52,6 +52,7 @@ function init(){
 		link.appendChild(caption);
 		galleryItem.appendChild(link);
 
+		// tags
 		document.querySelector('.gallery').appendChild(galleryItem);
 		let tags = row[6]; // Assuming the ninth column in the sheet contains the tags
 		if (tags) {
@@ -60,7 +61,7 @@ function init(){
 			tagContainer.className = 'tag-container';
 
 			tagList.forEach(function(tag) {
-				let tagItem = document.createElement('div');
+				let tagItem = document.createElement('span');
 				tagItem.className = 'tag';
 				tagItem.textContent = tag.trim();
 
