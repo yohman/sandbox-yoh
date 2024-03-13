@@ -23,6 +23,7 @@ extra:
 # Navigation
 nav:
   - "Work": work/index.md
+  - "tags": work/tags/index.md
   - Learn: learn/index.md
     # - "Workshops": learn/resources.md
     # - "Tutorials": learn/tutorials.md

@@ -157,7 +157,7 @@ function createProject(projectid) {
 			let imageDiv = document.createElement('div');
 			imageDiv.className = 'glightbox';
 			let img = document.createElement('img');
-			img.src = '../../work/projects/images/'+image.trim();
+			img.src = '../../work/project/images/'+image.trim();
 			img.alt = project[1];
 			imageDiv.appendChild(img);
 			projectDiv.appendChild(imageDiv);
