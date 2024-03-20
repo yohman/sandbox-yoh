@@ -23,12 +23,12 @@ extra:
 # Navigation
 nav:
   - "Work": work/index.md
-  - "tags": work/tags/index.md
+  # - "tags": work/tags/index.md
   - Learn: learn/index.md
     # - "Workshops": learn/resources.md
     # - "Tutorials": learn/tutorials.md
   - Connect:
-    - "Who we are": connect/who.md
+    - "Who we are": connect/index.md
     - "Consult": connect/consult.md
     - "Where is the Sandbox": connect/where.md
   - "Musings": blog

@@ -3,6 +3,10 @@ hide:
   - navigation
 ---
 
+<div class="btn btn-primary" onclick="window.location.href = 'tags'">
+	tag view
+</div>
+
 <div class="gallery"></div> 
 
 <script>
@@ -50,34 +54,16 @@ function init(){
 		});
 	}
 
-	// --------------------------------	//
-	// Add tags							//
-	// -------------------------------- //
-	// let tags = [];
-	// data.work.values.forEach(function(row) {
-	// 	let tagList = row[6].split(',');
-	// 	tagList.forEach(function(tag) {
-	// 		tags.push(tag.trim());
-	// 	});
-	// });
-	// tags = tags.filter(function(item, i, ar){ return ar.indexOf(item) === i; });
-	// tags.forEach(function(tag) {
-	// 	let tagItem = document.createElement('span');
-	// 	tagItem.className = 'tag';
-	// 	tagItem.textContent = tag;
-	// 	tagItem.onclick = function() {
-	// 		window.location.search = '?tag='+tag;
-	// 	}
-	// 	// set cursor to pointer
-	// 	tagItem.style.cursor = "pointer";
-	// 	document.querySelector('.gallery').appendChild(tagItem);
-	// });
 }
 
 // --------------------------------	//
 // Add gallery item					//
 // -------------------------------- //
 function addGalleryItem(row,counter) {
+
+	// create a container for the gallery item and gallery tags
+	let galleryContainer = document.createElement('div');
+	galleryContainer.className = 'gallery-container';
 
 	// --------------------------------	//
 	// gallery item						//
@@ -92,8 +78,8 @@ function addGalleryItem(row,counter) {
 
 	// image
 	let img = document.createElement('img');
-	img.src = '../'+section+'/images/'+row[4]; // Assuming the first column in the sheet is the image name
-	img.alt = row[1]; // Assuming the third column in the sheet is the alt text
+	img.src = '../'+section+'/images/'+row[4]; 
+	img.alt = row[1]; 
 
 	// caption
 	let caption = document.createElement('div');
@@ -120,11 +106,13 @@ function addGalleryItem(row,counter) {
 	link.appendChild(caption);
 	galleryItem.appendChild(link);
 
+	// append elements
+	galleryContainer.appendChild(galleryItem);
+
 	// --------------------------------	//
 	// tags								//
 	// -------------------------------- //
-	document.querySelector('.gallery').appendChild(galleryItem);
-	let tags = row[6]; // Assuming the ninth column in the sheet contains the tags
+	let tags = row[6];
 	if (tags) {
 		let tagList = tags.split(','); // Split the tags by comma
 		let tagContainer = document.createElement('div');
@@ -147,8 +135,10 @@ function addGalleryItem(row,counter) {
 		});
 
 		// galleryItem.appendChild(tagContainer);
-		document.querySelector('.gallery').appendChild(tagContainer);
+		galleryContainer.appendChild(tagContainer);
 	}
+
+	document.querySelector('.gallery').appendChild(galleryContainer);
 }
 
 </script>

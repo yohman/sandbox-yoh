@@ -15,6 +15,14 @@ hide:
 function init(){
 	counter = 0;
 	data.learn.values.forEach(function(row) {
+
+		// create a container for the gallery item and gallery tags
+		let galleryContainer = document.createElement('div');
+		galleryContainer.className = 'gallery-container';
+
+		// --------------------------------	//
+		// gallery item						//
+		// -------------------------------- //
 		let galleryItem = document.createElement('div');
 		galleryItem.className = 'gallery-item';
 
@@ -48,7 +56,13 @@ function init(){
 		link.appendChild(caption);
 		galleryItem.appendChild(link);
 
-		document.querySelector('.gallery').appendChild(galleryItem);
+		galleryContainer.appendChild(galleryItem);
+
+		// document.querySelector('.gallery-container').appendChild(galleryItem);
+
+		// --------------------------------	//
+		// tags								//
+		// -------------------------------- //
 		let tags = row[7]; // Assuming the ninth column in the sheet contains the tags
 		if (tags) {
 			let tagList = tags.split(','); // Split the tags by comma
@@ -64,9 +78,10 @@ function init(){
 			});
 
 			// galleryItem.appendChild(tagContainer);
-			document.querySelector('.gallery').appendChild(tagContainer);
+			galleryContainer.appendChild(tagContainer);
+			// document.querySelector('.gallery-container').appendChild(tagContainer);
 		}
-
+		document.querySelector('.gallery').appendChild(galleryContainer);
 	});
 }
 

@@ -1,8 +1,10 @@
-<!-- ---
+---
 hide:
   - navigation
-  - toc
---- -->
+---
+<div class="btn btn-primary" onclick="window.location.href = '../'">
+	gallery view
+</div>
 
 <div class="tag-gallery"></div> 
 
