@@ -10,7 +10,7 @@
       
       
       
-        <link rel="next" href="tags/">
+        <link rel="next" href="../learn/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -207,23 +207,6 @@
   
   
     <li class="md-tabs__item">
-      <a href="tags/" class="md-tabs__link">
-        
-  
-    
-  
-  tags
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
       <a href="../learn/" class="md-tabs__link">
         
   
@@ -243,7 +226,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../connect/who/" class="md-tabs__link">
+        <a href="../connect/" class="md-tabs__link">
           
   
     
@@ -354,26 +337,6 @@
   
   
     <li class="md-nav__item">
-      <a href="tags/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    tags
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../learn/" class="md-nav__link">
         
   
@@ -397,6 +360,8 @@
     
       
         
+          
+        
       
         
       
@@ -414,46 +379,35 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../connect/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Connect
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Connect
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../connect/who/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Who we are
-  </span>
-  
-
-      </a>
-    </li>
-  
-
               
             
               
@@ -563,6 +517,10 @@
 
   <h1>Work</h1>
 
+<div class="btn btn-primary" onclick="window.location.href = 'tags'">
+    tag view
+</div>
+
 <div class="gallery"></div>
 
 <script>
@@ -610,34 +568,16 @@ function init(){
         });
     }
 
-    // -------------------------------- //
-    // Add tags                         //
-    // -------------------------------- //
-    // let tags = [];
-    // data.work.values.forEach(function(row) {
-    //  let tagList = row[6].split(',');
-    //  tagList.forEach(function(tag) {
-    //      tags.push(tag.trim());
-    //  });
-    // });
-    // tags = tags.filter(function(item, i, ar){ return ar.indexOf(item) === i; });
-    // tags.forEach(function(tag) {
-    //  let tagItem = document.createElement('span');
-    //  tagItem.className = 'tag';
-    //  tagItem.textContent = tag;
-    //  tagItem.onclick = function() {
-    //      window.location.search = '?tag='+tag;
-    //  }
-    //  // set cursor to pointer
-    //  tagItem.style.cursor = "pointer";
-    //  document.querySelector('.gallery').appendChild(tagItem);
-    // });
 }
 
 // -------------------------------- //
 // Add gallery item                 //
 // -------------------------------- //
 function addGalleryItem(row,counter) {
+
+    // create a container for the gallery item and gallery tags
+    let galleryContainer = document.createElement('div');
+    galleryContainer.className = 'gallery-container';
 
     // -------------------------------- //
     // gallery item                     //
@@ -652,8 +592,8 @@ function addGalleryItem(row,counter) {
 
     // image
     let img = document.createElement('img');
-    img.src = '../'+section+'/images/'+row[4]; // Assuming the first column in the sheet is the image name
-    img.alt = row[1]; // Assuming the third column in the sheet is the alt text
+    img.src = '../'+section+'/images/'+row[4]; 
+    img.alt = row[1]; 
 
     // caption
     let caption = document.createElement('div');
@@ -680,11 +620,13 @@ function addGalleryItem(row,counter) {
     link.appendChild(caption);
     galleryItem.appendChild(link);
 
+    // append elements
+    galleryContainer.appendChild(galleryItem);
+
     // -------------------------------- //
     // tags                             //
     // -------------------------------- //
-    document.querySelector('.gallery').appendChild(galleryItem);
-    let tags = row[6]; // Assuming the ninth column in the sheet contains the tags
+    let tags = row[6];
     if (tags) {
         let tagList = tags.split(','); // Split the tags by comma
         let tagContainer = document.createElement('div');
@@ -707,8 +649,10 @@ function addGalleryItem(row,counter) {
         });
 
         // galleryItem.appendChild(tagContainer);
-        document.querySelector('.gallery').appendChild(tagContainer);
+        galleryContainer.appendChild(tagContainer);
     }
+
+    document.querySelector('.gallery').appendChild(galleryContainer);
 }
 
 </script>
@@ -749,13 +693,13 @@ function addGalleryItem(row,counter) {
         
         
           
-          <a href="tags/" class="md-footer__link md-footer__link--next" aria-label="Next: tags">
+          <a href="../learn/" class="md-footer__link md-footer__link--next" aria-label="Next: Learn">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                tags
+                Learn
               </div>
             </div>
             <div class="md-footer__button md-icon">
