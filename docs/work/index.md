@@ -3,9 +3,14 @@ hide:
   - navigation
 ---
 
-<div class="btn btn-primary" onclick="window.location.href = 'tags'">
+<h1 id="title">Work</h1>
+<!-- two buttons to toggle between gallery view and tag view -->
+<span class="btn btn-on" onclick="window.location.href = '../'">
+	gallery view
+</span>
+<span class="btn btn-off" onclick="window.location.href = 'tags'">
 	tag view
-</div>
+</span>
 
 <div class="gallery"></div> 
 

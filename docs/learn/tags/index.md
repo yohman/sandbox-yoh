@@ -32,12 +32,12 @@ if(urlParams.has('gamified')) {
 //                            		//
 // -------------------------------- //
 
-let section = 'work'
+let section = 'learn'
 let tags = [];
 
 function init(){
 
-	data.work.values.forEach(function(row) {
+	data.learn.values.forEach(function(row) {
 		let tagList = row[6].split(',');
 		tagList.forEach(function(tag) {
 			tags.push(tag.trim());

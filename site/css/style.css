@@ -56,7 +56,7 @@ body, html {
     font-size: 1.5rem;
     cursor: pointer;
     opacity:0.8;
-    transition: background-color 0.3s;
+    transition: background-color 0.1s;
 }
 
 .title-font {
@@ -220,18 +220,23 @@ small {
     margin: 0 0 -2rem !important;
 }
 
+/* ---------------------------------- */
+/* Tag                                */
+/* ---------------------------------- */
+
 .tag-container {
     flex: 1 0 50%;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     align-content: flex-start;
+    justify-content: center;
 }
 
 .tag {
     font-size: 0.5rem !important;
     line-height: 1.2;
-    background-color: red;
+    background-color: gray;
     padding: 5px;
     font-size: 0.6rem;
     border-radius: 4px;
@@ -241,6 +246,12 @@ small {
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
     text-align: center;
     white-space: nowrap;
+    transition: background-color 0.1s;
+}
+
+.tag:hover {
+    background-color: red;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.9);
 }
 
 .tag-gallery {
@@ -255,7 +266,7 @@ small {
     height: 100px; /* Adjust height as needed */
     /* border: 1px solid black; Just for visualization */
     border-radius: 50%; /* Makes the box circular */
-    background-color: red;
+    background-color: gray;
     color: white;
     font-size: 0.6rem;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
@@ -263,8 +274,20 @@ small {
     display: flex; /* Use flexbox to vertically center text */
     justify-content: center; /* Horizontally center text */
     align-items: center; /* Vertically center text */
+    transition: background-color 0.1s;
+
 
 }
+
+/* hover state of tag */
+.tag-round:hover {
+    background-color: red;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.9);
+}
+
+/* ---------------------------------- */
+/* Button                             */
+/* ---------------------------------- */
 
 .btn {
     /* style it like a small pill */
@@ -276,9 +299,24 @@ small {
     font-size: 0.6rem;
     cursor: pointer;
     opacity:0.8;
-    transition: background-color 0.3s;
+    transition: background-color 0.1s;
     width:fit-content;
 
+}
+
+/* on and off state of btn */
+.btn-on {
+    background-color: red;
+    color: #ffffff;
+}
+.btn-off {
+    background-color: rgb(222, 222, 222);
+    color: #000000;
+}
+
+/* hover state of btn */
+.btn:hover {
+    background-color: gray;
 }
 
 h1 {

@@ -45,7 +45,7 @@ function createWorkshop(id) {
 
 	// add the youtube video
 	let video = document.createElement('div');
-	video.innerHTML = workshop[6];
+	video.innerHTML = workshop[7];
 	workshopDiv.appendChild(video);
 
 	// add the link to the youtube video
@@ -61,7 +61,7 @@ function createWorkshop(id) {
 	workshopDiv.appendChild(description);
 
 	// add the tags
-	let tags = workshop[7].split(',');
+	let tags = workshop[6].split(',');
 	let tagContainer = document.createElement('div');
 	tagContainer.className = 'tag-container';
 	tags.forEach(function(tag) {

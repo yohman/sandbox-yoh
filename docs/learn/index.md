@@ -4,9 +4,17 @@ hide:
   - toc
 ---
 
-<div class="gallery">
-	
-</div> 
+<h1 id="title">Learn</h1>
+<!-- two buttons to toggle between gallery view and tag view -->
+<span class="btn btn-on" onclick="window.location.href = '../'">
+	gallery view
+</span>
+<span class="btn btn-off" onclick="window.location.href = 'tags'">
+	tag view
+</span>
+
+
+<div class="gallery"></div> 
 
 
 <script>
@@ -63,7 +71,7 @@ function init(){
 		// --------------------------------	//
 		// tags								//
 		// -------------------------------- //
-		let tags = row[7]; // Assuming the ninth column in the sheet contains the tags
+		let tags = row[6]; // Assuming the ninth column in the sheet contains the tags
 		if (tags) {
 			let tagList = tags.split(','); // Split the tags by comma
 			let tagContainer = document.createElement('div');
