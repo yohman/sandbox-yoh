@@ -203,7 +203,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../" class="md-tabs__link">
+      <a href="../../learn/" class="md-tabs__link">
         
   
     
@@ -222,7 +222,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../connect/" class="md-tabs__link">
+        <a href="../" class="md-tabs__link">
           
   
     
@@ -325,7 +325,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../learn/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -372,7 +372,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../connect/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -405,7 +405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connect/consult/" class="md-nav__link">
+      <a href="../consult/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -426,7 +426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connect/where/" class="md-nav__link">
+      <a href="../where/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -503,8 +503,7 @@
   
 
 
-<h1 id="title">Learn Tags</h1>
-
+<h1 id="title">Connect Tags</h1>
 <!-- two buttons to toggle between gallery view and tag view -->
 <p><span class="btn btn-off" onclick="window.location.href = '../'">
     gallery view
@@ -532,16 +531,19 @@ if(urlParams.has('gamified')) {
 //                                  //
 // -------------------------------- //
 
-let section = 'learn'
+let section = 'connect'
 let tags = [];
 
 function init(){
 
-    data.learn.values.forEach(function(row) {
-        let tagList = row[6].split(',');
-        tagList.forEach(function(tag) {
-            tags.push(tag.trim());
-        });
+    data[section].values.forEach(function(row) {
+        // if row is not undefined
+        if (row[6] != undefined) {
+            let tagList = row[6].split(',');
+            tagList.forEach(function(tag) {
+                tags.push(tag.trim());
+            });
+        }
     });
     // -------------------------------- //
     // Loop through project data        //
@@ -565,7 +567,6 @@ function init(){
 
 
 }
-
 
 
 </script>

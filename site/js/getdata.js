@@ -1,4 +1,6 @@
-// Function to get URL parameters
+// -------------------------------------------- //
+// Function to initialize the page              //
+// -------------------------------------------- //
 function getUrlParams() {
     var params = {};
     var queryString = window.location.search;
@@ -9,12 +11,19 @@ function getUrlParams() {
     return params;
 }
 
-const sheetNames = ['work', 'learn', 'team'];
+// -------------------------------------------- //
+// Parameters to be used in the page            //
+// -------------------------------------------- //
+
+const sheetNames = ['work', 'learn', 'connect'];
 const spreadsheetId = '1bQDVVO-R3tt99eR7ageBYu5XK8lnnlxHZLzJghYSLa0';
 const apiKey = 'AIzaSyAUi4KazffmDZV_dQUnMUKA1jJt4i0mqlU';
 let data = {};
 
-// Function to fetch data from a specific sheet
+// -------------------------------------------- //
+// Function to fetch data from a specific sheet //
+// -------------------------------------------- //
+
 async function fetchData(sheetName) {
   const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${sheetName}?key=${apiKey}`;
 
@@ -33,7 +42,10 @@ async function fetchData(sheetName) {
   }
 }
 
-// Function to check if data is fetched from all sheets
+// -------------------------------------------- //
+// Function to check if data is                 //
+// fetched from all sheets                      //
+// -------------------------------------------- //
 async function checkAndInit() {
   const promises = sheetNames.map(sheetName => fetchData(sheetName));
   const results = await Promise.all(promises);
@@ -55,92 +67,144 @@ async function checkAndInit() {
   }
 }
 
-
-// Call the function to fetch data from all sheets and initialize if successful
+// -------------------------------------------- //
+// Function to initialize the page              //
+// -------------------------------------------- //
 checkAndInit();
 
 
+// --------------------------------	//
+//                            		//
+//	  Gamefied version		    	//
+//                            		//
+// -------------------------------- //
+var urlParams = new URLSearchParams(window.location.search);
+if(urlParams.has('gamified')) {
+	alert("Congratulations! You have chosen the gamified version! This is still under (secret) development, so stay tuned!");
+}
+
+// --------------------------------	//
+// Add gallery item					        //
+// -------------------------------- //
+function addGalleryItem(row,counter) {
+
+	// create a container for the gallery item and gallery tags
+	let galleryContainer = document.createElement('div');
+	galleryContainer.className = 'gallery-container';
+
+	// --------------------------------	//
+	// gallery item						          //
+	// -------------------------------- //
+	let galleryItem = document.createElement('div');
+	galleryItem.className = 'gallery-item';
+
+	// link
+	let link = document.createElement('a');
+
+  if (section == 'connect') {
+    link.href = 'who/?id='+counter;
+  } else if (section == 'learn') {
+    link.href = 'workshop/?id='+counter;
+  } else {
+    link.href = 'project/?id='+counter;
+  }
+	// link.href = 'project/?id='+counter; 
+	// counter++;
+
+	// image
+	let img = document.createElement('img');
+	img.src = '../'+section+'/images/'+row[4]; 
+	img.alt = row[1]; 
+
+	// caption
+	let caption = document.createElement('div');
+	caption.className = 'caption';
+	caption.innerHTML = row[0]+'<br>'+row[1]; 
+	
+	// hover effect
+	img.style.filter = "grayscale(100%)";
+	img.onmouseover = function() {
+		img.style.filter = "grayscale(0%)";
+	}
+	img.onmouseout = function() {
+		img.style.filter = "grayscale(100%)";
+	}
+	caption.onmouseover = function() {
+		img.style.filter = "grayscale(0%)";
+	}
+	caption.onmouseout = function() {
+		img.style.filter = "grayscale(100%)";
+	}
+
+	// append elements
+	link.appendChild(img);
+	link.appendChild(caption);
+	galleryItem.appendChild(link);
+
+	// append elements
+	galleryContainer.appendChild(galleryItem);
+
+	// --------------------------------	//
+	// tags								//
+	// -------------------------------- //
+	let tags = row[6];
+	if (tags) {
+		let tagList = tags.split(','); // Split the tags by comma
+		let tagContainer = document.createElement('div');
+		tagContainer.className = 'tag-container';
+
+		tagList.forEach(function(tag) {
+			let tagItem = document.createElement('span');
+			tagItem.className = 'tag';
+			tagItem.textContent = tag.trim();
+			// get rid of the leading and trailing white spaces
+			tag = tag.trim();
+			tagItem.onclick = function() {
+				window.location.search = '?tag='+tag;
+			}
+			// add title attribute
+			tagItem.title = tag;
+			// set cursor to pointer
+			tagItem.style.cursor = "pointer";
+			tagContainer.appendChild(tagItem);
+		});
+
+		// galleryItem.appendChild(tagContainer);
+		galleryContainer.appendChild(tagContainer);
+	}
+
+	document.querySelector('.gallery').appendChild(galleryContainer);
+}
 
 
-
-
-
-
-
-
-
-// // get current url to find out what page we are on
-// const fullUrl = window.location.href;
-// console.log(fullUrl);
-
-
-// // fetch data from three different google sheets with the same id but different sheet names (work, learn, connect), then run init function
-
-// const sheets = ['work', 'learn', 'connect']
-
-// // fetch data from google sheets
-// sheets.forEach(sheet => {
-//     const apiUrl = 'https://sheets.googleapis.com/v4/spreadsheets/1bQDVVO-R3tt99eR7ageBYu5XK8lnnlxHZLzJghYSLa0/values/'+sheet+'?key=AIzaSyAUi4KazffmDZV_dQUnMUKA1jJt4i0mqlU';
-//     fetch(apiUrl)
-//     .then(response => {
-//         // Check if the response status is OK (200)
-//         if (!response.ok) {
-//         throw new Error('Network response was not ok');    
-//         }
-//         // Parse the response as JSON
-//         return response.json();
-//     })    
-//     .then(data => {
-//         // Handle the JSON data here
-//         window[sheet] = data.values
-//         // get rid of first row
-//         window[sheet].shift()
-//         console.log(window[sheet])
-//         init()
-//     })    
-//     .catch(error => {
-//         // Handle errors
-//         console.error('Fetch error:', error);
-//     });    
-// }    
-
-
-
-
-
-
-
-
-// // const section = fullUrl.split('/')[3];
-
-
-// console.log('section: ',section);
-
-// const sheetname = section
-// const apiUrl = 'https://sheets.googleapis.com/v4/spreadsheets/1bQDVVO-R3tt99eR7ageBYu5XK8lnnlxHZLzJghYSLa0/values/'+sheetname+'?key=AIzaSyAUi4KazffmDZV_dQUnMUKA1jJt4i0mqlU';
-
-// let sectionData = null;
-
-// // Use the fetch function to make a GET request
-// fetch(apiUrl)
-// .then(response => {
-//     // Check if the response status is OK (200)
-//     if (!response.ok) {
-//     throw new Error('Network response was not ok');    
-//     }
-//     // Parse the response as JSON
-//     return response.json();
-// })    
-// .then(data => {
-//     // Handle the JSON data here
-//     sectionData = data.values
-//     // get rid of first row
-//     sectionData.shift()
-//     console.log(sectionData)
-//     init()
-
-// })    
-// .catch(error => {
-//     // Handle errors
-//     console.error('Fetch error:', error);
-// });    
+function createTagDiv(tag) {
+	let tagItem = document.createElement('div');
+	tagItem.className = 'tag-round';
+	// add the tag name plus the count
+	tag_count = tags.filter(function(x) { return x === tag }).length;
+	// if tag count is 1, make the width and height 50px, for every additional tag, multiply by 1.5
+	tagItem.style.width = 80 + (tag_count-1)*40 + 'px';
+	tagItem.style.height = 80 + (tag_count-1)*40 + 'px';
+	
+	// if tag count is 1, make the font size 6px, for every additional tag, multiply by 1.5
+	tagItem.style.fontSize = 10 + (tag_count-1)*4 + 'px';
+	if (tag_count > 1) {
+		tagItem.textContent = tag + ' (' + tag_count + ')';
+	}
+	else {
+		tagItem.textContent = tag;
+	}
+	// tagItem.textContent = tag;
+	tagItem.onclick = function() {
+		// get the current url, and go to the work page (one folder up) with the tag parameter
+		// get the current url
+		currentUrl = window.location.href;
+		// find the work page
+		workIndex = currentUrl.indexOf('/'+section+'/');
+		// use substring to get the url of the work page and add the tag parameter
+		window.location.href = currentUrl.substring(0, workIndex+section.length+2) + '?tag='+tag;
+	}
+	// set cursor to pointer
+	tagItem.style.cursor = "pointer";
+	document.querySelector('.tag-gallery').appendChild(tagItem);
+}

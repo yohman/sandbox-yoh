@@ -3,7 +3,7 @@ hide:
   - navigation
 ---
 
-<h1 id="title">Work Tags</h1>
+<h1 id="title">Connect Tags</h1>
 <!-- two buttons to toggle between gallery view and tag view -->
 <span class="btn btn-off" onclick="window.location.href = '../'">
 	gallery view
@@ -33,16 +33,19 @@ if(urlParams.has('gamified')) {
 //                            		//
 // -------------------------------- //
 
-let section = 'work'
+let section = 'connect'
 let tags = [];
 
 function init(){
 
-	data.work.values.forEach(function(row) {
-		let tagList = row[6].split(',');
-		tagList.forEach(function(tag) {
-			tags.push(tag.trim());
-		});
+	data[section].values.forEach(function(row) {
+		// if row is not undefined
+		if (row[6] != undefined) {
+			let tagList = row[6].split(',');
+			tagList.forEach(function(tag) {
+				tags.push(tag.trim());
+			});
+		}
 	});
 	// --------------------------------	//
 	// Loop through project data		//
