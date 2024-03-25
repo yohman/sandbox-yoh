@@ -1,21 +1,8 @@
 // -------------------------------------------- //
-// Function to initialize the page              //
-// -------------------------------------------- //
-function getUrlParams() {
-    var params = {};
-    var queryString = window.location.search;
-    var urlParams = new URLSearchParams(queryString);
-    urlParams.forEach(function(value, key) {
-      params[key] = value;
-    });
-    return params;
-}
-
-// -------------------------------------------- //
 // Parameters to be used in the page            //
 // -------------------------------------------- //
 
-const sheetNames = ['work', 'learn', 'connect'];
+const sheetNames = ['work', 'learn', 'connect','musings'];
 const spreadsheetId = '1bQDVVO-R3tt99eR7ageBYu5XK8lnnlxHZLzJghYSLa0';
 const apiKey = 'AIzaSyAUi4KazffmDZV_dQUnMUKA1jJt4i0mqlU';
 let data = {};
@@ -25,21 +12,21 @@ let data = {};
 // -------------------------------------------- //
 
 async function fetchData(sheetName) {
-  const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${sheetName}?key=${apiKey}`;
+	const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${sheetName}?key=${apiKey}`;
 
-  try {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error('Failed to fetch data');
-    }
-    const data = await response.json();
-    // get rid of first row 
-    data.values.shift();
-    return data;
-  } catch (error) {
-    console.error('Error fetching data:', error);
-    return null;
-  }
+	try {
+		const response = await fetch(url);
+		if (!response.ok) {
+			throw new Error('Failed to fetch data');
+		}
+		const data = await response.json();
+		// get rid of first row 
+		data.values.shift();
+		return data;
+	} catch (error) {
+		console.error('Error fetching data:', error);
+		return null;
+	}
 }
 
 // -------------------------------------------- //
@@ -47,31 +34,30 @@ async function fetchData(sheetName) {
 // fetched from all sheets                      //
 // -------------------------------------------- //
 async function checkAndInit() {
-  const promises = sheetNames.map(sheetName => fetchData(sheetName));
-  const results = await Promise.all(promises);
+	const promises = sheetNames.map(sheetName => fetchData(sheetName));
+	const results = await Promise.all(promises);
 
-  // Check if data is fetched from all sheets
-  const allDataFetched = results.every(result => result !== null);
+	// Check if data is fetched from all sheets
+	const allDataFetched = results.every(result => result !== null);
 
-  if (allDataFetched) {
-    // console.log('Data fetched from all sheets:', results);
-    // put the data in an object
-    results.forEach((result, index) => {
-      data[sheetNames[index]] = result;
-    });
-    console.log('Data object:', data);
+	if (allDataFetched) {
+		// put the data in an object
+		results.forEach((result, index) => {
+			data[sheetNames[index]] = result;
+		});
+		console.log('Data object:', data);
 
-    init();
-  } else {
-    console.log('Failed to fetch data from one or more sheets.');
-  }
+		// fun init function, located in each respective page
+		init();
+	} else {
+		console.log('Failed to fetch data from one or more sheets.');
+	}
 }
 
 // -------------------------------------------- //
-// Function to initialize the page              //
+// Let's get it rolling				            //
 // -------------------------------------------- //
 checkAndInit();
-
 
 // --------------------------------	//
 //                            		//
@@ -83,9 +69,9 @@ if(urlParams.has('gamified')) {
 	alert("Congratulations! You have chosen the gamified version! This is still under (secret) development, so stay tuned!");
 }
 
-// --------------------------------	//
-// Add gallery item					        //
-// -------------------------------- //
+// -------------------------------------------- //
+// Add gallery item								//
+// -------------------------------------------- //
 function addGalleryItem(row,counter) {
 
 	// create a container for the gallery item and gallery tags
@@ -93,7 +79,7 @@ function addGalleryItem(row,counter) {
 	galleryContainer.className = 'gallery-container';
 
 	// --------------------------------	//
-	// gallery item						          //
+	// gallery item						//
 	// -------------------------------- //
 	let galleryItem = document.createElement('div');
 	galleryItem.className = 'gallery-item';
@@ -101,15 +87,16 @@ function addGalleryItem(row,counter) {
 	// link
 	let link = document.createElement('a');
 
-  if (section == 'connect') {
-    link.href = 'who/?id='+counter;
-  } else if (section == 'learn') {
-    link.href = 'workshop/?id='+counter;
-  } else {
-    link.href = 'project/?id='+counter;
-  }
-	// link.href = 'project/?id='+counter; 
-	// counter++;
+	// sometimes, link name is different from the section name...
+	if (section == 'connect') {
+		link.href = 'who/?id='+counter;
+	} else if (section == 'learn') {
+		link.href = 'workshop/?id='+counter;
+	} else if (section == 'musings') {
+		link.href = 'posts/?id='+counter;
+	} else {
+		link.href = 'project/?id='+counter;
+	}
 
 	// image
 	let img = document.createElement('img');
@@ -176,7 +163,9 @@ function addGalleryItem(row,counter) {
 	document.querySelector('.gallery').appendChild(galleryContainer);
 }
 
-
+// -------------------------------------------- //
+// Create tag divs				            	//
+// -------------------------------------------- //
 function createTagDiv(tag) {
 	let tagItem = document.createElement('div');
 	tagItem.className = 'tag-round';
@@ -207,4 +196,17 @@ function createTagDiv(tag) {
 	// set cursor to pointer
 	tagItem.style.cursor = "pointer";
 	document.querySelector('.tag-gallery').appendChild(tagItem);
+}
+
+// -------------------------------------------- //
+// Get URL parameters				            //
+// -------------------------------------------- //
+function getUrlParams() {
+	var params = {};
+	var queryString = window.location.search;
+	var urlParams = new URLSearchParams(queryString);
+	urlParams.forEach(function(value, key) {
+		params[key] = value;
+	});
+	return params;
 }
