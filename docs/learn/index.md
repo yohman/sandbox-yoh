@@ -4,70 +4,52 @@ hide:
   - toc
 ---
 
-<div class="gallery">
-	
-</div> 
+<h1 id="title">Learn</h1>
+<!-- two buttons to toggle between gallery view and tag view -->
+<span class="btn btn-on" onclick="window.location.href = '../'">
+	gallery view
+</span>
+<span class="btn btn-off" onclick="window.location.href = 'tags'">
+	tag view
+</span>
 
+<div class="gallery"></div> 
 
 <script>
 
+// --------------------------------	//
+//                            		//
+//	  Initialize			    	//
+//                            		//
+// -------------------------------- //
+
+let section = 'learn'
 
 function init(){
+
+	// --------------------------------	//
+	// Loop through project data		//
+	// -------------------------------- //
 	counter = 0;
-	data.learn.values.forEach(function(row) {
-		let galleryItem = document.createElement('div');
-		galleryItem.className = 'gallery-item';
 
-		let link = document.createElement('a');
-		link.href = 'workshop/?id='+counter; // Assuming the second column in the sheet is the URL
-		counter++;
+	// filter data by tag, default is all
+	let tag = urlParams.get('tag');
+	if (tag) {
+		document.querySelector('.gallery').innerHTML = '';
+		data[section].values.forEach(function(row) {
+			let tags = row[6].split(',');
+			if (tags.map(function(x) { return x.trim() }).includes(tag)) {
+				addGalleryItem(row,counter);
+			}
+			counter++;
+		});
+	} else {
+		data[section].values.forEach(function(row) {
+			addGalleryItem(row,counter);
+			counter++;
+		});
+	}
 
-		let img = document.createElement('img');
-		img.src = '../learn/images/'+row[4]; // Assuming the first column in the sheet is the image name
-		img.alt = row[1]; // Assuming the third column in the sheet is the alt text
-
-		let caption = document.createElement('div');
-		caption.className = 'caption';
-		caption.innerHTML = row[0]+'<br>'+row[1]; 
-		
-		img.style.filter = "grayscale(100%)";
-		img.onmouseover = function() {
-			img.style.filter = "grayscale(0%)";
-		}
-		img.onmouseout = function() {
-			img.style.filter = "grayscale(100%)";
-		}
-		caption.onmouseover = function() {
-			img.style.filter = "grayscale(0%)";
-		}
-		caption.onmouseout = function() {
-			img.style.filter = "grayscale(100%)";
-		}
-
-		link.appendChild(img);
-		link.appendChild(caption);
-		galleryItem.appendChild(link);
-
-		document.querySelector('.gallery').appendChild(galleryItem);
-		let tags = row[7]; // Assuming the ninth column in the sheet contains the tags
-		if (tags) {
-			let tagList = tags.split(','); // Split the tags by comma
-			let tagContainer = document.createElement('div');
-			tagContainer.className = 'tag-container';
-
-			tagList.forEach(function(tag) {
-				let tagItem = document.createElement('div');
-				tagItem.className = 'tag';
-				tagItem.textContent = tag.trim();
-
-				tagContainer.appendChild(tagItem);
-			});
-
-			// galleryItem.appendChild(tagContainer);
-			document.querySelector('.gallery').appendChild(tagContainer);
-		}
-
-	});
 }
 
 </script>

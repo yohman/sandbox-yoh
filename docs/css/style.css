@@ -56,7 +56,7 @@ body, html {
     font-size: 1.5rem;
     cursor: pointer;
     opacity:0.8;
-    transition: background-color 0.3s;
+    transition: background-color 0.1s;
 }
 
 .title-font {
@@ -76,10 +76,19 @@ body, html {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-gap: 20px;
 }
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+}
+
 .gallery-item {
+    flex: 1 0 50%;
     text-align: center;
     position: relative;
     display: inline-block;
@@ -211,16 +220,23 @@ small {
     margin: 0 0 -2rem !important;
 }
 
+/* ---------------------------------- */
+/* Tag                                */
+/* ---------------------------------- */
+
 .tag-container {
+    flex: 1 0 50%;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     align-content: flex-start;
+    justify-content: center;
 }
 
 .tag {
+    font-size: 0.5rem !important;
     line-height: 1.2;
-    background-color: red;
+    background-color: gray;
     padding: 5px;
     font-size: 0.6rem;
     border-radius: 4px;
@@ -230,6 +246,77 @@ small {
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
     text-align: center;
     white-space: nowrap;
+    transition: background-color 0.1s;
+}
+
+.tag:hover {
+    background-color: red;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.9);
+}
+
+.tag-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.tag-round {
+    width: 100px; /* Adjust width as needed */
+    height: 100px; /* Adjust height as needed */
+    /* border: 1px solid black; Just for visualization */
+    border-radius: 50%; /* Makes the box circular */
+    background-color: gray;
+    color: white;
+    font-size: 0.6rem;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+    text-align: center; /* Align text horizontally to center */
+    display: flex; /* Use flexbox to vertically center text */
+    justify-content: center; /* Horizontally center text */
+    align-items: center; /* Vertically center text */
+    transition: background-color 0.1s;
+
+
+}
+
+/* hover state of tag */
+.tag-round:hover {
+    background-color: red;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.9);
+}
+
+/* ---------------------------------- */
+/* Button                             */
+/* ---------------------------------- */
+
+.btn {
+    /* style it like a small pill */
+    padding: 4px 8px;
+    background-color: rgb(222, 222, 222);
+    /* color: #ffffff; */
+    border: 2px solid white;
+    border-radius: 5px;
+    font-size: 0.6rem;
+    cursor: pointer;
+    opacity:0.8;
+    transition: background-color 0.1s;
+    width:fit-content;
+
+}
+
+/* on and off state of btn */
+.btn-on {
+    background-color: red;
+    color: #ffffff;
+}
+.btn-off {
+    background-color: rgb(222, 222, 222);
+    color: #000000;
+}
+
+/* hover state of btn */
+.btn:hover {
+    background-color: gray;
 }
 
 h1 {
@@ -261,4 +348,14 @@ h1 {
     font-family: "Arial", sans-serif;
     color: rgb(87, 87, 87) !important;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.author-image {
+    width: 50px;
+  height: 50px;
+  /* background-image: url('original_image.jpg'); */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+    border-radius: 50%;
 }
