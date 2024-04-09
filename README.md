@@ -4,7 +4,7 @@
 
 This site is built using the [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/getting-started/) framework. 
 
-For contributors to this site, it is recommended for you to install MdDocs on your machine:
+For contributors to this site, it is recommended for you to install MkDocs on your machine:
 
 ```
 pip install mkdocs-material
