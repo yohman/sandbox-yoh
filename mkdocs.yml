@@ -30,7 +30,7 @@ nav:
   - Connect:
     - "Who we are": connect/index.md
     - "Consult": connect/consult.md
-    - "Where is the Sandbox": connect/where.md
+    - "Where is the Sandbox?": connect/where/index.md
   - "Musings": musings/index.md
 
 extra_css:
