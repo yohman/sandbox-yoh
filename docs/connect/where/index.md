@@ -1,5 +1,7 @@
 # Where is the Sandbox?
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1zMRudGxQZA?si=oROflQ8eYkHfmdwT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 The Sandbox is located in a labyrinth-like path. Here are the steps to get there:
 
 1. Start at the main entrance of the building.
