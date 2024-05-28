@@ -82,7 +82,9 @@ function createProject(projectid) {
 	// --------------------------------	//
 	// YouTube video					//
 	// -------------------------------- //
-	if (project[9] !== undefined) {
+	// if project[9] is undefined or empty, then don't add the video
+	if(project[9] !== undefined && project[9] !== "" && project[9] !== " "){
+		console.log('video exists: ' + project[9])
 		// add a title
 		let videoTitle = document.createElement('h3');
 		videoTitle.innerHTML = "Watch";
@@ -104,7 +106,7 @@ function createProject(projectid) {
 	// --------------------------------	//
 	// Contributors						//
 	// -------------------------------- //
-	if (project[7] !== undefined) {
+	if (project[7] !== undefined && project[7] !== "" && project[7] !== " ") {
 		console.log('contributors exist: ' + project[7])
 		let contributorsTitle = document.createElement('h3');
 		contributorsTitle.innerHTML = "Contributors";
@@ -117,7 +119,7 @@ function createProject(projectid) {
 	// --------------------------------	//
 	// Supported by						//
 	// -------------------------------- //
-	if (project[8] !== undefined) {	
+	if (project[8] !== undefined && project[8] !== "" && project[8] !== " ") {	
 		let supportedByTitle = document.createElement('h3');
 		supportedByTitle.innerHTML = "Supported by";
 		projectDiv.appendChild(supportedByTitle);
@@ -146,7 +148,7 @@ function createProject(projectid) {
 	// --------------------------------	//
 	// Image gallery					//
 	// -------------------------------- //
-	if (project[11] !== undefined) {
+	if (project[11] !== undefined && project[11] !== "" && project[11] !== " ") {
 		// add a title
 		let galleryTitle = document.createElement('h3');
 		galleryTitle.innerHTML = "Gallery";

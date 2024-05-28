@@ -487,11 +487,12 @@ function createWorkshop(id) {
     workshopDiv.appendChild(video);
 
     // add the link to the youtube video
-    let link = document.createElement('a');
-    link.href = workshop[5];
-    link.innerHTML = "Watch on YouTube";
-    workshopDiv.appendChild(link);
-
+    if (workshop[5] != "") {
+        let link = document.createElement('a');
+        link.href = workshop[5];
+        link.innerHTML = "Watch on YouTube";
+        workshopDiv.appendChild(link);
+    }   
 
     // add the description
     let description = document.createElement('p');
