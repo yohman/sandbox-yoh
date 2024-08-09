@@ -4,6 +4,7 @@ hide:
 ---
 
 <h1 id="title">Work Tags</h1>
+
 <!-- two buttons to toggle between gallery view and tag view -->
 <span class="btn btn-off" onclick="window.location.href = '../'">
 	gallery view

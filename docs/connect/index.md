@@ -1,11 +1,16 @@
 ---
 hide:
   - toc
+
 ---
 
 <h1 id="title">Connect</h1>
+
+<!-- add a search box -->
+<input type="text" id="search" class="search" onkeyup="search()" placeholder="Search for people..">
+
 <!-- two buttons to toggle between gallery view and tag view -->
-<span class="btn btn-on" onclick="window.location.href = '../'">
+<span class="btn btn-on" >
 	gallery view
 </span>
 <span class="btn btn-off" onclick="window.location.href = 'tags'">
@@ -42,12 +47,43 @@ function init(){
 			}
 			counter++;
 		});
+		// add the name of the tag next to the search box with an option to clear the filter
+		// clear the filter by removing the tag from the url
+		document.querySelector('.search').insertAdjacentHTML('afterend',` <a href="?"><span class="tag tag-filter">${tag} x</span></a>`);
+
 	} else {
 		data[section].values.forEach(function(row) {
 			addGalleryItem(row,counter);
 			counter++;
 		});
 	}
+
+	// create the search function
+	window.search = function() {
+		let input, filter, ul, li, a, i, txtValue;
+		input = document.getElementById('search');
+		filter = input.value.toUpperCase();
+		li = document.querySelectorAll('.gallery-container');
+		for (i = 0; i < li.length; i++) {
+
+			a = li[i].getElementsByTagName('a')[0];
+
+			// search by project name, project description, and tags
+			let txtValue = a.textContent || a.innerText;
+			// search tags, which are in separate span tags of class tag
+			let tags = '';
+			li[i].querySelectorAll('.tag').forEach(function(tag) {
+				tags += tag.textContent;
+			});
+
+			if (txtValue.toUpperCase().indexOf(filter) > -1 || tags.toUpperCase().indexOf(filter) > -1) {
+				li[i].style.display = '';
+			} else {
+				li[i].style.display = 'none';
+			}
+
+		}
+	}	
 
 }
 

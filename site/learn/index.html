@@ -9,10 +9,8 @@
       
       
       
-        <link rel="prev" href="../work/">
       
-      
-        <link rel="next" href="../connect/">
+        <link rel="next" href="../work/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +18,7 @@
     
     
       
-        <title>Learn - OARC Technology Sandbox</title>
+        <title>Learn - &#8203;</title>
       
     
     
@@ -90,9 +88,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="OARC Technology Sandbox" class="md-header__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
+    <a href=".." title="&amp;#8203;" class="md-header__button md-logo" aria-label="&#8203;" data-md-component="logo">
       
-  <img src="../logo.jpg" alt="logo">
+  <img src="../logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -103,7 +101,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            OARC Technology Sandbox
+            &#8203;
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -139,23 +137,6 @@
         
   
   
-  
-    <li class="md-tabs__item">
-      <a href="../work/" class="md-tabs__link">
-        
-  
-    
-  
-  Work
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
     
   
   
@@ -166,6 +147,23 @@
     
   
   Learn
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../work/" class="md-tabs__link">
+        
+  
+    
+  
+  Work
 
       </a>
     </li>
@@ -233,35 +231,15 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="OARC Technology Sandbox" class="md-nav__button md-logo" aria-label="OARC Technology Sandbox" data-md-component="logo">
+    <a href=".." title="&amp;#8203;" class="md-nav__button md-logo" aria-label="&#8203;" data-md-component="logo">
       
-  <img src="../logo.jpg" alt="logo">
+  <img src="../logo.png" alt="logo">
 
     </a>
-    OARC Technology Sandbox
+    &#8203;
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../work/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Work
-  </span>
-  
-
-      </a>
-    </li>
-  
-
     
       
       
@@ -287,6 +265,26 @@
 
       </a>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../work/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Work
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -458,7 +456,7 @@
 <!-- add a search box -->
 <p><input type="text" id="search" class="search" onkeyup="search()" placeholder="Search for projects.."></p>
 <!-- two buttons to toggle between gallery view and tag view -->
-<p><span class="btn btn-on" onclick="window.location.href = '../'">
+<p><span class="btn btn-on" >
     gallery view
 </span>
 <span class="btn btn-off" onclick="window.location.href = 'tags'">
@@ -494,6 +492,10 @@ function init(){
             }
             counter++;
         });
+        // add the name of the tag next to the search box with an option to clear the filter
+        // clear the filter by removing the tag from the url
+        document.querySelector('.search').insertAdjacentHTML('afterend',` <a href="?"><span class="tag tag-filter">${tag} x</span></a>`);
+
     } else {
         data[section].values.forEach(function(row) {
             addGalleryItem(row,counter);
@@ -509,12 +511,21 @@ function init(){
         li = document.querySelectorAll('.gallery-container');
         for (i = 0; i < li.length; i++) {
             a = li[i].getElementsByTagName('a')[0];
-            txtValue = a.textContent || a.innerText;
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+
+            // search by project name, project description, and tags
+            let txtValue = a.textContent || a.innerText;
+            // search tags, which are in separate span tags of class tag
+            let tags = '';
+            li[i].querySelectorAll('.tag').forEach(function(tag) {
+                tags += tag.textContent;
+            });
+
+            if (txtValue.toUpperCase().indexOf(filter) > -1 || tags.toUpperCase().indexOf(filter) > -1) {
                 li[i].style.display = '';
             } else {
                 li[i].style.display = 'none';
             }
+
         }
     }   
 

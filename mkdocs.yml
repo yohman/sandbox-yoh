@@ -1,8 +1,8 @@
-site_name: OARC Technology Sandbox
+site_name:  '&#8203;'
 # repo_url: https://github.com/IDREsandbox/sandbox
 theme:
   name: material
-  logo: logo.jpg
+  logo: logo.png
   use_directory_urls: true
   scheme: slate
   palette:
@@ -22,9 +22,9 @@ extra:
 
 # Navigation
 nav:
-  - "Work": work/index.md
   # - "tags": work/tags/index.md
   - Learn: learn/index.md
+  - "Work": work/index.md
     # - "Workshops": learn/resources.md
     # - "Tutorials": learn/tutorials.md
   - Connect:
