@@ -20,6 +20,8 @@ theme:
 extra:
   generator: false
 
+home_page: /learn/
+
 # Navigation
 nav:
   # - "tags": work/tags/index.md
