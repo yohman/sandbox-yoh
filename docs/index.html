@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+	<!-- redirect after 1 second and fade out -->
+	<!-- <meta http-equiv="refresh" content="1; url=learn/" /> -->
+
 	<style>
 		body {
 			display: flex;
@@ -94,6 +98,13 @@
 			
 		}
 
+		body {
+			transition: opacity 1s ease-out;
+		}
+		.fade-out {
+			opacity: 0;
+		}
+
 	</style>
 	<script>
 		function handleScanClick() {
@@ -105,7 +116,24 @@
 				alert("Wrong passcode");
 			}
 		}
+
+		document.addEventListener("DOMContentLoaded", function() {
+			setTimeout(function() {
+				document.body.classList.add('fade-out');
+			}, 1000); // Wait for 1 second before starting the fade out
+
+			setTimeout(function() {
+				window.location.href = 'learn/';
+			}, 2000); // Redirect after the fade out (total 2 seconds)
+		});
 	</script>
+
+
+
+
+
+
+
 </head>
 <body>
 	<div class="sign">
