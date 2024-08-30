@@ -24,16 +24,14 @@ function init(){
 	createProject(projectid);	
 }
 
-
 // --------------------------------	//
 //                            		//
 //	  Function to create project 	//
 //                            		//
 // -------------------------------- //
 function createProject(projectid) {
-	section = 'musings';
 	// find the project in the projects array
-	let project = data[section].values[projectid];
+	let project = data.musings.values[projectid];
 
 	// --------------------------------	//
 	// Title and secondary title		//
@@ -43,31 +41,8 @@ function createProject(projectid) {
 
 	// get the secondary title
 	let secondaryTitle = document.getElementById('secondary-title');
-	secondaryTitle.innerHTML = project[2] + ' by ' + project[1];
+	secondaryTitle.innerHTML = project[1] + ' - ' + project[2];
 
-	// find the author (project[1]) in data.connect.values which is an array
-	connectIndex = data.connect.values.findIndex(value => value.includes(project[1]));
-	imageLink = data.connect.values[connectIndex][4];
-	// show author image
-	// create a div for the project
-	let authorDiv = document.createElement('div');
-	authorDiv.className = 'project';
-	// --------------------------------	//
-	// Author image					//
-	// -------------------------------- //
-	let authorImage = document.createElement('img');
-	// add class
-	authorImage.className = 'author-image';
-	authorImage.src = '../../connect/images/'+imageLink; // Assuming the first column in the sheet is the image name
-	authorImage.alt = project[1]; // Assuming the third column in the sheet is the alt text
-	authorDiv.appendChild(authorImage);
-	// add the project to the page
-	document.getElementById('project-container').appendChild(authorDiv);
-
-	
-
-
-	console.log('imageLink: ' + imageLink);
 	// create a div for the project
 	let projectDiv = document.createElement('div');
 	projectDiv.className = 'project';
@@ -76,8 +51,13 @@ function createProject(projectid) {
 	// Project image					//
 	// -------------------------------- //
 	let image = document.createElement('img');
-	image.src = '../../'+section+'/images/'+project[4]; // Assuming the first column in the sheet is the image name
-	image.alt = project[1]; // Assuming the third column in the sheet is the alt text
+
+	if (project[4] === undefined) {
+		project[4] = 'sandbox.png';
+	}
+	image.src = '../../musings/images/'+project[4]; 
+	image.alt = project[1]; 
+
 	// assign maxheight to the image
 	image.style.maxHeight = '500px';
 	projectDiv.appendChild(image);

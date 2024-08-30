@@ -72,7 +72,7 @@ if(urlParams.has('gamified')) {
 // -------------------------------------------- //
 // Add gallery item								//
 // -------------------------------------------- //
-function addGalleryItem(row,counter) {
+function addGalleryItem(row,counter,selector) {
 
 	// create a container for the gallery item and gallery tags
 	let galleryContainer = document.createElement('div');
@@ -99,8 +99,17 @@ function addGalleryItem(row,counter) {
 	}
 
 	// image
+	// if image is not available, use the default image
+	// if row[4] is undefined, use the default image
+	if (row[4] == undefined) {
+		image_file = 'sandbox.png';
+	}
+	else {
+		image_file = row[4];
+	}
+
 	let img = document.createElement('img');
-	img.src = '../'+section+'/images/'+row[4]; 
+	img.src = '../'+section+'/images/'+image_file; 
 	img.alt = row[1]; 
 
 	// caption
@@ -160,7 +169,13 @@ function addGalleryItem(row,counter) {
 		galleryContainer.appendChild(tagContainer);
 	}
 
-	document.querySelector('.gallery').appendChild(galleryContainer);
+	// if selector argument is provided, append to the selector, otherwise, append to the gallery
+	if (selector) {
+		document.querySelector(selector).appendChild(galleryContainer);
+	}
+	else {
+		document.querySelector('.gallery').appendChild(galleryContainer);
+	}
 }
 
 // -------------------------------------------- //

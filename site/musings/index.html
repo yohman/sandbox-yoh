@@ -14,7 +14,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.25">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.33">
     
     
       
@@ -22,7 +22,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -452,6 +452,9 @@
 
 
 <h1 id="title">Musings</h1>
+
+<!-- add a search box -->
+<p><input type="text" id="search" class="search" onkeyup="search()" placeholder="Search for musings.."></p>
 <!-- two buttons to toggle between gallery view and tag view -->
 <p><span class="btn btn-on" onclick="window.location.href = '../'">
     gallery view
@@ -489,12 +492,67 @@ function init(){
             }
             counter++;
         });
+        // add the name of the tag next to the search box with an option to clear the filter
+        // clear the filter by removing the tag from the url
+        document.querySelector('.search').insertAdjacentHTML('afterend',` <a href="?"><span class="tag tag-filter">${tag} x</span></a>`);
+
     } else {
         data[section].values.forEach(function(row) {
             addGalleryItem(row,counter);
             counter++;
         });
     }
+
+
+    // create the search function
+    window.search = function() {
+        let input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById('search');
+        filter = input.value.toUpperCase();
+        li = document.querySelectorAll('.gallery-container');
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName('a')[0];
+
+            // search by project name, project description, and tags
+            let txtValue = a.textContent || a.innerText;
+            // search tags, which are in separate span tags of class tag
+            let tags = '';
+            li[i].querySelectorAll('.tag').forEach(function(tag) {
+                tags += tag.textContent;
+            });
+
+            if (txtValue.toUpperCase().indexOf(filter) > -1 || tags.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = '';
+            } else {
+                li[i].style.display = 'none';
+            }
+
+        }
+    }   
+
+
+
+
+
+
+
+    // // filter data by tag, default is all
+    // let tag = urlParams.get('tag');
+    // if (tag) {
+    //  document.querySelector('.gallery').innerHTML = '';
+    //  data[section].values.forEach(function(row) {
+    //      let tags = row[6].split(',');
+    //      if (tags.map(function(x) { return x.trim() }).includes(tag)) {
+    //          addGalleryItem(row,counter);
+    //      }
+    //      counter++;
+    //  });
+    // } else {
+    //  data[section].values.forEach(function(row) {
+    //      addGalleryItem(row,counter);
+    //      counter++;
+    //  });
+    // }
 
 }
 
@@ -548,7 +606,7 @@ function init(){
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.indexes"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.081f42fc.min.js"></script>
+      <script src="../assets/javascripts/bundle.af256bd8.min.js"></script>
       
         <script src="../js/getdata.js"></script>
       
