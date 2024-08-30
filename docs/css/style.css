@@ -6,6 +6,10 @@ body, html {
     /*overflow: hidden; /* Remove comment to hide overflow */
 }
 
+.md-main__inner {
+    margin-top: 0rem;
+}
+
 .search {
     border: 1px solid #aaa;
     padding: 5px;
