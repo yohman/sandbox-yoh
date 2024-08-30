@@ -12,7 +12,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.25">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.33">
     
     
       
@@ -20,7 +20,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3cba04c6.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -460,16 +460,14 @@ function init(){
     createProject(projectid);   
 }
 
-
 // -------------------------------- //
 //                                  //
 //    Function to create project    //
 //                                  //
 // -------------------------------- //
 function createProject(projectid) {
-    section = 'musings';
     // find the project in the projects array
-    let project = data[section].values[projectid];
+    let project = data.musings.values[projectid];
 
     // -------------------------------- //
     // Title and secondary title        //
@@ -479,31 +477,8 @@ function createProject(projectid) {
 
     // get the secondary title
     let secondaryTitle = document.getElementById('secondary-title');
-    secondaryTitle.innerHTML = project[2] + ' by ' + project[1];
+    secondaryTitle.innerHTML = project[1] + ' - ' + project[2];
 
-    // find the author (project[1]) in data.connect.values which is an array
-    connectIndex = data.connect.values.findIndex(value => value.includes(project[1]));
-    imageLink = data.connect.values[connectIndex][4];
-    // show author image
-    // create a div for the project
-    let authorDiv = document.createElement('div');
-    authorDiv.className = 'project';
-    // -------------------------------- //
-    // Author image                 //
-    // -------------------------------- //
-    let authorImage = document.createElement('img');
-    // add class
-    authorImage.className = 'author-image';
-    authorImage.src = '../../connect/images/'+imageLink; // Assuming the first column in the sheet is the image name
-    authorImage.alt = project[1]; // Assuming the third column in the sheet is the alt text
-    authorDiv.appendChild(authorImage);
-    // add the project to the page
-    document.getElementById('project-container').appendChild(authorDiv);
-
-
-
-
-    console.log('imageLink: ' + imageLink);
     // create a div for the project
     let projectDiv = document.createElement('div');
     projectDiv.className = 'project';
@@ -512,8 +487,13 @@ function createProject(projectid) {
     // Project image                    //
     // -------------------------------- //
     let image = document.createElement('img');
-    image.src = '../../'+section+'/images/'+project[4]; // Assuming the first column in the sheet is the image name
-    image.alt = project[1]; // Assuming the third column in the sheet is the alt text
+
+    if (project[4] === undefined) {
+        project[4] = 'sandbox.png';
+    }
+    image.src = '../../musings/images/'+project[4]; 
+    image.alt = project[1]; 
+
     // assign maxheight to the image
     image.style.maxHeight = '500px';
     projectDiv.appendChild(image);
@@ -675,7 +655,7 @@ function createProject(projectid) {
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.af256bd8.min.js"></script>
       
         <script src="../../js/getdata.js"></script>
       
