@@ -101,7 +101,7 @@ function addGalleryItem(row,counter,selector) {
 	// image
 	// if image is not available, use the default image
 	// if row[4] is undefined, use the default image
-	if (row[4] == undefined) {
+	if (row[4] == undefined || row[4] == '') {
 		image_file = 'sandbox.png';
 	}
 	else {
@@ -135,6 +135,10 @@ function addGalleryItem(row,counter,selector) {
 	// append elements
 	link.appendChild(img);
 	link.appendChild(caption);
+
+	// add alt tags
+	img.alt = row[0] + ' - ' + row[1];
+	img.title = row[0] + ' - ' + row[1];
 	galleryItem.appendChild(link);
 
 	// append elements

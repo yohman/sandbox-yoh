@@ -52,9 +52,10 @@ function createProject(projectid) {
 	// -------------------------------- //
 	let image = document.createElement('img');
 
-	if (project[4] === undefined) {
+	if (project[4] == undefined || project[4] == '') {
 		project[4] = 'sandbox.png';
 	}
+
 	image.src = '../../musings/images/'+project[4]; 
 	image.alt = project[1]; 
 
@@ -74,18 +75,18 @@ function createProject(projectid) {
 	// --------------------------------	//
 	// Main staff link					//
 	// -------------------------------- //
-	if (project[5] !== undefined) {
-		// create a paragraph, then put the link in the paragraph, then put the paragraph in the project div
-		let linkParagraph = document.createElement('p');
-		// add class
-		linkParagraph.className = 'btn';
+	// if (project[5] !== undefined) {
+	// 	// create a paragraph, then put the link in the paragraph, then put the paragraph in the project div
+	// 	let linkParagraph = document.createElement('p');
+	// 	// add class
+	// 	linkParagraph.className = 'btn';
 		
-		let link = document.createElement('a');
-		link.href = project[5];
-		link.innerHTML = "More ";
-		linkParagraph.appendChild(link);
-		projectDiv.appendChild(linkParagraph);
-	}
+	// 	let link = document.createElement('a');
+	// 	link.href = project[5];
+	// 	link.innerHTML = "More ";
+	// 	linkParagraph.appendChild(link);
+	// 	projectDiv.appendChild(linkParagraph);
+	// }
 
 	// --------------------------------	//
 	// YouTube video					//

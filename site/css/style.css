@@ -259,7 +259,7 @@ small {
 }
 
 .tag:hover {
-    background-color: red;
+    background-color: #a10000;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.9);
 }
 
@@ -290,7 +290,7 @@ small {
 
 /* hover state of tag */
 .tag-round:hover {
-    background-color: red;
+    background-color: #a10000;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.9);
 }
 
@@ -315,7 +315,7 @@ small {
 
 /* on and off state of btn */
 .btn-on {
-    background-color: red;
+    background-color: #a10000;
     color: #ffffff;
 }
 .btn-off {

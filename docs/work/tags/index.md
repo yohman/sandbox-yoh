@@ -60,6 +60,14 @@ function init(){
 	 
 
 	distinct_tags = tags.filter(function(item, i, ar){ return ar.indexOf(item) === i; });
+
+	// sort tags ignore case
+	distinct_tags.sort(function(a, b) {
+		return a.toLowerCase().localeCompare(b.toLowerCase());
+	});
+
+	console.log(distinct_tags);
+
 	distinct_tags.forEach(function(tag) {
 		createTagDiv(tag);
 
