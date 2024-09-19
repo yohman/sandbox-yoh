@@ -1,7 +1,7 @@
 ---
 hide:
   - navigation
-
+  - toc
 ---
 
 <h1 id="title">Work</h1>
