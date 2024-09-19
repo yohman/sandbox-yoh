@@ -3,7 +3,8 @@ hide:
   - navigation
 ---
 
-<h1 id="title">Connect Tags</h1>
+<h1 id="title">Musings Tags</h1>
+
 <!-- two buttons to toggle between gallery view and tag view -->
 <span class="btn btn-off" onclick="window.location.href = '../'">
 	gallery view
@@ -33,19 +34,16 @@ if(urlParams.has('gamified')) {
 //                            		//
 // -------------------------------- //
 
-let section = 'connect'
+let section = 'musings'
 let tags = [];
 
 function init(){
 
-	data[section].values.forEach(function(row) {
-		// if row is not undefined
-		if (row[6] != undefined) {
-			let tagList = row[6].split(',');
-			tagList.forEach(function(tag) {
-				tags.push(tag.trim());
-			});
-		}
+	data.musings.values.forEach(function(row) {
+		let tagList = row[6].split(',');
+		tagList.forEach(function(tag) {
+			tags.push(tag.trim());
+		});
 	});
 	// --------------------------------	//
 	// Loop through project data		//
@@ -64,7 +62,7 @@ function init(){
 	distinct_tags.sort(function(a, b) {
 		return a.toLowerCase().localeCompare(b.toLowerCase());
 	});
-	
+
 	distinct_tags.forEach(function(tag) {
 		createTagDiv(tag);
 
@@ -72,6 +70,7 @@ function init(){
 
 	
 }
+
 
 
 </script>
