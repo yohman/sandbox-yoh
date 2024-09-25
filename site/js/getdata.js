@@ -214,6 +214,18 @@ function createTagDiv(tag) {
 	}
 	// set cursor to pointer
 	tagItem.style.cursor = "pointer";
+	// add title attribute
+	tagItem.title = tag;
+	// add alt tag
+	tagItem.alt = tag;
+	// add tabindex
+	tagItem.tabIndex = 0;
+	// add onkeypress event
+	tagItem.onkeypress = function(event) {
+		if (event.key === 'Enter') {
+			tagItem.click();
+		}
+	}
 	document.querySelector('.tag-gallery').appendChild(tagItem);
 }
 
