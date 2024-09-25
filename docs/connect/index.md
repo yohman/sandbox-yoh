@@ -10,10 +10,10 @@ hide:
 <input type="text" id="search" class="search" onkeyup="search()" placeholder="Search for people..">
 
 <!-- two buttons to toggle between gallery view and tag view -->
-<span class="btn btn-on" >
+<span class="btn btn-on" tabindex="0" alt="gallery view" title="gallery view">
 	gallery view
 </span>
-<span class="btn btn-off" onclick="window.location.href = 'tags'">
+<span class="btn btn-off" tabindex="0" alt="tab view" title="tab view" onclick="window.location.href = 'tags'" onkeydown="if(event.keyCode === 13) { window.location.href = 'tags' }">
 	tag view
 </span>
 
