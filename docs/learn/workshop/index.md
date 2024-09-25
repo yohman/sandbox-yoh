@@ -46,6 +46,10 @@ function createWorkshop(id) {
 	// add the youtube video
 	let video = document.createElement('div');
 	video.innerHTML = workshop[7];
+	// add alt and title tags
+	video.alt = workshop[1];
+	video.title = workshop[1];
+	
 	workshopDiv.appendChild(video);
 
 	// add the link to the youtube video

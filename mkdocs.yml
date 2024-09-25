@@ -1,8 +1,9 @@
-site_name:  '&#8203;'
+site_name:  'UCLA OARC Sandbox'
 # repo_url: https://github.com/IDREsandbox/sandbox
 theme:
   name: material
   logo: logo.png
+  # add alt text to the logo
   use_directory_urls: true
   scheme: slate
   palette:
@@ -19,6 +20,8 @@ theme:
     - navigation.indexes
 extra:
   generator: false
+  logo_alt: "UCLA OARC Sandbox"
+
 
 home_page: /learn/
 

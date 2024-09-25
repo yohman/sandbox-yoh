@@ -57,7 +57,8 @@ function createProject(projectid) {
 	}
 
 	image.src = '../../musings/images/'+project[4]; 
-	image.alt = project[1]; 
+	image.alt = project[0] + ", " + project[1]; 
+	image.title = project[0] + ", " + project[1];
 
 	// assign maxheight to the image
 	image.style.maxHeight = '500px';

@@ -52,7 +52,8 @@ function createProject(projectid) {
 	// -------------------------------- //
 	let image = document.createElement('img');
 	image.src = '../../connect/images/'+project[4]; // Assuming the first column in the sheet is the image name
-	image.alt = project[1]; // Assuming the third column in the sheet is the alt text
+	image.alt = project[0] + " " + project[1]; // Assuming the third column in the sheet is the alt text
+	image.title = project[0] + " " + project[1]
 	// assign maxheight to the image
 	image.style.maxHeight = '500px';
 	projectDiv.appendChild(image);

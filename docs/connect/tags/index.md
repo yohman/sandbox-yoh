@@ -4,14 +4,14 @@ hide:
 ---
 
 <h1 id="title">Connect Tags</h1>
+
 <!-- two buttons to toggle between gallery view and tag view -->
-<span class="btn btn-off" onclick="window.location.href = '../'">
+<span class="btn btn-off" tabindex="0" alt="gallery view" title="gallery view" onclick="window.location.href = '../'" onkeydown="if(event.keyCode === 13) { window.location.href = '../' }">
 	gallery view
 </span>
-<span class="btn btn-on">
+<span class="btn btn-on" tabindex="0" alt="tab view" title="tab view">
 	tag view
 </span>
-
 
 <div class="tag-gallery"></div> 
 

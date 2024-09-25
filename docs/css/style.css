@@ -6,6 +6,11 @@ body, html {
     /*overflow: hidden; /* Remove comment to hide overflow */
 }
 
+/* hide the header */
+[dir=ltr] .md-header__title {
+    display: none;
+}
+
 .md-main__inner {
     margin-top: 0rem;
 }
