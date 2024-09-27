@@ -51,6 +51,11 @@ function createProject(projectid) {
 	// Project image					//
 	// -------------------------------- //
 	let image = document.createElement('img');
+
+	if (project[4] == undefined || project[4] == '') {
+		project[4] = 'sandbox.png';
+	}
+
 	image.src = '../../work/images/'+project[4]; // Assuming the first column in the sheet is the image name
 	image.alt = project[1]; 
 	image.title = project[1]; 
