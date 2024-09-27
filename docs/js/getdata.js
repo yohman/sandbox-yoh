@@ -49,6 +49,8 @@ async function checkAndInit() {
 
 		// fun init function, located in each respective page
 		init();
+		// After your Google Sheets data is loaded
+		document.dispatchEvent(new Event('dataLoaded'));
 	} else {
 		console.log('Failed to fetch data from one or more sheets.');
 	}
@@ -241,3 +243,147 @@ function getUrlParams() {
 	});
 	return params;
 }
+
+// -------------------------------------------- //
+// Code highlighting				            //
+// -------------------------------------------- //
+function syntaxHighlightCode() {
+	console.log('Syntax highlighting code blocks...');
+	// Get all <code> blocks
+	const codeBlocks = document.querySelectorAll('pre code');
+
+	codeBlocks.forEach(block => {
+	  let code = block.innerHTML;
+
+		// Detect language from class (e.g., language-html, language-js, language-python)
+		const language = block.className.includes('html') ? 'html'
+						: block.className.includes('js') ? 'js'
+						: block.className.includes('python') ? 'python'
+						: 'python'; // Default to Python
+
+		// Apply syntax highlighting based on detected language
+		let highlightedCode;
+		if (language === 'html') {
+			highlightedCode = highlightHTML(code);
+		} else if (language === 'js') {
+			highlightedCode = highlightJS(code);
+		} else if (language === 'python') {
+			highlightedCode = highlightPython(code);
+		}
+
+		// Replace the block's inner HTML with the highlighted version
+		block.innerHTML = highlightedCode;
+	});
+}
+
+// Function to highlight HTML
+function highlightHTML(code) {
+	return code
+		.replace(/(&lt;\/?[\w\s="']+&gt;)/g, '<span class="html-tag">$1</span>')  // HTML tags
+		.replace(/(\w+)(=)/g, '<span class="html-attribute">$1</span>$2')        // HTML attributes
+		.replace(/"([^"]+)"/g, '<span class="html-attribute-value">"$1"</span>'); // Attribute values
+}
+
+// Function to highlight JavaScript
+function highlightJS(code) {
+	// Step 1: Save strings in placeholders to avoid conflicts with other replacements
+	let placeholders = [];
+
+	// Handle regular strings (single and double quotes)
+	code = code.replace(/(["'])(.*?)\1/g, (match) => {
+	placeholders.push(match);
+	return `__STRING_PLACEHOLDER_${placeholders.length - 1}__`;
+	});
+
+	// Step 2: Tokenize the code, ensuring comments and lists are handled correctly
+	const tokens = code.split(/(\s+|\/\/.*$|,|\(|\)|\{|\}|\[|\]|\+|\-|\*|\/|\=|\+=|\-=|\*=|\/=|===|==|!=)/m);
+
+	// Step 3: Apply highlighting
+	let highlightedCode = tokens.map(token => {
+	// Restore strings from placeholders
+	if (token.startsWith("__STRING_PLACEHOLDER_")) {
+		const index = token.match(/\d+/)[0];
+		return `<span class="js-string">${placeholders[index]}</span>`;
+	}
+
+	// Check for comments (// comment)
+	if (/^\/\/.*$/.test(token)) {
+		return `<span class="js-comment">${token}</span>`;
+	}
+
+	// Check for keywords
+	if (/\b(let|const|var|if|else|for|while|return|function|class|import|from|export|this|new|try|catch|throw|async|await)\b/.test(token)) {
+		return `<span class="js-keyword">${token}</span>`;
+	}
+
+	// Check for numbers
+	if (/^\d+(\.\d+)?$/.test(token)) { // Allow for integers and floats
+		return `<span class="js-number">${token}</span>`;
+	}
+
+	// Check for operators
+	if (/(\+|\-|\*|\/|\=|\+=|\-=|\*=|\/=|===|==|!=)/.test(token)) {
+		return `<span class="js-operator">${token}</span>`;
+	}
+
+	// Return token as-is if no match
+	return token;
+	}).join('');
+
+	return highlightedCode;
+}
+
+// Function to highlight Python
+function highlightPython(code) {
+	// Step 1: Save strings in placeholders to avoid conflicts with other replacements
+	let placeholders = [];
+
+	// Handle formatted strings (f-strings), triple-quoted strings, single quotes, and double quotes
+	code = code.replace(/(f"""(.*?)"""|f'(.*?)'|f"([^"]*|{[^}]*})*"|f'([^']*|{[^}]*})*'|"([^"]*)"|'([^']*)'|"""(.*?)"""|'''(.*?)''')/g, (match) => {
+		placeholders.push(match);
+		return `__STRING_PLACEHOLDER_${placeholders.length - 1}__`;
+	});
+
+	// Step 2: Tokenize the code, ensuring comments and lists are handled correctly
+	const tokens = code.split(/(\s+|#.*$|,|\(|\)|\{|\}|\[|\]|\+|\-|\*|\/|\=|\+=|\-=|\*=|\/=|===|==|!=)/m);
+
+	// Step 3: Apply highlighting
+	let highlightedCode = tokens.map(token => {
+		// Restore strings from placeholders
+		if (token.startsWith("__STRING_PLACEHOLDER_")) {
+		const index = token.match(/\d+/)[0];
+		return `<span class="py-string">${placeholders[index]}</span>`;
+		}
+
+		// Check for comments (# comment)
+		if (/^#.*$/.test(token)) {
+		return `<span class="py-comment">${token}</span>`;
+		}
+
+		// Check for keywords
+		if (/\b(def|class|if|elif|else|for|while|return|import|from|as|try|except|with|pass|break|continue|True|False|None)\b/.test(token)) {
+		return `<span class="py-keyword">${token}</span>`;
+		}
+
+		// Check for numbers
+		if (/^\d+(\.\d+)?$/.test(token)) { // Allow for integers and floats
+		return `<span class="py-number">${token}</span>`;
+		}
+
+		// Check for operators
+		if (/(\+|\-|\*|\/|\=|\+=|\-=|\*=|\/=|===|==|!=)/.test(token)) {
+		return `<span class="py-operator">${token}</span>`;
+		}
+
+		// Return token as-is if no match
+		return token;
+	}).join('');
+
+	return highlightedCode;
+}
+
+// Set up an event listener for the custom event
+document.addEventListener('dataLoaded', syntaxHighlightCode, { once: true });
+
+// Optional: You can also call syntaxHighlightCode initially if you have static content
+// document.addEventListener('DOMContentLoaded', syntaxHighlightCode);

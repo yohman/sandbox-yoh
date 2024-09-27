@@ -2,7 +2,6 @@
 <span id="secondary-title"></span>
 <div id="project-container"></div>
 
-
 <script>
 // --------------------------------	//
 //                            		//
@@ -68,9 +67,14 @@ function createProject(projectid) {
 	// Description						//
 	// -------------------------------- //
 	if (project[3] !== undefined) {
-		let description = document.createElement('p');
+		let description = document.createElement('div');
+		// give it an id "markdown-content"
+		description.id = 'markdown-content';
 		description.innerHTML = project[3];
 		projectDiv.appendChild(description);
+
+
+
 	}	
 
 	// --------------------------------	//
@@ -176,4 +180,6 @@ function createProject(projectid) {
 		});
 	}
 }
+
+
 </script>
