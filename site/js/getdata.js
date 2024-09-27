@@ -383,7 +383,8 @@ function highlightPython(code) {
 }
 
 // Set up an event listener for the custom event
-document.addEventListener('dataLoaded', syntaxHighlightCode, { once: true });
+// document.addEventListener('dataLoaded', syntaxHighlightCode, { once: true });
+document.addEventListener('dataLoaded', Prism.highlightAll, { once: true });
 
 // Optional: You can also call syntaxHighlightCode initially if you have static content
 // document.addEventListener('DOMContentLoaded', syntaxHighlightCode);
