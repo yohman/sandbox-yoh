@@ -504,9 +504,14 @@ function createProject(projectid) {
     // Description                      //
     // -------------------------------- //
     if (project[3] !== undefined) {
-        let description = document.createElement('p');
+        let description = document.createElement('div');
+        // give it an id "markdown-content"
+        description.id = 'markdown-content';
         description.innerHTML = project[3];
         projectDiv.appendChild(description);
+
+
+
     }   
 
     // -------------------------------- //
@@ -612,6 +617,8 @@ function createProject(projectid) {
         });
     }
 }
+
+
 </script>
 
 
@@ -664,6 +671,8 @@ function createProject(projectid) {
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
       
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
