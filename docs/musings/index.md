@@ -2,6 +2,8 @@
 hide:
   - navigation
   - toc
+title: "OARC Sandbox Musings | Insights from UCLA Research Staff"
+description: "Dive into thought-provoking reflections and expert insights from UCLA's OARC Sandbox research team. Explore cutting-edge ideas in digital scholarship, data science, and technology innovation."
 ---
 
 <h1 id="title">Musings</h1>

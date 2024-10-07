@@ -31,7 +31,7 @@ function init(){
 // -------------------------------- //
 function createProject(projectid) {
 	// find the project in the projects array
-	let project = data.connect.values[projectid];
+	let project = data.consult.values[projectid];
 
 	// --------------------------------	//
 	// Title and secondary title		//
@@ -56,7 +56,7 @@ function createProject(projectid) {
 		project[4] = 'sandbox.png';
 	}
 
-	image.src = '../../connect/images/'+project[4]; // Assuming the first column in the sheet is the image name
+	image.src = '../../images/'+project[4]; // Assuming the first column in the sheet is the image name
 	image.alt = project[0] + " " + project[1]; // Assuming the third column in the sheet is the alt text
 	image.title = project[0] + " " + project[1]
 	// assign maxheight to the image

@@ -2,6 +2,8 @@
 hide:
   - navigation
   - toc
+title: "OARC Sandbox Projects | Innovative Research Initiatives at UCLA"
+description: "Explore cutting-edge projects from UCLA's OARC Sandbox team. Discover our interdisciplinary research, advanced computing applications, and collaborative digital scholarship initiatives."
 ---
 
 <h1 id="title">Work</h1>

@@ -2,7 +2,7 @@
 // Parameters to be used in the page            //
 // -------------------------------------------- //
 
-const sheetNames = ['work', 'learn', 'connect','musings'];
+const sheetNames = ['work', 'learn', 'consult','musings'];
 const spreadsheetId = '1bQDVVO-R3tt99eR7ageBYu5XK8lnnlxHZLzJghYSLa0';
 const apiKey = 'AIzaSyAUi4KazffmDZV_dQUnMUKA1jJt4i0mqlU';
 let data = {};
@@ -90,7 +90,7 @@ function addGalleryItem(row,counter,selector) {
 	let link = document.createElement('a');
 
 	// sometimes, link name is different from the section name...
-	if (section == 'connect') {
+	if (section == 'consult') {
 		link.href = 'who/?id='+counter;
 	} else if (section == 'learn') {
 		link.href = 'workshop/?id='+counter;
@@ -113,6 +113,11 @@ function addGalleryItem(row,counter,selector) {
 	let img = document.createElement('img');
 	img.src = '../'+section+'/images/'+image_file; 
 	img.alt = row[1]; 
+
+	// if section is consult, don't add section to the path
+	if (section == 'consult') {
+		img.src = '../images/'+image_file;
+	}
 
 	// caption
 	let caption = document.createElement('div');

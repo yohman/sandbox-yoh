@@ -32,10 +32,10 @@ nav:
   - "Work": work/index.md
     # - "Workshops": learn/resources.md
     # - "Tutorials": learn/tutorials.md
-  - Connect:
-    - "Who we are": connect/index.md
-    - "Consult": connect/consult.md
-    - "Where is the Sandbox?": connect/where/index.md
+  - Consult:
+    - "Consult": consult/index.md
+    - "Connect with us": consult/connect/index.md
+    - "Where is the Sandbox?": consult/where/index.md
   - "Musings": musings/index.md
 
 extra_css:
@@ -73,6 +73,7 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - meta
 
 plugins:
   # - search
