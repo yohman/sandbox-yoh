@@ -1,8 +1,10 @@
 ---
 hide:
   - toc
-
+title:  "Connect with OARC Sandbox Research Team | UCLA Technology Sandbox"
+description: "Meet the interdisciplinary research team behind UCLA's Technology Sandbox. Learn how to collaborate, access our innovative computing facility, and engage with OARC's experts in digital scholarship."
 ---
+
 
 <h1 id="title">Connect</h1>
 
@@ -32,7 +34,7 @@ hide:
 //                            		//
 // -------------------------------- //
 
-let section = 'connect'
+let section = 'consult'
 
 function init(){
 

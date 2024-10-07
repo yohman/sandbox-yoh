@@ -2,6 +2,8 @@
 hide:
   - navigation
   - toc
+title: "Learn with OARC Sandbox | UCLA Workshops and Tutorials"
+description: "Access a comprehensive library of workshops and tutorials from UCLA's OARC Sandbox. Enhance your skills in digital research, data analysis, and advanced computing techniques."
 ---
 
 <h1 id="title">Learn</h1>

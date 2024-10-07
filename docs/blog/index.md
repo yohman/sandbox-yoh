@@ -1,3 +1,8 @@
+---
+title: 
+description:
+---
+
 # Musings on 3D Modeling
 
 3D modeling is a fascinating field that merges creativity with technology. It's not just about creating digital objects, but about bringing ideas to life in a three-dimensional space.
