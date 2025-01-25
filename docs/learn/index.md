@@ -7,9 +7,12 @@ description: "Access a comprehensive library of workshops and tutorials from UCL
 ---
 
 <h1 id="title">Learn</h1>
+<!-- add description -->
+<p id="description">Access a comprehensive library of workshops and tutorials from UCLA's OARC Sandbox. Enhance your skills in digital research, data analysis, and advanced computing techniques.
+</p>
 
 <!-- add a search box -->
-<input type="text" id="search" class="search" onkeyup="search()" placeholder="Search for projects..">
+<input type="text" id="search" class="search" onkeyup="search()" placeholder="Search projects..">
 
 <!-- two buttons to toggle between gallery view and tag view -->
 <span class="btn btn-on" tabindex="0" alt="gallery view" title="gallery view">

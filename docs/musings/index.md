@@ -8,6 +8,10 @@ description: "Dive into thought-provoking reflections and expert insights from U
 
 <h1 id="title">Musings</h1>
 
+<!-- add description -->
+<p id="description">Dive into thought-provoking reflections and expert insights from UCLA's OARC Sandbox research team. Explore cutting-edge ideas in digital scholarship, data science, and technology innovation.
+</p>
+
 <!-- add a search box -->
 <input type="text" id="search" class="search" onkeyup="search()" placeholder="Search for musings..">
 

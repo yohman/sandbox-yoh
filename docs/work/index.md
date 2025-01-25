@@ -8,6 +8,10 @@ description: "Explore cutting-edge projects from UCLA's OARC Sandbox team. Disco
 
 <h1 id="title">Work</h1>
 
+<!-- add description -->
+<p id="description">Explore cutting-edge projects from UCLA's OARC Sandbox team. Discover our interdisciplinary research, advanced computing applications, and collaborative digital scholarship initiatives.
+</p>
+
 <!-- add a search box -->
 <input type="text" id="search" class="search" onkeyup="search()" placeholder="Search for projects..">
 
