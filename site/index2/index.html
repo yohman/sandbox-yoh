@@ -6,15 +6,9 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Explore cutting-edge projects from UCLA's OARC Sandbox team. Discover our interdisciplinary research, advanced computing applications, and collaborative digital scholarship initiatives.">
       
       
       
-      
-        <link rel="prev" href="../learn/">
-      
-      
-        <link rel="next" href="../musings/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -22,7 +16,7 @@
     
     
       
-        <title>OARC Sandbox Projects | Innovative Research Initiatives at UCLA - UCLA OARC Sandbox</title>
+        <title>Index2 - UCLA OARC Sandbox</title>
       
     
     
@@ -113,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              OARC Sandbox Projects | Innovative Research Initiatives at UCLA
+              Index2
             
           </span>
         </div>
@@ -160,11 +154,9 @@
         
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../work/" class="md-tabs__link">
         
   
     
@@ -271,17 +263,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../work/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -290,7 +275,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -459,92 +443,96 @@
                   
 
 
-<h1 id="title">Work</h1>
+  <h1>Index2</h1>
 
-<!-- add description -->
-<p id="description">Explore cutting-edge projects from UCLA's OARC Sandbox team. Discover our interdisciplinary research, advanced computing applications, and collaborative digital scholarship initiatives.
-</p>
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.body-background {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.page-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 20px;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+.site-logo {
+  margin-top: 20px;
+}
+.tagline {
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: right;
+}
+.paragraph {
+  text-align: right;
+  max-width: 300px;
+}
+.links {
+  margin-top: 20px;
+  text-align: right;
+}
+.links a {
+  margin-left: 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+</style>
 
-<!-- add a search box -->
-<p><input type="text" id="search" class="search" onkeyup="search()" placeholder="Search for projects.."></p>
-<!-- two buttons to toggle between gallery view and tag view -->
-<p><span class="btn btn-on" tabindex="0" alt="gallery view" title="gallery view">
-    gallery view
-</span>
-<span class="btn btn-off" tabindex="0" alt="tab view" title="tab view" onclick="window.location.href = 'tags'" onkeydown="if(event.keyCode === 13) { window.location.href = 'tags' }">
-    tag view
-</span></p>
-<div class="gallery"></div>
+<div id="bgContainer" class="body-background">
+  <div class="page-content">
+    <div class="site-logo">
+      <a class="glightbox" href="logo.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="logo.png" alt="Site Logo" height="50"></a>
+    </div>
+    <div>
+      <div class="tagline">Bringing your research to life</div>
+      <p class="paragraph">
+        Explore new ideas with interactive workshops, hands-on experimentation, 
+        and expert support in our Technology Sandbox.
+      </p>
+    </div>
+    <div class="links">
+      <a href="learn/">Learn</a>
+      <a href="work/">Work</a>
+      <a href="musings/">Musings</a>
+      <a href="consult/">Consult</a>
+    </div>
+  </div>
+</div>
 
 <script>
-
-// -------------------------------- //
-//                                  //
-//    Initialize                    //
-//                                  //
-// -------------------------------- //
-
-let section = 'work'
-
-function init(){
-
-    // -------------------------------- //
-    // Loop through project data        //
-    // -------------------------------- //
-    counter = 0;
-
-    // filter data by tag, default is all
-    let tag = urlParams.get('tag');
-    if (tag) {
-        document.querySelector('.gallery').innerHTML = '';
-        data[section].values.forEach(function(row) {
-            let tags = row[6].split(',');
-            if (tags.map(function(x) { return x.trim() }).includes(tag)) {
-                addGalleryItem(row,counter);
-            }
-            counter++;
-        });
-        // add the name of the tag next to the search box with an option to clear the filter
-        // clear the filter by removing the tag from the url
-        document.querySelector('.search').insertAdjacentHTML('afterend',` <a href="?"><span class="tag tag-filter">${tag} x</span></a>`);
-
-    } else {
-        data[section].values.forEach(function(row) {
-            addGalleryItem(row,counter);
-            counter++;
-        });
-    }
-
-    // create the search function
-    window.search = function() {
-        let input, filter, ul, li, a, i, txtValue;
-        input = document.getElementById('search');
-        filter = input.value.toUpperCase();
-        li = document.querySelectorAll('.gallery-container');
-        for (i = 0; i < li.length; i++) {
-
-            a = li[i].getElementsByTagName('a')[0];
-
-            // search by project name, project description, and tags
-            let txtValue = a.textContent || a.innerText;
-            // search tags, which are in separate span tags of class tag
-            let tags = '';
-            li[i].querySelectorAll('.tag').forEach(function(tag) {
-                tags += tag.textContent;
-            });
-
-            if (txtValue.toUpperCase().indexOf(filter) > -1 || tags.toUpperCase().indexOf(filter) > -1) {
-                li[i].style.display = '';
-            } else {
-                li[i].style.display = 'none';
-            }
-
+function init() {
+    document.addEventListener('dataLoaded', function() {
+        if (!data.work || !data.work.values || data.work.values.length === 0) {
+            console.warn('No valid "work" sheet data found.');
+            return;
         }
-    }   
-
-
+        let randomIndex = Math.floor(Math.random() * data.work.values.length);
+        let image = data.work.values[randomIndex][4] || 'sandbox.png';
+        console.log('Random image selected:', image);
+        document.getElementById('bgContainer').style.backgroundImage =
+            'url("./work/images/' + image + '")';
+    });
 }
 
+// init();
 </script>
 
 

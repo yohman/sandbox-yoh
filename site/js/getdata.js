@@ -1,10 +1,12 @@
 // -------------------------------------------- //
 // Parameters to be used in the page            //
 // -------------------------------------------- //
+console.log('Getting data...');
 
 const sheetNames = ['work', 'learn', 'consult','musings'];
 const spreadsheetId = '1bQDVVO-R3tt99eR7ageBYu5XK8lnnlxHZLzJghYSLa0';
-const apiKey = 'AIzaSyAUi4KazffmDZV_dQUnMUKA1jJt4i0mqlU';
+// const apiKey = 'AIzaSyAUi4KazffmDZV_dQUnMUKA1jJt4i0mqlU';
+const apiKey = 'AIzaSyAxlHpEwRMRcj5qobzddd2oN9FNjWAh0RY';
 let data = {};
 
 // -------------------------------------------- //
