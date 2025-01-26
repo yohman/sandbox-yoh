@@ -464,22 +464,22 @@
                   
 
 
-<h1 id="title">Connect</h1>
+<h1 id="title" tabindex="0">Connect</h1>
 
 <!-- add a search box -->
-<p><input type="text" id="search" class="search" onkeyup="search()" placeholder="Search for people.."></p>
+<p><input type="text" id="search" class="search" onkeyup="search()" placeholder="Search for people.." tabindex="0"></p>
 <!-- two buttons to toggle between gallery view and tag view -->
 <p><span class="btn btn-on" tabindex="0" alt="gallery view" title="gallery view">
     gallery view
 </span>
-<span class="btn btn-off" tabindex="0" alt="tab view" title="tab view" onclick="window.location.href = 'tags'" onkeydown="if(event.keyCode === 13) { window.location.href = 'tags' }">
+<span class="btn btn-off" tabindex="0" alt="tab view" title="tab view" onclick="window.location.href = 'tags'" onkeydown="if(event.keyCode === 13) { window.location.href = 'tags' }" tabindex="0">
     tag view
 </span></p>
-<h2>Current</h2>
-<div class="gallery-current"></div>
+<h2 tabindex="0">Current</h2>
+<div class="gallery-current" tabindex="0"></div>
 
-<h2>Past</h2>
-<div class="gallery-past"></div>
+<h2 tabindex="0">Past</h2>
+<div class="gallery-past" tabindex="0"></div>
 <!-- <div class="gallery"></div>  -->
 
 <hr><script>

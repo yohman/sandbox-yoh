@@ -5,15 +5,14 @@ hide:
 title: "OARC Sandbox Projects | Innovative Research Initiatives at UCLA"
 description: "Explore cutting-edge projects from UCLA's OARC Sandbox team. Discover our interdisciplinary research, advanced computing applications, and collaborative digital scholarship initiatives."
 ---
-
-<h1 id="title">Work</h1>
+<h1 id="title" tabindex="0">Work</h1>
 
 <!-- add description -->
-<p id="description">Explore cutting-edge projects from UCLA's OARC Sandbox team. Discover our interdisciplinary research, advanced computing applications, and collaborative digital scholarship initiatives.
+<p id="description" tabindex="0">Explore cutting-edge projects from UCLA's OARC Sandbox team. Discover our interdisciplinary research, advanced computing applications, and collaborative digital scholarship initiatives.
 </p>
 
 <!-- add a search box -->
-<input type="text" id="search" class="search" onkeyup="search()" placeholder="Search for projects..">
+<input type="text" id="search" class="search" onkeyup="search()" placeholder="Search for projects.." tabindex="0">
 
 <!-- two buttons to toggle between gallery view and tag view -->
 <span class="btn btn-on" tabindex="0" alt="gallery view" title="gallery view">
@@ -23,7 +22,7 @@ description: "Explore cutting-edge projects from UCLA's OARC Sandbox team. Disco
 	tag view
 </span>
 
-<div class="gallery"></div> 
+<div class="gallery" tabindex="0"></div> 
 
 <script>
 

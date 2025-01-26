@@ -5,14 +5,13 @@ hide:
 title: "Learn with OARC Sandbox | UCLA Workshops and Tutorials"
 description: "Access a comprehensive library of workshops and tutorials from UCLA's OARC Sandbox. Enhance your skills in digital research, data analysis, and advanced computing techniques."
 ---
-
-<h1 id="title">Learn</h1>
+<h1 id="title" tabindex="0">Learn</h1>
 <!-- add description -->
-<p id="description">Access a comprehensive library of workshops and tutorials from UCLA's OARC Sandbox. Enhance your skills in digital research, data analysis, and advanced computing techniques.
+<p id="description" tabindex="0">Access a comprehensive library of workshops and tutorials from UCLA's OARC Sandbox. Enhance your skills in digital research, data analysis, and advanced computing techniques.
 </p>
 
 <!-- add a search box -->
-<input type="text" id="search" class="search" onkeyup="search()" placeholder="Search projects..">
+<input type="text" id="search" class="search" onkeyup="search()" placeholder="Search projects.." tabindex="0">
 
 <!-- two buttons to toggle between gallery view and tag view -->
 <span class="btn btn-on" tabindex="0" alt="gallery view" title="gallery view">
@@ -22,7 +21,7 @@ description: "Access a comprehensive library of workshops and tutorials from UCL
 	tag view
 </span>
 
-<div class="gallery"></div> 
+<div class="gallery" tabindex="0"></div> 
 
 <script>
 
