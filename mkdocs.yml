@@ -52,6 +52,7 @@ extra_javascript:
   # - https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js
   - js/prism.js
   - js/getdata.js
+  - js/sheets_data.json
 
 
 # Extensions

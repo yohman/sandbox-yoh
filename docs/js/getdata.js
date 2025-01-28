@@ -3,82 +3,23 @@
 // -------------------------------------------- //
 console.log('Getting data...');
 
-
-// -------------------------------------------- //
-// Import data from sheets_data.json            //
-// -------------------------------------------- //
-// fetch('./sheets_data.json')
-// 	.then(response => response.json())
-// 	.then(jsonData => {
-// 		data = jsonData;
-// 		console.log('Data imported from sheets_data.json:', data);
-// 	})
-// 	.catch(error => {
-// 		console.error('Error importing data from sheets_data.json:', error);
-// 	});
-
-
-
-
-
-const sheetNames = ['work', 'learn', 'consult','musings'];
+// may not need this, as we are fetching data from a json file
+// instead, use the getdata.py script to get the data from the Google Sheet
 const spreadsheetId = '1bQDVVO-R3tt99eR7ageBYu5XK8lnnlxHZLzJghYSLa0';
-// const apiKey = 'AIzaSyAUi4KazffmDZV_dQUnMUKA1jJt4i0mqlU';
 const apiKey = 'AIzaSyAxlHpEwRMRcj5qobzddd2oN9FNjWAh0RY';
+
+// sections of the data
+const sheetNames = ['work', 'learn', 'consult','musings'];
+
 let data = {};
 
-// -------------------------------------------- //
-// Function to fetch data from a specific sheet //
-// -------------------------------------------- //
-
-// async function fetchData(sheetName) {
-// 	const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${sheetName}?key=${apiKey}`;
-
-// 	try {
-// 		const response = await fetch(url);
-// 		if (!response.ok) {
-// 			throw new Error('Failed to fetch data');
-// 		}
-// 		const data = await response.json();
-// 		// get rid of first row 
-// 		data.shift();
-// 		return data;
-// 	} catch (error) {
-// 		console.error('Error fetching data:', error);
-// 		return null;
-// 	}
-// }
+// Get the base URL dynamically
+const baseUrl = window.location.pathname.includes('/site/') ? '/site/' : '/';
 
 // -------------------------------------------- //
-// Function to check if data is                 //
-// fetched from all sheets                      //
+// Fetch data from the json file                //
 // -------------------------------------------- //
-// async function checkAndInit() {
-// 	const promises = sheetNames.map(sheetName => fetchData(sheetName));
-// 	const results = await Promise.all(promises);
-
-// 	// Check if data is fetched from all sheets
-// 	const allDataFetched = results.every(result => result !== null);
-
-// 	if (allDataFetched) {
-// 		// put the data in an object
-// 		results.forEach((result, index) => {
-// 			data[sheetNames[index]] = result;
-// 		});
-// 		console.log('Data object:', data);
-
-// 		// fun init function, located in each respective page
-// 		init();
-// 		// After your Google Sheets data is loaded
-// 		document.dispatchEvent(new Event('dataLoaded'));
-// 	} else {
-// 		console.log('Failed to fetch data from one or more sheets.');
-// 	}
-// }
-
-
-
-fetch('/js/sheets_data.json')
+fetch(`${baseUrl}js/sheets_data.json`)
 	.then(response => {
 		if (!response.ok) {
 			throw new Error(`HTTP error! Status: ${response.status}`);
@@ -93,12 +34,6 @@ fetch('/js/sheets_data.json')
 		console.log('Successfully fetched data:', data);
 		init();
 	})
-
-
-// -------------------------------------------- //
-// Let's get it rolling				            //
-// -------------------------------------------- //
-// checkAndInit();
 
 // --------------------------------	//
 //                            		//
