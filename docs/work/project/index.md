@@ -31,7 +31,7 @@ function init(){
 // -------------------------------- //
 function createProject(projectid) {
 	// find the project in the projects array
-	let project = data.work.values[projectid];
+	let project = data.work[projectid];
 
 	// --------------------------------	//
 	// Title and secondary title		//

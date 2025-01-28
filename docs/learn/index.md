@@ -34,7 +34,7 @@ description: "Access a comprehensive library of workshops and tutorials from UCL
 let section = 'learn'
 
 function init(){
-
+	console.log(data)
 	// --------------------------------	//
 	// Loop through project data		//
 	// -------------------------------- //
@@ -44,7 +44,7 @@ function init(){
 	let tag = urlParams.get('tag');
 	if (tag) {
 		document.querySelector('.gallery').innerHTML = '';
-		data[section].values.forEach(function(row) {
+		data[section].forEach(function(row) {
 			let tags = row[6].split(',');
 			if (tags.map(function(x) { return x.trim() }).includes(tag)) {
 				addGalleryItem(row,counter);
@@ -56,7 +56,7 @@ function init(){
 		document.querySelector('.search').insertAdjacentHTML('afterend',` <a href="?"><span class="tag tag-filter">${tag} x</span></a>`);
 
 	} else {
-		data[section].values.forEach(function(row) {
+		data[section].forEach(function(row) {
 			addGalleryItem(row,counter);
 			counter++;
 		});

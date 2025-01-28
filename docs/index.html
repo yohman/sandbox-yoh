@@ -100,17 +100,16 @@
 	<script>
 
 		function init() {
-			// Wait for data to load before setting a random work or learn image as background
-			document.addEventListener('dataLoaded', function() {
-				console.log('Data loaded');
+
+				console.log('generating random background image');
 				let images = [];
 
-				if (data.work && data.work.values && data.work.values.length > 0) {
-					images = images.concat(data.work.values.map(row => ({ src: row[4], type: 'work' })));
+				if (data.work && data.work && data.work.length > 0) {
+					images = images.concat(data.work.map(row => ({ src: row[4], type: 'work' })));
 				}
 
-				if (data.learn && data.learn.values && data.learn.values.length > 0) {
-					images = images.concat(data.learn.values.map(row => ({ src: row[4], type: 'learn' })));
+				if (data.learn && data.learn && data.learn.length > 0) {
+					images = images.concat(data.learn.map(row => ({ src: row[4], type: 'learn' })));
 				}
 
 				images = images.filter(image => image.src); // Remove any undefined or empty values
@@ -125,7 +124,6 @@
 				let imageUrl = (image.type === 'work' ? 'work/images/' : 'learn/images/') + image.src;
 				document.getElementById('bgContainer').style.backgroundImage = 
 					'url("' + imageUrl + '")';
-			});
 		}
 	</script>
 
@@ -148,7 +146,7 @@
 			<div class="links" tabindex="0">
 				<a href="learn/" tabindex="0">Learn</a>
 				<a href="work/" tabindex="0">Work</a>
-				<a href="musings/" tabindex="0">Musings</a>
+				<a href="musings/" tabindex="0">Muse</a>
 				<a href="consult/" tabindex="0">Consult</a>
 			</div>
 		</div>

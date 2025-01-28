@@ -30,7 +30,7 @@ function init(){
 // -------------------------------- //
 function createProject(projectid) {
 	// find the project in the projects array
-	let project = data.consult.values[projectid];
+	let project = data.consult[projectid];
 
 	// --------------------------------	//
 	// Title and secondary title		//

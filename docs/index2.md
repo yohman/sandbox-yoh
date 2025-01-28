@@ -80,17 +80,18 @@ html, body {
 
 <script>
 function init() {
-    document.addEventListener('dataLoaded', function() {
-        if (!data.work || !data.work.values || data.work.values.length === 0) {
-            console.warn('No valid "work" sheet data found.');
-            return;
-        }
-        let randomIndex = Math.floor(Math.random() * data.work.values.length);
-        let image = data.work.values[randomIndex][4] || 'sandbox.png';
+    // document.addEventListener('dataLoaded', function() {
+    //     if (!data.work || !data.work || data.work.length === 0) {
+    //         console.warn('No valid "work" sheet data found.');
+    //         return;
+    //     }
+    console.log("generating random image...");
+        let randomIndex = Math.floor(Math.random() * data.work.length);
+        let image = data.work[randomIndex][4] || 'sandbox.png';
         console.log('Random image selected:', image);
         document.getElementById('bgContainer').style.backgroundImage =
             'url("./work/images/' + image + '")';
-    });
+    // });
 }
 
 // init();

@@ -65,7 +65,7 @@ function init(){
 	let tag = urlParams.get('tag');
 	if (tag) {
 		console.log('tag found');
-		data[section].values.forEach(function(row) {
+		data[section].forEach(function(row) {
 			let status = row[2];
 			let tags = row[6].split(',');
 			if (tags.map(function(x) { return x.trim() }).includes(tag)) {
@@ -83,7 +83,7 @@ function init(){
 		
 	} else {
 		console.log('no tag found');
-		data[section].values.forEach(function(row) {
+		data[section].forEach(function(row) {
 			let status = row[2];
 			if (status == 'staff') {
 				addGalleryItem(row,counter,'.gallery-current')

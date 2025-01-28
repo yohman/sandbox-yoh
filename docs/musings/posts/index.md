@@ -30,7 +30,7 @@ function init(){
 // -------------------------------- //
 function createProject(projectid) {
 	// find the project in the projects array
-	let project = data.musings.values[projectid];
+	let project = data.musings[projectid];
 
 	// --------------------------------	//
 	// Title and secondary title		//
