@@ -14,8 +14,17 @@ const sheetNames = ['work', 'learn', 'consult','musings'];
 let data = {};
 
 // Get the base URL dynamically
-const baseUrl = window.location.pathname.includes('/site/') ? '/site/' : '/';
+// const baseUrl = window.location.pathname.includes('/site/') ? '/site/' : '/';
 
+
+
+// Get the base URL dynamically
+const pathParts = window.location.pathname.split('/');
+const repoName = pathParts[1] ? `/${pathParts[1]}` : '';
+const isLocal = window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost';
+const baseUrl = isLocal ? '/' : `${window.location.origin}${repoName}/site/`;
+
+console.log('Base URL:', baseUrl);
 // -------------------------------------------- //
 // Fetch data from the json file                //
 // -------------------------------------------- //
