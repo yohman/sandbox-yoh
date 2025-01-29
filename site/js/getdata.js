@@ -13,18 +13,31 @@ const sheetNames = ['work', 'learn', 'consult','musings'];
 
 let data = {};
 
-// Get the base URL dynamically
-// const baseUrl = window.location.pathname.includes('/site/') ? '/site/' : '/';
+// Determine the environment
+let environment;
+if (window.location.href.includes('github') && window.location.href.includes('site')) {
+    environment = 'git';
+} else if (window.location.href.includes('site')) {
+    environment = 'postbuild';
+} else {
+    environment = 'prebuild';
+}
 
+// Set the base URL based on the environment
+let baseUrl;
+if (environment === 'prebuild') {
+    baseUrl = '/';
+} else if (environment === 'git') {
+    const pathParts = window.location.pathname.split('/');
+    const repoName = pathParts[1] ? `/${pathParts[1]}` : '';
+    baseUrl = `${window.location.origin}${repoName}/site/`;
+} else if (environment === 'postbuild') {
+    baseUrl = `${window.location.origin}/site/`;
+}
 
-
-// Get the base URL dynamically
-const pathParts = window.location.pathname.split('/');
-const repoName = pathParts[1] ? `/${pathParts[1]}` : '';
-const isLocal = window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost';
-const baseUrl = isLocal ? '/' : `${window.location.origin}${repoName}/site/`;
-
+console.log('Environment:', environment);
 console.log('Base URL:', baseUrl);
+
 // -------------------------------------------- //
 // Fetch data from the json file                //
 // -------------------------------------------- //
