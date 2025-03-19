@@ -119,6 +119,16 @@
 					return;
 				}
 
+				// Filter out images that are not marked as "TRUE" in the "Show" column
+				images = images.filter(image => {
+					if (image.type === 'work') {
+						return data.work.some(row => row[4] === image.src && row[15] === "TRUE"); // Column K is index 10
+					} else if (image.type === 'learn') {
+						return data.learn.some(row => row[4] === image.src && row[10] === "TRUE"); // Column P is index 15
+					}
+					return false;
+				});
+
 				let randomIndex = Math.floor(Math.random() * images.length);
 				let image = images[randomIndex];
 				let imageUrl = (image.type === 'work' ? 'work/images/' : 'learn/images/') + image.src;
