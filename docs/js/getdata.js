@@ -23,19 +23,8 @@ if (window.location.href.includes('github') && window.location.href.includes('si
     environment = 'prebuild';
 }
 
-// Dynamically set the base URL based on the environment
-let baseUrl;
-if (window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost') {
-    // Local development
-    baseUrl = 'http://127.0.0.1:8000/';
-} else if (window.location.hostname.includes('github.io')) {
-    // GitHub Pages
-    const repoName = window.location.pathname.split('/')[1];
-    baseUrl = `${window.location.origin}/${repoName}/`;
-} else {
-    // Default to the current origin
-    baseUrl = `${window.location.origin}/`;
-}
+// Set the base URL to a fixed location
+let baseUrl = 'http://127.0.0.1:8000/';
 
 console.log('Base URL:', baseUrl);
 
