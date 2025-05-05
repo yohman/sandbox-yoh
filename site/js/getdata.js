@@ -473,6 +473,7 @@ function highlightPython(code) {
 document.addEventListener('dataLoaded', function() {
     // Check if Prism library is available
     if (typeof Prism !== 'undefined') {
+		console.log('Prism library found, using it for syntax highlighting');
         Prism.highlightAll();
     } else {
         // Fallback to our custom syntax highlighter
