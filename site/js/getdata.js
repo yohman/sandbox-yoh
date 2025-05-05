@@ -23,19 +23,9 @@ if (window.location.href.includes('github') && window.location.href.includes('si
     environment = 'prebuild';
 }
 
-// Set the base URL based on the environment
-let baseUrl;
-if (environment === 'prebuild') {
-    baseUrl = '/';
-} else if (environment === 'git') {
-    const pathParts = window.location.pathname.split('/');
-    const repoName = pathParts[1] ? `/${pathParts[1]}` : '';
-    baseUrl = `${window.location.origin}${repoName}/site/`;
-} else if (environment === 'postbuild') {
-    baseUrl = `${window.location.origin}/site/`;
-}
+// Set the base URL to a fixed location
+let baseUrl = 'http://127.0.0.1:8000/';
 
-console.log('Environment:', environment);
 console.log('Base URL:', baseUrl);
 
 // -------------------------------------------- //
@@ -43,6 +33,7 @@ console.log('Base URL:', baseUrl);
 // -------------------------------------------- //
 fetch(`${baseUrl}js/sheets_data.json`)
 	.then(response => {
+		console.log('Fetching data from:', response.url);
 		if (!response.ok) {
 			throw new Error(`HTTP error! Status: ${response.status}`);
 		}
@@ -147,9 +138,11 @@ fetch(`${baseUrl}js/sheets_data.json`)
 			});
 			
 			console.log('Successfully processed data:', data);
-			// Dispatch the dataLoaded event
-			document.dispatchEvent(new Event('dataLoaded'));
-			// Call init function
+			// Dispatch the dataLoaded event after a short delay to ensure listeners are attached
+			setTimeout(() => {
+				document.dispatchEvent(new Event('dataLoaded'));
+			}, 50);
+			// Call init function if available
 			if (typeof init === 'function') {
 				init();
 			} else {
@@ -477,8 +470,16 @@ function highlightPython(code) {
 }
 
 // Set up an event listener for the custom event
-// document.addEventListener('dataLoaded', syntaxHighlightCode, { once: true });
-document.addEventListener('dataLoaded', Prism.highlightAll, { once: true });
+document.addEventListener('dataLoaded', function() {
+    // Check if Prism library is available
+    if (typeof Prism !== 'undefined') {
+        Prism.highlightAll();
+    } else {
+        // Fallback to our custom syntax highlighter
+        console.log('Prism library not found, using custom syntax highlighter');
+        syntaxHighlightCode();
+    }
+}, { once: true });
 
 // Optional: You can also call syntaxHighlightCode initially if you have static content
 // document.addEventListener('DOMContentLoaded', syntaxHighlightCode);
