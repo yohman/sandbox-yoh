@@ -31,7 +31,7 @@ console.log('Base URL:', baseUrl);
 // -------------------------------------------- //
 // Fetch data from the json file                //
 // -------------------------------------------- //
-fetch(`${baseUrl}js/sheets_data.json`)
+fetch(`../js/sheets_data.json`)
 	.then(response => {
 		console.log('Fetching data from:', response.url);
 		if (!response.ok) {
