@@ -24,14 +24,22 @@ if (window.location.href.includes('github') && window.location.href.includes('si
 }
 
 // Set the base URL to a fixed location
-let baseUrl = 'http://127.0.0.1:8000/';
+// let baseUrl = 'http://127.0.0.1:8000/';
 
-console.log('Base URL:', baseUrl);
+// console.log('Base URL:', baseUrl);
 
 // -------------------------------------------- //
 // Fetch data from the json file                //
 // -------------------------------------------- //
-fetch(`../js/sheets_data.json`)
+// Determine the relative path to sheets_data.json based on the current script location
+const scriptPath = document.currentScript.src;
+const basePath = scriptPath.substring(0, scriptPath.lastIndexOf('/'));
+const jsonPath = `${basePath}/sheets_data.json`;
+
+console.log('JSON Path:', jsonPath);
+
+// Fetch the JSON data
+fetch(jsonPath)
 	.then(response => {
 		console.log('Fetching data from:', response.url);
 		if (!response.ok) {
@@ -42,9 +50,7 @@ fetch(`../js/sheets_data.json`)
 	.then(text => {
 		try {
 			// More thorough comment removal (handles both line and block comments)
-			// First remove block comments
 			let cleanedText = text.replace(/\/\*[\s\S]*?\*\//g, '');
-			// Then remove line comments (but not within string literals)
 			let inString = false;
 			let quoteChar = '';
 			let result = '';
@@ -53,7 +59,6 @@ fetch(`../js/sheets_data.json`)
 				const char = cleanedText[i];
 				const nextChar = cleanedText[i + 1] || '';
 				
-				// Handle string literals
 				if ((char === '"' || char === "'") && (i === 0 || cleanedText[i - 1] !== '\\')) {
 					if (!inString) {
 						inString = true;
@@ -63,9 +68,7 @@ fetch(`../js/sheets_data.json`)
 					}
 				}
 				
-				// Handle line comments
 				if (!inString && char === '/' && nextChar === '/') {
-					// Skip until end of line
 					while (i < cleanedText.length && cleanedText[i] !== '\n') {
 						i++;
 					}
@@ -75,17 +78,13 @@ fetch(`../js/sheets_data.json`)
 				result += char;
 			}
 			
-			// Try to parse the cleaned JSON
 			console.log('Attempting to parse JSON...');
 			return JSON.parse(result);
 		} catch (e) {
 			console.error('JSON parsing error:', e);
 			console.log('Problematic JSON text (first 500 chars):', text.substring(0, 500));
 			
-			// Try a simpler parsing approach as a fallback
-			console.log('Attempting fallback parsing method...');
 			try {
-				// Simple regex to remove comments
 				const simpleClean = text.replace(/\/\/.*$/gm, '').replace(/\/\*[\s\S]*?\*\//g, '');
 				return JSON.parse(simpleClean);
 			} catch (fallbackError) {
@@ -95,68 +94,54 @@ fetch(`../js/sheets_data.json`)
 		}
 	})
 	.then(gdata => {
-		// for each sheetname in SheetNames, add the data as an object to the data object
 		sheetNames.forEach(sheetName => {
-			// Get all entries
 			const allEntries = gdata[sheetName];
 			
 			if (allEntries && allEntries.length > 0) {
-					// The first row contains headers
-					const headers = allEntries[0];
-					
-					// Find the index of the "show" column (case insensitive)
-					let showColumnIndex = -1;
-					if (headers) {
-						showColumnIndex = headers.findIndex(header => 
-							header && String(header).toLowerCase().includes('show'));
-					}
-					
-					// For backward compatibility, keep the old structure
-					// Filter entries where "show" is not "FALSE"
-					let filteredEntries;
-					if (showColumnIndex !== -1) {
-						filteredEntries = allEntries.slice(1).filter(row => {
-							if (!row || row.length <= showColumnIndex) return true;
-							return !(row[showColumnIndex] === "FALSE" || row[showColumnIndex] === false);
-						});
-					} else {
-						filteredEntries = allEntries.slice(1);
-					}
-					
-					// Store data in both the new and old format for maximum compatibility
-					data[sheetName] = filteredEntries;
-					data[sheetName].values = filteredEntries;
-					data[sheetName].headers = headers;
-					
-					// console.log(`Processed ${sheetName}: ${filteredEntries.length entries after filtering`);
-				} else {
-					// Handle empty sheets
-					data[sheetName] = [];
-					data[sheetName].values = [];
-					data[sheetName].headers = [];
+				const headers = allEntries[0];
+				let showColumnIndex = -1;
+				if (headers) {
+					showColumnIndex = headers.findIndex(header => 
+						header && String(header).toLowerCase().includes('show'));
 				}
-			});
-			
-			console.log('Successfully processed data:', data);
-			// Dispatch the dataLoaded event after a short delay to ensure listeners are attached
-			setTimeout(() => {
-				document.dispatchEvent(new Event('dataLoaded'));
-			}, 50);
-			// Call init function if available
-			if (typeof init === 'function') {
-				init();
+				
+				let filteredEntries;
+				if (showColumnIndex !== -1) {
+					filteredEntries = allEntries.slice(1).filter(row => {
+						if (!row || row.length <= showColumnIndex) return true;
+						return !(row[showColumnIndex] === "FALSE" || row[showColumnIndex] === false);
+					});
+				} else {
+					filteredEntries = allEntries.slice(1);
+				}
+				
+				data[sheetName] = filteredEntries;
+				data[sheetName].values = filteredEntries;
+				data[sheetName].headers = headers;
 			} else {
-				console.warn('No init function found to call after data loading');
+				data[sheetName] = [];
+				data[sheetName].values = [];
+				data[sheetName].headers = [];
 			}
-		})
-		.catch(error => {
-			console.error('Error fetching or processing data:', error);
-			// Add an on-screen error message for better user feedback
-			const errorMsg = document.createElement('div');
-			errorMsg.style.cssText = 'position:fixed;top:10px;left:10px;background:red;color:white;padding:10px;z-index:9999;';
-			errorMsg.textContent = `Error loading data: ${error.message}`;
-			document.body.appendChild(errorMsg);
 		});
+		
+		console.log('Successfully processed data:', data);
+		setTimeout(() => {
+			document.dispatchEvent(new Event('dataLoaded'));
+		}, 50);
+		if (typeof init === 'function') {
+			init();
+		} else {
+			console.warn('No init function found to call after data loading');
+		}
+	})
+	.catch(error => {
+		console.error('Error fetching or processing data:', error);
+		const errorMsg = document.createElement('div');
+		errorMsg.style.cssText = 'position:fixed;top:10px;left:10px;background:red;color:white;padding:10px;z-index:9999;';
+		errorMsg.textContent = `Error loading data: ${error.message}`;
+		document.body.appendChild(errorMsg);
+	});
 
 // --------------------------------	//
 //                            		//
