@@ -35,7 +35,8 @@
             "Lisa Snyder",
             "Chicago, Virtual learning environment, three-dimensional space, 3D computer graphics, spatial, history",
             "http://www.wikidata.org/entity/Q1297; http://www.wikidata.org/entity/Q2349394; http://www.wikidata.org/entity/Q34929; http://www.wikidata.org/entity/Q189177; http://www.wikidata.org/entity/Q122075505; http://www.wikidata.org/entity/Q309",
-            "TRUE"
+            "TRUE",
+            "FALSE"
         ],
         [
             "\u2018A Kind of Alchemy': The Work of Art in the Age of Artificial Intelligence (2023)",
@@ -571,7 +572,8 @@
             "External staff link",
             "tags \n(required)",
             "wikidata-tags",
-            "wikidata-uri"
+            "wikidata-uri",
+            "show"
         ],
         [
             "Lisa Snyder, PhD",
@@ -644,7 +646,8 @@
             "Description (HTML ok) \n(required)",
             "main image\n(required)",
             "External link",
-            "tags \n(required)"
+            "tags \n(required)",
+            "show"
         ],
         [
             "Adding URI Lookup from Wikidata",
@@ -678,7 +681,10 @@
             "Anthony Doolan",
             "4/3/2025",
             "This is a test",
-            "UCLA_Bruins_logo.svg.png"
+            "UCLA_Bruins_logo.svg.png",
+            "",
+            "",
+            "FALSE"
         ],
         [],
         [
@@ -686,7 +692,10 @@
             "Anthony Doolan",
             "4/3/2025",
             "This is a test 3",
-            "UCLA_Bruins_logo.svg.png"
+            "UCLA_Bruins_logo.svg.png",
+            "",
+            "",
+            "FALSE"
         ]
     ]
 }
