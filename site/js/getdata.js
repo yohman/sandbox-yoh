@@ -113,6 +113,7 @@ fetch(jsonPath)
 					});
 				} else {
 					filteredEntries = allEntries.slice(1);
+					console.warn(`No 'show' column found in ${sheetName}. All entries will be included.`);
 				}
 				
 				data[sheetName] = filteredEntries;
